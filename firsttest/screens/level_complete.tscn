@@ -1,0 +1,90 @@
+[gd_scene load_steps=5 format=3 uid="uid://dsip577k0qqj7"]
+
+[ext_resource type="Script" uid="uid://dkqclwacxg25c" path="res://screens/level_complete.gd" id="1_4sait"]
+[ext_resource type="AudioStream" uid="uid://cpdmshr5kyvqc" path="res://audio/AmbienceLooped.ogg" id="2_4sait"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_4sait"]
+font_size = 32
+font_color = Color(1, 1, 0, 1)
+
+[sub_resource type="LabelSettings" id="LabelSettings_hy6y3"]
+line_spacing = 0.0
+font_size = 10
+
+[node name="LevelComplete" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_4sait")
+
+[node name="Background" type="ColorRect" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0, 0, 0, 1)
+
+[node name="CenterContainer" type="CenterContainer" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="CenterContainer"]
+layout_mode = 2
+
+[node name="VictoryLabel" type="Label" parent="CenterContainer/VBoxContainer"]
+layout_mode = 2
+theme_override_colors/font_color = Color(1, 0, 0, 1)
+theme_override_font_sizes/font_size = 31
+text = "ESCAPED!"
+label_settings = SubResource("LabelSettings_4sait")
+horizontal_alignment = 1
+
+[node name="Spacer" type="Control" parent="CenterContainer/VBoxContainer"]
+custom_minimum_size = Vector2(0, 10)
+layout_mode = 2
+
+[node name="VictoryLabel2" type="Label" parent="CenterContainer/VBoxContainer"]
+layout_mode = 2
+theme_override_colors/font_color = Color(1, 0, 0, 1)
+theme_override_font_sizes/font_size = 31
+text = "But what lies further down the well?
+Your curiosity gnaws at you...
+You must find the truth."
+label_settings = SubResource("LabelSettings_hy6y3")
+horizontal_alignment = 1
+
+[node name="Spacer2" type="Control" parent="CenterContainer/VBoxContainer"]
+custom_minimum_size = Vector2(0, 15)
+layout_mode = 2
+
+[node name="ContinueButton" type="Button" parent="CenterContainer/VBoxContainer"]
+unique_name_in_owner = true
+layout_mode = 2
+text = "Next Level"
+
+[node name="MainMenuButton" type="Button" parent="CenterContainer/VBoxContainer"]
+unique_name_in_owner = true
+layout_mode = 2
+text = "Main Menu
+"
+
+[node name="QuitButton" type="Button" parent="CenterContainer/VBoxContainer"]
+unique_name_in_owner = true
+layout_mode = 2
+text = "Quit
+"
+
+[node name="SuccessMusic" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("2_4sait")
+volume_db = 0.623
+pitch_scale = 0.37
+autoplay = true

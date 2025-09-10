@@ -1,0 +1,79 @@
+[gd_scene load_steps=6 format=3 uid="uid://b0cbnhr7phiph"]
+
+[ext_resource type="MeshLibrary" uid="uid://cnx0qgayriil2" path="res://tiles/tileset.tres" id="2_ms5c5"]
+[ext_resource type="PackedScene" uid="uid://bpt4ifnqk7rui" path="res://wallPieces/wall.tscn" id="3_kaw43"]
+[ext_resource type="PackedScene" uid="uid://dc6b77ldnro6k" path="res://wallPieces/cornerIn.tscn" id="4_6ym8j"]
+[ext_resource type="Script" uid="uid://bkn3x6pkn7dfn" path="res://roomTypes/corridorCleanup.gd" id="5_c0rae"]
+
+[sub_resource type="NavigationMesh" id="NavigationMesh_5xu85"]
+vertices = PackedVector3Array(2.75, -0.75, -3.25, 1.25, -0.75, -1.75, 1.5, -0.75, -1.25, 2, -0.75, -1, 3.5, -0.75, -2.5, 3.25, -0.75, -3, 3.5, -0.75, 2.75, 4.25, -0.75, 2.75, 4.25, -0.75, 2, 2, -0.75, 0.5, 2, -0.75, 1.25, 4.75, -0.75, 1.75, 5, -0.75, 1.25, 5.75, -0.75, 1.25, 5.75, -0.75, 0.5, 5, -0.75, -1, 4.75, -0.75, -1.5, 4.25, -0.75, -1.75, 4.25, -0.75, -2.5, 2, -0.75, -0.25, 0, -0.75, -5.5, -1.5, -0.75, -4.75, -2, -0.75, -4, 2.75, -0.75, -4, 2, -0.75, -4, 0.5, -0.75, -1.75, 1.75, -0.75, -4.5, 1.25, -0.75, -4.75, 1.25, -0.75, -5.5, 0.5, -0.75, -5.5, -2.75, -0.75, -4, -2.75, -0.75, -3.25, -1, -0.75, -1.75, -0.25, -0.75, -1.75, 5.75, -0.75, -4.76837e-07, 5.75, -0.75, -1, -1, -0.75, -5.5, 1.75, -0.75, 1.5, 3.25, -0.75, 3, -3, -0.75, -3, -1.25, -0.75, -1.5, -2.5, -0.75, 3.5, -1, -0.75, 2, -1.25, -0.75, 1.5, -1.75, -0.75, 1.25, -3.25, -0.75, 2.75, -3, -0.75, 3.25, -3.5, -0.75, -2.5, -4.25, -0.75, -2.5, -4.25, -0.75, -1.75, -1.75, -0.75, -4.76837e-07, -1.75, -0.75, -1, -1.75, -0.75, 4.25, 0, -0.75, 2, -2.5, -0.75, 4.25, 2.75, -0.75, 3.5, 1.25, -0.75, 2, 0.5, -0.75, 2, 2, -0.75, 4.25, 2.75, -0.75, 4.25, -1.5, -0.75, 4.75, -1, -0.75, 5, 0.5, -0.75, 5.75, 1.25, -0.75, 5.75, 1.25, -0.75, 5, 1.75, -0.75, 4.75, -1.75, -0.75, 0.5, -5.5, -0.75, 0.5, -5.5, -0.75, 1.25, -4.75, -0.75, 1.5, -4.25, -0.75, 2, -4.25, -0.75, 2.75, -1, -0.75, 5.75, 0, -0.75, 5.75, -4.75, -0.75, -1.25, -5.5, -0.75, -1, -5.5, -0.75, -4.76837e-07)
+polygons = [PackedInt32Array(5, 4, 0), PackedInt32Array(0, 4, 3), PackedInt32Array(0, 3, 2), PackedInt32Array(0, 2, 1), PackedInt32Array(7, 6, 8), PackedInt32Array(8, 6, 10), PackedInt32Array(8, 10, 9), PackedInt32Array(12, 11, 8), PackedInt32Array(14, 13, 12), PackedInt32Array(17, 16, 15), PackedInt32Array(18, 17, 4), PackedInt32Array(4, 17, 3), PackedInt32Array(3, 17, 19), PackedInt32Array(22, 21, 20), PackedInt32Array(23, 0, 24), PackedInt32Array(24, 0, 1), PackedInt32Array(24, 1, 25), PackedInt32Array(27, 26, 24), PackedInt32Array(29, 28, 27), PackedInt32Array(30, 22, 31), PackedInt32Array(31, 22, 32), PackedInt32Array(32, 22, 33), PackedInt32Array(15, 35, 34), PackedInt32Array(14, 12, 34), PackedInt32Array(34, 12, 15), PackedInt32Array(20, 29, 27), PackedInt32Array(21, 36, 20), PackedInt32Array(6, 38, 10), PackedInt32Array(10, 38, 37), PackedInt32Array(15, 12, 17), PackedInt32Array(17, 12, 8), PackedInt32Array(17, 8, 9), PackedInt32Array(17, 9, 19), PackedInt32Array(27, 24, 20), PackedInt32Array(20, 24, 25), PackedInt32Array(20, 25, 33), PackedInt32Array(20, 33, 22), PackedInt32Array(32, 40, 31), PackedInt32Array(31, 40, 39), PackedInt32Array(46, 45, 41), PackedInt32Array(41, 45, 44), PackedInt32Array(41, 44, 43), PackedInt32Array(41, 43, 42), PackedInt32Array(48, 47, 49), PackedInt32Array(49, 47, 51), PackedInt32Array(49, 51, 50), PackedInt32Array(54, 41, 52), PackedInt32Array(52, 41, 42), PackedInt32Array(52, 42, 53), PackedInt32Array(59, 58, 55), PackedInt32Array(55, 58, 56), PackedInt32Array(56, 58, 57), PackedInt32Array(61, 60, 52), PackedInt32Array(64, 63, 62), PackedInt32Array(58, 65, 64), PackedInt32Array(66, 44, 45), PackedInt32Array(69, 68, 67), PackedInt32Array(45, 71, 70), PackedInt32Array(73, 72, 61), PackedInt32Array(76, 75, 74), PackedInt32Array(62, 73, 64), PackedInt32Array(64, 73, 61), PackedInt32Array(69, 67, 76), PackedInt32Array(45, 70, 69), PackedInt32Array(76, 74, 49), PackedInt32Array(55, 56, 38), PackedInt32Array(38, 56, 37), PackedInt32Array(66, 45, 50), PackedInt32Array(50, 45, 69), PackedInt32Array(50, 69, 76), PackedInt32Array(50, 76, 49), PackedInt32Array(57, 58, 53), PackedInt32Array(53, 58, 64), PackedInt32Array(53, 64, 61), PackedInt32Array(53, 61, 52), PackedInt32Array(47, 39, 51), PackedInt32Array(51, 39, 40)]
+agent_radius = 1.0
+edge_max_length = 1.0
+
+[node name="SmallerRoomPillar" type="Node3D"]
+transform = Transform3D(1, -1.11005e-05, -0.000187571, 1.08938e-05, 1, -0.00104794, 0.000187583, 0.00104794, 1, 0, 0, 0)
+script = ExtResource("5_c0rae")
+voxel_scale = Vector3(10.505, 5, 10.505)
+metadata/_custom_type_script = "uid://dxngah8a6spom"
+
+[node name="NavigationRegion3D" type="NavigationRegion3D" parent="."]
+navigation_mesh = SubResource("NavigationMesh_5xu85")
+
+[node name="GridMap" type="GridMap" parent="NavigationRegion3D"]
+transform = Transform3D(1.5, 8.52651e-13, -2.91038e-11, -9.66338e-13, 1.5, -1.16415e-10, 2.91038e-11, 1.16415e-10, 1.5, -0.75, -1.25, -0.75)
+mesh_library = ExtResource("2_ms5c5")
+cell_size = Vector3(1, 1, 1)
+cell_center_y = false
+data = {
+"cells": PackedInt32Array(65533, 65535, 1048579, 65533, 1, 655363, 65535, 3, 655363, 1, 3, 1441795, 3, 1, 1441795, 3, 65535, 3, 1, 65534, 655362, 2, 65535, 655362, 2, 65534, 3, 0, 65534, 655362, 2, 0, 655362, 0, 2, 1441794, 65535, 2, 1441794, 65534, 1, 655362, 65534, 0, 1048578, 65534, 65535, 1048578, 65535, 65534, 2, 1, 2, 2, 2, 2, 1441795, 2, 1, 1441794, 3, 0, 1048578, 0, 3, 1048578, 65533, 0, 1048578, 1, 65533, 3, 65535, 65533, 1048579, 0, 65533, 1048578, 65534, 2, 655363, 65534, 65534, 1048579, 65534, 65533, 1048577, 65533, 65534, 1048577, 65533, 2, 655361, 65534, 3, 655361, 2, 3, 1441793, 3, 2, 1441793, 3, 65534, 1, 2, 65533, 1, 1, 65535, 655363, 1, 1, 1048579, 65535, 1, 3, 65535, 65535, 1441795, 0, 1, 0, 65535, 0, 1441792, 0, 65535, 655360, 1, 0, 1048576, 0, 0, 655362)
+}
+metadata/_editor_floor_ = Vector3(0, 0, 0)
+
+[node name="DOOR?_LEFT" type="Node3D" parent="NavigationRegion3D/GridMap"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.5, 0, 0.5)
+
+[node name="Wall" parent="NavigationRegion3D/GridMap/DOOR?_LEFT" instance=ExtResource("3_kaw43")]
+transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 3, 0, 0)
+
+[node name="Corner1" parent="NavigationRegion3D/GridMap/DOOR?_LEFT" instance=ExtResource("4_6ym8j")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3, 0, -1)
+
+[node name="Corner2" parent="NavigationRegion3D/GridMap/DOOR?_LEFT" instance=ExtResource("4_6ym8j")]
+transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 3, 0, 1)
+
+[node name="DOOR?_FRONT" type="Node3D" parent="NavigationRegion3D/GridMap"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.5, 1.25, -0.5)
+
+[node name="Wall" parent="NavigationRegion3D/GridMap/DOOR?_FRONT" instance=ExtResource("3_kaw43")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.08616e-07, -1.25, -3)
+
+[node name="Corner1" parent="NavigationRegion3D/GridMap/DOOR?_FRONT" instance=ExtResource("4_6ym8j")]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -1, -1.25, -3)
+
+[node name="Corner2" parent="NavigationRegion3D/GridMap/DOOR?_FRONT" instance=ExtResource("4_6ym8j")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1, -1.25, -3)
+
+[node name="DOOR?_RIGHT" type="Node3D" parent="NavigationRegion3D/GridMap"]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -0.5, 1.25, 0.5)
+
+[node name="Wall" parent="NavigationRegion3D/GridMap/DOOR?_RIGHT" instance=ExtResource("3_kaw43")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.08616e-07, -1.25, -3)
+
+[node name="Corner1" parent="NavigationRegion3D/GridMap/DOOR?_RIGHT" instance=ExtResource("4_6ym8j")]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -1, -1.25, -3)
+
+[node name="Corner2" parent="NavigationRegion3D/GridMap/DOOR?_RIGHT" instance=ExtResource("4_6ym8j")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1, -1.25, -3)
+
+[node name="DOOR_BACK" type="Node3D" parent="NavigationRegion3D/GridMap"]
+transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 0.5, 1.25, 1.5)
+
+[node name="Wall" parent="NavigationRegion3D/GridMap/DOOR_BACK" instance=ExtResource("3_kaw43")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.08616e-07, -1.25, -3)
+
+[node name="Corner1" parent="NavigationRegion3D/GridMap/DOOR_BACK" instance=ExtResource("4_6ym8j")]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -1, -1.25, -3)
+
+[node name="Corner2" parent="NavigationRegion3D/GridMap/DOOR_BACK" instance=ExtResource("4_6ym8j")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1, -1.25, -3)

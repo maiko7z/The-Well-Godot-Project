@@ -1,0 +1,196 @@
+[gd_scene load_steps=6 format=3 uid="uid://chu4ft88k3ahk"]
+
+[ext_resource type="AudioStream" uid="uid://6r05nimratie" path="res://audio/Flashlight.mp3" id="1_4flbx"]
+[ext_resource type="AudioStream" uid="uid://bnnssgjv4sunn" path="res://audio/Footstep.ogg" id="2_onrkg"]
+
+[sub_resource type="GDScript" id="GDScript_sh265"]
+resource_name = "PlayerControl"
+script/source = "extends CharacterBody3D
+class_name Player
+
+var speed
+const WALK_SPEED = 5.0
+const SPRINT_SPEED = 8.0
+const CROUCH_SPEED = 2.0
+const JUMP_VELOCITY = 4.8
+const SENSITIVITY = 0.004
+
+#Bobbing variables
+const BOB_FREQ = 2.4
+const BOB_AMP = 0.08
+var t_bob = 0.0
+
+#FOV variables
+const BASE_FOV = 75.0
+const FOV_CHANGE = 1.5
+
+# Get the gravity from the project settings to be synced with RigidBody nodes.
+var gravity = 9.8
+
+#Sprint / crouch checks
+var isCrouching = false
+var isSprinting = false
+
+
+@onready var head = $Head
+@onready var camera = $Head/Camera3D
+@onready var light1 = $Head/SpotLight3D
+@onready var light2 = $Head/SpotLight3D2
+@onready var flashSound = $Head/FlashlightSound
+@onready var footstepSound: AudioStreamPlayer = $Head/StepSound
+var prevStep := Vector3.ZERO
+
+func _ready():
+	Input.mouse_mode = Input.MOUSE_MODE_CAPTURED
+	prevStep = Vector3(global_position.x, 0.0, global_position.z)
+
+
+
+func _unhandled_input(event):
+	if event is InputEventMouseMotion:
+		head.rotate_y(-event.relative.x * SENSITIVITY)
+		camera.rotate_x(-event.relative.y * SENSITIVITY)
+		camera.rotation.x = clamp(camera.rotation.x, deg_to_rad(-40), deg_to_rad(60))
+
+
+func _physics_process(delta):
+	#Gravity handler
+	if not is_on_floor():
+		velocity.y -= gravity * delta
+
+	#Jump input
+	if Input.is_action_just_pressed(\"jump\") and is_on_floor():
+		velocity.y = JUMP_VELOCITY
+	
+	#Crouch and sprint handler
+	if Input.is_action_pressed(\"crouch\") and is_on_floor():
+		speed = CROUCH_SPEED
+		if not isCrouching:
+			var tween = create_tween()
+			tween.tween_property(camera, \"v_offset\", -0.5, 0.3).set_trans(Tween.TRANS_CUBIC)
+		isCrouching = true
+		isSprinting = false
+	elif Input.is_action_pressed(\"sprint\"):
+		if isCrouching:
+			var tween = create_tween()
+			tween.tween_property(camera, \"v_offset\", 0, 0.3).set_trans(Tween.TRANS_CUBIC)
+		speed = SPRINT_SPEED
+		isCrouching = false
+		isSprinting = true
+	else:
+		if isCrouching:
+			var tween = create_tween()
+			tween.tween_property(camera, \"v_offset\", 0, 0.3).set_trans(Tween.TRANS_CUBIC)
+		isCrouching = false
+		isSprinting = false
+		speed = WALK_SPEED
+	
+	#Light input (toggle)
+	if Input.is_action_just_pressed(\"light\"):
+		if light1.visible:
+			light1.visible = false;
+			light2.visible = false;
+			flashSound.stop()
+			flashSound.pitch_scale = 1.2
+			flashSound.volume_db = -18.0
+			flashSound.play()
+		else:
+			light1.visible = true;
+			light2.visible = true;
+			flashSound.stop()
+			flashSound.pitch_scale = 1.5
+			flashSound.volume_db = -10.0
+			flashSound.play()
+
+	# Footsteps
+	var xz_position := Vector3(global_position.x, 0.0, global_position.z)
+	if prevStep.distance_to(xz_position) > 1.5 and not isCrouching:
+		prevStep = xz_position
+		footstepSound.play()
+
+	#Input direction / deceleration (tutorial code)
+	var input_dir = Input.get_vector(\"left\", \"right\", \"up\", \"down\")
+	var direction = (head.transform.basis * transform.basis * Vector3(input_dir.x, 0, input_dir.y)).normalized()
+	if is_on_floor():
+		if direction:
+			velocity.x = direction.x * speed
+			velocity.z = direction.z * speed
+		else:
+			velocity.x = lerp(velocity.x, direction.x * speed, delta * 7.0)
+			velocity.z = lerp(velocity.z, direction.z * speed, delta * 7.0)
+	else:
+		velocity.x = lerp(velocity.x, direction.x * speed, delta * 3.0)
+		velocity.z = lerp(velocity.z, direction.z * speed, delta * 3.0)
+	
+	#Bobbing
+	t_bob += delta * velocity.length() * float(is_on_floor())
+	camera.transform.origin = _headbob(t_bob)
+	
+	#FOV
+	var velocity_clamped = clamp(velocity.length(), 0.5, SPRINT_SPEED * 2)
+	var target_fov = BASE_FOV + FOV_CHANGE * velocity_clamped
+	camera.fov = lerp(camera.fov, target_fov, delta * 8.0)
+	
+	move_and_slide()
+
+
+func _headbob(time) -> Vector3:
+	var pos = Vector3.ZERO
+	pos.y = sin(time * BOB_FREQ) * BOB_AMP
+	pos.x = cos(time * BOB_FREQ / 2) * BOB_AMP
+	return pos
+"
+
+[sub_resource type="CapsuleShape3D" id="CapsuleShape3D_yab5q"]
+
+[sub_resource type="AudioStreamRandomizer" id="AudioStreamRandomizer_i3pqv"]
+random_pitch = 1.2
+random_volume_offset_db = 4.0
+streams_count = 1
+stream_0/stream = ExtResource("2_onrkg")
+
+[node name="Player" type="CharacterBody3D" groups=["player"]]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.712204, 0.29932, 5.16054)
+collision_layer = 2
+collision_mask = 5
+script = SubResource("GDScript_sh265")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.522293, 0)
+shape = SubResource("CapsuleShape3D_yab5q")
+
+[node name="Head" type="Node3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.1938, 0)
+
+[node name="Camera3D" type="Camera3D" parent="Head"]
+
+[node name="SpotLight3D" type="SpotLight3D" parent="Head"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.0988146, 0.400088)
+light_color = Color(0.765623, 0.766371, 1, 1)
+shadow_enabled = true
+spot_range = 14.6545
+spot_angle = 34.04
+
+[node name="SpotLight3D2" type="SpotLight3D" parent="Head"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.0988146, 0.396744)
+light_color = Color(0.765623, 0.766371, 1, 1)
+light_energy = 0.5
+shadow_enabled = true
+spot_range = 6.244
+spot_angle = 70.77
+
+[node name="OmniLight3D" type="OmniLight3D" parent="Head"]
+light_color = Color(0.764706, 0.764706, 1, 1)
+light_energy = 0.25
+omni_range = 2.446
+
+[node name="FlashlightSound" type="AudioStreamPlayer" parent="Head"]
+stream = ExtResource("1_4flbx")
+volume_db = -12.418
+bus = &"ReverbAmbience"
+
+[node name="StepSound" type="AudioStreamPlayer" parent="Head"]
+stream = SubResource("AudioStreamRandomizer_i3pqv")
+volume_db = -15.433
+pitch_scale = 0.28
+bus = &"ReverbAmbience"

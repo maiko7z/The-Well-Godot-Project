@@ -1,0 +1,44 @@
+[gd_scene load_steps=3 format=3 uid="uid://dsak2yq0asty0"]
+
+[ext_resource type="Texture2D" uid="uid://doyeyl45c6wx4" path="res://WPI LOGO.png" id="1_7x64a"]
+[ext_resource type="Script" uid="uid://c1m0285hc6vqu" path="res://screens/splash_screen_manager.gd" id="1_h21qq"]
+
+[node name="Splash Screen Manager" type="Control"]
+layout_mode = 3
+anchors_preset = 0
+offset_left = 175.0
+offset_top = 134.0
+offset_right = 215.0
+offset_bottom = 174.0
+script = ExtResource("1_h21qq")
+
+[node name="ColorRect" type="ColorRect" parent="."]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = -4.389
+anchor_top = -3.35
+anchor_right = 7.648
+anchor_bottom = 4.658
+offset_left = 679.56
+offset_top = 143.0
+offset_right = 238.08
+offset_bottom = -137.32
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0, 0, 0, 1)
+
+[node name="CenterContainer" type="CenterContainer" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -45.0
+offset_top = -22.0
+offset_right = 129.0
+offset_bottom = 21.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="TextureRect" type="TextureRect" parent="CenterContainer"]
+layout_mode = 2
+texture = ExtResource("1_7x64a")

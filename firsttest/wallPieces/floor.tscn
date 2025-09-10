@@ -1,0 +1,56 @@
+[gd_scene load_steps=7 format=4 uid="uid://deqypvuv47hwp"]
+
+[ext_resource type="Texture2D" uid="uid://dlxwmov67hwmd" path="res://tiles/tileset_atlas.png" id="1_bhfq4"]
+[ext_resource type="Texture2D" uid="uid://c1i2nekrnvpu5" path="res://tiles/tileset_atlas_n.png" id="2_dqn7s"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_b128f"]
+resource_name = "Material.001"
+cull_mode = 2
+albedo_texture = ExtResource("1_bhfq4")
+normal_enabled = true
+normal_texture = ExtResource("2_dqn7s")
+texture_filter = 2
+
+[sub_resource type="ArrayMesh" id="ArrayMesh_qa15b"]
+_surfaces = [{
+"aabb": AABB(-0.5, 0, -0.5, 1, 2.5, 1),
+"format": 34896613377,
+"index_count": 12,
+"index_data": PackedByteArray("AAABAAIAAAADAAEABAAFAAYABAAHAAUA"),
+"name": "Material.001",
+"primitive": 3,
+"uv_scale": Vector4(0, 0, 0, 0),
+"vertex_count": 8,
+"vertex_data": PackedByteArray("AAAAAP//AAD//wAAAAAAAP//AAD//wAAAAAAAAAAAAAAAP//AAAAAP///////wAA/////wAAAAAAAP////8AAA==")
+}]
+blend_shape_mode = 0
+
+[sub_resource type="ArrayMesh" id="ArrayMesh_xhcon"]
+resource_name = "tileset_Plane_002"
+_surfaces = [{
+"aabb": AABB(-0.5, 0, -0.5, 1, 2.5, 1),
+"attribute_data": PackedByteArray("/3//f///AAD///9//38AAAAAn3//fwAA/3//fwAAAAA="),
+"format": 34896613399,
+"index_count": 12,
+"index_data": PackedByteArray("AAABAAIAAAADAAEABAAFAAYABAAHAAUA"),
+"material": SubResource("StandardMaterial3D_b128f"),
+"name": "Material.001",
+"primitive": 3,
+"uv_scale": Vector4(0, 0, 0, 0),
+"vertex_count": 8,
+"vertex_data": PackedByteArray("AAAAAP///7///wAAAAD/v///AAD///+/AAAAAAAA/78AAP//AAD/v/////////+//////wAA/78AAP//////v////3////9/////f////38XAC+AFwAvgC8AXoAAAP9/")
+}]
+blend_shape_mode = 0
+shadow_mesh = SubResource("ArrayMesh_qa15b")
+
+[sub_resource type="ConcavePolygonShape3D" id="ConcavePolygonShape3D_a3bwd"]
+data = PackedVector3Array(-0.5, 0, 0.5, 0.5, 0, -0.5, 0.5, 0, 0.5, -0.5, 0, 0.5, -0.5, 0, -0.5, 0.5, 0, -0.5, -0.5, 2.5, -0.5, 0.5, 2.5, 0.5, 0.5, 2.5, -0.5, -0.5, 2.5, -0.5, -0.5, 2.5, 0.5, 0.5, 2.5, 0.5)
+
+[node name="floor" type="MeshInstance3D"]
+mesh = SubResource("ArrayMesh_xhcon")
+skeleton = NodePath("")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="."]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="StaticBody3D"]
+shape = SubResource("ConcavePolygonShape3D_a3bwd")
