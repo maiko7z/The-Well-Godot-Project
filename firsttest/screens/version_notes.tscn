@@ -1,0 +1,47 @@
+[gd_scene load_steps=2 format=3 uid="uid://1kmifl2iba5r"]
+
+[ext_resource type="Script" uid="uid://0ub84h30x8ew" path="res://screens/version_notes.gd" id="1_x2x1v"]
+
+[node name="Version Notes" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 1.0
+offset_top = 1.0
+offset_right = 1.0
+offset_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_x2x1v")
+
+[node name="ScrollContainer" type="ScrollContainer" parent="."]
+layout_mode = 0
+offset_left = 66.0
+offset_top = 45.0
+offset_right = 385.0
+offset_bottom = 230.0
+
+[node name="Label" type="Label" parent="ScrollContainer"]
+layout_mode = 2
+text = "Build 0.0.1 - Basic Dungeon Generation
+and player movement
+Build 0.0.2 - Added unique end room 
+to complete level
+Build 0.0.3 - Added enemy that tracks 
+player
+Build 0.0.4 - Added \"Game Over\" and 
+\"Victory\" Screens"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Back Button" type="Button" parent="."]
+layout_mode = 0
+offset_left = 204.0
+offset_top = 275.0
+offset_right = 249.0
+offset_bottom = 306.0
+text = "Back"
+
+[connection signal="pressed" from="Back Button" to="." method="_on_back_button_pressed"]
+[connection signal="pressed" from="Back Button" to="." method="_on_button_pressed"]
