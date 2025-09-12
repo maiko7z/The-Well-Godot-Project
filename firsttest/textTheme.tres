@@ -1,0 +1,8 @@
+[gd_resource type="Theme" load_steps=2 format=3 uid="uid://cxjwnkpltc1jx"]
+
+[ext_resource type="FontFile" uid="uid://b0rphhel08piw" path="res://images/fonts/Tagesschrift-Regular.ttf" id="1_c6jbv"]
+
+[resource]
+default_font = ExtResource("1_c6jbv")
+Control/colors/font = Color(0, 0, 0, 1)
+Control/colors/font_shadow_color = Color(0, 0, 0, 1)
