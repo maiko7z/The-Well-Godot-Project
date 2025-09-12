@@ -1,0 +1,117 @@
+[gd_scene load_steps=12 format=4 uid="uid://88hmwx1qw4rk"]
+
+[ext_resource type="Texture2D" uid="uid://c8yb3rsssuu70" path="res://tiles_traps/trap_tiles_FIN atlas rockeye closed.png" id="1_g560b"]
+[ext_resource type="Texture2D" uid="uid://cy6j2uxby00ps" path="res://tiles_traps/trap_tiles_FIN rockeye closed atlas_n.png" id="2_2g8fb"]
+[ext_resource type="Texture2D" uid="uid://cmf8cf4n5u8ct" path="res://tiles_traps/trap_tiles_FIN rockeye opened atlas.png" id="3_s6v35"]
+[ext_resource type="Texture2D" uid="uid://cplee6egufjg5" path="res://tiles_traps/trap_tiles_FIN rockeye open atlas_n.png" id="4_vufry"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_bu7qn"]
+resource_name = "Material.001"
+cull_mode = 2
+albedo_texture = ExtResource("1_g560b")
+normal_enabled = true
+normal_texture = ExtResource("2_2g8fb")
+texture_filter = 2
+
+[sub_resource type="ArrayMesh" id="ArrayMesh_pmrxa"]
+_surfaces = [{
+"aabb": AABB(-0.5, 0, -0.5, 1, 2.5, 1),
+"format": 34896613377,
+"index_count": 30,
+"index_data": PackedByteArray("AAABAAIAAAADAAEAAwAEAAEAAwAFAAQABQAGAAQABQAHAAYABwAIAAYABwAJAAgACQAKAAgACQALAAoA"),
+"name": "Material.001",
+"primitive": 3,
+"uv_scale": Vector4(0, 0, 0, 0),
+"vertex_count": 12,
+"vertex_data": PackedByteArray("AAAAAP//AAD//wAAAAAAAP//AAD//wAAAAAAAAAAAAD//2ZmAAAAAAAAZmYAAAAA///MzAAAAAAAAMzMAAAAAP//////fwAAAAD///9/AAD///////8AAAAA/////wAA")
+}]
+blend_shape_mode = 0
+
+[sub_resource type="ArrayMesh" id="ArrayMesh_dbva8"]
+resource_name = "trap_tiles_Plane"
+_surfaces = [{
+"aabb": AABB(-0.5, 0, -0.5, 1, 2.5, 1),
+"attribute_data": PackedByteArray("/3//f///AAD///9//38AAAAA/3//fwAA/3//fwAAAAAAAP///3//f/9///8AAP9/AAD/f/9/AAD/f/9/AAAAAAAA/z//fwAA/3//PwAAAAA="),
+"format": 34896613399,
+"index_count": 30,
+"index_data": PackedByteArray("AAABAAIAAAADAAEABAAFAAYABAAHAAUACAAJAAoACAALAAkADAANAA4ADAAPAA0AEAARABIAEAATABEA"),
+"material": SubResource("StandardMaterial3D_bu7qn"),
+"name": "Material.001",
+"primitive": 3,
+"uv_scale": Vector4(0, 0, 0, 0),
+"vertex_count": 20,
+"vertex_data": PackedByteArray("AAAAAP///7///wAAAAD/v///AAD///+/AAAAAAAA/78AAAAAAAAAgP//ZmYAAACA//8AAAAAAIAAAGZmAAAAgAAAZmYAAACA///MzAAAAID//2ZmAAAAgAAAzMwAAACAAADMzAAA/5///////3//n///zMwAAP+fAAD///9//58AAP///3//v/////////+///////9//78AAP//////v////3////9/////f////3//f////3////9/////f////3////9/////f////3///wAA/38AAP9/AAD/fwAA/38AAP9/AAD/fwAA/38AAP9/")
+}]
+blend_shape_mode = 0
+shadow_mesh = SubResource("ArrayMesh_pmrxa")
+
+[sub_resource type="ConcavePolygonShape3D" id="ConcavePolygonShape3D_y6qi3"]
+data = PackedVector3Array(-0.5, 0, 0.5, 0.5, 0, -0.5, 0.5, 0, 0.5, -0.5, 0, 0.5, -0.5, 0, -0.5, 0.5, 0, -0.5, -0.5, 0, -0.5, 0.5, 1, -0.5, 0.5, 0, -0.5, -0.5, 0, -0.5, -0.5, 1, -0.5, 0.5, 1, -0.5, -0.5, 1, -0.5, 0.5, 2, -0.5, 0.5, 1, -0.5, -0.5, 1, -0.5, -0.5, 2, -0.5, 0.5, 2, -0.5, -0.5, 2, -0.5, 0.5, 2.5, 0, 0.5, 2, -0.5, -0.5, 2, -0.5, -0.5, 2.5, 0, 0.5, 2.5, 0, -0.5, 2.5, 0, 0.5, 2.5, 0.5, 0.5, 2.5, 0, -0.5, 2.5, 0, -0.5, 2.5, 0.5, 0.5, 2.5, 0.5)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_wrwyy"]
+resource_name = "Material.002"
+cull_mode = 2
+albedo_texture = ExtResource("3_s6v35")
+normal_enabled = true
+normal_texture = ExtResource("4_vufry")
+texture_filter = 2
+
+[sub_resource type="ArrayMesh" id="ArrayMesh_lgfn2"]
+_surfaces = [{
+"aabb": AABB(-0.5, 0, -0.5, 1, 2.5, 1),
+"format": 34896613377,
+"index_count": 30,
+"index_data": PackedByteArray("AAABAAIAAAADAAEAAwAEAAEAAwAFAAQABQAGAAQABQAHAAYABwAIAAYABwAJAAgACQAKAAgACQALAAoA"),
+"name": "Material.002",
+"primitive": 3,
+"uv_scale": Vector4(0, 0, 0, 0),
+"vertex_count": 12,
+"vertex_data": PackedByteArray("AAAAAP//AAD//wAAAAAAAP//AAD//wAAAAAAAAAAAAD//2ZmAAAAAAAAZmYAAAAA///MzAAAAAAAAMzMAAAAAP//////fwAAAAD///9/AAD///////8AAAAA/////wAA")
+}]
+blend_shape_mode = 0
+
+[sub_resource type="ArrayMesh" id="ArrayMesh_gfk4p"]
+resource_name = "trap_tiles_Plane_003"
+_surfaces = [{
+"aabb": AABB(-0.5, 0, -0.5, 1, 2.5, 1),
+"attribute_data": PackedByteArray("/3//f///AAD///9//38AAAAA/3//fwAA/3//fwAAAAAAAP///3//f/9///8AAP9/AAD/f/9/AAD/f/9/AAAAAAAA/z//fwAA/3//PwAAAAA="),
+"format": 34896613399,
+"index_count": 30,
+"index_data": PackedByteArray("AAABAAIAAAADAAEABAAFAAYABAAHAAUACAAJAAoACAALAAkADAANAA4ADAAPAA0AEAARABIAEAATABEA"),
+"material": SubResource("StandardMaterial3D_wrwyy"),
+"name": "Material.002",
+"primitive": 3,
+"uv_scale": Vector4(0, 0, 0, 0),
+"vertex_count": 20,
+"vertex_data": PackedByteArray("AAAAAP///7///wAAAAD/v///AAD///+/AAAAAAAA/78AAAAAAAAAgP//ZmYAAACA//8AAAAAAIAAAGZmAAAAgAAAZmYAAACA///MzAAAAID//2ZmAAAAgAAAzMwAAACAAADMzAAA/5///////3//n///zMwAAP+fAAD///9//58AAP///3//v/////////+///////9//78AAP//////v////3////9/////f////3//f////3////9/////f////3////9/////f////3///wAA/38AAP9/AAD/fwAA/38AAP9/AAD/fwAA/38AAP9/")
+}]
+blend_shape_mode = 0
+shadow_mesh = SubResource("ArrayMesh_lgfn2")
+
+[node name="Rockeye_Trap" type="Node3D"]
+
+[node name="EyeClosed" type="MeshInstance3D" parent="."]
+mesh = SubResource("ArrayMesh_dbva8")
+skeleton = NodePath("")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="EyeClosed"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="EyeClosed/StaticBody3D"]
+shape = SubResource("ConcavePolygonShape3D_y6qi3")
+
+[node name="EyeOpened" type="MeshInstance3D" parent="."]
+visible = false
+mesh = SubResource("ArrayMesh_gfk4p")
+skeleton = NodePath("")
+
+[node name="EyeLight1" type="SpotLight3D" parent="EyeOpened"]
+transform = Transform3D(-1, 0, 8.74228e-08, 0, 1, 0, -8.74228e-08, 0, -1, 0, 1.54076, -0.450962)
+light_color = Color(1, 0, 0, 1)
+spot_range = 2.0
+spot_angle = 90.0
+
+[node name="OmniLight3D" type="OmniLight3D" parent="EyeOpened"]
+transform = Transform3D(0.999992, -0.00397464, 0.000342005, 0.00397404, 0.999991, 0.00172457, -0.000348845, -0.0017232, 0.999999, 0, 1.541, -0.451)
+light_color = Color(1, 0, 0, 1)
+light_energy = 0.354
+omni_range = 1.0
