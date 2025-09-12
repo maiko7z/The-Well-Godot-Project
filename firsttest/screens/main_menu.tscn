@@ -1,7 +1,8 @@
-[gd_scene load_steps=3 format=3 uid="uid://dw2oiju4chjw7"]
+[gd_scene load_steps=4 format=3 uid="uid://dw2oiju4chjw7"]
 
 [ext_resource type="Script" uid="uid://dtkja878hsyft" path="res://screens/main_menu.gd" id="1_jf8mj"]
 [ext_resource type="AudioStream" uid="uid://cdrvmlt86xifl" path="res://audio/MainMenu.ogg" id="2_r5jgm"]
+[ext_resource type="Theme" uid="uid://cxjwnkpltc1jx" path="res://textTheme.tres" id="2_t3bh0"]
 
 [node name="Main Menu" type="Control"]
 layout_mode = 3
@@ -21,18 +22,22 @@ offset_bottom = 236.0
 
 [node name="Start" type="Button" parent="VBoxContainer"]
 layout_mode = 2
+theme = ExtResource("2_t3bh0")
 text = "Start"
 
 [node name="Version notes" type="Button" parent="VBoxContainer"]
 layout_mode = 2
+theme = ExtResource("2_t3bh0")
 text = "Version Notes"
 
 [node name="Credits" type="Button" parent="VBoxContainer"]
 layout_mode = 2
+theme = ExtResource("2_t3bh0")
 text = "Credits"
 
 [node name="Quit" type="Button" parent="VBoxContainer"]
 layout_mode = 2
+theme = ExtResource("2_t3bh0")
 text = "Quit"
 
 [node name="Ambience" type="AudioStreamPlayer" parent="."]

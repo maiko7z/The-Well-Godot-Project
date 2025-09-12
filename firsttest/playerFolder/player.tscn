@@ -1,7 +1,14 @@
-[gd_scene load_steps=6 format=3 uid="uid://chu4ft88k3ahk"]
+[gd_scene load_steps=13 format=3 uid="uid://chu4ft88k3ahk"]
 
 [ext_resource type="AudioStream" uid="uid://6r05nimratie" path="res://audio/Flashlight.mp3" id="1_4flbx"]
 [ext_resource type="AudioStream" uid="uid://bnnssgjv4sunn" path="res://audio/Footstep.ogg" id="2_onrkg"]
+[ext_resource type="AudioStream" uid="uid://b1kmeklk07f1i" path="res://audio/ExhaustionBreathing.mp3" id="3_6v6k0"]
+[ext_resource type="Texture2D" uid="uid://di0arg7lxvb7e" path="res://images/staminabar under.jpg" id="3_erkmy"]
+[ext_resource type="Texture2D" uid="uid://yx5ataeprkb1" path="res://images/Bar exterior.png" id="4_6v6k0"]
+[ext_resource type="Texture2D" uid="uid://cmra3ak7qgoog" path="res://images/staminabar.jpg" id="5_uwpkh"]
+[ext_resource type="Texture2D" uid="uid://cnj25goxf4wpd" path="res://images/healthbar under.jpg" id="6_vpon2"]
+[ext_resource type="Texture2D" uid="uid://mpu84f06fnyn" path="res://images/healthbar.jpg" id="7_kaacd"]
+[ext_resource type="Theme" uid="uid://cxjwnkpltc1jx" path="res://textTheme.tres" id="9_uwpkh"]
 
 [sub_resource type="GDScript" id="GDScript_sh265"]
 resource_name = "PlayerControl"
@@ -15,6 +22,16 @@ const CROUCH_SPEED = 2.0
 const JUMP_VELOCITY = 4.8
 const SENSITIVITY = 0.004
 
+#Stamina variables, I'm making these var instead of const because I think we can change them later with level modifiers :D
+var MAX_STAMINA = 100.0
+var CURRENT_STAMINA = 100.0
+var CROUCH_REGEN = 0.7
+var STAND_REGEN = 0.5
+var CROUCH_WALK_REGEN = 0.35
+var WALK_REGEN = 0.2
+var SPRINT_COST = 0.5
+var JUMP_COST = 20.0
+
 #Bobbing variables
 const BOB_FREQ = 2.4
 const BOB_AMP = 0.08
@@ -24,20 +41,26 @@ var t_bob = 0.0
 const BASE_FOV = 75.0
 const FOV_CHANGE = 1.5
 
-# Get the gravity from the project settings to be synced with RigidBody nodes.
+#Get the gravity from the project settings to be synced with RigidBody nodes.
 var gravity = 9.8
 
 #Sprint / crouch checks
 var isCrouching = false
 var isSprinting = false
+var isExhausted = false
 
-
+#Onready variables
 @onready var head = $Head
 @onready var camera = $Head/Camera3D
 @onready var light1 = $Head/SpotLight3D
 @onready var light2 = $Head/SpotLight3D2
 @onready var flashSound = $Head/FlashlightSound
 @onready var footstepSound: AudioStreamPlayer = $Head/StepSound
+@onready var staminaBar = $CanvasLayer/StaminaBar
+@onready var healthBar = $CanvasLayer/HealthBar
+@onready var exhaustionTimer = $ExhaustionTimer
+@onready var exhaustionSound = $Head/ExhaustionSound
+
 var prevStep := Vector3.ZERO
 
 func _ready():
@@ -52,15 +75,67 @@ func _unhandled_input(event):
 		camera.rotate_x(-event.relative.y * SENSITIVITY)
 		camera.rotation.x = clamp(camera.rotation.x, deg_to_rad(-40), deg_to_rad(60))
 
+func _manage_stamina(crouching: bool,sprinting: bool,moving: bool):
+	if moving:
+		if crouching:
+			if CURRENT_STAMINA < MAX_STAMINA:
+				if CURRENT_STAMINA + CROUCH_WALK_REGEN > 100.0:
+					CURRENT_STAMINA = 100.0
+				else:
+					CURRENT_STAMINA += CROUCH_WALK_REGEN
+		elif sprinting:
+			if CURRENT_STAMINA > 0.0:
+				if CURRENT_STAMINA - SPRINT_COST > 0.0:
+					CURRENT_STAMINA -= SPRINT_COST
+				else:
+					_exhaust()
+					CURRENT_STAMINA = 0.0
+		elif not sprinting and not crouching:
+			if CURRENT_STAMINA < MAX_STAMINA:
+				if CURRENT_STAMINA + WALK_REGEN > 100.0:
+					CURRENT_STAMINA = 100.0
+				else:
+					CURRENT_STAMINA += WALK_REGEN
+	elif not moving:
+		if crouching:
+			if CURRENT_STAMINA < MAX_STAMINA:
+				if CURRENT_STAMINA + CROUCH_REGEN > 100.0:
+					CURRENT_STAMINA = 100.0
+				else:
+					CURRENT_STAMINA += CROUCH_REGEN
+		elif not crouching:
+			if CURRENT_STAMINA < MAX_STAMINA:
+				if CURRENT_STAMINA + STAND_REGEN > 100.0:
+					CURRENT_STAMINA = 100.0
+				else:
+					CURRENT_STAMINA += STAND_REGEN
+	staminaBar.value = CURRENT_STAMINA
+	#print(CURRENT_STAMINA) debug stuff
 
+func _exhaust():
+	if not isExhausted:
+		isExhausted = true
+		exhaustionSound.play()
+		exhaustionTimer.start()
+
+func _exhaust_end():
+	exhaustionSound.stop()
+	isExhausted = false
+	
 func _physics_process(delta):
 	#Gravity handler
 	if not is_on_floor():
 		velocity.y -= gravity * delta
 
 	#Jump input
-	if Input.is_action_just_pressed(\"jump\") and is_on_floor():
+	if Input.is_action_just_pressed(\"jump\") and is_on_floor() and not isExhausted:
 		velocity.y = JUMP_VELOCITY
+		if CURRENT_STAMINA - 20.0 < 0:
+			CURRENT_STAMINA = 0.0
+			staminaBar.value = CURRENT_STAMINA
+			_exhaust()
+		else:
+			CURRENT_STAMINA -= JUMP_COST
 	
 	#Crouch and sprint handler
 	if Input.is_action_pressed(\"crouch\") and is_on_floor():
@@ -70,7 +145,8 @@ func _physics_process(delta):
 			tween.tween_property(camera, \"v_offset\", -0.5, 0.3).set_trans(Tween.TRANS_CUBIC)
 		isCrouching = true
 		isSprinting = false
-	elif Input.is_action_pressed(\"sprint\"):
+		
+	elif Input.is_action_pressed(\"sprint\") and CURRENT_STAMINA > 0 and not isExhausted:
 		if isCrouching:
 			var tween = create_tween()
 			tween.tween_property(camera, \"v_offset\", 0, 0.3).set_trans(Tween.TRANS_CUBIC)
@@ -84,7 +160,6 @@ func _physics_process(delta):
 		isCrouching = false
 		isSprinting = false
 		speed = WALK_SPEED
-	
 	#Light input (toggle)
 	if Input.is_action_just_pressed(\"light\"):
 		if light1.visible:
@@ -107,10 +182,18 @@ func _physics_process(delta):
 	if prevStep.distance_to(xz_position) > 1.5 and not isCrouching:
 		prevStep = xz_position
 		footstepSound.play()
-
+		
+	#Stamina system
 	#Input direction / deceleration (tutorial code)
 	var input_dir = Input.get_vector(\"left\", \"right\", \"up\", \"down\")
 	var direction = (head.transform.basis * transform.basis * Vector3(input_dir.x, 0, input_dir.y)).normalized()
+	if not isExhausted:
+		if direction:
+			_manage_stamina(isCrouching,isSprinting,true)
+		else:
+			_manage_stamina(isCrouching,isSprinting,false)
+	
+	
 	if is_on_floor():
 		if direction:
 			velocity.x = direction.x * speed
@@ -121,6 +204,8 @@ func _physics_process(delta):
 	else:
 		velocity.x = lerp(velocity.x, direction.x * speed, delta * 3.0)
 		velocity.z = lerp(velocity.z, direction.z * speed, delta * 3.0)
+	
+	
 	
 	#Bobbing
 	t_bob += delta * velocity.length() * float(is_on_floor())
@@ -194,3 +279,68 @@ stream = SubResource("AudioStreamRandomizer_i3pqv")
 volume_db = -15.433
 pitch_scale = 0.28
 bus = &"ReverbAmbience"
+
+[node name="ExhaustionSound" type="AudioStreamPlayer" parent="Head"]
+stream = ExtResource("3_6v6k0")
+volume_db = -4.685
+pitch_scale = 0.86
+bus = &"ReverbAmbience"
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="StaminaBar" type="TextureProgressBar" parent="CanvasLayer"]
+offset_left = 385.0
+offset_top = 252.0
+offset_right = 476.0
+offset_bottom = 275.0
+step = 0.1
+value = 100.0
+rounded = true
+nine_patch_stretch = true
+texture_under = ExtResource("3_erkmy")
+texture_over = ExtResource("4_6v6k0")
+texture_progress = ExtResource("5_uwpkh")
+
+[node name="HealthBar" type="TextureProgressBar" parent="CanvasLayer"]
+offset_left = 384.0
+offset_top = 291.0
+offset_right = 475.0
+offset_bottom = 314.0
+value = 100.0
+rounded = true
+nine_patch_stretch = true
+texture_under = ExtResource("6_vpon2")
+texture_over = ExtResource("4_6v6k0")
+texture_progress = ExtResource("7_kaacd")
+
+[node name="HealthLabel" type="RichTextLabel" parent="CanvasLayer"]
+offset_left = 405.0
+offset_top = 274.0
+offset_right = 458.0
+offset_bottom = 299.0
+theme = ExtResource("9_uwpkh")
+theme_override_colors/default_color = Color(1, 0, 0, 1)
+text = "Health"
+scroll_active = false
+horizontal_alignment = 1
+
+[node name="StaminaLabel" type="RichTextLabel" parent="CanvasLayer"]
+offset_left = 401.0
+offset_top = 234.0
+offset_right = 464.0
+offset_bottom = 259.0
+theme = ExtResource("9_uwpkh")
+theme_override_colors/default_color = Color(0.150648, 0.482341, 1, 1)
+text = "Stamina
+"
+scroll_active = false
+horizontal_alignment = 1
+
+[node name="ExhaustionTimer" type="Timer" parent="."]
+wait_time = 5.0
+one_shot = true
+
+[node name="CanRegen" type="Timer" parent="."]
+one_shot = true
+
+[connection signal="timeout" from="ExhaustionTimer" to="." method="_exhaust_end"]
