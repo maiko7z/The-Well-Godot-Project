@@ -1,5 +1,6 @@
-[gd_scene load_steps=6 format=3 uid="uid://ds1dcdlcj1lya"]
+[gd_scene load_steps=7 format=3 uid="uid://ds1dcdlcj1lya"]
 
+[ext_resource type="Theme" uid="uid://cxjwnkpltc1jx" path="res://textTheme.tres" id="1_4qfck"]
 [ext_resource type="Script" uid="uid://cgph8uqjba4m" path="res://screens/game_over.gd" id="1_s28jw"]
 [ext_resource type="AudioStream" uid="uid://cpdmshr5kyvqc" path="res://audio/AmbienceLooped.ogg" id="2_skulm"]
 [ext_resource type="AudioStream" uid="uid://ckh448vtqw8wj" path="res://audio/MonsterFootstep.ogg" id="3_x01cv"]
@@ -19,6 +20,7 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+theme = ExtResource("1_4qfck")
 script = ExtResource("1_s28jw")
 
 [node name="Background" type="ColorRect" parent="."]

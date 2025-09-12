@@ -1,7 +1,8 @@
-[gd_scene load_steps=5 format=3 uid="uid://dsip577k0qqj7"]
+[gd_scene load_steps=6 format=3 uid="uid://dsip577k0qqj7"]
 
 [ext_resource type="Script" uid="uid://dkqclwacxg25c" path="res://screens/level_complete.gd" id="1_4sait"]
 [ext_resource type="AudioStream" uid="uid://cpdmshr5kyvqc" path="res://audio/AmbienceLooped.ogg" id="2_4sait"]
+[ext_resource type="Theme" uid="uid://cxjwnkpltc1jx" path="res://textTheme.tres" id="2_hy6y3"]
 
 [sub_resource type="LabelSettings" id="LabelSettings_4sait"]
 font_size = 32
@@ -36,6 +37,7 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+theme = ExtResource("2_hy6y3")
 
 [node name="VBoxContainer" type="VBoxContainer" parent="CenterContainer"]
 layout_mode = 2
