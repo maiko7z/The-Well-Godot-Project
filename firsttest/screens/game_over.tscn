@@ -3,7 +3,7 @@
 [ext_resource type="Theme" uid="uid://cxjwnkpltc1jx" path="res://textTheme.tres" id="1_4qfck"]
 [ext_resource type="Script" uid="uid://cgph8uqjba4m" path="res://screens/game_over.gd" id="1_s28jw"]
 [ext_resource type="AudioStream" uid="uid://cpdmshr5kyvqc" path="res://audio/AmbienceLooped.ogg" id="2_skulm"]
-[ext_resource type="AudioStream" uid="uid://ckh448vtqw8wj" path="res://audio/MonsterFootstep.ogg" id="3_x01cv"]
+[ext_resource type="AudioStream" uid="uid://cycr8l2gorlke" path="res://audio/pianoHits/LifeLost.ogg" id="4_4qfck"]
 
 [sub_resource type="LabelSettings" id="LabelSettings_11mxd"]
 font_size = 32
@@ -92,8 +92,6 @@ pitch_scale = 2.21
 autoplay = true
 
 [node name="Jumpscare" type="AudioStreamPlayer" parent="."]
-stream = ExtResource("3_x01cv")
-volume_db = -1.439
-pitch_scale = 0.21
+stream = ExtResource("4_4qfck")
+volume_db = 6.057
 autoplay = true
-bus = &"WarpedSFX"

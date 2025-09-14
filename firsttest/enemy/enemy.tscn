@@ -2,7 +2,7 @@
 
 [ext_resource type="Script" uid="uid://dddebooap2efg" path="res://enemy/enemy.gd" id="1_5anih"]
 [ext_resource type="Script" uid="uid://dh8854weabqly" path="res://state_machine/state_machine.gd" id="2_1h0du"]
-[ext_resource type="AudioStream" uid="uid://ckh448vtqw8wj" path="res://audio/MonsterFootstep.ogg" id="2_rve8k"]
+[ext_resource type="AudioStream" uid="uid://ckh448vtqw8wj" path="res://audio/wraithSounds/MonsterFootstep.ogg" id="2_rve8k"]
 [ext_resource type="Script" uid="uid://cioukfjvhamtn" path="res://enemy/states/state_roaming.gd" id="4_s81n7"]
 [ext_resource type="Script" uid="uid://bo20pgbkufnbr" path="res://enemy/states/state_chasing.gd" id="5_gc7sf"]
 [ext_resource type="Script" uid="uid://djbebsn4ep0y4" path="res://enemy/states/state_searching.gd" id="7_2fq87"]

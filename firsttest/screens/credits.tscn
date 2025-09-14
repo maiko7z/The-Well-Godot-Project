@@ -17,29 +17,56 @@ grow_vertical = 2
 script = ExtResource("1_j0jnr")
 
 [node name="ScrollContainer" type="ScrollContainer" parent="."]
+z_index = 2
 layout_mode = 0
-offset_left = 86.0
-offset_top = 55.0
-offset_right = 377.0
-offset_bottom = 240.0
+offset_left = 63.0
+offset_top = 32.0
+offset_right = 422.0
+offset_bottom = 306.0
 theme = ExtResource("2_qkjnt")
 
 [node name="Label" type="Label" parent="ScrollContainer"]
 layout_mode = 2
-text = "Game programming: Michael & Nate
-Art & Design: Tatiana and Jay
-Sound Design: Nate"
+text = "- Development Team -
+Jay Audrey, Tatiana Nwosu,
+Michael Reyes, Nathaniel \"Nate\" Wood
+
+- Roles -
+Artists: Jay, Tatiana
+UI Design: Michael
+Textures: Jay, Tatiana, Nate
+Writing: Jay, Tatiana
+2D Programming: Michael
+3D Programming: Nate
+Audio Design and Composer: Nate
+Level Design: Jay, Michael, Tatiana, Nate
+Modeling: Nate
+
+- Asset Attribution -
+SFX: pixabay.com
+
+- Code Attribution -
+bypell (AI base)
+LegionGames (Cam Bobbing)
+majikayogames (Simple Dungeons)
+
+- Thank You! -
+Special thanks to Rodney DuPlessis (Professor) 
+and Bashar Alqassar (TA)
+for guidance and support
+throughout our project!"
 horizontal_alignment = 1
 vertical_alignment = 1
 
 [node name="Back Button" type="Button" parent="."]
+z_index = 2
 layout_mode = 0
-offset_left = 204.0
+offset_left = 426.0
 offset_top = 275.0
-offset_right = 249.0
+offset_right = 471.0
 offset_bottom = 306.0
 theme = ExtResource("2_qkjnt")
 text = "Back"
 
-[connection signal="pressed" from="Back Button" to="." method="_on_button_pressed"]
 [connection signal="pressed" from="Back Button" to="." method="_on_back_button_pressed"]
+[connection signal="pressed" from="Back Button" to="." method="_on_button_pressed"]

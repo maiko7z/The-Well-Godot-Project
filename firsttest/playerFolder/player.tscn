@@ -1,10 +1,12 @@
-[gd_scene load_steps=13 format=3 uid="uid://chu4ft88k3ahk"]
+[gd_scene load_steps=16 format=3 uid="uid://chu4ft88k3ahk"]
 
 [ext_resource type="AudioStream" uid="uid://6r05nimratie" path="res://audio/Flashlight.mp3" id="1_4flbx"]
 [ext_resource type="AudioStream" uid="uid://bnnssgjv4sunn" path="res://audio/Footstep.ogg" id="2_onrkg"]
 [ext_resource type="AudioStream" uid="uid://b1kmeklk07f1i" path="res://audio/ExhaustionBreathing.mp3" id="3_6v6k0"]
 [ext_resource type="Texture2D" uid="uid://di0arg7lxvb7e" path="res://images/staminabar under.jpg" id="3_erkmy"]
 [ext_resource type="Texture2D" uid="uid://yx5ataeprkb1" path="res://images/Bar exterior.png" id="4_6v6k0"]
+[ext_resource type="AudioStream" uid="uid://bstck34ke1g5d" path="res://audio/Hurt.mp3" id="4_vpon2"]
+[ext_resource type="AudioStream" uid="uid://ru0kuavutlcp" path="res://audio/Death.ogg" id="5_kaacd"]
 [ext_resource type="Texture2D" uid="uid://cmra3ak7qgoog" path="res://images/staminabar.jpg" id="5_uwpkh"]
 [ext_resource type="Texture2D" uid="uid://cnj25goxf4wpd" path="res://images/healthbar under.jpg" id="6_vpon2"]
 [ext_resource type="Texture2D" uid="uid://mpu84f06fnyn" path="res://images/healthbar.jpg" id="7_kaacd"]
@@ -32,6 +34,10 @@ var WALK_REGEN = 0.2
 var SPRINT_COST = 0.5
 var JUMP_COST = 20.0
 
+#Health variables
+const MAX_HEALTH = 100.0
+var CURRENT_HEALTH = 100.0
+
 #Bobbing variables
 const BOB_FREQ = 2.4
 const BOB_AMP = 0.08
@@ -56,9 +62,13 @@ var isExhausted = false
 @onready var light2 = $Head/SpotLight3D2
 @onready var flashSound = $Head/FlashlightSound
 @onready var footstepSound: AudioStreamPlayer = $Head/StepSound
+@onready var hurtSound: AudioStreamPlayer = $Head/HurtSound
+@onready var deathSound: AudioStreamPlayer = $Head/DeathSound
 @onready var staminaBar = $CanvasLayer/StaminaBar
 @onready var healthBar = $CanvasLayer/HealthBar
 @onready var exhaustionTimer = $ExhaustionTimer
+@onready var hurtFrame = $CanvasLayer/HurtFilter
+@onready var hurtFrameTimer = $HurtFrame
 @onready var exhaustionSound = $Head/ExhaustionSound
 
 var prevStep := Vector3.ZERO
@@ -67,7 +77,23 @@ func _ready():
 	Input.mouse_mode = Input.MOUSE_MODE_CAPTURED
 	prevStep = Vector3(global_position.x, 0.0, global_position.z)
 
+func _take_damage(damage: int):
+	CURRENT_HEALTH -= damage
+	healthBar.value = CURRENT_HEALTH
+	print(\"owch! hurting!\")
+	if healthBar.value <= 0:
+		GlobalSounds.health_death_sound_play()
+		get_tree().change_scene_to_file(\"res://screens/game_over.tscn\")
+	else:
+		if damage > 10:
+			if hurtFrame.visible == false:
+				hurtFrame.visible = true
+				hurtFrameTimer.start()
+			hurtSound.play()
+			
 
+func _hurt_frame_end():
+	hurtFrame.visible = false
 
 func _unhandled_input(event):
 	if event is InputEventMouseMotion:
@@ -234,6 +260,12 @@ random_volume_offset_db = 4.0
 streams_count = 1
 stream_0/stream = ExtResource("2_onrkg")
 
+[sub_resource type="AudioStreamRandomizer" id="AudioStreamRandomizer_vpon2"]
+random_pitch = 1.28
+random_volume_offset_db = 1.5
+streams_count = 1
+stream_0/stream = ExtResource("4_vpon2")
+
 [node name="Player" type="CharacterBody3D" groups=["player"]]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.712204, 0.29932, 5.16054)
 collision_layer = 2
@@ -286,9 +318,20 @@ volume_db = -4.685
 pitch_scale = 0.86
 bus = &"ReverbAmbience"
 
+[node name="HurtSound" type="AudioStreamPlayer" parent="Head"]
+stream = SubResource("AudioStreamRandomizer_vpon2")
+volume_db = -4.685
+pitch_scale = 1.04
+
+[node name="DeathSound" type="AudioStreamPlayer" parent="Head"]
+stream = ExtResource("5_kaacd")
+volume_db = -10.307
+pitch_scale = 1.04
+
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
 
 [node name="StaminaBar" type="TextureProgressBar" parent="CanvasLayer"]
+z_index = 4
 offset_left = 385.0
 offset_top = 252.0
 offset_right = 476.0
@@ -302,6 +345,7 @@ texture_over = ExtResource("4_6v6k0")
 texture_progress = ExtResource("5_uwpkh")
 
 [node name="HealthBar" type="TextureProgressBar" parent="CanvasLayer"]
+z_index = 4
 offset_left = 384.0
 offset_top = 291.0
 offset_right = 475.0
@@ -314,6 +358,7 @@ texture_over = ExtResource("4_6v6k0")
 texture_progress = ExtResource("7_kaacd")
 
 [node name="HealthLabel" type="RichTextLabel" parent="CanvasLayer"]
+z_index = 4
 offset_left = 405.0
 offset_top = 274.0
 offset_right = 458.0
@@ -325,6 +370,7 @@ scroll_active = false
 horizontal_alignment = 1
 
 [node name="StaminaLabel" type="RichTextLabel" parent="CanvasLayer"]
+z_index = 4
 offset_left = 401.0
 offset_top = 234.0
 offset_right = 464.0
@@ -336,6 +382,14 @@ text = "Stamina
 scroll_active = false
 horizontal_alignment = 1
 
+[node name="HurtFilter" type="ColorRect" parent="CanvasLayer"]
+visible = false
+offset_right = 40.0
+offset_bottom = 40.0
+scale = Vector2(12, 8)
+mouse_filter = 2
+color = Color(1, 0, 0, 0.243137)
+
 [node name="ExhaustionTimer" type="Timer" parent="."]
 wait_time = 5.0
 one_shot = true
@@ -343,4 +397,9 @@ one_shot = true
 [node name="CanRegen" type="Timer" parent="."]
 one_shot = true
 
+[node name="HurtFrame" type="Timer" parent="."]
+wait_time = 0.1
+one_shot = true
+
 [connection signal="timeout" from="ExhaustionTimer" to="." method="_exhaust_end"]
+[connection signal="timeout" from="HurtFrame" to="." method="_hurt_frame_end"]

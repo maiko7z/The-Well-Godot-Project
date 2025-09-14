@@ -7,10 +7,13 @@ func _ready() -> void:
 	Input.mouse_mode = Input.MOUSE_MODE_VISIBLE
 
 func _on_restart_pressed() -> void:
+	GlobalSounds.click_sound_play()
 	get_tree().change_scene_to_file("res://world.tscn")
 	
 func _on_quit_pressed() -> void:
+	GlobalSounds.click_sound_play()
 	get_tree().quit()
 	
 func _on_main_menu_pressed() -> void:
+	GlobalSounds.click_sound_play()
 	get_tree().change_scene_to_file("res://screens//main_menu.tscn")

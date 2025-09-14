@@ -1,4 +1,4 @@
-[gd_scene load_steps=21 format=3 uid="uid://0nht4pnm1ybs"]
+[gd_scene load_steps=23 format=3 uid="uid://0nht4pnm1ybs"]
 
 [ext_resource type="MeshLibrary" uid="uid://cnx0qgayriil2" path="res://tiles/tileset.tres" id="1_eb85w"]
 [ext_resource type="Script" uid="uid://cp16ujlx0mdvi" path="res://world.gd" id="1_hiqwa"]
@@ -15,6 +15,8 @@
 [ext_resource type="PackedScene" uid="uid://dc8trpqo68hca" path="res://roomTypes/MonsterRoom.tscn" id="10_70uel"]
 [ext_resource type="PackedScene" uid="uid://bhu4estup45vo" path="res://roomTypes/SmallDeadEnd.tscn" id="10_gc6hl"]
 [ext_resource type="AudioStream" uid="uid://cpdmshr5kyvqc" path="res://audio/AmbienceLooped.ogg" id="11_qpkas"]
+[ext_resource type="PackedScene" uid="uid://buhu53cqvbg8n" path="res://tiles_traps/sus_wall.tscn" id="16_2u3nc"]
+[ext_resource type="PackedScene" uid="uid://dtsulxlclgia3" path="res://tiles_traps/sus_floor.tscn" id="17_udxuc"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_l4ph3"]
 sky_horizon_color = Color(0.662243, 0.671743, 0.686743, 1)
@@ -104,3 +106,9 @@ data = {
 
 [node name="Player" parent="." instance=ExtResource("2_xr186")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.712204, 0.507724, -7.06369)
+
+[node name="SusWall" parent="." instance=ExtResource("16_2u3nc")]
+transform = Transform3D(1.5, 0, 0, 0, 1.5, 0, 0, 0, 1.5, -1.299, 0.001, -11.669)
+
+[node name="SusFloor" parent="." instance=ExtResource("17_udxuc")]
+transform = Transform3D(1.5, 0, 0, 0, 1.5, 0, 0, 0, 1.5, -2.539, 0.001, -9.297)
