@@ -85,7 +85,7 @@ func _take_damage(damage: int):
 		GlobalSounds.health_death_sound_play()
 		get_tree().change_scene_to_file(\"res://screens/game_over.tscn\")
 	else:
-		if damage > 10:
+		if damage >= 5:
 			if hurtFrame.visible == false:
 				hurtFrame.visible = true
 				hurtFrameTimer.start()

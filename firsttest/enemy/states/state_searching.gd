@@ -25,6 +25,8 @@ func update(delta: float) -> void:
 	if _search_timer <= 0.0:
 		requested_transition_to_other_state.emit("Roaming", {"do_not_reset_path": true})
 
+func rockeye_triggered():
+	requested_transition_to_other_state.emit("Chasing")
 
 func physics_update(_delta: float) -> void:
 	var vec_to_player = (_enemy.player.global_position - _enemy.global_position)

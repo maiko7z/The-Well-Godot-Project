@@ -24,6 +24,8 @@ func update(delta: float) -> void: #Crouching reduces chase time by 33%
 	if _chase_timer <= 0.0:
 		requested_transition_to_other_state.emit("Searching", {"player_last_seen_position":_enemy.player.global_position})
 
+func rockeye_triggered():
+	_chase_timer = chase_max_time
 
 func physics_update(_delta: float) -> void:
 	var vec_to_player = (_enemy.player.global_position - _enemy.global_position)

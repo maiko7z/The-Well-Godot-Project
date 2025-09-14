@@ -27,6 +27,8 @@ func enter(previous_state_name: String, data := {}) -> void:
 	
 	_travel_to_random_position()
 
+func rockeye_triggered():
+	requested_transition_to_other_state.emit("Chasing")
 
 func physics_update(_delta: float) -> void:
 	if not _map_synchronized:
