@@ -1,8 +1,9 @@
-[gd_scene load_steps=6 format=3 uid="uid://dsip577k0qqj7"]
+[gd_scene load_steps=7 format=3 uid="uid://dsip577k0qqj7"]
 
 [ext_resource type="Script" uid="uid://dkqclwacxg25c" path="res://screens/level_complete.gd" id="1_4sait"]
 [ext_resource type="AudioStream" uid="uid://cpdmshr5kyvqc" path="res://audio/AmbienceLooped.ogg" id="2_4sait"]
 [ext_resource type="Theme" uid="uid://cxjwnkpltc1jx" path="res://textTheme.tres" id="2_hy6y3"]
+[ext_resource type="AudioStream" uid="uid://42lyxx8krnrs" path="res://audio/pianoHits/LifeGained.ogg" id="4_e4kpk"]
 
 [sub_resource type="LabelSettings" id="LabelSettings_4sait"]
 font_size = 32
@@ -89,4 +90,9 @@ text = "Quit
 stream = ExtResource("2_4sait")
 volume_db = 0.623
 pitch_scale = 0.37
+autoplay = true
+
+[node name="SuccessStinger" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("4_e4kpk")
+volume_db = 3.609
 autoplay = true

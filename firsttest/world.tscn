@@ -1,4 +1,4 @@
-[gd_scene load_steps=23 format=3 uid="uid://0nht4pnm1ybs"]
+[gd_scene load_steps=21 format=3 uid="uid://0nht4pnm1ybs"]
 
 [ext_resource type="MeshLibrary" uid="uid://cnx0qgayriil2" path="res://tiles/tileset.tres" id="1_eb85w"]
 [ext_resource type="Script" uid="uid://cp16ujlx0mdvi" path="res://world.gd" id="1_hiqwa"]
@@ -6,7 +6,6 @@
 [ext_resource type="PackedScene" uid="uid://chu4ft88k3ahk" path="res://playerFolder/player.tscn" id="2_xr186"]
 [ext_resource type="Script" uid="uid://c8ricokuop81u" path="res://addons/SimpleDungeons/DungeonGenerator3D.gd" id="3_frnp6"]
 [ext_resource type="PackedScene" uid="uid://m8l0pq5i0k5p" path="res://roomTypes/SmallRoom_U.tscn" id="4_7433l"]
-[ext_resource type="PackedScene" uid="uid://bhi1dilpireod" path="res://roomTypes/Corridor.tscn" id="5_1h652"]
 [ext_resource type="PackedScene" uid="uid://b0cbnhr7phiph" path="res://roomTypes/SmallerRoom_Pillar.tscn" id="5_gywx4"]
 [ext_resource type="Script" uid="uid://dxngah8a6spom" path="res://addons/SimpleDungeons/DungeonRoom3D.gd" id="6_gywx4"]
 [ext_resource type="PackedScene" uid="uid://dnewhfkngjbjn" path="res://roomTypes/LargeRoom_Cramped.tscn" id="6_ns5r6"]
@@ -15,8 +14,7 @@
 [ext_resource type="PackedScene" uid="uid://dc8trpqo68hca" path="res://roomTypes/MonsterRoom.tscn" id="10_70uel"]
 [ext_resource type="PackedScene" uid="uid://bhu4estup45vo" path="res://roomTypes/SmallDeadEnd.tscn" id="10_gc6hl"]
 [ext_resource type="AudioStream" uid="uid://cpdmshr5kyvqc" path="res://audio/AmbienceLooped.ogg" id="11_qpkas"]
-[ext_resource type="PackedScene" uid="uid://88hmwx1qw4rk" path="res://tiles_traps/rockeye_trap.tscn" id="17_ikiii"]
-[ext_resource type="PackedScene" uid="uid://dtsulxlclgia3" path="res://tiles_traps/sus_floor.tscn" id="17_udxuc"]
+[ext_resource type="PackedScene" uid="uid://ck0jt0gji4lvb" path="res://roomTypes/TrappedCorridor.tscn" id="11_udxuc"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_l4ph3"]
 sky_horizon_color = Color(0.662243, 0.671743, 0.686743, 1)
@@ -63,7 +61,7 @@ script = ExtResource("1_qpkas")
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6, 1.25, -67.5)
 script = ExtResource("3_frnp6")
 room_scenes = Array[PackedScene]([ExtResource("4_7433l"), ExtResource("5_gywx4"), ExtResource("6_ns5r6"), ExtResource("7_akdkd"), ExtResource("9_xdrm5"), ExtResource("10_gc6hl"), ExtResource("10_70uel")])
-corridor_room_scene = ExtResource("5_1h652")
+corridor_room_scene = ExtResource("11_udxuc")
 dungeon_size = Vector3i(10, 1, 10)
 voxel_scale = Vector3(10.505, 5, 10.505)
 generate_on_ready = false
@@ -106,9 +104,3 @@ data = {
 
 [node name="Player" parent="." instance=ExtResource("2_xr186")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.712204, 0.507724, -7.06369)
-
-[node name="SusFloor" parent="." instance=ExtResource("17_udxuc")]
-transform = Transform3D(1.5, 0, 0, 0, 1.5, 0, 0, 0, 1.5, -2.539, 0.001, -9.297)
-
-[node name="Rockeye_Trap" parent="." instance=ExtResource("17_ikiii")]
-transform = Transform3D(1.5, 0, 0, 0, 1.5, 0, 0, 0, 1.5, -1.23338, 0, -12.3965)

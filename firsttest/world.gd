@@ -12,7 +12,7 @@ func _ready() -> void:
 		print("no enemy, no connection generated.")
 
 func _enemy_reached_player() -> void:
-	get_tree().change_scene_to_file("res://screens/game_over.tscn")
+	get_tree().change_scene_to_file("res://screens/jumpscare.tscn")
 	print("owie ouch ow")
 	
 func player_reached_exit() -> void:

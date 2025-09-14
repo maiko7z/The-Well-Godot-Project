@@ -6,7 +6,9 @@ var _map_synchronized := false
 var _target_position: Vector3
 var _nav_map: RID
 
-
+@onready var aggroSound = $"../../Sounds/AggroSound"
+@onready var deaggroSound = $"../../Sounds/DeaggroSound"
+@onready var idleSound = $"../../Sounds/IdleSound"
 
 func _ready() -> void:
 	#await get_tree().create_timer(7).timeout
@@ -17,6 +19,11 @@ func _ready() -> void:
 
 
 func enter(previous_state_name: String, data := {}) -> void:
+	
+	if not aggroSound.playing and previous_state_name == "Searching":
+		deaggroSound.play()
+		aggroSound.stop()
+	
 	if not _map_synchronized:
 		return
 	
@@ -35,6 +42,9 @@ func physics_update(_delta: float) -> void:
 		return
 	
 	#terror radius
+	if not idleSound.playing and RandomNumberGenerator.new().randf_range(0,10) > 9.5:
+		idleSound.play()
+	
 	var vec_to_player = (_enemy.player.global_position - _enemy.global_position)
 	if vec_to_player.length() < 30.0:
 		$"../../TerrorRadiusNear".volume_db = 3.0 - vec_to_player.length()*1.25

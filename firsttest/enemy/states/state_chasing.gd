@@ -5,11 +5,18 @@ extends EnemyState
 @export var _chasing_speed := 5.0
 @export var _catching_distance := 1.4
 
+
 var _chase_timer := 0.0
 var _update_path_timer := 0.0
-
+@onready var chaseRoar = $"../../Sounds/ChaseSound"
+@onready var chaseRoar2 = $"../../Sounds/ChaseSound2"
+@onready var aggroSound = $"../../Sounds/AggroSound"
 
 func enter(previous_state_name: String, data := {}) -> void:
+	if not chaseRoar.playing:
+		aggroSound.stop()
+		chaseRoar.play()
+		chaseRoar2.play()
 	_chase_timer = chase_max_time
 	
 

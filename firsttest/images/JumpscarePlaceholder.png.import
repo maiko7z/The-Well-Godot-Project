@@ -2,8 +2,8 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://di0arg7lxvb7e"
-path.s3tc="res://.godot/imported/staminabar under.jpg-3cd2b42b16a256178eda660959ff8fe5.s3tc.ctex"
+uid="uid://qqk5yf1k4ema"
+path.s3tc="res://.godot/imported/JumpscarePlaceholder.png-3e013cd9d0cc739396cc4ba2081b7ae0.s3tc.ctex"
 metadata={
 "imported_formats": ["s3tc_bptc"],
 "vram_texture": true
@@ -11,8 +11,8 @@ metadata={
 
 [deps]
 
-source_file="res://images/staminabar under.jpg"
-dest_files=["res://.godot/imported/staminabar under.jpg-3cd2b42b16a256178eda660959ff8fe5.s3tc.ctex"]
+source_file="res://images/JumpscarePlaceholder.png"
+dest_files=["res://.godot/imported/JumpscarePlaceholder.png-3e013cd9d0cc739396cc4ba2081b7ae0.s3tc.ctex"]
 
 [params]
 

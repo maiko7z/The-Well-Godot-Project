@@ -7,8 +7,15 @@ extends EnemyState
 var _search_timer := 0.0
 var _player_last_seen_position: Vector3
 
+@onready var aggroSound = $"../../Sounds/AggroSound"
+@onready var deaggroSound = $"../../Sounds/DeaggroSound"
 
 func enter(previous_state_name: String, data := {}) -> void:
+	#RandomNumberGenerator.new().randf_range(0,10) > 2.5
+	if not aggroSound.playing and previous_state_name == "Roaming":
+		aggroSound.play()
+		deaggroSound.stop()
+	
 	if data["player_last_seen_position"]:
 		_player_last_seen_position = data["player_last_seen_position"]
 	else:

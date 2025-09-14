@@ -21,7 +21,6 @@ func _activate_eye(body: Node3D):
 		$"../RoarSound".play()
 		$"../eye-opened".visible = true
 		$"../eye-closed".visible = false
-		body._take_damage(5)
 		cooldown.start()
 		var enemy: Enemy = get_tree().get_first_node_in_group("enemy")
 		if enemy:
@@ -30,6 +29,7 @@ func _activate_eye(body: Node3D):
 			print("no enemy, nothing to alert.")
 		$".".disconnect("body_entered",_on_area_3d_body_entered)
 		$".".disconnect("body_exited",_on_area_3d_body_left)
+		body._take_damage(5)
 
 func _ready_to_reopen():
 	$"../CloseSound".play()

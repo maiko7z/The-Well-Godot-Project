@@ -1,6 +1,8 @@
 @tool
 extends DungeonRoom3D
 ## Called when the node enters the scene tree for the first time.
+#signal finished_generating
+
 func _ready():
 	#$"..".connect("dungeon_done_generating",remove_used_doors)
 	super._ready()
@@ -19,3 +21,5 @@ func remove_used_doors():
 	for door in get_doors():
 		if door.get_room_leads_to() != null and door.door_node != null:
 			door.door_node.queue_free()
+	#if $NavigationRegion3D/GridMap/TrapSpots:
+		#print("it's a trap!")
