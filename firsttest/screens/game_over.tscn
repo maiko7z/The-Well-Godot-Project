@@ -90,6 +90,7 @@ stream = ExtResource("2_skulm")
 volume_db = -7.05
 pitch_scale = 2.21
 autoplay = true
+parameters/looping = true
 
 [node name="Jumpscare" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("4_4qfck")
