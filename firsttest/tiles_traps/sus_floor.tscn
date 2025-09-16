@@ -7,7 +7,7 @@
 [ext_resource type="Texture2D" uid="uid://cju3e1kjfyice" path="res://tiles_traps/trap_tiles_atlas_n.png" id="5_6804p"]
 [ext_resource type="Texture2D" uid="uid://d0axbknkjpqu5" path="res://tiles_traps/trap_tiles_atlas sus open.png" id="6_tyck8"]
 [ext_resource type="Texture2D" uid="uid://maahitquybb1" path="res://tiles_traps/trap_tiles_atlas sus open_n.png" id="7_buy18"]
-[ext_resource type="Script" uid="uid://gp41wmgjcln6" path="res://tiles_traps/trap_floor.gd" id="8_exrs2"]
+[ext_resource type="Script" uid="uid://gp41wmgjcln6" path="res://tiles_traps/trap_floor_damage.gd" id="8_exrs2"]
 [ext_resource type="AudioStream" uid="uid://wvaujla85ymu" path="res://audio/trapSounds/SuspiciousActivate.ogg" id="9_r3n6k"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_bu7qn"]

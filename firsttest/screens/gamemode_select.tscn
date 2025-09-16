@@ -1,0 +1,62 @@
+[gd_scene load_steps=3 format=3 uid="uid://bdv0o3suow6ye"]
+
+[ext_resource type="Script" uid="uid://3psr3to5a0xf" path="res://screens/gamemode_select.gd" id="1_q3cvg"]
+[ext_resource type="Theme" uid="uid://cxjwnkpltc1jx" path="res://textTheme.tres" id="2_nqe80"]
+
+[node name="GamemodeSelect" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_q3cvg")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="."]
+layout_mode = 2
+offset_left = 144.0
+offset_top = 37.0
+offset_right = 350.0
+offset_bottom = 290.0
+
+[node name="StoryNew" type="Button" parent="VBoxContainer"]
+layout_mode = 2
+theme = ExtResource("2_nqe80")
+text = "Story Mode
+(NEW GAME)"
+
+[node name="StoryContinue" type="Button" parent="VBoxContainer"]
+layout_mode = 2
+theme = ExtResource("2_nqe80")
+text = "Story Mode
+(CONTINUE - )
+"
+
+[node name="Control" type="Control" parent="VBoxContainer"]
+layout_mode = 2
+
+[node name="EndlessNew" type="Button" parent="VBoxContainer"]
+layout_mode = 2
+theme = ExtResource("2_nqe80")
+text = "Endless Mode
+(NEW GAME)"
+
+[node name="EndlessContinue" type="Button" parent="VBoxContainer"]
+layout_mode = 2
+theme = ExtResource("2_nqe80")
+text = "Endless Mode
+(CONTINUE - )"
+
+[node name="Control2" type="Control" parent="VBoxContainer"]
+layout_mode = 2
+
+[node name="Back" type="Button" parent="VBoxContainer"]
+layout_mode = 2
+theme = ExtResource("2_nqe80")
+text = "Back"
+
+[connection signal="pressed" from="VBoxContainer/StoryNew" to="." method="_on_new_story_pressed"]
+[connection signal="pressed" from="VBoxContainer/StoryContinue" to="." method="_on_continue_story_pressed"]
+[connection signal="pressed" from="VBoxContainer/EndlessNew" to="." method="_on_new_endless_pressed"]
+[connection signal="pressed" from="VBoxContainer/EndlessContinue" to="." method="_on_continue_endless_pressed"]
+[connection signal="pressed" from="VBoxContainer/Back" to="." method="_on_back_button_pressed"]

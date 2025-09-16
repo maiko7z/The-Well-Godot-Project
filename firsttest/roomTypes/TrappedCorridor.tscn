@@ -1,4 +1,4 @@
-[gd_scene load_steps=9 format=3 uid="uid://ck0jt0gji4lvb"]
+[gd_scene load_steps=12 format=3 uid="uid://ck0jt0gji4lvb"]
 
 [ext_resource type="Script" uid="uid://bkn3x6pkn7dfn" path="res://roomTypes/corridorCleanup.gd" id="1_pb4do"]
 [ext_resource type="MeshLibrary" uid="uid://cnx0qgayriil2" path="res://tiles/tileset.tres" id="2_s41ff"]
@@ -7,6 +7,9 @@
 [ext_resource type="Script" uid="uid://cfbq0ul6yafn1" path="res://roomTypes/trap_wall_spawner.gd" id="5_q5lf3"]
 [ext_resource type="PackedScene" uid="uid://88hmwx1qw4rk" path="res://tiles_traps/rockeye_trap.tscn" id="6_3xmgc"]
 [ext_resource type="PackedScene" uid="uid://buhu53cqvbg8n" path="res://tiles_traps/sus_wall.tscn" id="7_ernbc"]
+[ext_resource type="Script" uid="uid://7n7fbptx1be4" path="res://roomTypes/trap_floor_spawner.gd" id="8_uepa5"]
+[ext_resource type="PackedScene" uid="uid://dtsulxlclgia3" path="res://tiles_traps/sus_floor.tscn" id="9_obqgd"]
+[ext_resource type="PackedScene" uid="uid://deqypvuv47hwp" path="res://wallPieces/floor.tscn" id="10_b2oln"]
 
 [sub_resource type="NavigationMesh" id="NavigationMesh_xdnoe"]
 vertices = PackedVector3Array(5.25, -0.75, 1.25, 5.75, -0.75, 1.25, 5.75, -0.75, 0.5, -1.75, -0.75, -1, -1.25, -0.75, -1.25, -1, -0.75, -1.75, 1.25, -0.75, -1.75, 1.5, -0.75, -1.25, 2, -0.75, -1, 5, -0.75, -1, 4.75, -0.75, -1.5, 4.25, -0.75, -1.75, 2, -0.75, -4, 1.75, -0.75, -4.5, 1.25, -0.75, -4.75, 1.25, -0.75, -5.5, 0.5, -0.75, -5.5, 5.75, -0.75, -4.76837e-07, 5.75, -0.75, -1, 4.25, -0.75, -3, 4.25, -0.75, -4, 3.5, -0.75, -4, -3, -0.75, -4, -4, -0.75, -4, -4, -0.75, -3.25, -4.25, -0.75, -2.75, -4.25, -0.75, -2, 0, -0.75, -5.5, 3, -0.75, -4, 4.25, -0.75, -2.5, -1, -0.75, -5.5, -1.5, -0.75, -4.75, 0.5, -0.75, -1.75, -2, -0.75, -4, 2, -0.75, -4.76837e-07, 2, -0.75, 1, 0, -0.75, -1.75, -4.5, -0.75, -1.5, -4.25, -0.75, 3.5, -4.25, -0.75, 4.25, -3.75, -0.75, 4.25, -1, -0.75, 2, -1.25, -0.75, 1.5, -1.75, -0.75, 1.25, -1.75, -0.75, 4.25, -1.5, -0.75, 4.75, -1, -0.75, 5, 0.5, -0.75, 5.75, 1.25, -0.75, 5.75, 1.25, -0.75, 5, 1.75, -0.75, 4.75, 2, -0.75, 4.25, 3.5, -0.75, 4.25, 4.25, -0.75, 4.25, 4.25, -0.75, 3.5, 1.5, -0.75, 1.5, 1.25, -0.75, 2, -5.5, -0.75, 0.5, -5.5, -0.75, 1.25, -4.75, -0.75, 1.5, -1, -0.75, 5.75, 0, -0.75, 5.75, 4.25, -0.75, 2, 4.75, -0.75, 1.75, -5, -0.75, -1.25, -5.5, -0.75, -1, -5.5, -0.75, -4.76837e-07, -4.25, -0.75, 3, -3, -0.75, 4.25, 3, -0.75, 4.25, 4.25, -0.75, 3, -1.75, -0.75, -4.76837e-07, 0, -0.75, 2, -2.5, -0.75, 4.25, -4.25, -0.75, 2, -1.75, -0.75, 0.5, 0.5, -0.75, 2)
@@ -29,7 +32,7 @@ mesh_library = ExtResource("2_s41ff")
 cell_size = Vector3(1, 1, 1)
 cell_center_y = false
 data = {
-"cells": PackedInt32Array(65533, 65533, 1048577, 65533, 65535, 1048579, 65533, 1, 655363, 65533, 3, 655361, 65535, 3, 655363, 1, 3, 1441795, 3, 3, 1441793, 3, 1, 1441795, 3, 65535, 3, 3, 65533, 1, 1, 65534, 655362, 2, 65535, 655362, 2, 65534, 655362, 0, 65534, 655362, 2, 0, 655362, 0, 2, 1441794, 65535, 2, 1441794, 65534, 2, 655362, 65534, 1, 655362, 65534, 0, 1048578, 65534, 65535, 1048578, 65534, 65534, 2, 65535, 65534, 2, 1, 2, 2, 2, 2, 2, 2, 1, 1441794, 65534, 65533, 0, 65533, 65534, 1048576, 2, 65533, 0, 3, 65534, 1441792, 3, 2, 1441792, 2, 3, 655360, 3, 0, 1048578, 0, 3, 1048578, 65533, 0, 1048578, 1, 65533, 3, 65535, 65533, 1048579, 0, 65533, 1048578, 1, 65535, 655363, 1, 1, 1048579, 65535, 1, 3, 65535, 65535, 1441795, 65533, 2, 1048576, 65534, 3, 655360)
+"cells": PackedInt32Array(65533, 65533, 1048577, 65533, 65535, 1048579, 65533, 1, 655363, 65533, 3, 655361, 65535, 3, 655363, 1, 3, 1441795, 3, 3, 1441793, 3, 1, 1441795, 3, 65535, 3, 3, 65533, 1, 1, 65534, 655362, 2, 65535, 655362, 65535, 2, 1441794, 65534, 1, 655362, 65534, 65535, 1048578, 65535, 65534, 2, 1, 2, 2, 2, 1, 1441794, 65534, 65533, 0, 65533, 65534, 1048576, 2, 65533, 0, 3, 65534, 1441792, 3, 2, 1441792, 2, 3, 655360, 3, 0, 1048578, 0, 3, 1048578, 65533, 0, 1048578, 1, 65533, 3, 65535, 65533, 1048579, 0, 65533, 1048578, 1, 65535, 655363, 1, 1, 1048579, 65535, 1, 3, 65535, 65535, 1441795, 65533, 2, 1048576, 65534, 3, 655360)
 }
 metadata/_editor_floor_ = Vector3(0, 0, 0)
 
@@ -82,6 +85,7 @@ transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -1, -1
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1, -1.25, -3)
 
 [node name="TrapSpots" type="Node3D" parent="NavigationRegion3D/GridMap"]
+transform = Transform3D(1, 7.67386e-13, 1.45519e-11, -1.20792e-12, 1, 1.16415e-10, -1.45519e-11, 0, 1, 0, 0, 0)
 
 [node name="WallTrapNode" type="Node3D" parent="NavigationRegion3D/GridMap/TrapSpots"]
 script = ExtResource("5_q5lf3")
@@ -133,3 +137,75 @@ transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 1.5, 5
 
 [node name="SusWall" parent="NavigationRegion3D/GridMap/TrapSpots/WallTrapNode4" instance=ExtResource("7_ernbc")]
 transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 1.5, 5.96046e-08, 0.5)
+
+[node name="FloorTrapNode" type="Node3D" parent="NavigationRegion3D/GridMap/TrapSpots"]
+transform = Transform3D(1, 1.66267e-12, 2.91038e-11, 5.82645e-13, 1, -1.16415e-10, 0, 1.16415e-10, 1, 2.5, 0, 0.5)
+script = ExtResource("8_uepa5")
+
+[node name="SusFloor" parent="NavigationRegion3D/GridMap/TrapSpots/FloorTrapNode" instance=ExtResource("9_obqgd")]
+transform = Transform3D(1, 7.24754e-13, 1.45519e-11, 5.82645e-13, 1, -1.16415e-10, 0, 0, 1, 0, 0, 0)
+
+[node name="Floor" parent="NavigationRegion3D/GridMap/TrapSpots/FloorTrapNode" instance=ExtResource("10_b2oln")]
+
+[node name="FloorTrapNode2" type="Node3D" parent="NavigationRegion3D/GridMap/TrapSpots"]
+transform = Transform3D(1, 1.7053e-12, 7.27596e-11, 5.82645e-13, 1, -1.16415e-10, 0, 3.49246e-10, 1, 2.5, -5.96046e-08, 2.5)
+script = ExtResource("8_uepa5")
+
+[node name="SusFloor" parent="NavigationRegion3D/GridMap/TrapSpots/FloorTrapNode2" instance=ExtResource("9_obqgd")]
+transform = Transform3D(1, 7.24754e-13, 1.45519e-11, 5.82645e-13, 1, -1.16415e-10, 0, 0, 1, 0, 0, 0)
+
+[node name="Floor" parent="NavigationRegion3D/GridMap/TrapSpots/FloorTrapNode2" instance=ExtResource("10_b2oln")]
+
+[node name="FloorTrapNode3" type="Node3D" parent="NavigationRegion3D/GridMap/TrapSpots"]
+transform = Transform3D(1, 1.71951e-12, 8.73115e-11, 5.82645e-13, 1, -1.16415e-10, 0, 4.65661e-10, 1, 0.5, 2.21133e-05, 2.50038)
+script = ExtResource("8_uepa5")
+
+[node name="SusFloor" parent="NavigationRegion3D/GridMap/TrapSpots/FloorTrapNode3" instance=ExtResource("9_obqgd")]
+transform = Transform3D(1, 7.24754e-13, 1.45519e-11, 5.82645e-13, 1, -1.16415e-10, 0, 0, 1, 0, 0, 0)
+
+[node name="Floor" parent="NavigationRegion3D/GridMap/TrapSpots/FloorTrapNode3" instance=ExtResource("10_b2oln")]
+
+[node name="FloorTrapNode4" type="Node3D" parent="NavigationRegion3D/GridMap/TrapSpots"]
+transform = Transform3D(1, 1.74794e-12, 1.16415e-10, 5.82645e-13, 1, -1.16415e-10, 0, 5.82077e-10, 1, -1.5, 4.42863e-05, 2.50075)
+script = ExtResource("8_uepa5")
+
+[node name="SusFloor" parent="NavigationRegion3D/GridMap/TrapSpots/FloorTrapNode4" instance=ExtResource("9_obqgd")]
+transform = Transform3D(1, 7.24754e-13, 1.45519e-11, 5.82645e-13, 1, -1.16415e-10, 0, 0, 1, 0, 0, 0)
+
+[node name="Floor" parent="NavigationRegion3D/GridMap/TrapSpots/FloorTrapNode4" instance=ExtResource("10_b2oln")]
+
+[node name="FloorTrapNode5" type="Node3D" parent="NavigationRegion3D/GridMap/TrapSpots"]
+transform = Transform3D(1, 1.77636e-12, 1.30967e-10, 5.82645e-13, 1, -1.16415e-10, 0, 6.98492e-10, 1, -1.50037, -0.00205165, 0.500753)
+script = ExtResource("8_uepa5")
+
+[node name="SusFloor" parent="NavigationRegion3D/GridMap/TrapSpots/FloorTrapNode5" instance=ExtResource("9_obqgd")]
+transform = Transform3D(1, 7.24754e-13, 1.45519e-11, 5.82645e-13, 1, -1.16415e-10, 0, 0, 1, 0, 0, 0)
+
+[node name="Floor" parent="NavigationRegion3D/GridMap/TrapSpots/FloorTrapNode5" instance=ExtResource("10_b2oln")]
+
+[node name="FloorTrapNode6" type="Node3D" parent="NavigationRegion3D/GridMap/TrapSpots"]
+transform = Transform3D(1, 1.79057e-12, 1.45519e-10, 5.82645e-13, 1, -1.16415e-10, 0, 8.14907e-10, 1, -1.50075, -0.00414753, -1.49925)
+script = ExtResource("8_uepa5")
+
+[node name="SusFloor" parent="NavigationRegion3D/GridMap/TrapSpots/FloorTrapNode6" instance=ExtResource("9_obqgd")]
+transform = Transform3D(1, 7.24754e-13, 1.45519e-11, 5.82645e-13, 1, -1.16415e-10, 0, 0, 1, 0, 0, 0)
+
+[node name="Floor" parent="NavigationRegion3D/GridMap/TrapSpots/FloorTrapNode6" instance=ExtResource("10_b2oln")]
+
+[node name="FloorTrapNode7" type="Node3D" parent="NavigationRegion3D/GridMap/TrapSpots"]
+transform = Transform3D(1, 1.80478e-12, 1.74623e-10, 5.82645e-13, 1, -1.16415e-10, 0, 9.31323e-10, 1, 0.49925, -0.0041697, -1.49962)
+script = ExtResource("8_uepa5")
+
+[node name="SusFloor" parent="NavigationRegion3D/GridMap/TrapSpots/FloorTrapNode7" instance=ExtResource("9_obqgd")]
+transform = Transform3D(1, 7.24754e-13, 1.45519e-11, 5.82645e-13, 1, -1.16415e-10, 0, 0, 1, 0, 0, 0)
+
+[node name="Floor" parent="NavigationRegion3D/GridMap/TrapSpots/FloorTrapNode7" instance=ExtResource("10_b2oln")]
+
+[node name="FloorTrapNode8" type="Node3D" parent="NavigationRegion3D/GridMap/TrapSpots"]
+transform = Transform3D(1, 1.84741e-12, 1.89175e-10, 5.82645e-13, 1, -1.16415e-10, 0, 1.04774e-09, 1, 2.49925, -0.00419188, -1.5)
+script = ExtResource("8_uepa5")
+
+[node name="SusFloor" parent="NavigationRegion3D/GridMap/TrapSpots/FloorTrapNode8" instance=ExtResource("9_obqgd")]
+transform = Transform3D(1, 7.24754e-13, 1.45519e-11, 5.82645e-13, 1, -1.16415e-10, 0, 0, 1, 0, 0, 0)
+
+[node name="Floor" parent="NavigationRegion3D/GridMap/TrapSpots/FloorTrapNode8" instance=ExtResource("10_b2oln")]

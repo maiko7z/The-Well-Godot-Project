@@ -1,0 +1,48 @@
+[gd_scene load_steps=3 format=3 uid="uid://dyyrcf3gp6ao2"]
+
+[ext_resource type="Theme" uid="uid://cxjwnkpltc1jx" path="res://textTheme.tres" id="1_pyk03"]
+[ext_resource type="Script" uid="uid://buv630p4a76a1" path="res://screens/controls.gd" id="2_pyk03"]
+
+[node name="Controls" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 1.0
+offset_top = 1.0
+offset_right = 1.0
+offset_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme = ExtResource("1_pyk03")
+script = ExtResource("2_pyk03")
+
+[node name="ScrollContainer" type="ScrollContainer" parent="."]
+layout_mode = 0
+offset_left = 66.0
+offset_top = 45.0
+offset_right = 415.0
+offset_bottom = 230.0
+
+[node name="Label" type="Label" parent="ScrollContainer"]
+layout_mode = 2
+text = "                                  CONTROLS
+WASD - Movement
+Shift (HOLD) - Sprint. 
+C (HOLD) - Crouch.
+E - Toggle Flashlight.
+Space - Jump.
+Hint: Turning off your light and/or crouching
+makes you much harder to be seen!"
+vertical_alignment = 1
+
+[node name="Back Button" type="Button" parent="."]
+layout_mode = 0
+offset_left = 204.0
+offset_top = 275.0
+offset_right = 249.0
+offset_bottom = 306.0
+text = "Back"
+
+[connection signal="pressed" from="Back Button" to="." method="_on_button_pressed"]
+[connection signal="pressed" from="Back Button" to="." method="_on_back_button_pressed"]

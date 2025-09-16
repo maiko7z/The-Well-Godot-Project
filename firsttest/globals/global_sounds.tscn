@@ -1,6 +1,6 @@
 [gd_scene load_steps=6 format=3 uid="uid://dnba2n1ob737x"]
 
-[ext_resource type="Script" uid="uid://dbp2dljwrer7m" path="res://global_sounds.gd" id="1_ygt6k"]
+[ext_resource type="Script" uid="uid://dbp2dljwrer7m" path="res://globals/global_sounds.gd" id="1_ygt6k"]
 [ext_resource type="AudioStream" uid="uid://b3klxmkb1lldy" path="res://audio/wraithSounds/Jumpscare.ogg" id="2_hk77k"]
 [ext_resource type="AudioStream" uid="uid://ru0kuavutlcp" path="res://audio/Death.ogg" id="3_5bu1w"]
 [ext_resource type="AudioStream" uid="uid://cdrvmlt86xifl" path="res://audio/MainMenu.ogg" id="4_hk77k"]

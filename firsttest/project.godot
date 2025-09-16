@@ -20,7 +20,8 @@ config/icon="uid://qqk5yf1k4ema"
 
 [autoload]
 
-GlobalSounds="*res://global_sounds.tscn"
+GlobalSounds="*res://globals/global_sounds.tscn"
+GlobalVariables="*res://globals/global_variables.gd"
 
 [display]
 

@@ -1,7 +1,7 @@
 [gd_scene load_steps=21 format=4 uid="uid://buhu53cqvbg8n"]
 
 [ext_resource type="Texture2D" uid="uid://c8yb3rsssuu70" path="res://tiles_traps/trap_tiles_FIN atlas rockeye closed.png" id="1_25f0d"]
-[ext_resource type="Script" uid="uid://ujq0vekwxglm" path="res://tiles_traps/trap_damage.gd" id="1_wpiuv"]
+[ext_resource type="Script" uid="uid://ujq0vekwxglm" path="res://tiles_traps/trap_wall_damage.gd" id="1_wpiuv"]
 [ext_resource type="Texture2D" uid="uid://cju3e1kjfyice" path="res://tiles_traps/trap_tiles_atlas_n.png" id="2_7yni8"]
 [ext_resource type="Texture2D" uid="uid://b08h70vxejfua" path="res://tiles_traps/trap_tiles_atlas sus closed.png" id="3_wpiuv"]
 [ext_resource type="Texture2D" uid="uid://bqevb4a02to67" path="res://tiles_traps/trap_tiles_atlas sus closed_n.png" id="4_0e403"]

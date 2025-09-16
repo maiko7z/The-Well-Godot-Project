@@ -3,6 +3,7 @@ extends Node3D
 
 func _ready():
 	#$"../../../..".finished_generating.connect(spawn_traps)
+	randomize()
 	spawn_traps()
 
 func spawn_traps():

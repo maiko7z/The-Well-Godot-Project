@@ -22,7 +22,8 @@ offset_bottom = 236.0
 [node name="Start" type="Button" parent="VBoxContainer"]
 layout_mode = 2
 theme = ExtResource("2_t3bh0")
-text = "Start"
+text = "Play
+"
 
 [node name="Version notes" type="Button" parent="VBoxContainer"]
 layout_mode = 2
@@ -34,6 +35,12 @@ layout_mode = 2
 theme = ExtResource("2_t3bh0")
 text = "Credits"
 
+[node name="Controls" type="Button" parent="VBoxContainer"]
+layout_mode = 2
+theme = ExtResource("2_t3bh0")
+text = "Controls
+"
+
 [node name="Quit" type="Button" parent="VBoxContainer"]
 layout_mode = 2
 theme = ExtResource("2_t3bh0")
@@ -42,4 +49,5 @@ text = "Quit"
 [connection signal="pressed" from="VBoxContainer/Start" to="." method="_on_start_pressed"]
 [connection signal="pressed" from="VBoxContainer/Version notes" to="." method="_on_version_notes_pressed"]
 [connection signal="pressed" from="VBoxContainer/Credits" to="." method="_on_credits_pressed"]
+[connection signal="pressed" from="VBoxContainer/Controls" to="." method="_on_controls_pressed"]
 [connection signal="pressed" from="VBoxContainer/Quit" to="." method="_on_quit_pressed"]
