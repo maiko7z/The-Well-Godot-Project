@@ -10,21 +10,27 @@ var storyCurrentLives = 3
 var endlessCurrentLives = 3
 #var resetLevelOnWorld = true #switches to false if you have enough lives to not refresh the structure and keep same seed
 
-#Trap modifiers that influence their spawn chance or damage
-var trapSusSpawnRate = 0
-var trapEyeSpawnRate = 0
-var trapSusDamageBoost = 0
-var trapEyeDamageBoost = 0
+#Trap modifiers that influence their spawn chance or damage. LOWER SPAWN RATE NUMBER MEANS HIGHER CHANCE TO SPAWN.
+var trapWallSpawnRate = 10.0 #If 2.5 or below, guaranteed spawn
+var trapSusSpawnRate = 10.0 #If 1.5 or below, guaranteed spawn
+var trapEyeSpawnRate = 10.0 #If 2.5 or below, guaranteed spawn over sus wall trap
+
+var trapSusDamage = 20.0
+var trapEyeDamage = 5.0
+
+#Dungeon size/room modifiers
+var dungeonXTotalSize = 10
+var dungeonPossibleRoomSpawns: Array = ["res://roomTypes/MonsterRoom.tscn"]
 
 #Player modifiers that mess with their core values
-var playerModHealth = 0
-var playerModHealthDegen = 0
-var playerModStam = 0
-var playerModMaxStam = 0
+var playerModHealth = 100.0
+var playerModHealthDegen = 0.0
+var playerModStamConsumption = 2.0
+var playerModMaxStam = 100.0
 
-#Enemy modifiers that make the wraith more dangerous
-var wraithModChaseSpeed = 0
-var wraithModRoamSpeed = 0
-var wraithModSearchSpeed = 0
-var wraithModChaseDuration = 0
-var wraithModSearchDuration = 0
+#Enemy modifiers that make the wraith more dangerous. The below values are the baseline
+var wraithModChaseSpeed = 5.0
+var wraithModRoamSpeed = 2.0
+var wraithModSearchSpeed = 5.0
+var wraithModChaseDuration = 3.5
+var wraithModSearchDuration = 10.0

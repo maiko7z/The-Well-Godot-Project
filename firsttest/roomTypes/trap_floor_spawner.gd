@@ -5,7 +5,7 @@ func _ready():
 	spawn_traps()
 
 func spawn_traps():
-	if RandomNumberGenerator.new().randf_range(0,10) > 1.5: 
+	if RandomNumberGenerator.new().randf_range(0,GlobalVariables.trapSusSpawnRate) > 1.5: #GlobalVariables.trapSusSpawnRate
 		$SusFloor.queue_free()
 	else:
 		$Floor.queue_free()

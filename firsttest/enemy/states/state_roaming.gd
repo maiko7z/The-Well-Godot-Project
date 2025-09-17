@@ -1,6 +1,6 @@
 extends EnemyState
 
-@export var _roaming_speed := 2.0
+@export var _roaming_speed : int = GlobalVariables.wraithModRoamSpeed
 
 var _map_synchronized := false
 var _target_position: Vector3

@@ -108,6 +108,9 @@ enum AStarHeuristics { NONE_DIJKSTRAS = 0, MANHATTAN = 1, EUCLIDEAN = 2 }
 ###########################
 ## INIT/PROCESS/BUILTINS ##
 ###########################
+#func _is_room_currently_usable(room):
+	#if GlobalVariables.dungeonPossibleRoomSpawns.has(room.get_tree().current_scene.scene_file_path):
+		#return room
 
 func _init():
 	RenderingServer.set_debug_generate_wireframes(true)
@@ -819,16 +822,36 @@ func setup_room_instances_and_validate_before_generate() -> bool:
 		return false
 	var inst_arr : Array[DungeonRoom3D] = []
 	for s in room_scenes:
-		if not s: continue
-		var inst = s.instantiate()
-		if not inst is DungeonRoom3D:
-			_printerr("SimpleDungeons Error: "+s.resource_path+" room scene does not inherit DungeonRoom3D. Also may need @tool annotation if generating in editor.")
-			return false
+		#print("Analysing element " + str(s.resource_path) + " from array!")
+		if not GlobalVariables.dungeonPossibleRoomSpawns.has(str(s.resource_path)):
+			#if str(s.resource_path) == "res://roomTypes/MonsterRoom.tscn":
+				#print_rich("[color=purple]We still need the monster room: " + str(s.resource_path) + " in the array!")
+				#if not s: continue
+				#var inst = s.instantiate()
+				#if not inst is DungeonRoom3D:
+					#_printerr("SimpleDungeons Error: "+s.resource_path+" room scene does not inherit DungeonRoom3D. Also may need @tool annotation if generating in editor.")
+					#return false
+				#else:
+					#inst.dungeon_generator = self
+					## Need to save door info before cloning/making virtual copies w/o actual nodes/meshes inside for performance
+					#inst.ensure_doors_and_or_transform_cached_for_threads_and_virtualized_rooms()
+					#inst_arr.append(inst as DungeonRoom3D)
+			#else:
+			print_rich("[color=white]Removing element " + str(s.resource_path) + " from array!")
+				#room_scenes.erase(s) #DON'T UNCOMMENT THIS IT FUCKS UP THE GOD DAMN ARRAY I SPENT 6 FUCKING HOURS TROUBLESHOOTING
+				#inst.min_count = 0
+				#s.max_count = 0
 		else:
-			inst.dungeon_generator = self
-			# Need to save door info before cloning/making virtual copies w/o actual nodes/meshes inside for performance
-			inst.ensure_doors_and_or_transform_cached_for_threads_and_virtualized_rooms()
-			inst_arr.append(inst as DungeonRoom3D)
+			if not s: continue
+			var inst = s.instantiate()
+			if not inst is DungeonRoom3D:
+				_printerr("SimpleDungeons Error: "+s.resource_path+" room scene does not inherit DungeonRoom3D. Also may need @tool annotation if generating in editor.")
+				return false
+			else:
+				inst.dungeon_generator = self
+				# Need to save door info before cloning/making virtual copies w/o actual nodes/meshes inside for performance
+				inst.ensure_doors_and_or_transform_cached_for_threads_and_virtualized_rooms()
+				inst_arr.append(inst as DungeonRoom3D)
 	room_instances = inst_arr
 	corridor_room_instance = corridor_room_scene.instantiate() if corridor_room_scene else null
 	if corridor_room_instance:

@@ -1,7 +1,7 @@
 [gd_scene load_steps=21 format=3 uid="uid://0nht4pnm1ybs"]
 
 [ext_resource type="MeshLibrary" uid="uid://cnx0qgayriil2" path="res://tiles/tileset.tres" id="1_eb85w"]
-[ext_resource type="Script" uid="uid://cp16ujlx0mdvi" path="res://world.gd" id="1_hiqwa"]
+[ext_resource type="Script" uid="uid://0mw7kqb0wmqq" path="res://world.gd" id="1_hiqwa"]
 [ext_resource type="Script" uid="uid://bkoiyaadv0p85" path="res://world_environment.gd" id="1_qpkas"]
 [ext_resource type="PackedScene" uid="uid://chu4ft88k3ahk" path="res://playerFolder/player.tscn" id="2_xr186"]
 [ext_resource type="Script" uid="uid://c8ricokuop81u" path="res://addons/SimpleDungeons/DungeonGenerator3D.gd" id="3_frnp6"]
@@ -65,7 +65,7 @@ corridor_room_scene = ExtResource("11_udxuc")
 dungeon_size = Vector3i(10, 1, 10)
 voxel_scale = Vector3(10.505, 5, 10.505)
 generate_on_ready = false
-max_retries = 2
+max_retries = 4
 metadata/_custom_type_script = "uid://c8ricokuop81u"
 
 [node name="DungeonOpening" type="Node3D" parent="DungeonGenerator3D"]

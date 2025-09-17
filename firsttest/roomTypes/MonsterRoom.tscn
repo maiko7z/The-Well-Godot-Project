@@ -69,16 +69,16 @@ transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -1, -1
 [node name="Corner2" parent="NavigationRegion3D/GridMap/DOOR?_RIGHT" instance=ExtResource("5_44k64")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1, -1.25, -3)
 
-[node name="DOOR?_BACK" type="Node3D" parent="NavigationRegion3D/GridMap"]
+[node name="DOOR_BACK" type="Node3D" parent="NavigationRegion3D/GridMap"]
 transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 0.5, 1.25, 1.5)
 
-[node name="Wall" parent="NavigationRegion3D/GridMap/DOOR?_BACK" instance=ExtResource("4_cfcpe")]
+[node name="Wall" parent="NavigationRegion3D/GridMap/DOOR_BACK" instance=ExtResource("4_cfcpe")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.08616e-07, -1.25, -3)
 
-[node name="Corner1" parent="NavigationRegion3D/GridMap/DOOR?_BACK" instance=ExtResource("5_44k64")]
+[node name="Corner1" parent="NavigationRegion3D/GridMap/DOOR_BACK" instance=ExtResource("5_44k64")]
 transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -1, -1.25, -3)
 
-[node name="Corner2" parent="NavigationRegion3D/GridMap/DOOR?_BACK" instance=ExtResource("5_44k64")]
+[node name="Corner2" parent="NavigationRegion3D/GridMap/DOOR_BACK" instance=ExtResource("5_44k64")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1, -1.25, -3)
 
 [node name="Enemy" parent="." instance=ExtResource("6_yb7rw")]

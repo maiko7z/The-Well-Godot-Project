@@ -1,8 +1,8 @@
 extends EnemyState
 
-@export var chase_max_time := 3.5
+@export var chase_max_time : int = GlobalVariables.wraithModChaseDuration
 @export var update_path_delay := 0.0 # if you do not want to update the path every physics frame, increase this
-@export var _chasing_speed := 5.0
+@export var _chasing_speed : int = GlobalVariables.wraithModChaseSpeed
 @export var _catching_distance := 1.4
 
 

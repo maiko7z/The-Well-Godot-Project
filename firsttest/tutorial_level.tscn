@@ -1,6 +1,6 @@
 [gd_scene load_steps=17 format=3 uid="uid://bk7koapp7moh5"]
 
-[ext_resource type="Script" uid="uid://cp16ujlx0mdvi" path="res://world.gd" id="1_p21de"]
+[ext_resource type="Script" uid="uid://c3cjac2php2l5" path="res://tutorial_level.gd" id="1_s56d1"]
 [ext_resource type="Script" uid="uid://bkoiyaadv0p85" path="res://world_environment.gd" id="2_i25kj"]
 [ext_resource type="PackedScene" uid="uid://buhu53cqvbg8n" path="res://tiles_traps/sus_wall.tscn" id="5_a5404"]
 [ext_resource type="PackedScene" uid="uid://88hmwx1qw4rk" path="res://tiles_traps/rockeye_trap.tscn" id="6_ohhhg"]
@@ -47,7 +47,7 @@ height = 3.11481
 
 [node name="World" type="Node3D"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.176785, -0.000110149, -0.0965099)
-script = ExtResource("1_p21de")
+script = ExtResource("1_s56d1")
 
 [node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
 transform = Transform3D(-0.866025, -0.433013, 0.25, 0, 0.5, 0.866025, -0.5, 0.75, -0.433013, 0, 0, 0)

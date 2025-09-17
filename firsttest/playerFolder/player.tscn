@@ -80,12 +80,12 @@ func _ready():
 func _take_damage(damage: int):
 	CURRENT_HEALTH -= damage
 	healthBar.value = CURRENT_HEALTH
-	print(\"owch! hurting!\")
+	#print(\"owch! hurting!\")
 	if healthBar.value <= 0:
 		GlobalSounds.health_death_sound_play()
 		get_tree().change_scene_to_file(\"res://screens/game_over.tscn\")
 	else:
-		if damage >= 5:
+		if damage >= 5: #Specifically doing this because we may drain health and don't want to give the player a seizure
 			if hurtFrame.visible == false:
 				hurtFrame.visible = true
 				hurtFrameTimer.start()

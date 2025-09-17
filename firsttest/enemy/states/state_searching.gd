@@ -1,7 +1,7 @@
 extends EnemyState
 
-@export var search_time := 10.0
-@export var _searching_speed := 5.0
+@export var search_time : int = GlobalVariables.wraithModSearchDuration
+@export var _searching_speed : int = GlobalVariables.wraithModSearchSpeed
 @export var _search_radius := 10.0
 
 var _search_timer := 0.0

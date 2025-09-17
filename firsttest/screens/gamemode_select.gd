@@ -5,10 +5,12 @@ func _ready() -> void:
 		$VBoxContainer/StoryContinue.text = "Story Mode\n(CONTINUE - Lvl " + str(GlobalVariables.storyLevel) + ")"
 	else:
 		$VBoxContainer/StoryContinue.text = "Story Mode\n(CONTINUE)"
+		$VBoxContainer/StoryContinue.disabled = true
 	if GlobalVariables.endlessLevel > 0:
 		$VBoxContainer/EndlessContinue.text = "Endless Mode\n(CONTINUE - Lvl " + str(GlobalVariables.endlessLevel) + ")"
 	else:
 		$VBoxContainer/EndlessContinue.text = "Endless Mode\n(CONTINUE)"
+		$VBoxContainer/EndlessContinue.disabled = true
 
 func _on_new_story_pressed() -> void:
 	GlobalSounds.click_sound_play()
@@ -27,7 +29,7 @@ func _on_continue_story_pressed() -> void:
 func _on_new_endless_pressed() -> void:
 	GlobalSounds.click_sound_play()
 	GlobalVariables.currentGameMode = "Endless"
-	GlobalVariables.endlessLevel = 0
+	GlobalVariables.endlessLevel = 1
 	GlobalVariables.endlessCurrentLives = 3
 	get_tree().change_scene_to_file("res://world.tscn")
 	GlobalSounds.main_menu_music_stop()
