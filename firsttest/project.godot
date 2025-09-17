@@ -35,6 +35,14 @@ window/stretch/mode="viewport"
 
 enabled=PackedStringArray()
 
+[file_customization]
+
+folder_colors={
+"res://images2d/": "purple",
+"res://player2d/": "purple",
+"res://scenes2d/": "purple"
+}
+
 [input]
 
 sprint={
