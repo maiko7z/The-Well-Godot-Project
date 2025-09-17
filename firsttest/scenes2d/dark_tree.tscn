@@ -1,0 +1,29 @@
+[gd_scene load_steps=5 format=3 uid="uid://dpi3nj5ynlf8l"]
+
+[ext_resource type="Texture2D" uid="uid://8t2hp5eidup1" path="res://images2d/UntitledArtwork13 (1).png" id="1_4xk2m"]
+[ext_resource type="Texture2D" uid="uid://cjbah50goxmt" path="res://images2d/UntitledArtwork11 (3).png" id="2_kepow"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_03sbs"]
+size = Vector2(3, 1)
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_4xk2m"]
+radius = 5.0
+
+[node name="Dark Tree" type="StaticBody2D"]
+collision_layer = 2
+collision_mask = 0
+
+[node name="Tree" type="Sprite2D" parent="."]
+z_index = 2
+texture = ExtResource("1_4xk2m")
+
+[node name="Stump" type="Sprite2D" parent="."]
+texture = ExtResource("2_kepow")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(-0.5, 8.5)
+shape = SubResource("RectangleShape2D_03sbs")
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="."]
+position = Vector2(2, 0)
+shape = SubResource("CircleShape2D_4xk2m")

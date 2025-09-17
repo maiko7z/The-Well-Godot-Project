@@ -1,0 +1,30 @@
+[gd_scene load_steps=5 format=3 uid="uid://t3rtm1ai2hk3"]
+
+[ext_resource type="Texture2D" uid="uid://8rv5l51hxwl4" path="res://images2d/UntitledArtwork11 (2).png" id="1_atcab"]
+[ext_resource type="Texture2D" uid="uid://cjbah50goxmt" path="res://images2d/UntitledArtwork11 (3).png" id="2_mtaav"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_atcab"]
+radius = 5.0
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_bdh2f"]
+size = Vector2(2.5, 1)
+
+[node name="Bright Tree" type="StaticBody2D"]
+z_index = 2
+collision_layer = 2
+collision_mask = 0
+
+[node name="Light Purple tree" type="Sprite2D" parent="."]
+z_index = 1
+texture = ExtResource("1_atcab")
+
+[node name="Tree stump" type="Sprite2D" parent="."]
+texture = ExtResource("2_mtaav")
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="."]
+position = Vector2(-2, 1)
+shape = SubResource("CircleShape2D_atcab")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(-0.25, 8.5)
+shape = SubResource("RectangleShape2D_bdh2f")

@@ -1,0 +1,8 @@
+[gd_scene load_steps=2 format=3 uid="uid://r7i7tebg5u8w"]
+
+[ext_resource type="Texture2D" uid="uid://b15vqwc2wjoyl" path="res://images2d/UntitledArtwork9.png" id="1_hr0la"]
+
+[node name="Light Mushroom Sprite" type="Node2D"]
+
+[node name="Light Mushroom" type="Sprite2D" parent="."]
+texture = ExtResource("1_hr0la")
