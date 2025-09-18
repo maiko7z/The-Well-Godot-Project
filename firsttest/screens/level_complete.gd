@@ -25,7 +25,11 @@ func _ready() -> void:
 
 func _on_restart_pressed() -> void:
 	GlobalSounds.click_sound_play()
-	get_tree().change_scene_to_file("res://world.tscn")
+	if GlobalVariables.currentGameMode == "Story":
+		if GlobalVariables.storyLevel == 1:
+			get_tree().change_scene_to_file("res://scenes2d/levels2d/level_2.tscn")
+		else:
+			get_tree().change_scene_to_file("res://world.tscn")
 	
 func _on_quit_pressed() -> void:
 	GlobalSounds.click_sound_play()

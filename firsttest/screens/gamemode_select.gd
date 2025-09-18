@@ -16,7 +16,7 @@ func _on_new_story_pressed() -> void:
 	GlobalSounds.click_sound_play()
 	GlobalVariables.currentGameMode = "Story"
 	GlobalVariables.storyLevel = 0
-	get_tree().change_scene_to_file("res://tutorial_level.tscn")
+	get_tree().change_scene_to_file("res://scenes2d/levels2d/level_1.tscn")
 	GlobalSounds.main_menu_music_stop()
 
 func _on_continue_story_pressed() -> void:

@@ -6,6 +6,7 @@ const SPEED = 50.0
 #@onready var animated_sprite = $AnimatedSprite2D
 @onready var animated_sprite: AnimatedSprite2D = $AnimatedSprite2D
 
+
 func _physics_process(delta):
 	# Add the gravity.
 	if not is_on_floor():
@@ -37,12 +38,12 @@ func _physics_process(delta):
 	var direction_y := Input.get_axis("up", "down")
 	# animation 
 	#if direction_y == 0:
-		#animated_sprite.play("default")
+		#animated_sprite.play("idle")
 	#elif direction_y > 0:
 		#animated_sprite.play("up")
 	#else:
 		#animated_sprite.play("down")		
-	#
+	
 	if direction_y:
 		velocity.y = direction_y * SPEED
 	else:

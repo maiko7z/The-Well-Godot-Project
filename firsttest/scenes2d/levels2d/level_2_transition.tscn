@@ -1,0 +1,62 @@
+[gd_scene load_steps=7 format=3 uid="uid://brt2x7l76xjh4"]
+
+[ext_resource type="Script" uid="uid://cdefjfvwp0pm2" path="res://scenes2d/levels2d/level_2_transition.gd" id="1_2g76w"]
+[ext_resource type="AudioStream" uid="uid://c1b4mowtf8jrx" path="res://audio/wraithSounds/WraithIdle1.mp3" id="2_ushwd"]
+[ext_resource type="AudioStream" uid="uid://bspjdac6hrjfd" path="res://audio/Main2DTheme.ogg" id="3_r76ga"]
+[ext_resource type="Texture2D" uid="uid://cqhkaqomdof62" path="res://images/enemy.png" id="4_04fco"]
+[ext_resource type="Texture2D" uid="uid://b1s11gygofpfh" path="res://images2d/UntitledArtwork5 (2).png" id="5_ushwd"]
+[ext_resource type="Theme" uid="uid://cxjwnkpltc1jx" path="res://textTheme.tres" id="6_r76ga"]
+
+[node name="Jumpscare" type="Control"]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+script = ExtResource("1_2g76w")
+
+[node name="JumpscareNoise" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("2_ushwd")
+volume_db = 6.357
+autoplay = true
+
+[node name="JumpscareNoise2" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("3_r76ga")
+volume_db = 14.545
+pitch_scale = 0.31
+autoplay = true
+bus = &"WarpedSFX"
+
+[node name="Background" type="ColorRect" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(12, 8)
+color = Color(0, 0, 0, 1)
+
+[node name="JumpscarePlaceholder" type="Sprite2D" parent="."]
+position = Vector2(342, 161)
+scale = Vector2(0.152803, 0.154889)
+texture = ExtResource("4_04fco")
+
+[node name="ScareTime" type="Timer" parent="."]
+wait_time = 1.175
+one_shot = true
+
+[node name="Well" type="Sprite2D" parent="."]
+position = Vector2(240, 147)
+scale = Vector2(1.15625, 1.07812)
+texture = ExtResource("5_ushwd")
+
+[node name="Accuse" type="RichTextLabel" parent="."]
+layout_mode = 0
+offset_left = 223.0
+offset_top = 59.0
+offset_right = 263.0
+offset_bottom = 99.0
+theme = ExtResource("6_r76ga")
+text = "YOU"
+
+[connection signal="timeout" from="ScareTime" to="." method="_scene_swap"]
