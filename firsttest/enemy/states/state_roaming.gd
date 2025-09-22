@@ -28,7 +28,7 @@ func enter(previous_state_name: String, data := {}) -> void:
 		return
 	
 	if data.has("do_not_reset_path") and data["do_not_reset_path"]:
-		_enemy.travel_to_position(_enemy.navigation_agent.target_position, _roaming_speed)
+		_enemy.travel_to_position(_enemy.navigation_agent.target_position, GlobalVariables.wraithModRoamSpeed)
 		return
 	
 	
@@ -64,4 +64,4 @@ func physics_update(_delta: float) -> void:
 
 func _travel_to_random_position() -> void:
 	var rand_pos := NavigationServer3D.map_get_random_point(_nav_map, 1, true)
-	_enemy.travel_to_position(rand_pos, _roaming_speed)
+	_enemy.travel_to_position(rand_pos, GlobalVariables.wraithModRoamSpeed)

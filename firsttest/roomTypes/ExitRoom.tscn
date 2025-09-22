@@ -45,9 +45,12 @@ omni_range = 3.173
 
 [node name="Ambient" type="AudioStreamPlayer3D" parent="ExitLight"]
 stream = ExtResource("3_x38kw")
+volume_db = 7.656
+unit_size = 15.26
+max_db = 0.273
 pitch_scale = 0.15
 autoplay = true
-max_distance = 75.0
+max_distance = 94.6
 bus = &"ReverbAmbience"
 parameters/looping = true
 
