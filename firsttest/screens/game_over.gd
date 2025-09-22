@@ -5,12 +5,8 @@ func _ready() -> void:
 	randomize()
 	%RetryButton.pressed.connect(_on_restart_pressed)
 	%MainMenuButton.pressed.connect(_on_main_menu_pressed)
-	%QuitButton.pressed.connect(_on_quit_pressed)
 	Input.mouse_mode = Input.MOUSE_MODE_VISIBLE
-	if GlobalVariables.currentGameMode == "Story":
-		%RetryButton.text = "Retry? ( Level " + str(GlobalVariables.storyLevel) + " )"
-	else:
-		%RetryButton.text = "Retry? ( Level " + str(GlobalVariables.endlessLevel) + " )"
+	%QuitButton.pressed.connect(_on_quit_pressed) 
 	var textChoice = RandomNumberGenerator.new().randf_range(0,10)
 	if textChoice < 2.5: 
 		message.text = "Your mind blanks, full of pain... \n...but hungry for answers."
@@ -21,6 +17,25 @@ func _ready() -> void:
 	elif textChoice >= 7.5:
 		message.text = "Why do you hide the truth from yourself?"
 	
+	if GlobalVariables.currentGameMode == "Story":
+		%RetryButton.text = "Retry? ( Level " + str(GlobalVariables.storyLevel) + " )"
+		$NoLivesLeft.play()
+	else:
+		GlobalVariables.endlessCurrentLives -= 1
+		if GlobalVariables.endlessCurrentLives <= 0:
+			%RetryButton.visible = false
+			$CenterContainer/VBoxContainer/GameOverLabel.text = "GAME OVER"
+			message.text = message.text + "\nNo lives left."
+			GlobalVariables.endlessLevel = 0
+			GlobalVariables.endlessCurrentLives = 3
+			$NoLivesLeft.play()
+		else:
+			$LifeLost.play()
+			%RetryButton.text = "Retry? ( Level " + str(GlobalVariables.endlessLevel) + " )"
+			if GlobalVariables.endlessCurrentLives == 1:
+				message.text = message.text + "\n" + str(GlobalVariables.endlessCurrentLives) + " life left!"
+			else:
+				message.text = message.text + "\n" + str(GlobalVariables.endlessCurrentLives) + " lives left!"
 func _on_restart_pressed() -> void:
 	GlobalSounds.click_sound_play()
 	if GlobalVariables.currentGameMode == "Story" and GlobalVariables.storyLevel == 0:

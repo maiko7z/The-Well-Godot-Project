@@ -7,12 +7,6 @@ func _ready() -> void:
 	%MainMenuButton.pressed.connect(_on_main_menu_pressed)
 	%QuitButton.pressed.connect(_on_quit_pressed)
 	Input.mouse_mode = Input.MOUSE_MODE_VISIBLE
-	if GlobalVariables.currentGameMode == "Story":
-		GlobalVariables.storyLevel += 1
-		%ContinueButton.text = "Continue ( Level " + str(GlobalVariables.storyLevel) + " )"
-	else:
-		GlobalVariables.endlessLevel += 1
-		%ContinueButton.text = "Continue ( Level " + str(GlobalVariables.endlessLevel) + " )"
 	var textChoice = RandomNumberGenerator.new().randf_range(0,10)
 	if textChoice < 2.5: 
 		message.text = "No more lies to yourself. \nThe truth must be yours."
@@ -22,6 +16,17 @@ func _ready() -> void:
 		message.text = "You feel closer to the truth."
 	elif textChoice >= 7.5:
 		message.text = "Revelation at last? No... but nearly!"
+	
+	if GlobalVariables.currentGameMode == "Story":
+		GlobalVariables.storyLevel += 1
+		%ContinueButton.text = "Continue ( Level " + str(GlobalVariables.storyLevel) + " )"
+	else:
+		GlobalVariables.endlessLevel += 1
+		%ContinueButton.text = "Continue ( Level " + str(GlobalVariables.endlessLevel) + " )"
+		if GlobalVariables.endlessCurrentLives == 1:
+			message.text = message.text + "\n" + str(GlobalVariables.endlessCurrentLives) + " life left!"
+		else:
+			message.text = message.text + "\n" + str(GlobalVariables.endlessCurrentLives) + " lives left!"
 
 func _on_restart_pressed() -> void:
 	GlobalSounds.click_sound_play()

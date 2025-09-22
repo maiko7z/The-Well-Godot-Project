@@ -1,4 +1,4 @@
-[gd_scene load_steps=17 format=3 uid="uid://bk7koapp7moh5"]
+[gd_scene load_steps=18 format=3 uid="uid://bk7koapp7moh5"]
 
 [ext_resource type="Script" uid="uid://c3cjac2php2l5" path="res://tutorial_level.gd" id="1_s56d1"]
 [ext_resource type="Script" uid="uid://bkoiyaadv0p85" path="res://world_environment.gd" id="2_i25kj"]
@@ -7,6 +7,7 @@
 [ext_resource type="PackedScene" uid="uid://dtsulxlclgia3" path="res://tiles_traps/sus_floor.tscn" id="7_drjao"]
 [ext_resource type="Texture2D" uid="uid://b533o31yijebg" path="res://images/light.jpg" id="8_s56d1"]
 [ext_resource type="Script" uid="uid://d14x5qa1bsrdu" path="res://roomTypes/area_3d.gd" id="9_ccse8"]
+[ext_resource type="AudioStream" uid="uid://btylk3hqyl2qq" path="res://audio/pianoHits/Frantic3.ogg" id="9_tgnax"]
 [ext_resource type="AudioStream" uid="uid://cpdmshr5kyvqc" path="res://audio/AmbienceLooped.ogg" id="13_ct0jk"]
 [ext_resource type="MeshLibrary" uid="uid://cnx0qgayriil2" path="res://tiles/tileset.tres" id="14_h47qk"]
 [ext_resource type="PackedScene" uid="uid://chu4ft88k3ahk" path="res://playerFolder/player.tscn" id="15_8tbre"]
@@ -146,6 +147,14 @@ height = 3.90222
 light_color = Color(1, 0.914231, 0.0586001, 1)
 light_energy = 1.625
 omni_range = 3.173
+
+[node name="Ambient" type="AudioStreamPlayer3D" parent="NavigationRegion3D/StarterZone/GridMap/ExitNode/ExitLight"]
+stream = ExtResource("9_tgnax")
+pitch_scale = 0.23
+autoplay = true
+max_distance = 75.0
+bus = &"ReverbAmbience"
+parameters/looping = true
 
 [node name="ExitLightOuter" type="CSGCylinder3D" parent="NavigationRegion3D/StarterZone/GridMap/ExitNode"]
 transform = Transform3D(1, 1.60654e-10, 1.45519e-11, -3.41061e-13, 1, 0, 0, 0, 1.00002, 0, 0.626647, 0)

@@ -1,9 +1,10 @@
-[gd_scene load_steps=7 format=3 uid="uid://ds1dcdlcj1lya"]
+[gd_scene load_steps=8 format=3 uid="uid://ds1dcdlcj1lya"]
 
 [ext_resource type="Theme" uid="uid://cxjwnkpltc1jx" path="res://textTheme.tres" id="1_4qfck"]
 [ext_resource type="Script" uid="uid://cgph8uqjba4m" path="res://screens/game_over.gd" id="1_s28jw"]
 [ext_resource type="AudioStream" uid="uid://cpdmshr5kyvqc" path="res://audio/AmbienceLooped.ogg" id="2_skulm"]
 [ext_resource type="AudioStream" uid="uid://cycr8l2gorlke" path="res://audio/pianoHits/LifeLost.ogg" id="4_4qfck"]
+[ext_resource type="AudioStream" uid="uid://b1w5hjis32rra" path="res://audio/pianoHits/Frantic4.ogg" id="5_40pha"]
 
 [sub_resource type="LabelSettings" id="LabelSettings_11mxd"]
 font_size = 32
@@ -47,7 +48,7 @@ layout_mode = 2
 layout_mode = 2
 theme_override_colors/font_color = Color(1, 0, 0, 1)
 theme_override_font_sizes/font_size = 31
-text = "GAME OVER"
+text = "YOU DIED"
 label_settings = SubResource("LabelSettings_11mxd")
 horizontal_alignment = 1
 
@@ -58,7 +59,7 @@ layout_mode = 2
 [node name="LoreLabel" type="Label" parent="CenterContainer/VBoxContainer"]
 layout_mode = 2
 theme_override_colors/font_color = Color(1, 0, 0, 1)
-theme_override_font_sizes/font_size = 31
+theme_override_font_sizes/font_size = 36
 text = "Your mind blanks, full of pain...
 ...but hungry for answers."
 label_settings = SubResource("LabelSettings_skulm")
@@ -92,7 +93,10 @@ pitch_scale = 2.21
 autoplay = true
 parameters/looping = true
 
-[node name="Jumpscare" type="AudioStreamPlayer" parent="."]
+[node name="NoLivesLeft" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("4_4qfck")
 volume_db = 6.057
-autoplay = true
+
+[node name="LifeLost" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("5_40pha")
+volume_db = 6.967
