@@ -144,10 +144,10 @@ func _ready() -> void:
 			GlobalVariables.trapEyeSpawnRate = 10.0
 			GlobalVariables.trapSusSpawnRate = 10.0
 			GlobalVariables.dungeonXTotalSize = 6
-			GlobalVariables.dungeonPossibleRoomSpawns = ["res://roomTypes/MonsterRoom.tscn","res://roomTypes/LargeRoom_Cramped.tscn","res://roomTypes/LargeRoom.tscn","res://roomTypes/ExitRoom.tscn"]
+			GlobalVariables.dungeonPossibleRoomSpawns = ["res://roomTypes/MonsterRoom.tscn","res://roomTypes/LargeRoom_Cramped.tscn","res://roomTypes/LargeRoom.tscn","res://roomTypes/StraightHall.tscn","res://roomTypes/ExitRoom.tscn"]
 			GlobalVariables.wraithModChaseDuration = 3.0
 			GlobalVariables.wraithModChaseSpeed = 4.5
-			GlobalVariables.wraithModSearchSpeed = 4.0
+			GlobalVariables.wraithModSearchSpeed = 4.5
 			GlobalVariables.wraithModSearchDuration = 7.0
 		elif GlobalVariables.storyLevel == 4:
 			GlobalVariables.trapWallSpawnRate = 8.0
@@ -157,17 +157,17 @@ func _ready() -> void:
 			GlobalVariables.dungeonPossibleRoomSpawns = ["res://roomTypes/SmallRoom_U.tscn","res://roomTypes/MonsterRoom.tscn","res://roomTypes/LargeRoom_Cramped.tscn","res://roomTypes/SmallDeadEnd.tscn","res://roomTypes/ExitRoom.tscn"]
 			GlobalVariables.wraithModChaseDuration = 3.5
 			GlobalVariables.wraithModChaseSpeed = 5.0
-			GlobalVariables.wraithModSearchSpeed = 4.5
+			GlobalVariables.wraithModSearchSpeed = 5.0
 			GlobalVariables.wraithModSearchDuration = 9.0
 		elif GlobalVariables.storyLevel == 5:
 			GlobalVariables.trapWallSpawnRate = 8.0
 			GlobalVariables.trapEyeSpawnRate = 7.0
 			GlobalVariables.trapSusSpawnRate = 25.0
 			GlobalVariables.dungeonXTotalSize = 8
-			GlobalVariables.dungeonPossibleRoomSpawns = ["res://roomTypes/SmallRoom_U.tscn","res://roomTypes/MonsterRoom.tscn","res://roomTypes/SmallerRoom_Pillar.tscn","res://roomTypes/SmallDeadEnd.tscn","res://roomTypes/ExitRoom.tscn"]
+			GlobalVariables.dungeonPossibleRoomSpawns = ["res://roomTypes/SmallRoom_U.tscn","res://roomTypes/MonsterRoom.tscn","res://roomTypes/SmallerRoom_Pillar.tscn","res://roomTypes/SmallDeadEnd.tscn","res://roomTypes/StraightHall.tscn","res://roomTypes/ExitRoom.tscn"]
 			GlobalVariables.wraithModChaseDuration = 3.5
 			GlobalVariables.wraithModChaseSpeed = 5.0
-			GlobalVariables.wraithModSearchSpeed = 5.0
+			GlobalVariables.wraithModSearchSpeed = 5.5
 			GlobalVariables.wraithModSearchDuration = 10.0
 		elif GlobalVariables.storyLevel == 6:
 			GlobalVariables.trapWallSpawnRate = 6.0
@@ -176,9 +176,9 @@ func _ready() -> void:
 			GlobalVariables.dungeonXTotalSize = 10
 			GlobalVariables.wraithModChaseDuration = 4.0
 			GlobalVariables.wraithModChaseSpeed = 5.0
-			GlobalVariables.wraithModSearchSpeed = 5.0
+			GlobalVariables.wraithModSearchSpeed = 6.0
 			GlobalVariables.wraithModSearchDuration = 12.0
-			GlobalVariables.dungeonPossibleRoomSpawns = ["res://roomTypes/LargeRoom.tscn","res://roomTypes/SmallerRoom_Pillar.tscn","res://roomTypes/SmallRoom_U.tscn","res://roomTypes/MonsterRoom.tscn","res://roomTypes/LargeRoom_Cramped.tscn","res://roomTypes/SmallDeadEnd.tscn","res://roomTypes/ExitRoom.tscn"]
+			GlobalVariables.dungeonPossibleRoomSpawns = ["res://roomTypes/LargeRoom.tscn","res://roomTypes/SmallerRoom_Pillar.tscn","res://roomTypes/SmallRoom_U.tscn","res://roomTypes/MonsterRoom.tscn","res://roomTypes/LargeRoom_Cramped.tscn","res://roomTypes/SmallDeadEnd.tscn","res://roomTypes/ExitRoom.tscn","res://roomTypes/StraightHall.tscn"]
 	else:
 		if GlobalVariables.endlessLevel <= 1: #Base for endless levels
 			GlobalVariables.trapWallSpawnRate = 15.0
@@ -190,7 +190,7 @@ func _ready() -> void:
 			GlobalVariables.wraithModSearchSpeed = 4.0
 			GlobalVariables.wraithModSearchDuration = 6.0
 			GlobalVariables.dungeonPossibleRoomSpawns = ["res://roomTypes/LargeRoom_Cramped.tscn","res://roomTypes/LargeRoom.tscn","res://roomTypes/ExitRoom.tscn","res://roomTypes/MonsterRoom.tscn"]
-		elif GlobalVariables.endlessLevel > 1 and GlobalVariables.endlessLevel < 10:
+		elif GlobalVariables.endlessLevel > 1 and GlobalVariables.endlessLevel < 7:
 			if RandomNumberGenerator.new().randf_range(0,10) < 1: #10% chance to increase
 				GlobalVariables.trapWallSpawnRate -= 1.0
 			if RandomNumberGenerator.new().randf_range(0,10) < 1:
@@ -202,7 +202,15 @@ func _ready() -> void:
 				if GlobalVariables.dungeonXTotalSize < 8 and GlobalVariables.dungeonXTotalSize >= 6:
 					GlobalVariables.dungeonPossibleRoomSpawns = ["res://roomTypes/LargeRoom.tscn","res://roomTypes/SmallerRoom_Pillar.tscn","res://roomTypes/MonsterRoom.tscn","res://roomTypes/LargeRoom_Cramped.tscn","res://roomTypes/SmallDeadEnd.tscn","res://roomTypes/ExitRoom.tscn"]
 				elif GlobalVariables.dungeonXTotalSize >= 8:
-					GlobalVariables.dungeonPossibleRoomSpawns = ["res://roomTypes/LargeRoom.tscn","res://roomTypes/SmallerRoom_Pillar.tscn","res://roomTypes/SmallRoom_U.tscn","res://roomTypes/MonsterRoom.tscn","res://roomTypes/LargeRoom_Cramped.tscn","res://roomTypes/SmallDeadEnd.tscn","res://roomTypes/ExitRoom.tscn"]
+					GlobalVariables.dungeonPossibleRoomSpawns = ["res://roomTypes/LargeRoom.tscn","res://roomTypes/SmallerRoom_Pillar.tscn","res://roomTypes/SmallRoom_U.tscn","res://roomTypes/MonsterRoom.tscn","res://roomTypes/LargeRoom_Cramped.tscn","res://roomTypes/SmallDeadEnd.tscn","res://roomTypes/ExitRoom.tscn","res://roomTypes/StraightHall.tscn",]
+		
+			#custom preset style dungeons have a chance to generate!
+			#cramped style
+			if RandomNumberGenerator.new().randf_range(0,9) < 1 and GlobalVariables.dungeonXTotalSize >= 8: #Cramped preset
+				GlobalVariables.dungeonPossibleRoomSpawns = ["res://roomTypes/SmallRoom_U.tscn","res://roomTypes/MonsterRoom.tscn","res://roomTypes/SmallDeadEnd.tscn","res://roomTypes/ExitRoom.tscn","res://roomTypes/StraightHall.tscn","res://roomTypes/StraightHall_Multi.tscn"]
+			elif RandomNumberGenerator.new().randf_range(0,8) < 1 and GlobalVariables.dungeonXTotalSize >= 10: #spacious style
+				GlobalVariables.dungeonPossibleRoomSpawns = ["res://roomTypes/LargeRoom_Multi.tscn","res://roomTypes/MonsterRoom.tscn","res://roomTypes/LargeRoom.tscn","res://roomTypes/ExitRoom.tscn","res://roomTypes/StraightHall.tscn"]
+			
 			if RandomNumberGenerator.new().randf_range(0,10) < 1:
 				GlobalVariables.wraithModChaseDuration += 0.25
 			if RandomNumberGenerator.new().randf_range(0,10) < 1:
@@ -211,7 +219,7 @@ func _ready() -> void:
 				GlobalVariables.wraithModSearchSpeed += 0.25
 			if RandomNumberGenerator.new().randf_range(0,10) < 1:
 				GlobalVariables.wraithModSearchDuration += 0.25
-		elif GlobalVariables.endlessLevel >= 10: #and GlobalVariables.endlessLevel < 20:
+		elif GlobalVariables.endlessLevel >= 7: #and GlobalVariables.endlessLevel < 20:
 			if RandomNumberGenerator.new().randf_range(0,8) < 1: #12.5% chance to increase
 				if GlobalVariables.trapWallSpawnRate > 1.0: #Do a check so that we don't dip into negatives and throw an error
 					GlobalVariables.trapWallSpawnRate -= 1.0
@@ -222,12 +230,28 @@ func _ready() -> void:
 				if GlobalVariables.trapSusSpawnRate > 1.0:
 					GlobalVariables.trapSusSpawnRate -= 1.0
 			if RandomNumberGenerator.new().randf_range(0,17) < 1:
-				if GlobalVariables.dungeonXTotalSize < 20.0: #Don't get too big
-					GlobalVariables.dungeonXTotalSize += 2.0
+				
+				if GlobalVariables.endlessLevel <= 12:
+					if GlobalVariables.dungeonXTotalSize < 10.0: #Don't get too big
+						GlobalVariables.dungeonXTotalSize += 2.0
+				elif GlobalVariables.endlessLevel > 12 and GlobalVariables.endlessLevel <= 20:
+					if GlobalVariables.dungeonXTotalSize < 15.0: #Don't get too big
+						GlobalVariables.dungeonXTotalSize += 2.0
+				elif GlobalVariables.endlessLevel > 20:
+					if GlobalVariables.dungeonXTotalSize < 20.0: #Don't get too big
+						GlobalVariables.dungeonXTotalSize += 2.0
 				if GlobalVariables.dungeonXTotalSize < 8 and GlobalVariables.dungeonXTotalSize >= 6:
 					GlobalVariables.dungeonPossibleRoomSpawns = ["res://roomTypes/LargeRoom.tscn","res://roomTypes/SmallerRoom_Pillar.tscn","res://roomTypes/MonsterRoom.tscn","res://roomTypes/LargeRoom_Cramped.tscn","res://roomTypes/SmallDeadEnd.tscn","res://roomTypes/ExitRoom.tscn"]
 				elif GlobalVariables.dungeonXTotalSize >= 8:
-					GlobalVariables.dungeonPossibleRoomSpawns = ["res://roomTypes/LargeRoom.tscn","res://roomTypes/SmallerRoom_Pillar.tscn","res://roomTypes/SmallRoom_U.tscn","res://roomTypes/MonsterRoom.tscn","res://roomTypes/LargeRoom_Cramped.tscn","res://roomTypes/SmallDeadEnd.tscn","res://roomTypes/ExitRoom.tscn"]
+					GlobalVariables.dungeonPossibleRoomSpawns = ["res://roomTypes/LargeRoom.tscn","res://roomTypes/SmallerRoom_Pillar.tscn","res://roomTypes/SmallRoom_U.tscn","res://roomTypes/MonsterRoom.tscn","res://roomTypes/LargeRoom_Cramped.tscn","res://roomTypes/SmallDeadEnd.tscn","res://roomTypes/ExitRoom.tscn","res://roomTypes/StraightHall.tscn",]
+			
+			#custom preset style dungeons have a chance to generate!
+			#cramped style
+			if RandomNumberGenerator.new().randf_range(0,8) < 1 and GlobalVariables.dungeonXTotalSize >= 8:
+				GlobalVariables.dungeonPossibleRoomSpawns = ["res://roomTypes/SmallRoom_U.tscn","res://roomTypes/MonsterRoom.tscn","res://roomTypes/SmallDeadEnd.tscn","res://roomTypes/ExitRoom.tscn","res://roomTypes/StraightHall.tscn","res://roomTypes/StraightHall_Multi.tscn"]
+			elif RandomNumberGenerator.new().randf_range(0,8) < 1 and GlobalVariables.dungeonXTotalSize >= 10: #spacious style
+				GlobalVariables.dungeonPossibleRoomSpawns = ["res://roomTypes/LargeRoom_Multi.tscn","res://roomTypes/MonsterRoom.tscn","res://roomTypes/LargeRoom.tscn","res://roomTypes/ExitRoom.tscn","res://roomTypes/StraightHall.tscn"]
+			
 			if RandomNumberGenerator.new().randf_range(0,10) < 1:
 				GlobalVariables.wraithModChaseDuration += 0.25
 			if RandomNumberGenerator.new().randf_range(0,10) < 1:
@@ -236,6 +260,7 @@ func _ready() -> void:
 				GlobalVariables.wraithModSearchSpeed += 0.25
 			if RandomNumberGenerator.new().randf_range(0,10) < 1:
 				GlobalVariables.wraithModSearchDuration += 0.25
+			
 	$DungeonGenerator3D.dungeon_size.x = GlobalVariables.dungeonXTotalSize
 	print(str(GlobalVariables.dungeonPossibleRoomSpawns))
 	map_ready_to_generate.emit()
