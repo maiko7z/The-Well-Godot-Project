@@ -36,7 +36,7 @@ Artists: Jay, Tatiana
 UI Design: Michael
 Textures: Jay, Tatiana, Nate
 Writing: Jay, Tatiana
-2D Programming: Michael
+2D Programming: Michael, Nate
 3D Programming: Nate
 Audio Design and Composer: Nate
 Level Design: Jay, Michael, Tatiana, Nate
@@ -68,5 +68,5 @@ offset_bottom = 306.0
 theme = ExtResource("2_qkjnt")
 text = "Back"
 
-[connection signal="pressed" from="Back Button" to="." method="_on_back_button_pressed"]
 [connection signal="pressed" from="Back Button" to="." method="_on_button_pressed"]
+[connection signal="pressed" from="Back Button" to="." method="_on_back_button_pressed"]
