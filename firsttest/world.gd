@@ -189,7 +189,7 @@ func _ready() -> void:
 			GlobalVariables.wraithModChaseSpeed = 4.0
 			GlobalVariables.wraithModSearchSpeed = 4.0
 			GlobalVariables.wraithModSearchDuration = 6.0
-			GlobalVariables.dungeonPossibleRoomSpawns = ["res://roomTypes/LargeRoom_Cramped.tscn","res://roomTypes/LargeRoom.tscn","res://roomTypes/ExitRoom.tscn","res://roomTypes/CorpseRoom.tscn","res://roomTypes/MonsterRoom.tscn"]
+			GlobalVariables.dungeonPossibleRoomSpawns = ["res://roomTypes/LargeRoom_Cramped.tscn","res://roomTypes/LargeRoom.tscn","res://roomTypes/ExitRoom.tscn","res://roomTypes/MonsterRoom.tscn"]
 		elif GlobalVariables.endlessLevel > 1 and GlobalVariables.endlessLevel < 7:
 			if RandomNumberGenerator.new().randf_range(0,10) < 1: #10% chance to increase
 				GlobalVariables.trapWallSpawnRate -= 1.0
@@ -219,6 +219,18 @@ func _ready() -> void:
 				GlobalVariables.wraithModSearchSpeed += 0.25
 			if RandomNumberGenerator.new().randf_range(0,10) < 1:
 				GlobalVariables.wraithModSearchDuration += 0.25
+			
+			#Random chance for extra monster to spawn
+			if RandomNumberGenerator.new().randf_range(0,6) < 1:
+				GlobalVariables.dungeonPossibleRoomSpawns.append("res://roomTypes/CorpseRoom.tscn")
+				if RandomNumberGenerator.new().randf_range(0,12) < 7: #Chance to remove primary monster if extra monster spawns
+					GlobalVariables.dungeonPossibleRoomSpawns.erase("res://roomTypes/MonsterRoom.tscn")
+			else:
+				if not GlobalVariables.dungeonPossibleRoomSpawns.has("res://roomTypes/MonsterRoom.tscn"):
+					GlobalVariables.dungeonPossibleRoomSpawns.append("res://roomTypes/MonsterRoom.tscn")
+				if GlobalVariables.dungeonPossibleRoomSpawns.has("res://roomTypes/CorpseRoom.tscn"):
+					GlobalVariables.dungeonPossibleRoomSpawns.erase("res://roomTypes/CorpseRoom.tscn")
+					
 		elif GlobalVariables.endlessLevel >= 7: #and GlobalVariables.endlessLevel < 20:
 			if RandomNumberGenerator.new().randf_range(0,8) < 1: #12.5% chance to increase
 				if GlobalVariables.trapWallSpawnRate > 1.0: #Do a check so that we don't dip into negatives and throw an error
@@ -260,6 +272,23 @@ func _ready() -> void:
 				GlobalVariables.wraithModSearchSpeed += 0.25
 			if RandomNumberGenerator.new().randf_range(0,10) < 1:
 				GlobalVariables.wraithModSearchDuration += 0.25
+			
+			#Random chance for extra monster to spawn
+			if GlobalVariables.endlessLevel < 10:
+				if RandomNumberGenerator.new().randf_range(0,4) > 1:
+					GlobalVariables.dungeonPossibleRoomSpawns.append("res://roomTypes/CorpseRoom.tscn")
+					if RandomNumberGenerator.new().randf_range(0,16) < 1: #Chance to remove primary monster if extra monster spawns
+						GlobalVariables.dungeonPossibleRoomSpawns.erase("res://roomTypes/MonsterRoom.tscn")
+				else:
+					if not GlobalVariables.dungeonPossibleRoomSpawns.has("res://roomTypes/MonsterRoom.tscn"):
+						GlobalVariables.dungeonPossibleRoomSpawns.append("res://roomTypes/MonsterRoom.tscn")
+					if GlobalVariables.dungeonPossibleRoomSpawns.has("res://roomTypes/CorpseRoom.tscn"):
+						GlobalVariables.dungeonPossibleRoomSpawns.erase("res://roomTypes/CorpseRoom.tscn")
+			else:
+				if not GlobalVariables.dungeonPossibleRoomSpawns.has("res://roomTypes/MonsterRoom.tscn"):
+					GlobalVariables.dungeonPossibleRoomSpawns.append("res://roomTypes/MonsterRoom.tscn")
+				if not GlobalVariables.dungeonPossibleRoomSpawns.has("res://roomTypes/CorpseRoom.tscn"):
+					GlobalVariables.dungeonPossibleRoomSpawns.append("res://roomTypes/CorpseRoom.tscn")
 			
 	$DungeonGenerator3D.dungeon_size.x = GlobalVariables.dungeonXTotalSize
 	print(str(GlobalVariables.dungeonPossibleRoomSpawns))
