@@ -1,16 +1,19 @@
-[gd_scene load_steps=16 format=3 uid="uid://chu4ft88k3ahk"]
+[gd_scene load_steps=21 format=3 uid="uid://chu4ft88k3ahk"]
 
 [ext_resource type="AudioStream" uid="uid://6r05nimratie" path="res://audio/Flashlight.mp3" id="1_4flbx"]
 [ext_resource type="AudioStream" uid="uid://bnnssgjv4sunn" path="res://audio/Footstep.ogg" id="2_onrkg"]
 [ext_resource type="AudioStream" uid="uid://b1kmeklk07f1i" path="res://audio/ExhaustionBreathing.mp3" id="3_6v6k0"]
 [ext_resource type="Texture2D" uid="uid://di0arg7lxvb7e" path="res://images/staminabar under.jpg" id="3_erkmy"]
+[ext_resource type="AudioStream" uid="uid://b170mpfa6nmhg" path="res://audio/corpseSounds/CorpseScare.ogg" id="4_3mvkr"]
 [ext_resource type="Texture2D" uid="uid://yx5ataeprkb1" path="res://images/Bar exterior.png" id="4_6v6k0"]
 [ext_resource type="AudioStream" uid="uid://bstck34ke1g5d" path="res://audio/Hurt.mp3" id="4_vpon2"]
 [ext_resource type="AudioStream" uid="uid://ru0kuavutlcp" path="res://audio/Death.ogg" id="5_kaacd"]
 [ext_resource type="Texture2D" uid="uid://cmra3ak7qgoog" path="res://images/staminabar.jpg" id="5_uwpkh"]
+[ext_resource type="AudioStream" uid="uid://b4420vgevagy0" path="res://audio/corpseSounds/CorpseAttack.ogg" id="6_0p6du"]
 [ext_resource type="Texture2D" uid="uid://cnj25goxf4wpd" path="res://images/healthbar under.jpg" id="6_vpon2"]
 [ext_resource type="Texture2D" uid="uid://mpu84f06fnyn" path="res://images/healthbar.jpg" id="7_kaacd"]
 [ext_resource type="Theme" uid="uid://cxjwnkpltc1jx" path="res://textTheme.tres" id="9_uwpkh"]
+[ext_resource type="Texture2D" uid="uid://c0m41y2wlt2qq" path="res://images/Corpse Jumpscare.png" id="12_rnuou"]
 
 [sub_resource type="GDScript" id="GDScript_sh265"]
 resource_name = "PlayerControl"
@@ -55,6 +58,7 @@ var isCrouching = false
 var isSprinting = false
 var isExhausted = false
 
+var canBeCorpseScared = true
 #Onready variables
 @onready var head = $Head
 @onready var camera = $Head/Camera3D
@@ -71,6 +75,12 @@ var isExhausted = false
 @onready var spawnFrame = $CanvasLayer/SpawnFilter
 @onready var hurtFrameTimer = $HurtFrame
 @onready var exhaustionSound = $Head/ExhaustionSound
+@onready var corpseScareSound = $Head/CorpseScareSound
+@onready var corpseScareSound2 = $Head/CorpseAttack
+@onready var corpseScareFrameTimer = $CorpseScareFrame
+@onready var corpseScareCooldown = $CorpseScareCooldown
+@onready var corpseScareFrame1 = $CanvasLayer/CorpseJumpscare
+@onready var corpseScareFrame2 = $CanvasLayer/CorpseJumpscare2
 
 var prevStep := Vector3.ZERO
 
@@ -80,6 +90,40 @@ func _ready():
 	var tween = spawnFrame.create_tween()
 	tween.tween_property(spawnFrame, \"modulate:a\", 0, 1)
 	tween.tween_callback(spawnFrame.queue_free)
+	
+	await get_tree().create_timer(3.5).timeout
+	var enemy2: CorpseEnemy = get_tree().get_first_node_in_group(\"corpseenemy\")
+	if enemy2:
+		enemy2.reached_player.connect(_enemy2_reached_player)
+	else:
+		print(\"no enemy2, no connection generated.\")
+
+func _enemy2_reached_player() -> void:
+	if corpseScareFrame1.visible == false and canBeCorpseScared == true:
+		canBeCorpseScared = false
+		corpseScareSound.play()
+		corpseScareSound2.play()
+		corpseScareFrame1.visible = true
+		corpseScareFrame2.visible = true
+		corpseScareFrameTimer.start()
+		for i in 20:
+			var rng = RandomNumberGenerator.new()
+			rng.randomize()
+			var random_x = rng.randi_range(225, 245)
+			corpseScareFrame1.position = Vector2(random_x, 160)
+			await get_tree().create_timer(0.02).timeout
+		
+func _corpse_frame_end():
+	corpseScareFrame1.visible = false
+	corpseScareFrame2.visible = false
+	_take_damage(50)
+	CURRENT_STAMINA = 0.0
+	staminaBar.value = CURRENT_STAMINA
+	_exhaust()
+	corpseScareCooldown.start()
+	
+func _corpse_can_scare():
+	canBeCorpseScared = true
 
 func _take_damage(damage: int):
 	CURRENT_HEALTH -= damage
@@ -265,10 +309,20 @@ streams_count = 1
 stream_0/stream = ExtResource("2_onrkg")
 
 [sub_resource type="AudioStreamRandomizer" id="AudioStreamRandomizer_vpon2"]
-random_pitch = 1.28
+random_pitch = 1.07
 random_volume_offset_db = 1.5
 streams_count = 1
 stream_0/stream = ExtResource("4_vpon2")
+
+[sub_resource type="AudioStreamRandomizer" id="AudioStreamRandomizer_rnuou"]
+random_pitch = 1.1
+streams_count = 1
+stream_0/stream = ExtResource("4_3mvkr")
+
+[sub_resource type="AudioStreamRandomizer" id="AudioStreamRandomizer_o8bqj"]
+random_pitch = 1.1
+streams_count = 1
+stream_0/stream = ExtResource("6_0p6du")
 
 [node name="Player" type="CharacterBody3D" groups=["player"]]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.712204, 0.29932, 5.16054)
@@ -326,6 +380,18 @@ bus = &"ReverbAmbience"
 stream = SubResource("AudioStreamRandomizer_vpon2")
 volume_db = -4.685
 pitch_scale = 1.04
+
+[node name="CorpseScareSound" type="AudioStreamPlayer" parent="Head"]
+stream = SubResource("AudioStreamRandomizer_rnuou")
+volume_db = 1.783
+pitch_scale = 1.04
+bus = &"ReverbAmbience"
+
+[node name="CorpseAttack" type="AudioStreamPlayer" parent="Head"]
+stream = SubResource("AudioStreamRandomizer_o8bqj")
+volume_db = -6.178
+pitch_scale = 0.97
+bus = &"ReverbAmbience"
 
 [node name="DeathSound" type="AudioStreamPlayer" parent="Head"]
 stream = ExtResource("5_kaacd")
@@ -394,11 +460,27 @@ scale = Vector2(12, 8)
 mouse_filter = 2
 color = Color(1, 0, 0, 0.243137)
 
+[node name="CorpseJumpscare2" type="ColorRect" parent="CanvasLayer"]
+visible = false
+z_index = 5
+offset_right = 40.0
+offset_bottom = 40.0
+scale = Vector2(12, 8)
+mouse_filter = 2
+color = Color(1, 0, 0, 1)
+
 [node name="SpawnFilter" type="ColorRect" parent="CanvasLayer"]
 offset_right = 480.0
 offset_bottom = 320.0
 mouse_filter = 2
 color = Color(0, 0, 0, 1)
+
+[node name="CorpseJumpscare" type="Sprite2D" parent="CanvasLayer"]
+visible = false
+z_index = 6
+position = Vector2(252, 160)
+scale = Vector2(1.23438, 1.25)
+texture = ExtResource("12_rnuou")
 
 [node name="ExhaustionTimer" type="Timer" parent="."]
 wait_time = 5.0
@@ -407,9 +489,18 @@ one_shot = true
 [node name="CanRegen" type="Timer" parent="."]
 one_shot = true
 
+[node name="CorpseScareFrame" type="Timer" parent="."]
+one_shot = true
+
+[node name="CorpseScareCooldown" type="Timer" parent="."]
+wait_time = 4.5
+one_shot = true
+
 [node name="HurtFrame" type="Timer" parent="."]
 wait_time = 0.1
 one_shot = true
 
 [connection signal="timeout" from="ExhaustionTimer" to="." method="_exhaust_end"]
+[connection signal="timeout" from="CorpseScareFrame" to="." method="_corpse_frame_end"]
+[connection signal="timeout" from="CorpseScareCooldown" to="." method="_corpse_can_scare"]
 [connection signal="timeout" from="HurtFrame" to="." method="_hurt_frame_end"]

@@ -34,6 +34,9 @@ func update(delta: float) -> void: #Crouching reduces chase time by 33%
 func rockeye_triggered():
 	_chase_timer = GlobalVariables.wraithModChaseDuration
 
+func corpse_triggered():
+	_chase_timer = GlobalVariables.wraithModChaseDuration
+
 func physics_update(_delta: float) -> void:
 	var vec_to_player = (_enemy.player.global_position - _enemy.global_position)
 	if _update_path_timer <= 0.0:

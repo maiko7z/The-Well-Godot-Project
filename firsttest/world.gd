@@ -189,7 +189,7 @@ func _ready() -> void:
 			GlobalVariables.wraithModChaseSpeed = 4.0
 			GlobalVariables.wraithModSearchSpeed = 4.0
 			GlobalVariables.wraithModSearchDuration = 6.0
-			GlobalVariables.dungeonPossibleRoomSpawns = ["res://roomTypes/LargeRoom_Cramped.tscn","res://roomTypes/LargeRoom.tscn","res://roomTypes/ExitRoom.tscn","res://roomTypes/MonsterRoom.tscn"]
+			GlobalVariables.dungeonPossibleRoomSpawns = ["res://roomTypes/LargeRoom_Cramped.tscn","res://roomTypes/LargeRoom.tscn","res://roomTypes/ExitRoom.tscn","res://roomTypes/CorpseRoom.tscn","res://roomTypes/MonsterRoom.tscn"]
 		elif GlobalVariables.endlessLevel > 1 and GlobalVariables.endlessLevel < 7:
 			if RandomNumberGenerator.new().randf_range(0,10) < 1: #10% chance to increase
 				GlobalVariables.trapWallSpawnRate -= 1.0
@@ -270,6 +270,8 @@ func _ready() -> void:
 		enemy.reached_player.connect(_enemy_reached_player)
 	else:
 		print("no enemy, no connection generated.")
+		
+	
 
 func _enemy_reached_player() -> void:
 	get_tree().change_scene_to_file("res://screens/jumpscare.tscn")
