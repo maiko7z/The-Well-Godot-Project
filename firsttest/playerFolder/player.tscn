@@ -1,4 +1,4 @@
-[gd_scene load_steps=21 format=3 uid="uid://chu4ft88k3ahk"]
+[gd_scene load_steps=40 format=3 uid="uid://chu4ft88k3ahk"]
 
 [ext_resource type="AudioStream" uid="uid://6r05nimratie" path="res://audio/Flashlight.mp3" id="1_4flbx"]
 [ext_resource type="AudioStream" uid="uid://bnnssgjv4sunn" path="res://audio/Footstep.ogg" id="2_onrkg"]
@@ -12,8 +12,23 @@
 [ext_resource type="AudioStream" uid="uid://b4420vgevagy0" path="res://audio/corpseSounds/CorpseAttack.ogg" id="6_0p6du"]
 [ext_resource type="Texture2D" uid="uid://cnj25goxf4wpd" path="res://images/healthbar under.jpg" id="6_vpon2"]
 [ext_resource type="Texture2D" uid="uid://mpu84f06fnyn" path="res://images/healthbar.jpg" id="7_kaacd"]
+[ext_resource type="AudioStream" uid="uid://cwsjos0eacow2" path="res://audio/ambientSounds/WaterDrop1.ogg" id="8_wwcwf"]
+[ext_resource type="AudioStream" uid="uid://davw505b8e3oj" path="res://audio/ambientSounds/WaterDrop2.ogg" id="9_nasy6"]
 [ext_resource type="Theme" uid="uid://cxjwnkpltc1jx" path="res://textTheme.tres" id="9_uwpkh"]
+[ext_resource type="AudioStream" uid="uid://bi4s21ubhw66j" path="res://audio/ambientSounds/WaterDrop3.ogg" id="10_di5tx"]
+[ext_resource type="AudioStream" uid="uid://cn3gk6yb15qe8" path="res://audio/ambientSounds/WaterDrop4.ogg" id="11_syb24"]
+[ext_resource type="AudioStream" uid="uid://dochgey6d8drl" path="res://audio/ambientSounds/WaterDrop5.ogg" id="12_geflb"]
 [ext_resource type="Texture2D" uid="uid://c0m41y2wlt2qq" path="res://images/Corpse Jumpscare.png" id="12_rnuou"]
+[ext_resource type="AudioStream" uid="uid://c8emln8rex1sh" path="res://audio/ambientSounds/Pebble1.ogg" id="13_otjdj"]
+[ext_resource type="AudioStream" uid="uid://c30ni2d27fv7t" path="res://audio/ambientSounds/Pebble2.ogg" id="14_b11d2"]
+[ext_resource type="AudioStream" uid="uid://270ooxjwq0i4" path="res://audio/ambientSounds/Pebble3.ogg" id="15_fc323"]
+[ext_resource type="AudioStream" uid="uid://c8sveb2krf642" path="res://audio/ambientSounds/Pebble4.ogg" id="16_cd4id"]
+[ext_resource type="AudioStream" uid="uid://24sngdsojyev" path="res://audio/ambientSounds/RockFall1.ogg" id="17_na4ql"]
+[ext_resource type="AudioStream" uid="uid://dqxr4img84s7s" path="res://audio/ambientSounds/RockFall2.ogg" id="18_04rlb"]
+[ext_resource type="AudioStream" uid="uid://v2vcj1nrmfa8" path="res://audio/ambientSounds/RockFall3.ogg" id="19_qxyni"]
+[ext_resource type="AudioStream" uid="uid://dayu1wtoj1yqv" path="res://audio/ambientSounds/RockFall4.ogg" id="20_pugy6"]
+[ext_resource type="AudioStream" uid="uid://ddpyxkuahrx53" path="res://audio/ambientSounds/Howl1.ogg" id="21_r8y4i"]
+[ext_resource type="AudioStream" uid="uid://bwquj8j53uagk" path="res://audio/ambientSounds/Howl2.ogg" id="22_31wpx"]
 
 [sub_resource type="GDScript" id="GDScript_sh265"]
 resource_name = "PlayerControl"
@@ -53,12 +68,14 @@ const FOV_CHANGE = 1.5
 #Get the gravity from the project settings to be synced with RigidBody nodes.
 var gravity = 9.8
 
-#Sprint / crouch checks
+#Sprint / crouch bools
 var isCrouching = false
 var isSprinting = false
 var isExhausted = false
 
+#Corpse enemy jumpscare bool
 var canBeCorpseScared = true
+
 #Onready variables
 @onready var head = $Head
 @onready var camera = $Head/Camera3D
@@ -81,6 +98,10 @@ var canBeCorpseScared = true
 @onready var corpseScareCooldown = $CorpseScareCooldown
 @onready var corpseScareFrame1 = $CanvasLayer/CorpseJumpscare
 @onready var corpseScareFrame2 = $CanvasLayer/CorpseJumpscare2
+@onready var waterDripSounds = $Head/WaterDripSounds
+@onready var pebbleDropSounds = $Head/PebbleDropSounds
+@onready var rockFallSounds = $Head/RockFallSounds
+@onready var howlSounds = $Head/HowlSounds
 
 var prevStep := Vector3.ZERO
 
@@ -92,11 +113,13 @@ func _ready():
 	tween.tween_callback(spawnFrame.queue_free)
 	
 	await get_tree().create_timer(3.5).timeout
+	
 	var enemy2: CorpseEnemy = get_tree().get_first_node_in_group(\"corpseenemy\")
 	if enemy2:
 		enemy2.reached_player.connect(_enemy2_reached_player)
 	else:
 		print(\"no enemy2, no connection generated.\")
+	_random_ambient_sound()
 
 func _enemy2_reached_player() -> void:
 	if corpseScareFrame1.visible == false and canBeCorpseScared == true:
@@ -140,6 +163,31 @@ func _take_damage(damage: int):
 			hurtSound.play()
 			
 
+func _random_ambient_sound():
+	if RandomNumberGenerator.new().randf_range(0,20) < 15:
+		await get_tree().create_timer(RandomNumberGenerator.new().randf_range(1,7)).timeout
+		waterDripSounds.transform.origin = Vector3(global_position.x + RandomNumberGenerator.new().randf_range(-40,40), 0, global_position.z +RandomNumberGenerator.new().randf_range(-40,40))
+		if (waterDripSounds.global_position - global_position).length() > 7:
+			waterDripSounds.play()
+	if RandomNumberGenerator.new().randf_range(0,20) < 15:
+		await get_tree().create_timer(RandomNumberGenerator.new().randf_range(1,7)).timeout
+		pebbleDropSounds.transform.origin = Vector3(global_position.x + RandomNumberGenerator.new().randf_range(-40,40), 0, global_position.z +RandomNumberGenerator.new().randf_range(-40,40))
+		if (pebbleDropSounds.global_position - global_position).length() > 7:
+			pebbleDropSounds.play()
+	if RandomNumberGenerator.new().randf_range(0,20) < 6:
+		await get_tree().create_timer(RandomNumberGenerator.new().randf_range(1,7)).timeout
+		rockFallSounds.transform.origin = Vector3(global_position.x + RandomNumberGenerator.new().randf_range(-50,50), 0, global_position.z +RandomNumberGenerator.new().randf_range(-50,50))
+		if (rockFallSounds.global_position - global_position).length() > 10:
+			rockFallSounds.play()
+	if RandomNumberGenerator.new().randf_range(0,20) < 1:
+		await get_tree().create_timer(RandomNumberGenerator.new().randf_range(1,7)).timeout
+		howlSounds.transform.origin = Vector3(global_position.x + RandomNumberGenerator.new().randf_range(-105,105), 0, global_position.z +RandomNumberGenerator.new().randf_range(-105,105))
+		if (howlSounds.global_position - global_position).length() > 55:
+			print(\"howling\")
+			howlSounds.play()
+	await get_tree().create_timer(RandomNumberGenerator.new().randf_range(1,10)).timeout
+	_random_ambient_sound()
+		
 func _hurt_frame_end():
 	hurtFrame.visible = false
 
@@ -324,6 +372,37 @@ random_pitch = 1.1
 streams_count = 1
 stream_0/stream = ExtResource("6_0p6du")
 
+[sub_resource type="AudioStreamRandomizer" id="AudioStreamRandomizer_6ybog"]
+random_pitch = 1.35
+streams_count = 5
+stream_0/stream = ExtResource("8_wwcwf")
+stream_1/stream = ExtResource("9_nasy6")
+stream_2/stream = ExtResource("10_di5tx")
+stream_3/stream = ExtResource("11_syb24")
+stream_4/stream = ExtResource("12_geflb")
+
+[sub_resource type="AudioStreamRandomizer" id="AudioStreamRandomizer_n5wqs"]
+random_pitch = 1.35
+streams_count = 4
+stream_0/stream = ExtResource("13_otjdj")
+stream_1/stream = ExtResource("14_b11d2")
+stream_2/stream = ExtResource("15_fc323")
+stream_3/stream = ExtResource("16_cd4id")
+
+[sub_resource type="AudioStreamRandomizer" id="AudioStreamRandomizer_twbjm"]
+random_pitch = 1.15
+streams_count = 4
+stream_0/stream = ExtResource("17_na4ql")
+stream_1/stream = ExtResource("18_04rlb")
+stream_2/stream = ExtResource("19_qxyni")
+stream_3/stream = ExtResource("20_pugy6")
+
+[sub_resource type="AudioStreamRandomizer" id="AudioStreamRandomizer_ltax0"]
+random_pitch = 1.15
+streams_count = 2
+stream_0/stream = ExtResource("21_r8y4i")
+stream_1/stream = ExtResource("22_31wpx")
+
 [node name="Player" type="CharacterBody3D" groups=["player"]]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.712204, 0.29932, 5.16054)
 collision_layer = 2
@@ -397,6 +476,36 @@ bus = &"ReverbAmbience"
 stream = ExtResource("5_kaacd")
 volume_db = -10.307
 pitch_scale = 1.04
+
+[node name="WaterDripSounds" type="AudioStreamPlayer3D" parent="Head"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.712204, 1.49312, 5.16054)
+top_level = true
+stream = SubResource("AudioStreamRandomizer_6ybog")
+volume_db = -1.577
+bus = &"ReverbAmbience"
+
+[node name="PebbleDropSounds" type="AudioStreamPlayer3D" parent="Head"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.712204, 1.49312, 5.16054)
+top_level = true
+stream = SubResource("AudioStreamRandomizer_n5wqs")
+volume_db = -5.336
+bus = &"ReverbAmbience"
+
+[node name="RockFallSounds" type="AudioStreamPlayer3D" parent="Head"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.712204, 1.49312, 5.16054)
+top_level = true
+stream = SubResource("AudioStreamRandomizer_twbjm")
+volume_db = -4.547
+unit_size = 14.43
+bus = &"ReverbAmbience"
+
+[node name="HowlSounds" type="AudioStreamPlayer3D" parent="Head"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.712204, 1.49312, 5.16054)
+top_level = true
+stream = SubResource("AudioStreamRandomizer_ltax0")
+volume_db = -21.099
+unit_size = 10.49
+bus = &"ReverbAmbience"
 
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
 
