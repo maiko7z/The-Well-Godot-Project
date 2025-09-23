@@ -22,6 +22,9 @@ func _ready() -> void:
 		%ContinueButton.text = "Continue ( Level " + str(GlobalVariables.storyLevel) + " )"
 	else:
 		GlobalVariables.endlessLevel += 1
+		if (GlobalVariables.endlessLevel % 5 == 0) and GlobalVariables.endlessCurrentLives < 5:
+			GlobalVariables.endlessCurrentLives += 1
+		
 		%ContinueButton.text = "Continue ( Level " + str(GlobalVariables.endlessLevel) + " )"
 		if GlobalVariables.endlessCurrentLives == 1:
 			message.text = message.text + "\n" + str(GlobalVariables.endlessCurrentLives) + " life left!"
