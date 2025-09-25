@@ -1793,6 +1793,11 @@ z_index = 1
 position = Vector2(-78, 234)
 rotation = -0.00706661
 
+[node name="Bright Tree123" parent="Trees/More trees" instance=ExtResource("5_c10qe")]
+z_index = 1
+position = Vector2(-116, 220)
+rotation = -0.00706661
+
 [node name="Bright Tree116" parent="Trees/More trees" instance=ExtResource("5_c10qe")]
 z_index = 1
 position = Vector2(-88, 178)
@@ -1831,6 +1836,11 @@ rotation = -0.00706661
 [node name="Bright Tree100" parent="Trees/More trees" instance=ExtResource("5_c10qe")]
 z_index = 1
 position = Vector2(-156, 116)
+rotation = -0.00706661
+
+[node name="Bright Tree124" parent="Trees/More trees" instance=ExtResource("5_c10qe")]
+z_index = 1
+position = Vector2(-149, 106)
 rotation = -0.00706661
 
 [node name="Bright Tree101" parent="Trees/More trees" instance=ExtResource("5_c10qe")]
@@ -2541,6 +2551,9 @@ position = Vector2(-106, 276)
 
 [node name="Dark Tree383" parent="Trees/More trees" instance=ExtResource("6_pfv7e")]
 position = Vector2(-77, 186)
+
+[node name="Dark Tree395" parent="Trees/More trees" instance=ExtResource("6_pfv7e")]
+position = Vector2(-109, 229)
 
 [node name="Dark Tree384" parent="Trees/More trees" instance=ExtResource("6_pfv7e")]
 position = Vector2(-66, 181)
@@ -3263,7 +3276,7 @@ position = Vector2(214, 288)
 [node name="Light Mushrooms" type="Node" parent="."]
 
 [node name="Mushroom Sprite" parent="Light Mushrooms" instance=ExtResource("7_cs3wm")]
-position = Vector2(-131, 219)
+position = Vector2(-136, 223)
 
 [node name="Mushroom Sprite2" parent="Light Mushrooms" instance=ExtResource("7_cs3wm")]
 position = Vector2(19, 212)
