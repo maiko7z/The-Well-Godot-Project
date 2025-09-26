@@ -29,7 +29,9 @@ script = ExtResource("1_chhu3")
 scene = ExtResource("4_12jv3")
 overrides = {
 "box_size": "Vector2(450, 100)",
-"custom_normal_font": "\"Tagesschrift-/Regular.ttf\"",
+"custom_normal_font": "\"res://images/fonts/Tagesschrift-Regular.ttf\"",
+"name_label_color_mode": "1",
+"name_label_customfont": "\"res://images/fonts/Tagesschrift-Regular.ttf\"",
 "text_custom_size": "6.0",
 "use_global_fonts": "false"
 }

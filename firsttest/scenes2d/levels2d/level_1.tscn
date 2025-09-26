@@ -27,7 +27,7 @@ radius = 5.0
 height = 40.0
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_vofyt"]
-size = Vector2(15, 11.625)
+size = Vector2(130, 130)
 
 [node name="Layout" type="Node2D"]
 script = ExtResource("1_vofyt")
@@ -3101,9 +3101,11 @@ rotation = -1.5708
 shape = SubResource("CapsuleShape2D_vtmy7")
 
 [node name="DialogueTrigger1" type="Area2D" parent="."]
+collision_layer = 3
+collision_mask = 3
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="DialogueTrigger1"]
-position = Vector2(-254.5, 82)
+position = Vector2(-39, 29)
 shape = SubResource("RectangleShape2D_vofyt")
 
 [connection signal="body_entered" from="Collisions/Area2D" to="." method="_scene_swap"]

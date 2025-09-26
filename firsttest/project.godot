@@ -31,10 +31,12 @@ directories/dch_directory={
 "unit_test_character": "res://Tests/Resources/unit_test_character.dch"
 }
 directories/dtl_directory={
-"scene1_timeline": "res://dialogue/Timelines/scene1_timeline.dtl"
+"scene1_timeline": "res://dialogue/Timelines/scene1_timeline.dtl",
+"scene2_timeline": "res://dialogue/Timelines/scene2_timeline.dtl",
+"scene3_timeline": "res://dialogue/Timelines/scene3_timeline.dtl"
 }
 extensions_folder="res://addons/dialogic_additions"
-text/letter_speed=0.01
+text/letter_speed=0.03
 text/initial_text_reveal_skippable=true
 text/text_reveal_skip_delay=0.1
 text/advance_delay=0.1
