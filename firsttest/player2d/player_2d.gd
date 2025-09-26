@@ -21,12 +21,16 @@ func _physics_process(delta):
 		#animated_sprite.flip_h = true 
 
 	# play animation
-	if direction_x == 0:
+	if Dialogic.current_timeline != null:
 		animated_sprite.play("idle")
-	if direction_x == 1.0:
-		animated_sprite.play("run_right")
-	elif direction_x == -1.0:
-		animated_sprite.play("run_left")
+		return
+	else:
+		if direction_x == 0:
+			animated_sprite.play("idle")
+		if direction_x == 1.0:
+			animated_sprite.play("run_right")
+		elif direction_x == -1.0:
+			animated_sprite.play("run_left")
 	
 	if direction_x:
 		velocity.x = direction_x * SPEED
