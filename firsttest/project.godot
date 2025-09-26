@@ -75,11 +75,24 @@ enabled=PackedStringArray("res://addons/dialogic/plugin.cfg")
 folder_colors={
 "res://Tests/": "blue",
 "res://addons/": "blue",
+"res://addons/SimpleDungeons/": "teal",
+"res://audio/": "yellow",
 "res://dialogue/": "blue",
 "res://dialogue/Timelines/": "blue",
+"res://enemy/": "gray",
+"res://enemy2/": "gray",
+"res://globals/": "pink",
+"res://images/": "red",
 "res://images2d/": "purple",
 "res://player2d/": "purple",
-"res://scenes2d/": "purple"
+"res://playerFolder/": "teal",
+"res://roomTypes/": "teal",
+"res://scenes2d/": "purple",
+"res://screens/": "green",
+"res://state_machine/": "gray",
+"res://tiles/": "teal",
+"res://tiles_traps/": "teal",
+"res://wallPieces/": "teal"
 }
 
 [input]
