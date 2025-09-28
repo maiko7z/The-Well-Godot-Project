@@ -1,6 +1,6 @@
 [gd_scene load_steps=3 format=3 uid="uid://dsak2yq0asty0"]
 
-[ext_resource type="Texture2D" uid="uid://doyeyl45c6wx4" path="res://WPI LOGO.png" id="1_7x64a"]
+[ext_resource type="Texture2D" uid="uid://doyeyl45c6wx4" path="res://images/WPI LOGO.png" id="1_7x64a"]
 [ext_resource type="Script" uid="uid://c1m0285hc6vqu" path="res://screens/splash_screen_manager.gd" id="1_h21qq"]
 
 [node name="Splash Screen Manager" type="Control"]
