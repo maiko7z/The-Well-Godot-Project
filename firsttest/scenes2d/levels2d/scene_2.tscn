@@ -1,0 +1,3459 @@
+[gd_scene load_steps=23 format=4 uid="uid://c15x8furx2fe8"]
+
+[ext_resource type="Texture2D" uid="uid://diplhx4elif2p" path="res://scenes2d/scene2Art/UntitledArtwork2 (2).png" id="1_c5w0c"]
+[ext_resource type="PackedScene" uid="uid://b7p6stpdyvv32" path="res://scenes2d/scene2Art/grayish_well_scene_2.tscn" id="1_ogt5y"]
+[ext_resource type="PackedScene" uid="uid://rot1fta3w6ut" path="res://scenes2d/scene2Art/player_2d.tscn" id="2_oq54p"]
+[ext_resource type="PackedScene" uid="uid://dj7modkvt00ks" path="res://scenes2d/scene2Art/grayish_grass.tscn" id="3_oq54p"]
+[ext_resource type="Texture2D" uid="uid://jinnsn7p41tv" path="res://scenes2d/scene2Art/UntitledArtwork2 (4).png" id="4_f618r"]
+[ext_resource type="PackedScene" uid="uid://tvk8w0kosjif" path="res://scenes2d/scene2Art/mushroom.tscn" id="5_ryt5m"]
+[ext_resource type="PackedScene" uid="uid://vglhfcx8swki" path="res://scenes2d/scene2Art/mushroom_2.tscn" id="6_mu6jc"]
+[ext_resource type="Texture2D" uid="uid://5y27x56ox0vq" path="res://scenes2d/scene2Art/UntitledArtwork10-Copy-Copy (2).png" id="6_y11yv"]
+[ext_resource type="Texture2D" uid="uid://bne27fnxcinr8" path="res://scenes2d/scene2Art/UntitledArtwork10-Copy-Copy.png" id="7_eu13y"]
+[ext_resource type="PackedScene" uid="uid://dsbbg5eakjhx3" path="res://scenes2d/scene2Art/mushroom_3.tscn" id="7_lpdaq"]
+[ext_resource type="Texture2D" uid="uid://q6rnbursphhm" path="res://scenes2d/scene2Art/UntitledArtwork10-Copy-Copy (1).png" id="8_p67ya"]
+[ext_resource type="PackedScene" uid="uid://cvbh5sh4hhr2u" path="res://scenes2d/scene2Art/dark_trees.tscn" id="13_p67ya"]
+[ext_resource type="PackedScene" path="res://scenes2d/scene2Art/item.tscn" id="14_krluk"]
+[ext_resource type="PackedScene" uid="uid://3gkj51nfx4xr" path="res://scenes2d/scene2Art/lighter_trees.tscn" id="14_mvd18"]
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_f618r"]
+texture = ExtResource("1_c5w0c")
+0:0/0 = 0
+0:1/0 = 0
+0:2/0 = 0
+0:3/0 = 0
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_4bgvd"]
+texture = ExtResource("4_f618r")
+0:0/0 = 0
+0:1/0 = 0
+0:2/0 = 0
+0:3/0 = 0
+
+[sub_resource type="TileSet" id="TileSet_4bgvd"]
+sources/0 = SubResource("TileSetAtlasSource_f618r")
+sources/2 = SubResource("TileSetAtlasSource_4bgvd")
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_lpdaq"]
+texture = ExtResource("7_eu13y")
+0:0/0 = 0
+0:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 7.00526, -8, 7.00526, 8, -8, 8)
+1:0/0 = 0
+1:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 6.1152, -8, 6.09153, 8, -8, 8)
+0:1/0 = 0
+0:1/0/physics_layer_0/polygon_0/points = PackedVector2Array(-5.1778, -7.10679, 8, -7.10679, 8, 8, -5.88848, 8, -5.88848, -3.9595)
+1:1/0 = 0
+0:2/0 = 0
+0:2/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -7.00526, 8, -7.00526, 8, 8, -8, 8)
+1:2/0 = 0
+1:2/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 4.85619, 5.07628, 4.87323, 5.1778, 7.00526, -8, 6.80221)
+0:3/0 = 0
+1:3/0 = 0
+0:4/0 = 0
+1:4/0 = 0
+0:5/0 = 0
+1:5/0 = 0
+1:5/0/physics_layer_0/polygon_0/points = PackedVector2Array(5.75548, 5.57562, 8, 5.39576, 8, 8, 5.57562, 8)
+0:6/0 = 0
+0:6/0/physics_layer_0/polygon_0/points = PackedVector2Array(-5.93534, -8, 8, -8, 8, 6.09153, -4.67633, 6.29506, -5.93534, 5.2159)
+1:6/0 = 0
+1:6/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 6.29506, -8, 6.1152, 3.77703, 3.0576, 6.1152, -8, 6.29506)
+0:7/0 = 0
+1:7/0 = 0
+1:7/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -6.90374, 2.84271, -6.90374, 4.87323, -5.88848, 6.29506, -5.03604, 6.09153, 8, -8, 8)
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_mvd18"]
+texture = ExtResource("6_y11yv")
+0:0/0 = 0
+1:0/0 = 0
+1:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 6.29506, -8, 6.1152, 8, -8, 8)
+0:1/0 = 0
+1:1/0 = 0
+0:2/0 = 0
+1:2/0 = 0
+0:3/0 = 0
+1:3/0 = 0
+0:4/0 = 0
+1:4/0 = 0
+0:5/0 = 0
+1:5/0 = 0
+1:5/0/physics_layer_0/polygon_0/points = PackedVector2Array(4.31661, 5.03605, 8, 5.03605, 8, 6.19306, 6.29458, 6.19306, 5.88848, 8, 4.3656, 8)
+0:6/0 = 0
+1:6/0 = 0
+0:7/0 = 0
+1:7/0 = 0
+1:7/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -7.00526, 3.14729, -6.90374, 4.7717, -5.99001, 6.09153, -4.87323, 5.88848, 8, -8, 8)
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_krluk"]
+texture = ExtResource("7_eu13y")
+0:0/0 = 0
+1:0/0 = 0
+0:1/0 = 0
+1:1/0 = 0
+0:2/0 = 0
+1:2/0 = 0
+0:3/0 = 0
+1:3/0 = 0
+0:4/0 = 0
+1:4/0 = 0
+0:5/0 = 0
+1:5/0 = 0
+0:6/0 = 0
+1:6/0 = 0
+0:7/0 = 0
+1:7/0 = 0
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_v4i4g"]
+texture = ExtResource("8_p67ya")
+0:0/0 = 0
+0:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-5.93534, -8, 8, -8, 8, 8, -5.88848, 8)
+1:0/0 = 0
+1:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 5.99001, -8, 5.99001, 8, 4.46712, 8, -8, 8)
+0:1/0 = 0
+0:1/0/physics_layer_0/polygon_0/points = PackedVector2Array(-4.26407, -6.80221, 8, -7.20831, 8, 8, -5.99001, 8, -5.88848, -3.75644, -4.97475, -3.55339, -4.97475, -6.39611)
+1:1/0 = 0
+0:2/0 = 0
+0:2/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -7.10679, 8, -7.00526, 8, 8, -8, 8)
+1:2/0 = 0
+1:2/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 4.97475, 5.38085, 4.97475, 5.1778, 6.90374, -8, 7.10679)
+0:3/0 = 0
+1:3/0 = 0
+0:4/0 = 0
+1:4/0 = 0
+0:5/0 = 0
+1:5/0 = 0
+1:5/0/physics_layer_0/polygon_0/points = PackedVector2Array(-5.78696, -8, -4.97475, -8, -4.67018, -5.5839, -8, -5.5839, -8, -7.10679, -5.58391, -7.10679)
+0:6/0 = 0
+0:6/0/physics_layer_0/polygon_0/points = PackedVector2Array(-5.93534, -8, 8, -8, 8, 6.29458, -4.56865, 5.88848, -5.93534, 5.2159)
+1:6/0 = 0
+1:6/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 6.1152, -8, 6.19306, 3.65492, 4.06102, 4.67017, 3.35034, 5.99001, -8, 6.09153)
+0:7/0 = 0
+0:7/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 5.68543, -8, 5.88848)
+1:7/0 = 0
+1:7/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -7.10679, 3.24882, -6.90374, 4.67017, -5.88848, 5.88848, -5.07628, 5.93534, 8, -8, 8)
+
+[sub_resource type="TileSet" id="TileSet_4lec3"]
+physics_layer_0/collision_layer = 1
+sources/2 = SubResource("TileSetAtlasSource_mvd18")
+sources/5 = SubResource("TileSetAtlasSource_krluk")
+sources/0 = SubResource("TileSetAtlasSource_lpdaq")
+sources/7 = SubResource("TileSetAtlasSource_v4i4g")
+
+[node name="SCENE 2" type="Node2D"]
+
+[node name="Grayish Grass" parent="." instance=ExtResource("3_oq54p")]
+position = Vector2(-1, 1)
+
+[node name="Path" type="TileMapLayer" parent="Grayish Grass"]
+position = Vector2(1, -1)
+tile_map_data = PackedByteArray("AAD///7/AAAAAAMAAAD/////AAAAAAEAAAD//wAAAAAAAAEAAAD//wEAAAAAAAEAAAD//wIAAAAAAAEAAAD8/wQAAAAAAAEAAAD8/wUAAAAAAAEAAAD8/wYAAAAAAAEAAAD8/wcAAAAAAAEAAAD8/wgAAAAAAAEAAAD8/wkAAAAAAAEAAAD//wMAAAAAAAIAAAD8/wMAAAAAAAAAAAD9/wMAAgAAAAAAAAD+/wMAAgAAAAAAAAD7/wMAAgAAAAAAAAD6/wMAAgAAAAAAAAD5/wMAAgAAAAAAAAD4/wMAAgAAAAAAAADu/wMAAgAAAAAAAADv/wMAAgAAAAAAAADw/wMAAgAAAAAAAADx/wMAAgAAAAAAAADy/wMAAgAAAAAAAADz/wMAAgAAAAAAAAD0/wMAAgAAAAAAAAD1/wMAAgAAAAAAAAD2/wMAAgAAAAAAAAD3/wMAAgAAAAAAAAA=")
+tile_set = SubResource("TileSet_4bgvd")
+
+[node name="Tree" type="StaticBody2D" parent="Grayish Grass"]
+z_index = 1
+
+[node name="Dark Trees" parent="Grayish Grass/Tree" instance=ExtResource("13_p67ya")]
+position = Vector2(-273, -129)
+
+[node name="Dark Trees160" parent="Grayish Grass/Tree" instance=ExtResource("13_p67ya")]
+position = Vector2(-273, -129)
+
+[node name="Dark Trees128" parent="Grayish Grass/Tree" instance=ExtResource("13_p67ya")]
+position = Vector2(-244, -154)
+
+[node name="Dark Trees151" parent="Grayish Grass/Tree" instance=ExtResource("13_p67ya")]
+position = Vector2(-260, -165)
+
+[node name="Dark Trees152" parent="Grayish Grass/Tree" instance=ExtResource("13_p67ya")]
+position = Vector2(-253, -152)
+
+[node name="Dark Trees153" parent="Grayish Grass/Tree" instance=ExtResource("13_p67ya")]
+position = Vector2(-272, -164)
+
+[node name="Dark Trees154" parent="Grayish Grass/Tree" instance=ExtResource("13_p67ya")]
+position = Vector2(-266, -155)
+
+[node name="Dark Trees155" parent="Grayish Grass/Tree" instance=ExtResource("13_p67ya")]
+position = Vector2(-286, -161)
+
+[node name="Dark Trees156" parent="Grayish Grass/Tree" instance=ExtResource("13_p67ya")]
+position = Vector2(-277, -153)
+
+[node name="Dark Trees157" parent="Grayish Grass/Tree" instance=ExtResource("13_p67ya")]
+position = Vector2(-292, -150)
+
+[node name="Dark Trees158" parent="Grayish Grass/Tree" instance=ExtResource("13_p67ya")]
+position = Vector2(-292, -138)
+
+[node name="Dark Trees159" parent="Grayish Grass/Tree" instance=ExtResource("13_p67ya")]
+position = Vector2(-292, -138)
+
+[node name="Dark Trees131" parent="Grayish Grass/Tree" instance=ExtResource("13_p67ya")]
+position = Vector2(-232, -153)
+
+[node name="Dark Trees150" parent="Grayish Grass/Tree" instance=ExtResource("13_p67ya")]
+position = Vector2(-244, -139)
+
+[node name="Dark Trees161" parent="Grayish Grass/Tree" instance=ExtResource("13_p67ya")]
+position = Vector2(-257, -143)
+
+[node name="Dark Trees162" parent="Grayish Grass/Tree" instance=ExtResource("13_p67ya")]
+position = Vector2(-269, -141)
+
+[node name="Dark Trees163" parent="Grayish Grass/Tree" instance=ExtResource("13_p67ya")]
+position = Vector2(-281, -134)
+
+[node name="Dark Trees132" parent="Grayish Grass/Tree" instance=ExtResource("13_p67ya")]
+position = Vector2(-220, -155)
+
+[node name="Dark Trees147" parent="Grayish Grass/Tree" instance=ExtResource("13_p67ya")]
+position = Vector2(-202, -159)
+
+[node name="Dark Trees133" parent="Grayish Grass/Tree" instance=ExtResource("13_p67ya")]
+position = Vector2(-209, -153)
+
+[node name="Dark Trees148" parent="Grayish Grass/Tree" instance=ExtResource("13_p67ya")]
+position = Vector2(-221, -145)
+
+[node name="Dark Trees149" parent="Grayish Grass/Tree" instance=ExtResource("13_p67ya")]
+position = Vector2(-233, -140)
+
+[node name="Dark Trees134" parent="Grayish Grass/Tree" instance=ExtResource("13_p67ya")]
+position = Vector2(-189, -154)
+
+[node name="Dark Trees146" parent="Grayish Grass/Tree" instance=ExtResource("13_p67ya")]
+position = Vector2(-199, -149)
+
+[node name="Dark Trees144" parent="Grayish Grass/Tree" instance=ExtResource("13_p67ya")]
+position = Vector2(-177, -152)
+
+[node name="Dark Trees137" parent="Grayish Grass/Tree" instance=ExtResource("13_p67ya")]
+position = Vector2(-165, -153)
+
+[node name="Dark Trees143" parent="Grayish Grass/Tree" instance=ExtResource("13_p67ya")]
+position = Vector2(-187, -144)
+
+[node name="Dark Trees145" parent="Grayish Grass/Tree" instance=ExtResource("13_p67ya")]
+position = Vector2(-200, -141)
+
+[node name="Dark Trees142" parent="Grayish Grass/Tree" instance=ExtResource("13_p67ya")]
+position = Vector2(-170, -145)
+
+[node name="Dark Trees140" parent="Grayish Grass/Tree" instance=ExtResource("13_p67ya")]
+position = Vector2(-143, -162)
+
+[node name="Dark Trees168" parent="Grayish Grass/Tree" instance=ExtResource("13_p67ya")]
+position = Vector2(-103, -170)
+
+[node name="Dark Trees173" parent="Grayish Grass/Tree" instance=ExtResource("13_p67ya")]
+position = Vector2(-88, -170)
+
+[node name="Dark Trees199" parent="Grayish Grass/Tree" instance=ExtResource("13_p67ya")]
+position = Vector2(-69, -171)
+
+[node name="Dark Trees174" parent="Grayish Grass/Tree" instance=ExtResource("13_p67ya")]
+position = Vector2(-57, -169)
+
+[node name="Dark Trees176" parent="Grayish Grass/Tree" instance=ExtResource("13_p67ya")]
+position = Vector2(-40, -169)
+
+[node name="Dark Trees177" parent="Grayish Grass/Tree" instance=ExtResource("13_p67ya")]
+position = Vector2(-25, -170)
+
+[node name="Dark Trees178" parent="Grayish Grass/Tree" instance=ExtResource("13_p67ya")]
+position = Vector2(-9, -170)
+
+[node name="Dark Trees179" parent="Grayish Grass/Tree" instance=ExtResource("13_p67ya")]
+position = Vector2(6, -170)
+
+[node name="Dark Trees180" parent="Grayish Grass/Tree" instance=ExtResource("13_p67ya")]
+position = Vector2(22, -170)
+
+[node name="Dark Trees181" parent="Grayish Grass/Tree" instance=ExtResource("13_p67ya")]
+position = Vector2(37, -171)
+
+[node name="Dark Trees182" parent="Grayish Grass/Tree" instance=ExtResource("13_p67ya")]
+position = Vector2(52, -171)
+
+[node name="Dark Trees183" parent="Grayish Grass/Tree" instance=ExtResource("13_p67ya")]
+position = Vector2(69, -171)
+
+[node name="Dark Trees184" parent="Grayish Grass/Tree" instance=ExtResource("13_p67ya")]
+position = Vector2(86, -171)
+
+[node name="Dark Trees185" parent="Grayish Grass/Tree" instance=ExtResource("13_p67ya")]
+position = Vector2(103, -171)
+
+[node name="Dark Trees186" parent="Grayish Grass/Tree" instance=ExtResource("13_p67ya")]
+position = Vector2(118, -171)
+
+[node name="Dark Trees187" parent="Grayish Grass/Tree" instance=ExtResource("13_p67ya")]
+position = Vector2(134, -171)
+
+[node name="Dark Trees188" parent="Grayish Grass/Tree" instance=ExtResource("13_p67ya")]
+position = Vector2(149, -171)
+
+[node name="Dark Trees189" parent="Grayish Grass/Tree" instance=ExtResource("13_p67ya")]
+position = Vector2(166, -172)
+
+[node name="Dark Trees190" parent="Grayish Grass/Tree" instance=ExtResource("13_p67ya")]
+position = Vector2(182, -171)
+
+[node name="Dark Trees191" parent="Grayish Grass/Tree" instance=ExtResource("13_p67ya")]
+position = Vector2(199, -171)
+
+[node name="Dark Trees192" parent="Grayish Grass/Tree" instance=ExtResource("13_p67ya")]
+position = Vector2(216, -171)
+
+[node name="Dark Trees193" parent="Grayish Grass/Tree" instance=ExtResource("13_p67ya")]
+position = Vector2(232, -171)
+
+[node name="Dark Trees194" parent="Grayish Grass/Tree" instance=ExtResource("13_p67ya")]
+position = Vector2(247, -171)
+
+[node name="Dark Trees195" parent="Grayish Grass/Tree" instance=ExtResource("13_p67ya")]
+position = Vector2(262, -171)
+
+[node name="Dark Trees196" parent="Grayish Grass/Tree" instance=ExtResource("13_p67ya")]
+position = Vector2(276, -172)
+
+[node name="Dark Trees197" parent="Grayish Grass/Tree" instance=ExtResource("13_p67ya")]
+position = Vector2(281, -168)
+
+[node name="Dark Trees198" parent="Grayish Grass/Tree" instance=ExtResource("13_p67ya")]
+position = Vector2(292, -166)
+
+[node name="Dark Trees175" parent="Grayish Grass/Tree" instance=ExtResource("13_p67ya")]
+position = Vector2(-72, -164)
+
+[node name="Dark Trees200" parent="Grayish Grass/Tree" instance=ExtResource("13_p67ya")]
+position = Vector2(-52, -163)
+
+[node name="Dark Trees201" parent="Grayish Grass/Tree" instance=ExtResource("13_p67ya")]
+position = Vector2(-88, -163)
+
+[node name="Dark Trees202" parent="Grayish Grass/Tree" instance=ExtResource("13_p67ya")]
+position = Vector2(-31, -163)
+
+[node name="Dark Trees203" parent="Grayish Grass/Tree" instance=ExtResource("13_p67ya")]
+position = Vector2(-12, -163)
+
+[node name="Dark Trees204" parent="Grayish Grass/Tree" instance=ExtResource("13_p67ya")]
+position = Vector2(4, -165)
+
+[node name="Dark Trees205" parent="Grayish Grass/Tree" instance=ExtResource("13_p67ya")]
+position = Vector2(24, -165)
+
+[node name="Dark Trees206" parent="Grayish Grass/Tree" instance=ExtResource("13_p67ya")]
+position = Vector2(43, -163)
+
+[node name="Dark Trees207" parent="Grayish Grass/Tree" instance=ExtResource("13_p67ya")]
+position = Vector2(60, -163)
+
+[node name="Dark Trees208" parent="Grayish Grass/Tree" instance=ExtResource("13_p67ya")]
+position = Vector2(159, -167)
+
+[node name="Dark Trees214" parent="Grayish Grass/Tree" instance=ExtResource("13_p67ya")]
+position = Vector2(176, -166)
+
+[node name="Dark Trees215" parent="Grayish Grass/Tree" instance=ExtResource("13_p67ya")]
+position = Vector2(190, -163)
+
+[node name="Dark Trees216" parent="Grayish Grass/Tree" instance=ExtResource("13_p67ya")]
+position = Vector2(208, -161)
+
+[node name="Dark Trees217" parent="Grayish Grass/Tree" instance=ExtResource("13_p67ya")]
+position = Vector2(225, -161)
+
+[node name="Dark Trees218" parent="Grayish Grass/Tree" instance=ExtResource("13_p67ya")]
+position = Vector2(240, -161)
+
+[node name="Dark Trees219" parent="Grayish Grass/Tree" instance=ExtResource("13_p67ya")]
+position = Vector2(256, -162)
+
+[node name="Dark Trees220" parent="Grayish Grass/Tree" instance=ExtResource("13_p67ya")]
+position = Vector2(270, -163)
+
+[node name="Dark Trees221" parent="Grayish Grass/Tree" instance=ExtResource("13_p67ya")]
+position = Vector2(283, -160)
+
+[node name="Dark Trees213" parent="Grayish Grass/Tree" instance=ExtResource("13_p67ya")]
+position = Vector2(127, -165)
+
+[node name="Dark Trees209" parent="Grayish Grass/Tree" instance=ExtResource("13_p67ya")]
+position = Vector2(76, -164)
+
+[node name="Dark Trees210" parent="Grayish Grass/Tree" instance=ExtResource("13_p67ya")]
+position = Vector2(94, -165)
+
+[node name="Dark Trees211" parent="Grayish Grass/Tree" instance=ExtResource("13_p67ya")]
+position = Vector2(113, -165)
+
+[node name="Dark Trees212" parent="Grayish Grass/Tree" instance=ExtResource("13_p67ya")]
+position = Vector2(142, -162)
+
+[node name="Dark Trees171" parent="Grayish Grass/Tree" instance=ExtResource("13_p67ya")]
+position = Vector2(-115, -170)
+
+[node name="Dark Trees172" parent="Grayish Grass/Tree" instance=ExtResource("13_p67ya")]
+position = Vector2(-122, -160)
+
+[node name="Dark Trees169" parent="Grayish Grass/Tree" instance=ExtResource("13_p67ya")]
+position = Vector2(-108, -165)
+
+[node name="Dark Trees170" parent="Grayish Grass/Tree" instance=ExtResource("13_p67ya")]
+position = Vector2(-81, -157)
+
+[node name="Dark Trees166" parent="Grayish Grass/Tree" instance=ExtResource("13_p67ya")]
+position = Vector2(-130, -158)
+
+[node name="Dark Trees167" parent="Grayish Grass/Tree" instance=ExtResource("13_p67ya")]
+position = Vector2(-129, -148)
+
+[node name="Dark Trees164" parent="Grayish Grass/Tree" instance=ExtResource("13_p67ya")]
+position = Vector2(-143, -150)
+
+[node name="Dark Trees165" parent="Grayish Grass/Tree" instance=ExtResource("13_p67ya")]
+position = Vector2(-101, -160)
+
+[node name="Dark Trees227" parent="Grayish Grass/Tree" instance=ExtResource("13_p67ya")]
+position = Vector2(-93, -152)
+
+[node name="Dark Trees228" parent="Grayish Grass/Tree" instance=ExtResource("13_p67ya")]
+position = Vector2(-62, -156)
+
+[node name="Dark Trees229" parent="Grayish Grass/Tree" instance=ExtResource("13_p67ya")]
+position = Vector2(-41, -156)
+
+[node name="Dark Trees230" parent="Grayish Grass/Tree" instance=ExtResource("13_p67ya")]
+position = Vector2(-20, -156)
+
+[node name="Dark Trees231" parent="Grayish Grass/Tree" instance=ExtResource("13_p67ya")]
+position = Vector2(-2, -159)
+
+[node name="Dark Trees232" parent="Grayish Grass/Tree" instance=ExtResource("13_p67ya")]
+position = Vector2(16, -160)
+
+[node name="Dark Trees233" parent="Grayish Grass/Tree" instance=ExtResource("13_p67ya")]
+position = Vector2(33, -158)
+
+[node name="Dark Trees234" parent="Grayish Grass/Tree" instance=ExtResource("13_p67ya")]
+position = Vector2(53, -159)
+
+[node name="Dark Trees235" parent="Grayish Grass/Tree" instance=ExtResource("13_p67ya")]
+position = Vector2(72, -158)
+
+[node name="Dark Trees236" parent="Grayish Grass/Tree" instance=ExtResource("13_p67ya")]
+position = Vector2(89, -159)
+
+[node name="Dark Trees237" parent="Grayish Grass/Tree" instance=ExtResource("13_p67ya")]
+position = Vector2(105, -160)
+
+[node name="Dark Trees238" parent="Grayish Grass/Tree" instance=ExtResource("13_p67ya")]
+position = Vector2(119, -157)
+
+[node name="Dark Trees239" parent="Grayish Grass/Tree" instance=ExtResource("13_p67ya")]
+position = Vector2(132, -154)
+
+[node name="Dark Trees240" parent="Grayish Grass/Tree" instance=ExtResource("13_p67ya")]
+position = Vector2(151, -157)
+
+[node name="Dark Trees241" parent="Grayish Grass/Tree" instance=ExtResource("13_p67ya")]
+position = Vector2(167, -158)
+
+[node name="Dark Trees242" parent="Grayish Grass/Tree" instance=ExtResource("13_p67ya")]
+position = Vector2(184, -156)
+
+[node name="Dark Trees243" parent="Grayish Grass/Tree" instance=ExtResource("13_p67ya")]
+position = Vector2(201, -154)
+
+[node name="Dark Trees244" parent="Grayish Grass/Tree" instance=ExtResource("13_p67ya")]
+position = Vector2(216, -152)
+
+[node name="Dark Trees245" parent="Grayish Grass/Tree" instance=ExtResource("13_p67ya")]
+position = Vector2(233, -154)
+
+[node name="Dark Trees246" parent="Grayish Grass/Tree" instance=ExtResource("13_p67ya")]
+position = Vector2(249, -155)
+
+[node name="Dark Trees247" parent="Grayish Grass/Tree" instance=ExtResource("13_p67ya")]
+position = Vector2(262, -153)
+
+[node name="Dark Trees248" parent="Grayish Grass/Tree" instance=ExtResource("13_p67ya")]
+position = Vector2(274, -150)
+
+[node name="Dark Trees249" parent="Grayish Grass/Tree" instance=ExtResource("13_p67ya")]
+position = Vector2(289, -146)
+
+[node name="Dark Trees222" parent="Grayish Grass/Tree" instance=ExtResource("13_p67ya")]
+position = Vector2(-112, -153)
+
+[node name="Dark Trees223" parent="Grayish Grass/Tree" instance=ExtResource("13_p67ya")]
+position = Vector2(-122, -141)
+
+[node name="Dark Trees250" parent="Grayish Grass/Tree" instance=ExtResource("13_p67ya")]
+position = Vector2(-104, -149)
+
+[node name="Dark Trees275" parent="Grayish Grass/Tree" instance=ExtResource("13_p67ya")]
+position = Vector2(-80, -150)
+
+[node name="Dark Trees252" parent="Grayish Grass/Tree" instance=ExtResource("13_p67ya")]
+position = Vector2(-68, -149)
+
+[node name="Dark Trees279" parent="Grayish Grass/Tree" instance=ExtResource("13_p67ya")]
+position = Vector2(-52, -151)
+
+[node name="Dark Trees278" parent="Grayish Grass/Tree" instance=ExtResource("13_p67ya")]
+position = Vector2(-77, -139)
+
+[node name="Dark Trees276" parent="Grayish Grass/Tree" instance=ExtResource("13_p67ya")]
+position = Vector2(-90, -139)
+
+[node name="Dark Trees277" parent="Grayish Grass/Tree" instance=ExtResource("13_p67ya")]
+position = Vector2(-113, -136)
+
+[node name="Dark Trees253" parent="Grayish Grass/Tree" instance=ExtResource("13_p67ya")]
+position = Vector2(-62, -140)
+
+[node name="Dark Trees280" parent="Grayish Grass/Tree" instance=ExtResource("13_p67ya")]
+position = Vector2(-35, -151)
+
+[node name="Dark Trees281" parent="Grayish Grass/Tree" instance=ExtResource("13_p67ya")]
+position = Vector2(-45, -141)
+
+[node name="Dark Trees254" parent="Grayish Grass/Tree" instance=ExtResource("13_p67ya")]
+position = Vector2(-26, -144)
+
+[node name="Dark Trees282" parent="Grayish Grass/Tree" instance=ExtResource("13_p67ya")]
+position = Vector2(-10, -150)
+
+[node name="Dark Trees283" parent="Grayish Grass/Tree" instance=ExtResource("13_p67ya")]
+position = Vector2(7, -152)
+
+[node name="Dark Trees255" parent="Grayish Grass/Tree" instance=ExtResource("13_p67ya")]
+position = Vector2(-18, -139)
+
+[node name="Dark Trees315" parent="Grayish Grass/Tree" instance=ExtResource("13_p67ya")]
+position = Vector2(-36, -137)
+
+[node name="Dark Trees316" parent="Grayish Grass/Tree" instance=ExtResource("13_p67ya")]
+position = Vector2(-27, -132)
+
+[node name="Dark Trees320" parent="Grayish Grass/Tree" instance=ExtResource("13_p67ya")]
+position = Vector2(-53, -132)
+
+[node name="Dark Trees321" parent="Grayish Grass/Tree" instance=ExtResource("13_p67ya")]
+position = Vector2(-43, -133)
+
+[node name="Dark Trees322" parent="Grayish Grass/Tree" instance=ExtResource("13_p67ya")]
+position = Vector2(-68, -132)
+
+[node name="Dark Trees323" parent="Grayish Grass/Tree" instance=ExtResource("13_p67ya")]
+position = Vector2(-85, -129)
+
+[node name="Dark Trees324" parent="Grayish Grass/Tree" instance=ExtResource("13_p67ya")]
+position = Vector2(-102, -139)
+
+[node name="Dark Trees317" parent="Grayish Grass/Tree" instance=ExtResource("13_p67ya")]
+position = Vector2(-1, -147)
+
+[node name="Dark Trees256" parent="Grayish Grass/Tree" instance=ExtResource("13_p67ya")]
+position = Vector2(-6, -140)
+
+[node name="Dark Trees284" parent="Grayish Grass/Tree" instance=ExtResource("13_p67ya")]
+position = Vector2(24, -152)
+
+[node name="Dark Trees257" parent="Grayish Grass/Tree" instance=ExtResource("13_p67ya")]
+position = Vector2(17, -143)
+
+[node name="Dark Trees285" parent="Grayish Grass/Tree" instance=ExtResource("13_p67ya")]
+position = Vector2(38, -151)
+
+[node name="Dark Trees258" parent="Grayish Grass/Tree" instance=ExtResource("13_p67ya")]
+position = Vector2(33, -143)
+
+[node name="Dark Trees286" parent="Grayish Grass/Tree" instance=ExtResource("13_p67ya")]
+position = Vector2(52, -151)
+
+[node name="Dark Trees259" parent="Grayish Grass/Tree" instance=ExtResource("13_p67ya")]
+position = Vector2(64, -153)
+
+[node name="Dark Trees289" parent="Grayish Grass/Tree" instance=ExtResource("13_p67ya")]
+position = Vector2(82, -154)
+
+[node name="Dark Trees290" parent="Grayish Grass/Tree" instance=ExtResource("13_p67ya")]
+position = Vector2(100, -148)
+
+[node name="Dark Trees287" parent="Grayish Grass/Tree" instance=ExtResource("13_p67ya")]
+position = Vector2(57, -145)
+
+[node name="Dark Trees288" parent="Grayish Grass/Tree" instance=ExtResource("13_p67ya")]
+position = Vector2(46, -137)
+
+[node name="Dark Trees260" parent="Grayish Grass/Tree" instance=ExtResource("13_p67ya")]
+position = Vector2(72, -144)
+
+[node name="Dark Trees261" parent="Grayish Grass/Tree" instance=ExtResource("13_p67ya")]
+position = Vector2(88, -142)
+
+[node name="Dark Trees262" parent="Grayish Grass/Tree" instance=ExtResource("13_p67ya")]
+position = Vector2(113, -146)
+
+[node name="Dark Trees291" parent="Grayish Grass/Tree" instance=ExtResource("13_p67ya")]
+position = Vector2(100, -136)
+
+[node name="Dark Trees292" parent="Grayish Grass/Tree" instance=ExtResource("13_p67ya")]
+position = Vector2(129, -150)
+
+[node name="Dark Trees293" parent="Grayish Grass/Tree" instance=ExtResource("13_p67ya")]
+position = Vector2(117, -137)
+
+[node name="Dark Trees263" parent="Grayish Grass/Tree" instance=ExtResource("13_p67ya")]
+position = Vector2(145, -149)
+
+[node name="Dark Trees264" parent="Grayish Grass/Tree" instance=ExtResource("13_p67ya")]
+position = Vector2(132, -140)
+
+[node name="Dark Trees294" parent="Grayish Grass/Tree" instance=ExtResource("13_p67ya")]
+position = Vector2(158, -150)
+
+[node name="Dark Trees265" parent="Grayish Grass/Tree" instance=ExtResource("13_p67ya")]
+position = Vector2(148, -138)
+
+[node name="Dark Trees295" parent="Grayish Grass/Tree" instance=ExtResource("13_p67ya")]
+position = Vector2(173, -149)
+
+[node name="Dark Trees266" parent="Grayish Grass/Tree" instance=ExtResource("13_p67ya")]
+position = Vector2(161, -139)
+
+[node name="Dark Trees267" parent="Grayish Grass/Tree" instance=ExtResource("13_p67ya")]
+position = Vector2(195, -146)
+
+[node name="Dark Trees396" parent="Grayish Grass/Tree" instance=ExtResource("13_p67ya")]
+position = Vector2(204, -140)
+
+[node name="Dark Trees298" parent="Grayish Grass/Tree" instance=ExtResource("13_p67ya")]
+position = Vector2(139, -134)
+
+[node name="Dark Trees299" parent="Grayish Grass/Tree" instance=ExtResource("13_p67ya")]
+position = Vector2(123, -132)
+
+[node name="Dark Trees300" parent="Grayish Grass/Tree" instance=ExtResource("13_p67ya")]
+position = Vector2(107, -132)
+
+[node name="Dark Trees301" parent="Grayish Grass/Tree" instance=ExtResource("13_p67ya")]
+position = Vector2(81, -139)
+
+[node name="Dark Trees302" parent="Grayish Grass/Tree" instance=ExtResource("13_p67ya")]
+position = Vector2(64, -140)
+
+[node name="Dark Trees303" parent="Grayish Grass/Tree" instance=ExtResource("13_p67ya")]
+position = Vector2(87, -130)
+
+[node name="Dark Trees304" parent="Grayish Grass/Tree" instance=ExtResource("13_p67ya")]
+position = Vector2(68, -133)
+
+[node name="Dark Trees305" parent="Grayish Grass/Tree" instance=ExtResource("13_p67ya")]
+position = Vector2(55, -127)
+
+[node name="Dark Trees382" parent="Grayish Grass/Tree" instance=ExtResource("13_p67ya")]
+position = Vector2(66, -119)
+
+[node name="Dark Trees306" parent="Grayish Grass/Tree" instance=ExtResource("13_p67ya")]
+position = Vector2(34, -134)
+
+[node name="Dark Trees307" parent="Grayish Grass/Tree" instance=ExtResource("13_p67ya")]
+position = Vector2(46, -123)
+
+[node name="Dark Trees308" parent="Grayish Grass/Tree" instance=ExtResource("13_p67ya")]
+position = Vector2(24, -134)
+
+[node name="Dark Trees309" parent="Grayish Grass/Tree" instance=ExtResource("13_p67ya")]
+position = Vector2(29, -127)
+
+[node name="Dark Trees310" parent="Grayish Grass/Tree" instance=ExtResource("13_p67ya")]
+position = Vector2(7, -139)
+
+[node name="Dark Trees311" parent="Grayish Grass/Tree" instance=ExtResource("13_p67ya")]
+position = Vector2(16, -131)
+
+[node name="Dark Trees312" parent="Grayish Grass/Tree" instance=ExtResource("13_p67ya")]
+position = Vector2(-11, -131)
+
+[node name="Dark Trees313" parent="Grayish Grass/Tree" instance=ExtResource("13_p67ya")]
+position = Vector2(2, -132)
+
+[node name="Dark Trees318" parent="Grayish Grass/Tree" instance=ExtResource("13_p67ya")]
+position = Vector2(-21, -127)
+
+[node name="Dark Trees314" parent="Grayish Grass/Tree" instance=ExtResource("13_p67ya")]
+position = Vector2(9, -128)
+
+[node name="Dark Trees373" parent="Grayish Grass/Tree" instance=ExtResource("13_p67ya")]
+position = Vector2(12, -118)
+
+[node name="Dark Trees383" parent="Grayish Grass/Tree" instance=ExtResource("13_p67ya")]
+position = Vector2(32, -119)
+
+[node name="Dark Trees379" parent="Grayish Grass/Tree" instance=ExtResource("13_p67ya")]
+position = Vector2(58, -116)
+
+[node name="Dark Trees423" parent="Grayish Grass/Tree" instance=ExtResource("13_p67ya")]
+position = Vector2(77, -129)
+
+[node name="Dark Trees424" parent="Grayish Grass/Tree" instance=ExtResource("13_p67ya")]
+position = Vector2(81, -122)
+
+[node name="Dark Trees384" parent="Grayish Grass/Tree" instance=ExtResource("13_p67ya")]
+position = Vector2(-3, -127)
+
+[node name="Dark Trees381" parent="Grayish Grass/Tree" instance=ExtResource("13_p67ya")]
+position = Vector2(93, -124)
+
+[node name="Dark Trees388" parent="Grayish Grass/Tree" instance=ExtResource("13_p67ya")]
+position = Vector2(102, -123)
+
+[node name="Dark Trees425" parent="Grayish Grass/Tree" instance=ExtResource("13_p67ya")]
+position = Vector2(97, -119)
+
+[node name="Dark Trees389" parent="Grayish Grass/Tree" instance=ExtResource("13_p67ya")]
+position = Vector2(118, -119)
+
+[node name="Dark Trees426" parent="Grayish Grass/Tree" instance=ExtResource("13_p67ya")]
+position = Vector2(108, -117)
+
+[node name="Dark Trees427" parent="Grayish Grass/Tree" instance=ExtResource("13_p67ya")]
+position = Vector2(72, -114)
+
+[node name="Dark Trees428" parent="Grayish Grass/Tree" instance=ExtResource("13_p67ya")]
+position = Vector2(86, -113)
+
+[node name="Dark Trees432" parent="Grayish Grass/Tree" instance=ExtResource("13_p67ya")]
+position = Vector2(134, -123)
+
+[node name="Dark Trees390" parent="Grayish Grass/Tree" instance=ExtResource("13_p67ya")]
+position = Vector2(134, -123)
+
+[node name="Dark Trees391" parent="Grayish Grass/Tree" instance=ExtResource("13_p67ya")]
+position = Vector2(150, -129)
+
+[node name="Dark Trees392" parent="Grayish Grass/Tree" instance=ExtResource("13_p67ya")]
+position = Vector2(140, -117)
+
+[node name="Dark Trees434" parent="Grayish Grass/Tree" instance=ExtResource("13_p67ya")]
+position = Vector2(173, -133)
+
+[node name="Dark Trees433" parent="Grayish Grass/Tree" instance=ExtResource("13_p67ya")]
+position = Vector2(128, -113)
+
+[node name="Dark Trees393" parent="Grayish Grass/Tree" instance=ExtResource("13_p67ya")]
+position = Vector2(179, -146)
+
+[node name="Dark Trees375" parent="Grayish Grass/Tree" instance=ExtResource("13_p67ya")]
+position = Vector2(23, -116)
+
+[node name="Dark Trees296" parent="Grayish Grass/Tree" instance=ExtResource("13_p67ya")]
+position = Vector2(183, -140)
+
+[node name="Dark Trees297" parent="Grayish Grass/Tree" instance=ExtResource("13_p67ya")]
+position = Vector2(172, -133)
+
+[node name="Dark Trees435" parent="Grayish Grass/Tree" instance=ExtResource("13_p67ya")]
+position = Vector2(163, -129)
+
+[node name="Dark Trees395" parent="Grayish Grass/Tree" instance=ExtResource("13_p67ya")]
+position = Vector2(182, -127)
+
+[node name="Dark Trees422" parent="Grayish Grass/Tree" instance=ExtResource("13_p67ya")]
+position = Vector2(151, -118)
+
+[node name="Dark Trees448" parent="Grayish Grass/Tree" instance=ExtResource("13_p67ya")]
+position = Vector2(162, -117)
+
+[node name="Dark Trees394" parent="Grayish Grass/Tree" instance=ExtResource("13_p67ya")]
+position = Vector2(175, -124)
+
+[node name="Dark Trees449" parent="Grayish Grass/Tree" instance=ExtResource("13_p67ya")]
+position = Vector2(176, -112)
+
+[node name="Dark Trees436" parent="Grayish Grass/Tree" instance=ExtResource("13_p67ya")]
+position = Vector2(195, -132)
+
+[node name="Dark Trees268" parent="Grayish Grass/Tree" instance=ExtResource("13_p67ya")]
+position = Vector2(216, -140)
+
+[node name="Dark Trees269" parent="Grayish Grass/Tree" instance=ExtResource("13_p67ya")]
+position = Vector2(229, -145)
+
+[node name="Dark Trees399" parent="Grayish Grass/Tree" instance=ExtResource("13_p67ya")]
+position = Vector2(243, -148)
+
+[node name="Dark Trees397" parent="Grayish Grass/Tree" instance=ExtResource("13_p67ya")]
+position = Vector2(192, -120)
+
+[node name="Dark Trees398" parent="Grayish Grass/Tree" instance=ExtResource("13_p67ya")]
+position = Vector2(208, -129)
+
+[node name="Dark Trees270" parent="Grayish Grass/Tree" instance=ExtResource("13_p67ya")]
+position = Vector2(255, -146)
+
+[node name="Dark Trees271" parent="Grayish Grass/Tree" instance=ExtResource("13_p67ya")]
+position = Vector2(249, -141)
+
+[node name="Dark Trees400" parent="Grayish Grass/Tree" instance=ExtResource("13_p67ya")]
+position = Vector2(237, -137)
+
+[node name="Dark Trees407" parent="Grayish Grass/Tree" instance=ExtResource("13_p67ya")]
+position = Vector2(247, -131)
+
+[node name="Dark Trees401" parent="Grayish Grass/Tree" instance=ExtResource("13_p67ya")]
+position = Vector2(224, -134)
+
+[node name="Dark Trees402" parent="Grayish Grass/Tree" instance=ExtResource("13_p67ya")]
+position = Vector2(264, -142)
+
+[node name="Dark Trees272" parent="Grayish Grass/Tree" instance=ExtResource("13_p67ya")]
+position = Vector2(271, -137)
+
+[node name="Dark Trees403" parent="Grayish Grass/Tree" instance=ExtResource("13_p67ya")]
+position = Vector2(257, -133)
+
+[node name="Dark Trees408" parent="Grayish Grass/Tree" instance=ExtResource("13_p67ya")]
+position = Vector2(235, -127)
+
+[node name="Dark Trees409" parent="Grayish Grass/Tree" instance=ExtResource("13_p67ya")]
+position = Vector2(221, -121)
+
+[node name="Dark Trees410" parent="Grayish Grass/Tree" instance=ExtResource("13_p67ya")]
+position = Vector2(248, -120)
+
+[node name="Dark Trees418" parent="Grayish Grass/Tree" instance=ExtResource("13_p67ya")]
+position = Vector2(234, -117)
+
+[node name="Dark Trees419" parent="Grayish Grass/Tree" instance=ExtResource("13_p67ya")]
+position = Vector2(186, -108)
+
+[node name="Dark Trees450" parent="Grayish Grass/Tree" instance=ExtResource("13_p67ya")]
+position = Vector2(204, -118)
+
+[node name="Dark Trees420" parent="Grayish Grass/Tree" instance=ExtResource("13_p67ya")]
+position = Vector2(200, -109)
+
+[node name="Dark Trees463" parent="Grayish Grass/Tree" instance=ExtResource("13_p67ya")]
+position = Vector2(195, -103)
+
+[node name="Dark Trees437" parent="Grayish Grass/Tree" instance=ExtResource("13_p67ya")]
+position = Vector2(183, -101)
+
+[node name="Dark Trees451" parent="Grayish Grass/Tree" instance=ExtResource("13_p67ya")]
+position = Vector2(117, -110)
+
+[node name="Dark Trees455" parent="Grayish Grass/Tree" instance=ExtResource("13_p67ya")]
+position = Vector2(138, -107)
+
+[node name="Dark Trees456" parent="Grayish Grass/Tree" instance=ExtResource("13_p67ya")]
+position = Vector2(130, -103)
+
+[node name="Dark Trees457" parent="Grayish Grass/Tree" instance=ExtResource("13_p67ya")]
+position = Vector2(154, -107)
+
+[node name="Dark Trees458" parent="Grayish Grass/Tree" instance=ExtResource("13_p67ya")]
+position = Vector2(145, -101)
+
+[node name="Dark Trees459" parent="Grayish Grass/Tree" instance=ExtResource("13_p67ya")]
+position = Vector2(166, -103)
+
+[node name="Dark Trees460" parent="Grayish Grass/Tree" instance=ExtResource("13_p67ya")]
+position = Vector2(173, -98)
+
+[node name="Dark Trees461" parent="Grayish Grass/Tree" instance=ExtResource("13_p67ya")]
+position = Vector2(156, -100)
+
+[node name="Dark Trees465" parent="Grayish Grass/Tree" instance=ExtResource("13_p67ya")]
+position = Vector2(164, -90)
+
+[node name="Dark Trees651" parent="Grayish Grass/Tree" instance=ExtResource("13_p67ya")]
+position = Vector2(153, -93)
+
+[node name="Dark Trees476" parent="Grayish Grass/Tree" instance=ExtResource("13_p67ya")]
+position = Vector2(172, -87)
+
+[node name="Dark Trees652" parent="Grayish Grass/Tree" instance=ExtResource("13_p67ya")]
+position = Vector2(143, -92)
+
+[node name="Dark Trees466" parent="Grayish Grass/Tree" instance=ExtResource("13_p67ya")]
+position = Vector2(183, -84)
+
+[node name="Dark Trees477" parent="Grayish Grass/Tree" instance=ExtResource("13_p67ya")]
+position = Vector2(176, -76)
+
+[node name="Dark Trees653" parent="Grayish Grass/Tree" instance=ExtResource("13_p67ya")]
+position = Vector2(156, -85)
+
+[node name="Dark Trees478" parent="Grayish Grass/Tree" instance=ExtResource("13_p67ya")]
+position = Vector2(196, -89)
+
+[node name="Dark Trees467" parent="Grayish Grass/Tree" instance=ExtResource("13_p67ya")]
+position = Vector2(204, -100)
+
+[node name="Dark Trees462" parent="Grayish Grass/Tree" instance=ExtResource("13_p67ya")]
+position = Vector2(102, -113)
+
+[node name="Dark Trees453" parent="Grayish Grass/Tree" instance=ExtResource("13_p67ya")]
+position = Vector2(43, -116)
+
+[node name="Dark Trees442" parent="Grayish Grass/Tree" instance=ExtResource("13_p67ya")]
+position = Vector2(214, -111)
+
+[node name="Dark Trees464" parent="Grayish Grass/Tree" instance=ExtResource("13_p67ya")]
+position = Vector2(227, -107)
+
+[node name="Dark Trees421" parent="Grayish Grass/Tree" instance=ExtResource("13_p67ya")]
+position = Vector2(195, -92)
+
+[node name="Dark Trees443" parent="Grayish Grass/Tree" instance=ExtResource("13_p67ya")]
+position = Vector2(212, -100)
+
+[node name="Dark Trees469" parent="Grayish Grass/Tree" instance=ExtResource("13_p67ya")]
+position = Vector2(222, -99)
+
+[node name="Dark Trees470" parent="Grayish Grass/Tree" instance=ExtResource("13_p67ya")]
+position = Vector2(231, -96)
+
+[node name="Dark Trees438" parent="Grayish Grass/Tree" instance=ExtResource("13_p67ya")]
+position = Vector2(242, -107)
+
+[node name="Dark Trees411" parent="Grayish Grass/Tree" instance=ExtResource("13_p67ya")]
+position = Vector2(266, -126)
+
+[node name="Dark Trees417" parent="Grayish Grass/Tree" instance=ExtResource("13_p67ya")]
+position = Vector2(256, -118)
+
+[node name="Dark Trees404" parent="Grayish Grass/Tree" instance=ExtResource("13_p67ya")]
+position = Vector2(281, -134)
+
+[node name="Dark Trees413" parent="Grayish Grass/Tree" instance=ExtResource("13_p67ya")]
+position = Vector2(277, -122)
+
+[node name="Dark Trees416" parent="Grayish Grass/Tree" instance=ExtResource("13_p67ya")]
+position = Vector2(267, -115)
+
+[node name="Dark Trees414" parent="Grayish Grass/Tree" instance=ExtResource("13_p67ya")]
+position = Vector2(287, -119)
+
+[node name="Dark Trees415" parent="Grayish Grass/Tree" instance=ExtResource("13_p67ya")]
+position = Vector2(282, -106)
+
+[node name="Dark Trees412" parent="Grayish Grass/Tree" instance=ExtResource("13_p67ya")]
+position = Vector2(253, -105)
+
+[node name="Dark Trees439" parent="Grayish Grass/Tree" instance=ExtResource("13_p67ya")]
+position = Vector2(204, -87)
+
+[node name="Dark Trees444" parent="Grayish Grass/Tree" instance=ExtResource("13_p67ya")]
+position = Vector2(244, -96)
+
+[node name="Dark Trees440" parent="Grayish Grass/Tree" instance=ExtResource("13_p67ya")]
+position = Vector2(194, -80)
+
+[node name="Dark Trees479" parent="Grayish Grass/Tree" instance=ExtResource("13_p67ya")]
+position = Vector2(185, -73)
+
+[node name="Dark Trees654" parent="Grayish Grass/Tree" instance=ExtResource("13_p67ya")]
+position = Vector2(167, -75)
+
+[node name="Dark Trees491" parent="Grayish Grass/Tree" instance=ExtResource("13_p67ya")]
+position = Vector2(197, -70)
+
+[node name="Dark Trees480" parent="Grayish Grass/Tree" instance=ExtResource("13_p67ya")]
+position = Vector2(219, -89)
+
+[node name="Dark Trees471" parent="Grayish Grass/Tree" instance=ExtResource("13_p67ya")]
+position = Vector2(215, -77)
+
+[node name="Dark Trees481" parent="Grayish Grass/Tree" instance=ExtResource("13_p67ya")]
+position = Vector2(207, -75)
+
+[node name="Dark Trees472" parent="Grayish Grass/Tree" instance=ExtResource("13_p67ya")]
+position = Vector2(234, -83)
+
+[node name="Dark Trees482" parent="Grayish Grass/Tree" instance=ExtResource("13_p67ya")]
+position = Vector2(226, -74)
+
+[node name="Dark Trees483" parent="Grayish Grass/Tree" instance=ExtResource("13_p67ya")]
+position = Vector2(291, -99)
+
+[node name="Dark Trees473" parent="Grayish Grass/Tree" instance=ExtResource("13_p67ya")]
+position = Vector2(261, -99)
+
+[node name="Dark Trees445" parent="Grayish Grass/Tree" instance=ExtResource("13_p67ya")]
+position = Vector2(274, -100)
+
+[node name="Dark Trees441" parent="Grayish Grass/Tree" instance=ExtResource("13_p67ya")]
+position = Vector2(251, -84)
+
+[node name="Dark Trees273" parent="Grayish Grass/Tree" instance=ExtResource("13_p67ya")]
+position = Vector2(274, -92)
+
+[node name="Dark Trees405" parent="Grayish Grass/Tree" instance=ExtResource("13_p67ya")]
+position = Vector2(286, -89)
+
+[node name="Dark Trees446" parent="Grayish Grass/Tree" instance=ExtResource("13_p67ya")]
+position = Vector2(240, -74)
+
+[node name="Dark Trees474" parent="Grayish Grass/Tree" instance=ExtResource("13_p67ya")]
+position = Vector2(262, -85)
+
+[node name="Dark Trees475" parent="Grayish Grass/Tree" instance=ExtResource("13_p67ya")]
+position = Vector2(273, -79)
+
+[node name="Dark Trees447" parent="Grayish Grass/Tree" instance=ExtResource("13_p67ya")]
+position = Vector2(286, -79)
+
+[node name="Dark Trees484" parent="Grayish Grass/Tree" instance=ExtResource("13_p67ya")]
+position = Vector2(280, -69)
+
+[node name="Dark Trees406" parent="Grayish Grass/Tree" instance=ExtResource("13_p67ya")]
+position = Vector2(254, -74)
+
+[node name="Dark Trees274" parent="Grayish Grass/Tree" instance=ExtResource("13_p67ya")]
+position = Vector2(267, -67)
+
+[node name="Dark Trees487" parent="Grayish Grass/Tree" instance=ExtResource("13_p67ya")]
+position = Vector2(246, -65)
+
+[node name="Dark Trees488" parent="Grayish Grass/Tree" instance=ExtResource("13_p67ya")]
+position = Vector2(232, -64)
+
+[node name="Dark Trees489" parent="Grayish Grass/Tree" instance=ExtResource("13_p67ya")]
+position = Vector2(217, -65)
+
+[node name="Dark Trees490" parent="Grayish Grass/Tree" instance=ExtResource("13_p67ya")]
+position = Vector2(188, -63)
+
+[node name="Dark Trees655" parent="Grayish Grass/Tree" instance=ExtResource("13_p67ya")]
+position = Vector2(180, -60)
+
+[node name="Dark Trees492" parent="Grayish Grass/Tree" instance=ExtResource("13_p67ya")]
+position = Vector2(202, -62)
+
+[node name="Dark Trees493" parent="Grayish Grass/Tree" instance=ExtResource("13_p67ya")]
+position = Vector2(210, -54)
+
+[node name="Dark Trees508" parent="Grayish Grass/Tree" instance=ExtResource("13_p67ya")]
+position = Vector2(196, -52)
+
+[node name="Dark Trees656" parent="Grayish Grass/Tree" instance=ExtResource("13_p67ya")]
+position = Vector2(185, -47)
+
+[node name="Dark Trees509" parent="Grayish Grass/Tree" instance=ExtResource("13_p67ya")]
+position = Vector2(207, -44)
+
+[node name="Dark Trees647" parent="Grayish Grass/Tree" instance=ExtResource("13_p67ya")]
+position = Vector2(200, -40)
+
+[node name="Dark Trees658" parent="Grayish Grass/Tree" instance=ExtResource("13_p67ya")]
+position = Vector2(192, -32)
+
+[node name="Dark Trees494" parent="Grayish Grass/Tree" instance=ExtResource("13_p67ya")]
+position = Vector2(224, -53)
+
+[node name="Dark Trees495" parent="Grayish Grass/Tree" instance=ExtResource("13_p67ya")]
+position = Vector2(241, -55)
+
+[node name="Dark Trees496" parent="Grayish Grass/Tree" instance=ExtResource("13_p67ya")]
+position = Vector2(257, -58)
+
+[node name="Dark Trees497" parent="Grayish Grass/Tree" instance=ExtResource("13_p67ya")]
+position = Vector2(277, -59)
+
+[node name="Dark Trees485" parent="Grayish Grass/Tree" instance=ExtResource("13_p67ya")]
+position = Vector2(290, -61)
+
+[node name="Dark Trees486" parent="Grayish Grass/Tree" instance=ExtResource("13_p67ya")]
+position = Vector2(267, -53)
+
+[node name="Dark Trees498" parent="Grayish Grass/Tree" instance=ExtResource("13_p67ya")]
+position = Vector2(285, -49)
+
+[node name="Dark Trees499" parent="Grayish Grass/Tree" instance=ExtResource("13_p67ya")]
+position = Vector2(219, -44)
+
+[node name="Dark Trees510" parent="Grayish Grass/Tree" instance=ExtResource("13_p67ya")]
+position = Vector2(213, -31)
+
+[node name="Dark Trees648" parent="Grayish Grass/Tree" instance=ExtResource("13_p67ya")]
+position = Vector2(203, -27)
+
+[node name="Dark Trees657" parent="Grayish Grass/Tree" instance=ExtResource("13_p67ya")]
+position = Vector2(198, -18)
+
+[node name="Dark Trees500" parent="Grayish Grass/Tree" instance=ExtResource("13_p67ya")]
+position = Vector2(235, -44)
+
+[node name="Dark Trees501" parent="Grayish Grass/Tree" instance=ExtResource("13_p67ya")]
+position = Vector2(252, -45)
+
+[node name="Dark Trees502" parent="Grayish Grass/Tree" instance=ExtResource("13_p67ya")]
+position = Vector2(274, -41)
+
+[node name="Dark Trees503" parent="Grayish Grass/Tree" instance=ExtResource("13_p67ya")]
+position = Vector2(260, -37)
+
+[node name="Dark Trees504" parent="Grayish Grass/Tree" instance=ExtResource("13_p67ya")]
+position = Vector2(243, -36)
+
+[node name="Dark Trees505" parent="Grayish Grass/Tree" instance=ExtResource("13_p67ya")]
+position = Vector2(226, -33)
+
+[node name="Dark Trees511" parent="Grayish Grass/Tree" instance=ExtResource("13_p67ya")]
+position = Vector2(219, -21)
+
+[node name="Dark Trees512" parent="Grayish Grass/Tree" instance=ExtResource("13_p67ya")]
+position = Vector2(236, -24)
+
+[node name="Dark Trees513" parent="Grayish Grass/Tree" instance=ExtResource("13_p67ya")]
+position = Vector2(255, -27)
+
+[node name="Dark Trees514" parent="Grayish Grass/Tree" instance=ExtResource("13_p67ya")]
+position = Vector2(282, -34)
+
+[node name="Dark Trees506" parent="Grayish Grass/Tree" instance=ExtResource("13_p67ya")]
+position = Vector2(268, -29)
+
+[node name="Dark Trees507" parent="Grayish Grass/Tree" instance=ExtResource("13_p67ya")]
+position = Vector2(291, -28)
+
+[node name="Dark Trees515" parent="Grayish Grass/Tree" instance=ExtResource("13_p67ya")]
+position = Vector2(279, -22)
+
+[node name="Dark Trees516" parent="Grayish Grass/Tree" instance=ExtResource("13_p67ya")]
+position = Vector2(262, -19)
+
+[node name="Dark Trees517" parent="Grayish Grass/Tree" instance=ExtResource("13_p67ya")]
+position = Vector2(248, -16)
+
+[node name="Dark Trees518" parent="Grayish Grass/Tree" instance=ExtResource("13_p67ya")]
+position = Vector2(230, -14)
+
+[node name="Dark Trees519" parent="Grayish Grass/Tree" instance=ExtResource("13_p67ya")]
+position = Vector2(209, -13)
+
+[node name="Dark Trees520" parent="Grayish Grass/Tree" instance=ExtResource("13_p67ya")]
+position = Vector2(223, -8)
+
+[node name="Dark Trees521" parent="Grayish Grass/Tree" instance=ExtResource("13_p67ya")]
+position = Vector2(239, -5)
+
+[node name="Dark Trees522" parent="Grayish Grass/Tree" instance=ExtResource("13_p67ya")]
+position = Vector2(258, -5)
+
+[node name="Dark Trees523" parent="Grayish Grass/Tree" instance=ExtResource("13_p67ya")]
+position = Vector2(272, -10)
+
+[node name="Dark Trees524" parent="Grayish Grass/Tree" instance=ExtResource("13_p67ya")]
+position = Vector2(288, -12)
+
+[node name="Dark Trees525" parent="Grayish Grass/Tree" instance=ExtResource("13_p67ya")]
+position = Vector2(280, 2)
+
+[node name="Dark Trees526" parent="Grayish Grass/Tree" instance=ExtResource("13_p67ya")]
+position = Vector2(264, 5)
+
+[node name="Dark Trees527" parent="Grayish Grass/Tree" instance=ExtResource("13_p67ya")]
+position = Vector2(248, 6)
+
+[node name="Dark Trees528" parent="Grayish Grass/Tree" instance=ExtResource("13_p67ya")]
+position = Vector2(231, 5)
+
+[node name="Dark Trees529" parent="Grayish Grass/Tree" instance=ExtResource("13_p67ya")]
+position = Vector2(214, 1)
+
+[node name="Dark Trees649" parent="Grayish Grass/Tree" instance=ExtResource("13_p67ya")]
+position = Vector2(201, -1)
+
+[node name="Dark Trees530" parent="Grayish Grass/Tree" instance=ExtResource("13_p67ya")]
+position = Vector2(221, 12)
+
+[node name="Dark Trees531" parent="Grayish Grass/Tree" instance=ExtResource("13_p67ya")]
+position = Vector2(242, 13)
+
+[node name="Dark Trees532" parent="Grayish Grass/Tree" instance=ExtResource("13_p67ya")]
+position = Vector2(257, 13)
+
+[node name="Dark Trees533" parent="Grayish Grass/Tree" instance=ExtResource("13_p67ya")]
+position = Vector2(270, 12)
+
+[node name="Dark Trees534" parent="Grayish Grass/Tree" instance=ExtResource("13_p67ya")]
+position = Vector2(292, 7)
+
+[node name="Dark Trees535" parent="Grayish Grass/Tree" instance=ExtResource("13_p67ya")]
+position = Vector2(282, 14)
+
+[node name="Dark Trees536" parent="Grayish Grass/Tree" instance=ExtResource("13_p67ya")]
+position = Vector2(293, 19)
+
+[node name="Dark Trees537" parent="Grayish Grass/Tree" instance=ExtResource("13_p67ya")]
+position = Vector2(274, 22)
+
+[node name="Dark Trees540" parent="Grayish Grass/Tree" instance=ExtResource("13_p67ya")]
+position = Vector2(264, 23)
+
+[node name="Dark Trees541" parent="Grayish Grass/Tree" instance=ExtResource("13_p67ya")]
+position = Vector2(231, 19)
+
+[node name="Dark Trees542" parent="Grayish Grass/Tree" instance=ExtResource("13_p67ya")]
+position = Vector2(250, 25)
+
+[node name="Dark Trees543" parent="Grayish Grass/Tree" instance=ExtResource("13_p67ya")]
+position = Vector2(213, 15)
+
+[node name="Dark Trees650" parent="Grayish Grass/Tree" instance=ExtResource("13_p67ya")]
+position = Vector2(206, 17)
+
+[node name="Dark Trees544" parent="Grayish Grass/Tree" instance=ExtResource("13_p67ya")]
+position = Vector2(222, 25)
+
+[node name="Dark Trees545" parent="Grayish Grass/Tree" instance=ExtResource("13_p67ya")]
+position = Vector2(206, 31)
+
+[node name="Dark Trees546" parent="Grayish Grass/Tree" instance=ExtResource("13_p67ya")]
+position = Vector2(214, 37)
+
+[node name="Dark Trees547" parent="Grayish Grass/Tree" instance=ExtResource("13_p67ya")]
+position = Vector2(236, 29)
+
+[node name="Dark Trees548" parent="Grayish Grass/Tree" instance=ExtResource("13_p67ya")]
+position = Vector2(228, 41)
+
+[node name="Dark Trees549" parent="Grayish Grass/Tree" instance=ExtResource("13_p67ya")]
+position = Vector2(248, 37)
+
+[node name="Dark Trees550" parent="Grayish Grass/Tree" instance=ExtResource("13_p67ya")]
+position = Vector2(262, 34)
+
+[node name="Dark Trees551" parent="Grayish Grass/Tree" instance=ExtResource("13_p67ya")]
+position = Vector2(282, 23)
+
+[node name="Dark Trees538" parent="Grayish Grass/Tree" instance=ExtResource("13_p67ya")]
+position = Vector2(288, 31)
+
+[node name="Dark Trees539" parent="Grayish Grass/Tree" instance=ExtResource("13_p67ya")]
+position = Vector2(274, 39)
+
+[node name="Dark Trees552" parent="Grayish Grass/Tree" instance=ExtResource("13_p67ya")]
+position = Vector2(286, 42)
+
+[node name="Dark Trees553" parent="Grayish Grass/Tree" instance=ExtResource("13_p67ya")]
+position = Vector2(240, 44)
+
+[node name="Dark Trees554" parent="Grayish Grass/Tree" instance=ExtResource("13_p67ya")]
+position = Vector2(252, 46)
+
+[node name="Dark Trees555" parent="Grayish Grass/Tree" instance=ExtResource("13_p67ya")]
+position = Vector2(266, 49)
+
+[node name="Dark Trees556" parent="Grayish Grass/Tree" instance=ExtResource("13_p67ya")]
+position = Vector2(277, 53)
+
+[node name="Dark Trees557" parent="Grayish Grass/Tree" instance=ExtResource("13_p67ya")]
+position = Vector2(207, 45)
+
+[node name="Dark Trees558" parent="Grayish Grass/Tree" instance=ExtResource("13_p67ya")]
+position = Vector2(221, 53)
+
+[node name="Dark Trees559" parent="Grayish Grass/Tree" instance=ExtResource("13_p67ya")]
+position = Vector2(233, 54)
+
+[node name="Dark Trees570" parent="Grayish Grass/Tree" instance=ExtResource("13_p67ya")]
+position = Vector2(227, 66)
+
+[node name="Dark Trees560" parent="Grayish Grass/Tree" instance=ExtResource("13_p67ya")]
+position = Vector2(247, 57)
+
+[node name="Dark Trees571" parent="Grayish Grass/Tree" instance=ExtResource("13_p67ya")]
+position = Vector2(258, 58)
+
+[node name="Dark Trees561" parent="Grayish Grass/Tree" instance=ExtResource("13_p67ya")]
+position = Vector2(253, 69)
+
+[node name="Dark Trees562" parent="Grayish Grass/Tree" instance=ExtResource("13_p67ya")]
+position = Vector2(291, 57)
+
+[node name="Dark Trees563" parent="Grayish Grass/Tree" instance=ExtResource("13_p67ya")]
+position = Vector2(285, 66)
+
+[node name="Dark Trees564" parent="Grayish Grass/Tree" instance=ExtResource("13_p67ya")]
+position = Vector2(271, 68)
+
+[node name="Dark Trees572" parent="Grayish Grass/Tree" instance=ExtResource("13_p67ya")]
+position = Vector2(263, 78)
+
+[node name="Dark Trees577" parent="Grayish Grass/Tree" instance=ExtResource("13_p67ya")]
+position = Vector2(243, 70)
+
+[node name="Dark Trees578" parent="Grayish Grass/Tree" instance=ExtResource("13_p67ya")]
+position = Vector2(234, 73)
+
+[node name="Dark Trees573" parent="Grayish Grass/Tree" instance=ExtResource("13_p67ya")]
+position = Vector2(279, 78)
+
+[node name="Dark Trees574" parent="Grayish Grass/Tree" instance=ExtResource("13_p67ya")]
+position = Vector2(293, 81)
+
+[node name="Dark Trees575" parent="Grayish Grass/Tree" instance=ExtResource("13_p67ya")]
+position = Vector2(285, 89)
+
+[node name="Dark Trees576" parent="Grayish Grass/Tree" instance=ExtResource("13_p67ya")]
+position = Vector2(270, 90)
+
+[node name="Dark Trees565" parent="Grayish Grass/Tree" instance=ExtResource("13_p67ya")]
+position = Vector2(208, 56)
+
+[node name="Dark Trees568" parent="Grayish Grass/Tree" instance=ExtResource("13_p67ya")]
+position = Vector2(219, 68)
+
+[node name="Dark Trees579" parent="Grayish Grass/Tree" instance=ExtResource("13_p67ya")]
+position = Vector2(226, 82)
+
+[node name="Dark Trees580" parent="Grayish Grass/Tree" instance=ExtResource("13_p67ya")]
+position = Vector2(252, 81)
+
+[node name="Dark Trees581" parent="Grayish Grass/Tree" instance=ExtResource("13_p67ya")]
+position = Vector2(241, 85)
+
+[node name="Dark Trees582" parent="Grayish Grass/Tree" instance=ExtResource("13_p67ya")]
+position = Vector2(208, 70)
+
+[node name="Dark Trees566" parent="Grayish Grass/Tree" instance=ExtResource("13_p67ya")]
+position = Vector2(200, 64)
+
+[node name="Dark Trees567" parent="Grayish Grass/Tree" instance=ExtResource("13_p67ya")]
+position = Vector2(197, 76)
+
+[node name="Dark Trees590" parent="Grayish Grass/Tree" instance=ExtResource("13_p67ya")]
+position = Vector2(213, 82)
+
+[node name="Dark Trees569" parent="Grayish Grass/Tree" instance=ExtResource("13_p67ya")]
+position = Vector2(203, 86)
+
+[node name="Dark Trees594" parent="Grayish Grass/Tree" instance=ExtResource("13_p67ya")]
+position = Vector2(191, 87)
+
+[node name="Dark Trees592" parent="Grayish Grass/Tree" instance=ExtResource("13_p67ya")]
+position = Vector2(215, 96)
+
+[node name="Dark Trees583" parent="Grayish Grass/Tree" instance=ExtResource("13_p67ya")]
+position = Vector2(223, 97)
+
+[node name="Dark Trees593" parent="Grayish Grass/Tree" instance=ExtResource("13_p67ya")]
+position = Vector2(205, 104)
+
+[node name="Dark Trees595" parent="Grayish Grass/Tree" instance=ExtResource("13_p67ya")]
+position = Vector2(197, 99)
+
+[node name="Dark Trees646" parent="Grayish Grass/Tree" instance=ExtResource("13_p67ya")]
+position = Vector2(186, 97)
+
+[node name="Dark Trees659" parent="Grayish Grass/Tree" instance=ExtResource("13_p67ya")]
+position = Vector2(191, 109)
+
+[node name="Dark Trees775" parent="Grayish Grass/Tree" instance=ExtResource("13_p67ya")]
+position = Vector2(-37, 125)
+
+[node name="Dark Trees777" parent="Grayish Grass/Tree" instance=ExtResource("13_p67ya")]
+position = Vector2(-26, 129)
+
+[node name="Dark Trees780" parent="Grayish Grass/Tree" instance=ExtResource("13_p67ya")]
+position = Vector2(-40, 134)
+
+[node name="Dark Trees801" parent="Grayish Grass/Tree" instance=ExtResource("13_p67ya")]
+position = Vector2(-56, 141)
+
+[node name="Dark Trees665" parent="Grayish Grass/Tree" instance=ExtResource("13_p67ya")]
+position = Vector2(176, 105)
+
+[node name="Dark Trees666" parent="Grayish Grass/Tree" instance=ExtResource("13_p67ya")]
+position = Vector2(164, 112)
+
+[node name="Dark Trees667" parent="Grayish Grass/Tree" instance=ExtResource("13_p67ya")]
+position = Vector2(153, 114)
+
+[node name="Dark Trees672" parent="Grayish Grass/Tree" instance=ExtResource("13_p67ya")]
+position = Vector2(160, 120)
+
+[node name="Dark Trees675" parent="Grayish Grass/Tree" instance=ExtResource("13_p67ya")]
+position = Vector2(144, 116)
+
+[node name="Dark Trees711" parent="Grayish Grass/Tree" instance=ExtResource("13_p67ya")]
+position = Vector2(-14, 132)
+
+[node name="Dark Trees752" parent="Grayish Grass/Tree" instance=ExtResource("13_p67ya")]
+position = Vector2(15, 131)
+
+[node name="Dark Trees712" parent="Grayish Grass/Tree" instance=ExtResource("13_p67ya")]
+position = Vector2(105, 132)
+
+[node name="Dark Trees716" parent="Grayish Grass/Tree" instance=ExtResource("13_p67ya")]
+position = Vector2(89, 133)
+
+[node name="Dark Trees719" parent="Grayish Grass/Tree" instance=ExtResource("13_p67ya")]
+position = Vector2(73, 138)
+
+[node name="Dark Trees731" parent="Grayish Grass/Tree" instance=ExtResource("13_p67ya")]
+position = Vector2(63, 142)
+
+[node name="Dark Trees753" parent="Grayish Grass/Tree" instance=ExtResource("13_p67ya")]
+position = Vector2(26, 136)
+
+[node name="Dark Trees755" parent="Grayish Grass/Tree" instance=ExtResource("13_p67ya")]
+position = Vector2(12, 136)
+
+[node name="Dark Trees754" parent="Grayish Grass/Tree" instance=ExtResource("13_p67ya")]
+position = Vector2(0, 134)
+
+[node name="Dark Trees729" parent="Grayish Grass/Tree" instance=ExtResource("13_p67ya")]
+position = Vector2(55, 140)
+
+[node name="Dark Trees736" parent="Grayish Grass/Tree" instance=ExtResource("13_p67ya")]
+position = Vector2(43, 139)
+
+[node name="Dark Trees756" parent="Grayish Grass/Tree" instance=ExtResource("13_p67ya")]
+position = Vector2(32, 143)
+
+[node name="Dark Trees757" parent="Grayish Grass/Tree" instance=ExtResource("13_p67ya")]
+position = Vector2(15, 143)
+
+[node name="Dark Trees758" parent="Grayish Grass/Tree" instance=ExtResource("13_p67ya")]
+position = Vector2(1, 145)
+
+[node name="Dark Trees782" parent="Grayish Grass/Tree" instance=ExtResource("13_p67ya")]
+position = Vector2(-28, 139)
+
+[node name="Dark Trees783" parent="Grayish Grass/Tree" instance=ExtResource("13_p67ya")]
+position = Vector2(-17, 141)
+
+[node name="Dark Trees678" parent="Grayish Grass/Tree" instance=ExtResource("13_p67ya")]
+position = Vector2(-11, 150)
+
+[node name="Dark Trees784" parent="Grayish Grass/Tree" instance=ExtResource("13_p67ya")]
+position = Vector2(-24, 152)
+
+[node name="Dark Trees785" parent="Grayish Grass/Tree" instance=ExtResource("13_p67ya")]
+position = Vector2(-36, 147)
+
+[node name="Dark Trees781" parent="Grayish Grass/Tree" instance=ExtResource("13_p67ya")]
+position = Vector2(-47, 153)
+
+[node name="Dark Trees815" parent="Grayish Grass/Tree" instance=ExtResource("13_p67ya")]
+position = Vector2(-47, 153)
+
+[node name="Dark Trees816" parent="Grayish Grass/Tree" instance=ExtResource("13_p67ya")]
+position = Vector2(-78, 136)
+
+[node name="Dark Trees814" parent="Grayish Grass/Tree" instance=ExtResource("13_p67ya")]
+position = Vector2(-75, 124)
+
+[node name="Dark Trees813" parent="Grayish Grass/Tree" instance=ExtResource("13_p67ya")]
+position = Vector2(-70, 136)
+
+[node name="Dark Trees818" parent="Grayish Grass/Tree" instance=ExtResource("13_p67ya")]
+position = Vector2(-60, 150)
+
+[node name="Dark Trees674" parent="Grayish Grass/Tree" instance=ExtResource("13_p67ya")]
+position = Vector2(152, 127)
+
+[node name="Dark Trees681" parent="Grayish Grass/Tree" instance=ExtResource("13_p67ya")]
+position = Vector2(165, 128)
+
+[node name="Dark Trees691" parent="Grayish Grass/Tree" instance=ExtResource("13_p67ya")]
+position = Vector2(131, 125)
+
+[node name="Dark Trees671" parent="Grayish Grass/Tree" instance=ExtResource("13_p67ya")]
+position = Vector2(178, 113)
+
+[node name="Dark Trees669" parent="Grayish Grass/Tree" instance=ExtResource("13_p67ya")]
+position = Vector2(117, 128)
+
+[node name="Dark Trees713" parent="Grayish Grass/Tree" instance=ExtResource("13_p67ya")]
+position = Vector2(102, 139)
+
+[node name="Dark Trees692" parent="Grayish Grass/Tree" instance=ExtResource("13_p67ya")]
+position = Vector2(129, 134)
+
+[node name="Dark Trees693" parent="Grayish Grass/Tree" instance=ExtResource("13_p67ya")]
+position = Vector2(118, 139)
+
+[node name="Dark Trees662" parent="Grayish Grass/Tree" instance=ExtResource("13_p67ya")]
+position = Vector2(175, 117)
+
+[node name="Dark Trees680" parent="Grayish Grass/Tree" instance=ExtResource("13_p67ya")]
+position = Vector2(171, 131)
+
+[node name="Dark Trees591" parent="Grayish Grass/Tree" instance=ExtResource("13_p67ya")]
+position = Vector2(215, 107)
+
+[node name="Dark Trees605" parent="Grayish Grass/Tree" instance=ExtResource("13_p67ya")]
+position = Vector2(232, 98)
+
+[node name="Dark Trees596" parent="Grayish Grass/Tree" instance=ExtResource("13_p67ya")]
+position = Vector2(229, 108)
+
+[node name="Dark Trees597" parent="Grayish Grass/Tree" instance=ExtResource("13_p67ya")]
+position = Vector2(201, 114)
+
+[node name="Dark Trees606" parent="Grayish Grass/Tree" instance=ExtResource("13_p67ya")]
+position = Vector2(212, 118)
+
+[node name="Dark Trees584" parent="Grayish Grass/Tree" instance=ExtResource("13_p67ya")]
+position = Vector2(224, 114)
+
+[node name="Dark Trees598" parent="Grayish Grass/Tree" instance=ExtResource("13_p67ya")]
+position = Vector2(246, 98)
+
+[node name="Dark Trees585" parent="Grayish Grass/Tree" instance=ExtResource("13_p67ya")]
+position = Vector2(258, 92)
+
+[node name="Dark Trees586" parent="Grayish Grass/Tree" instance=ExtResource("13_p67ya")]
+position = Vector2(240, 110)
+
+[node name="Dark Trees599" parent="Grayish Grass/Tree" instance=ExtResource("13_p67ya")]
+position = Vector2(265, 102)
+
+[node name="Dark Trees587" parent="Grayish Grass/Tree" instance=ExtResource("13_p67ya")]
+position = Vector2(252, 109)
+
+[node name="Dark Trees600" parent="Grayish Grass/Tree" instance=ExtResource("13_p67ya")]
+position = Vector2(259, 117)
+
+[node name="Dark Trees601" parent="Grayish Grass/Tree" instance=ExtResource("13_p67ya")]
+position = Vector2(278, 101)
+
+[node name="Dark Trees588" parent="Grayish Grass/Tree" instance=ExtResource("13_p67ya")]
+position = Vector2(271, 114)
+
+[node name="Dark Trees589" parent="Grayish Grass/Tree" instance=ExtResource("13_p67ya")]
+position = Vector2(290, 102)
+
+[node name="Dark Trees602" parent="Grayish Grass/Tree" instance=ExtResource("13_p67ya")]
+position = Vector2(285, 114)
+
+[node name="Dark Trees603" parent="Grayish Grass/Tree" instance=ExtResource("13_p67ya")]
+position = Vector2(279, 124)
+
+[node name="Dark Trees604" parent="Grayish Grass/Tree" instance=ExtResource("13_p67ya")]
+position = Vector2(265, 129)
+
+[node name="Dark Trees607" parent="Grayish Grass/Tree" instance=ExtResource("13_p67ya")]
+position = Vector2(232, 123)
+
+[node name="Dark Trees608" parent="Grayish Grass/Tree" instance=ExtResource("13_p67ya")]
+position = Vector2(203, 125)
+
+[node name="Dark Trees609" parent="Grayish Grass/Tree" instance=ExtResource("13_p67ya")]
+position = Vector2(220, 129)
+
+[node name="Dark Trees610" parent="Grayish Grass/Tree" instance=ExtResource("13_p67ya")]
+position = Vector2(247, 127)
+
+[node name="Dark Trees611" parent="Grayish Grass/Tree" instance=ExtResource("13_p67ya")]
+position = Vector2(239, 128)
+
+[node name="Dark Trees612" parent="Grayish Grass/Tree" instance=ExtResource("13_p67ya")]
+position = Vector2(254, 132)
+
+[node name="Dark Trees613" parent="Grayish Grass/Tree" instance=ExtResource("13_p67ya")]
+position = Vector2(272, 137)
+
+[node name="Dark Trees619" parent="Grayish Grass/Tree" instance=ExtResource("13_p67ya")]
+position = Vector2(262, 141)
+
+[node name="Dark Trees620" parent="Grayish Grass/Tree" instance=ExtResource("13_p67ya")]
+position = Vector2(244, 142)
+
+[node name="Dark Trees624" parent="Grayish Grass/Tree" instance=ExtResource("13_p67ya")]
+position = Vector2(188, 121)
+
+[node name="Dark Trees621" parent="Grayish Grass/Tree" instance=ExtResource("13_p67ya")]
+position = Vector2(226, 138)
+
+[node name="Dark Trees623" parent="Grayish Grass/Tree" instance=ExtResource("13_p67ya")]
+position = Vector2(210, 134)
+
+[node name="Dark Trees622" parent="Grayish Grass/Tree" instance=ExtResource("13_p67ya")]
+position = Vector2(192, 129)
+
+[node name="Dark Trees638" parent="Grayish Grass/Tree" instance=ExtResource("13_p67ya")]
+position = Vector2(180, 138)
+
+[node name="Dark Trees682" parent="Grayish Grass/Tree" instance=ExtResource("13_p67ya")]
+position = Vector2(162, 138)
+
+[node name="Dark Trees685" parent="Grayish Grass/Tree" instance=ExtResource("13_p67ya")]
+position = Vector2(142, 131)
+
+[node name="Dark Trees684" parent="Grayish Grass/Tree" instance=ExtResource("13_p67ya")]
+position = Vector2(151, 140)
+
+[node name="Dark Trees690" parent="Grayish Grass/Tree" instance=ExtResource("13_p67ya")]
+position = Vector2(139, 143)
+
+[node name="Dark Trees694" parent="Grayish Grass/Tree" instance=ExtResource("13_p67ya")]
+position = Vector2(129, 144)
+
+[node name="Dark Trees696" parent="Grayish Grass/Tree" instance=ExtResource("13_p67ya")]
+position = Vector2(111, 146)
+
+[node name="Dark Trees698" parent="Grayish Grass/Tree" instance=ExtResource("13_p67ya")]
+position = Vector2(99, 146)
+
+[node name="Dark Trees720" parent="Grayish Grass/Tree" instance=ExtResource("13_p67ya")]
+position = Vector2(84, 141)
+
+[node name="Dark Trees732" parent="Grayish Grass/Tree" instance=ExtResource("13_p67ya")]
+position = Vector2(72, 151)
+
+[node name="Dark Trees733" parent="Grayish Grass/Tree" instance=ExtResource("13_p67ya")]
+position = Vector2(88, 152)
+
+[node name="Dark Trees734" parent="Grayish Grass/Tree" instance=ExtResource("13_p67ya")]
+position = Vector2(60, 153)
+
+[node name="Dark Trees744" parent="Grayish Grass/Tree" instance=ExtResource("13_p67ya")]
+position = Vector2(60, 153)
+
+[node name="Dark Trees721" parent="Grayish Grass/Tree" instance=ExtResource("13_p67ya")]
+position = Vector2(81, 159)
+
+[node name="Dark Trees722" parent="Grayish Grass/Tree" instance=ExtResource("13_p67ya")]
+position = Vector2(100, 158)
+
+[node name="Dark Trees739" parent="Grayish Grass/Tree" instance=ExtResource("13_p67ya")]
+position = Vector2(97, 166)
+
+[node name="Dark Trees740" parent="Grayish Grass/Tree" instance=ExtResource("13_p67ya")]
+position = Vector2(99, 172)
+
+[node name="Dark Trees738" parent="Grayish Grass/Tree" instance=ExtResource("13_p67ya")]
+position = Vector2(87, 167)
+
+[node name="Dark Trees741" parent="Grayish Grass/Tree" instance=ExtResource("13_p67ya")]
+position = Vector2(51, 154)
+
+[node name="Dark Trees759" parent="Grayish Grass/Tree" instance=ExtResource("13_p67ya")]
+position = Vector2(37, 153)
+
+[node name="Dark Trees760" parent="Grayish Grass/Tree" instance=ExtResource("13_p67ya")]
+position = Vector2(21, 153)
+
+[node name="Dark Trees761" parent="Grayish Grass/Tree" instance=ExtResource("13_p67ya")]
+position = Vector2(7, 153)
+
+[node name="Dark Trees745" parent="Grayish Grass/Tree" instance=ExtResource("13_p67ya")]
+position = Vector2(68, 163)
+
+[node name="Dark Trees746" parent="Grayish Grass/Tree" instance=ExtResource("13_p67ya")]
+position = Vector2(54, 167)
+
+[node name="Dark Trees763" parent="Grayish Grass/Tree" instance=ExtResource("13_p67ya")]
+position = Vector2(41, 167)
+
+[node name="Dark Trees764" parent="Grayish Grass/Tree" instance=ExtResource("13_p67ya")]
+position = Vector2(-6, 157)
+
+[node name="Dark Trees786" parent="Grayish Grass/Tree" instance=ExtResource("13_p67ya")]
+position = Vector2(-34, 161)
+
+[node name="Dark Trees787" parent="Grayish Grass/Tree" instance=ExtResource("13_p67ya")]
+position = Vector2(-16, 161)
+
+[node name="Dark Trees788" parent="Grayish Grass/Tree" instance=ExtResource("13_p67ya")]
+position = Vector2(-56, 163)
+
+[node name="Dark Trees817" parent="Grayish Grass/Tree" instance=ExtResource("13_p67ya")]
+position = Vector2(-47, 164)
+
+[node name="Dark Trees789" parent="Grayish Grass/Tree" instance=ExtResource("13_p67ya")]
+position = Vector2(-25, 168)
+
+[node name="Dark Trees800" parent="Grayish Grass/Tree" instance=ExtResource("13_p67ya")]
+position = Vector2(-38, 175)
+
+[node name="Dark Trees790" parent="Grayish Grass/Tree" instance=ExtResource("13_p67ya")]
+position = Vector2(-7, 168)
+
+[node name="Dark Trees765" parent="Grayish Grass/Tree" instance=ExtResource("13_p67ya")]
+position = Vector2(15, 164)
+
+[node name="Dark Trees762" parent="Grayish Grass/Tree" instance=ExtResource("13_p67ya")]
+position = Vector2(29, 164)
+
+[node name="Dark Trees766" parent="Grayish Grass/Tree" instance=ExtResource("13_p67ya")]
+position = Vector2(4, 170)
+
+[node name="Dark Trees767" parent="Grayish Grass/Tree" instance=ExtResource("13_p67ya")]
+position = Vector2(21, 172)
+
+[node name="Dark Trees768" parent="Grayish Grass/Tree" instance=ExtResource("13_p67ya")]
+position = Vector2(13, 177)
+
+[node name="Dark Trees791" parent="Grayish Grass/Tree" instance=ExtResource("13_p67ya")]
+position = Vector2(-2, 178)
+
+[node name="Dark Trees792" parent="Grayish Grass/Tree" instance=ExtResource("13_p67ya")]
+position = Vector2(-18, 178)
+
+[node name="Dark Trees793" parent="Grayish Grass/Tree" instance=ExtResource("13_p67ya")]
+position = Vector2(-51, 178)
+
+[node name="Dark Trees794" parent="Grayish Grass/Tree" instance=ExtResource("13_p67ya")]
+position = Vector2(-28, 186)
+
+[node name="Dark Trees803" parent="Grayish Grass/Tree" instance=ExtResource("13_p67ya")]
+position = Vector2(-42, 187)
+
+[node name="Dark Trees804" parent="Grayish Grass/Tree" instance=ExtResource("13_p67ya")]
+position = Vector2(-61, 187)
+
+[node name="Dark Trees805" parent="Grayish Grass/Tree" instance=ExtResource("13_p67ya")]
+position = Vector2(-50, 199)
+
+[node name="Dark Trees806" parent="Grayish Grass/Tree" instance=ExtResource("13_p67ya")]
+position = Vector2(-35, 199)
+
+[node name="Dark Trees807" parent="Grayish Grass/Tree" instance=ExtResource("13_p67ya")]
+position = Vector2(-15, 190)
+
+[node name="Dark Trees795" parent="Grayish Grass/Tree" instance=ExtResource("13_p67ya")]
+position = Vector2(-7, 194)
+
+[node name="Dark Trees796" parent="Grayish Grass/Tree" instance=ExtResource("13_p67ya")]
+position = Vector2(8, 187)
+
+[node name="Dark Trees769" parent="Grayish Grass/Tree" instance=ExtResource("13_p67ya")]
+position = Vector2(37, 174)
+
+[node name="Dark Trees770" parent="Grayish Grass/Tree" instance=ExtResource("13_p67ya")]
+position = Vector2(50, 180)
+
+[node name="Dark Trees773" parent="Grayish Grass/Tree" instance=ExtResource("13_p67ya")]
+position = Vector2(62, 179)
+
+[node name="Dark Trees771" parent="Grayish Grass/Tree" instance=ExtResource("13_p67ya")]
+position = Vector2(29, 186)
+
+[node name="Dark Trees797" parent="Grayish Grass/Tree" instance=ExtResource("13_p67ya")]
+position = Vector2(19, 196)
+
+[node name="Dark Trees798" parent="Grayish Grass/Tree" instance=ExtResource("13_p67ya")]
+position = Vector2(4, 197)
+
+[node name="Dark Trees799" parent="Grayish Grass/Tree" instance=ExtResource("13_p67ya")]
+position = Vector2(-23, 202)
+
+[node name="Dark Trees808" parent="Grayish Grass/Tree" instance=ExtResource("13_p67ya")]
+position = Vector2(-14, 204)
+
+[node name="Dark Trees809" parent="Grayish Grass/Tree" instance=ExtResource("13_p67ya")]
+position = Vector2(-5, 210)
+
+[node name="Dark Trees810" parent="Grayish Grass/Tree" instance=ExtResource("13_p67ya")]
+position = Vector2(11, 207)
+
+[node name="Dark Trees811" parent="Grayish Grass/Tree" instance=ExtResource("13_p67ya")]
+position = Vector2(31, 194)
+
+[node name="Dark Trees812" parent="Grayish Grass/Tree" instance=ExtResource("13_p67ya")]
+position = Vector2(43, 191)
+
+[node name="Dark Trees772" parent="Grayish Grass/Tree" instance=ExtResource("13_p67ya")]
+position = Vector2(41, 201)
+
+[node name="Dark Trees747" parent="Grayish Grass/Tree" instance=ExtResource("13_p67ya")]
+position = Vector2(69, 180)
+
+[node name="Dark Trees774" parent="Grayish Grass/Tree" instance=ExtResource("13_p67ya")]
+position = Vector2(57, 191)
+
+[node name="Dark Trees748" parent="Grayish Grass/Tree" instance=ExtResource("13_p67ya")]
+position = Vector2(81, 174)
+
+[node name="Dark Trees742" parent="Grayish Grass/Tree" instance=ExtResource("13_p67ya")]
+position = Vector2(76, 188)
+
+[node name="Dark Trees743" parent="Grayish Grass/Tree" instance=ExtResource("13_p67ya")]
+position = Vector2(91, 184)
+
+[node name="Dark Trees723" parent="Grayish Grass/Tree" instance=ExtResource("13_p67ya")]
+position = Vector2(112, 156)
+
+[node name="Dark Trees683" parent="Grayish Grass/Tree" instance=ExtResource("13_p67ya")]
+position = Vector2(171, 144)
+
+[node name="Dark Trees686" parent="Grayish Grass/Tree" instance=ExtResource("13_p67ya")]
+position = Vector2(159, 147)
+
+[node name="Dark Trees689" parent="Grayish Grass/Tree" instance=ExtResource("13_p67ya")]
+position = Vector2(144, 154)
+
+[node name="Dark Trees695" parent="Grayish Grass/Tree" instance=ExtResource("13_p67ya")]
+position = Vector2(133, 155)
+
+[node name="Dark Trees697" parent="Grayish Grass/Tree" instance=ExtResource("13_p67ya")]
+position = Vector2(121, 155)
+
+[node name="Dark Trees699" parent="Grayish Grass/Tree" instance=ExtResource("13_p67ya")]
+position = Vector2(107, 175)
+
+[node name="Dark Trees724" parent="Grayish Grass/Tree" instance=ExtResource("13_p67ya")]
+position = Vector2(123, 165)
+
+[node name="Dark Trees700" parent="Grayish Grass/Tree" instance=ExtResource("13_p67ya")]
+position = Vector2(133, 167)
+
+[node name="Dark Trees725" parent="Grayish Grass/Tree" instance=ExtResource("13_p67ya")]
+position = Vector2(115, 177)
+
+[node name="Dark Trees776" parent="Grayish Grass/Tree" instance=ExtResource("13_p67ya")]
+position = Vector2(104, 188)
+
+[node name="Dark Trees726" parent="Grayish Grass/Tree" instance=ExtResource("13_p67ya")]
+position = Vector2(126, 178)
+
+[node name="Dark Trees701" parent="Grayish Grass/Tree" instance=ExtResource("13_p67ya")]
+position = Vector2(143, 165)
+
+[node name="Dark Trees702" parent="Grayish Grass/Tree" instance=ExtResource("13_p67ya")]
+position = Vector2(138, 175)
+
+[node name="Dark Trees688" parent="Grayish Grass/Tree" instance=ExtResource("13_p67ya")]
+position = Vector2(155, 164)
+
+[node name="Dark Trees703" parent="Grayish Grass/Tree" instance=ExtResource("13_p67ya")]
+position = Vector2(148, 174)
+
+[node name="Dark Trees614" parent="Grayish Grass/Tree" instance=ExtResource("13_p67ya")]
+position = Vector2(289, 133)
+
+[node name="Dark Trees615" parent="Grayish Grass/Tree" instance=ExtResource("13_p67ya")]
+position = Vector2(281, 144)
+
+[node name="Dark Trees625" parent="Grayish Grass/Tree" instance=ExtResource("13_p67ya")]
+position = Vector2(198, 139)
+
+[node name="Dark Trees639" parent="Grayish Grass/Tree" instance=ExtResource("13_p67ya")]
+position = Vector2(189, 145)
+
+[node name="Dark Trees640" parent="Grayish Grass/Tree" instance=ExtResource("13_p67ya")]
+position = Vector2(197, 151)
+
+[node name="Dark Trees641" parent="Grayish Grass/Tree" instance=ExtResource("13_p67ya")]
+position = Vector2(178, 154)
+
+[node name="Dark Trees687" parent="Grayish Grass/Tree" instance=ExtResource("13_p67ya")]
+position = Vector2(168, 159)
+
+[node name="Dark Trees704" parent="Grayish Grass/Tree" instance=ExtResource("13_p67ya")]
+position = Vector2(162, 171)
+
+[node name="Dark Trees705" parent="Grayish Grass/Tree" instance=ExtResource("13_p67ya")]
+position = Vector2(178, 162)
+
+[node name="Dark Trees642" parent="Grayish Grass/Tree" instance=ExtResource("13_p67ya")]
+position = Vector2(188, 159)
+
+[node name="Dark Trees707" parent="Grayish Grass/Tree" instance=ExtResource("13_p67ya")]
+position = Vector2(191, 165)
+
+[node name="Dark Trees706" parent="Grayish Grass/Tree" instance=ExtResource("13_p67ya")]
+position = Vector2(174, 172)
+
+[node name="Dark Trees643" parent="Grayish Grass/Tree" instance=ExtResource("13_p67ya")]
+position = Vector2(213, 140)
+
+[node name="Dark Trees626" parent="Grayish Grass/Tree" instance=ExtResource("13_p67ya")]
+position = Vector2(208, 151)
+
+[node name="Dark Trees644" parent="Grayish Grass/Tree" instance=ExtResource("13_p67ya")]
+position = Vector2(221, 152)
+
+[node name="Dark Trees630" parent="Grayish Grass/Tree" instance=ExtResource("13_p67ya")]
+position = Vector2(200, 165)
+
+[node name="Dark Trees708" parent="Grayish Grass/Tree" instance=ExtResource("13_p67ya")]
+position = Vector2(186, 175)
+
+[node name="Dark Trees709" parent="Grayish Grass/Tree" instance=ExtResource("13_p67ya")]
+position = Vector2(209, 165)
+
+[node name="Dark Trees631" parent="Grayish Grass/Tree" instance=ExtResource("13_p67ya")]
+position = Vector2(234, 145)
+
+[node name="Dark Trees645" parent="Grayish Grass/Tree" instance=ExtResource("13_p67ya")]
+position = Vector2(207, 174)
+
+[node name="Dark Trees710" parent="Grayish Grass/Tree" instance=ExtResource("13_p67ya")]
+position = Vector2(198, 180)
+
+[node name="Dark Trees627" parent="Grayish Grass/Tree" instance=ExtResource("13_p67ya")]
+position = Vector2(231, 154)
+
+[node name="Dark Trees632" parent="Grayish Grass/Tree" instance=ExtResource("13_p67ya")]
+position = Vector2(218, 166)
+
+[node name="Dark Trees633" parent="Grayish Grass/Tree" instance=ExtResource("13_p67ya")]
+position = Vector2(242, 158)
+
+[node name="Dark Trees634" parent="Grayish Grass/Tree" instance=ExtResource("13_p67ya")]
+position = Vector2(231, 164)
+
+[node name="Dark Trees628" parent="Grayish Grass/Tree" instance=ExtResource("13_p67ya")]
+position = Vector2(256, 153)
+
+[node name="Dark Trees635" parent="Grayish Grass/Tree" instance=ExtResource("13_p67ya")]
+position = Vector2(249, 162)
+
+[node name="Dark Trees636" parent="Grayish Grass/Tree" instance=ExtResource("13_p67ya")]
+position = Vector2(269, 152)
+
+[node name="Dark Trees637" parent="Grayish Grass/Tree" instance=ExtResource("13_p67ya")]
+position = Vector2(278, 159)
+
+[node name="Dark Trees629" parent="Grayish Grass/Tree" instance=ExtResource("13_p67ya")]
+position = Vector2(263, 163)
+
+[node name="Dark Trees616" parent="Grayish Grass/Tree" instance=ExtResource("13_p67ya")]
+position = Vector2(296, 148)
+
+[node name="Dark Trees617" parent="Grayish Grass/Tree" instance=ExtResource("13_p67ya")]
+position = Vector2(285, 165)
+
+[node name="Dark Trees618" parent="Grayish Grass/Tree" instance=ExtResource("13_p67ya")]
+position = Vector2(293, 163)
+
+[node name="Dark Trees251" parent="Grayish Grass/Tree" instance=ExtResource("13_p67ya")]
+position = Vector2(-105, -128)
+
+[node name="Dark Trees332" parent="Grayish Grass/Tree" instance=ExtResource("13_p67ya")]
+position = Vector2(-124, -133)
+
+[node name="Dark Trees325" parent="Grayish Grass/Tree" instance=ExtResource("13_p67ya")]
+position = Vector2(-94, -123)
+
+[node name="Dark Trees333" parent="Grayish Grass/Tree" instance=ExtResource("13_p67ya")]
+position = Vector2(-122, -125)
+
+[node name="Dark Trees326" parent="Grayish Grass/Tree" instance=ExtResource("13_p67ya")]
+position = Vector2(-79, -121)
+
+[node name="Dark Trees335" parent="Grayish Grass/Tree" instance=ExtResource("13_p67ya")]
+position = Vector2(-102, -121)
+
+[node name="Dark Trees327" parent="Grayish Grass/Tree" instance=ExtResource("13_p67ya")]
+position = Vector2(-61, -131)
+
+[node name="Dark Trees328" parent="Grayish Grass/Tree" instance=ExtResource("13_p67ya")]
+position = Vector2(-49, -124)
+
+[node name="Dark Trees329" parent="Grayish Grass/Tree" instance=ExtResource("13_p67ya")]
+position = Vector2(-34, -125)
+
+[node name="Dark Trees370" parent="Grayish Grass/Tree" instance=ExtResource("13_p67ya")]
+position = Vector2(-12, -122)
+
+[node name="Dark Trees378" parent="Grayish Grass/Tree" instance=ExtResource("13_p67ya")]
+position = Vector2(-19, -117)
+
+[node name="Dark Trees371" parent="Grayish Grass/Tree" instance=ExtResource("13_p67ya")]
+position = Vector2(-42, -118)
+
+[node name="Dark Trees330" parent="Grayish Grass/Tree" instance=ExtResource("13_p67ya")]
+position = Vector2(-71, -121)
+
+[node name="Dark Trees365" parent="Grayish Grass/Tree" instance=ExtResource("13_p67ya")]
+position = Vector2(-60, -124)
+
+[node name="Dark Trees366" parent="Grayish Grass/Tree" instance=ExtResource("13_p67ya")]
+position = Vector2(-54, -116)
+
+[node name="Dark Trees344" parent="Grayish Grass/Tree" instance=ExtResource("13_p67ya")]
+position = Vector2(-113, -119)
+
+[node name="Dark Trees331" parent="Grayish Grass/Tree" instance=ExtResource("13_p67ya")]
+position = Vector2(-93, -113)
+
+[node name="Dark Trees361" parent="Grayish Grass/Tree" instance=ExtResource("13_p67ya")]
+position = Vector2(-81, -111)
+
+[node name="Dark Trees363" parent="Grayish Grass/Tree" instance=ExtResource("13_p67ya")]
+position = Vector2(-103, -112)
+
+[node name="Dark Trees367" parent="Grayish Grass/Tree" instance=ExtResource("13_p67ya")]
+position = Vector2(-31, -115)
+
+[node name="Dark Trees386" parent="Grayish Grass/Tree" instance=ExtResource("13_p67ya")]
+position = Vector2(0, -117)
+
+[node name="Dark Trees362" parent="Grayish Grass/Tree" instance=ExtResource("13_p67ya")]
+position = Vector2(-66, -113)
+
+[node name="Dark Trees360" parent="Grayish Grass/Tree" instance=ExtResource("13_p67ya")]
+position = Vector2(-97, -105)
+
+[node name="Dark Trees336" parent="Grayish Grass/Tree" instance=ExtResource("13_p67ya")]
+position = Vector2(-136, -140)
+
+[node name="Dark Trees334" parent="Grayish Grass/Tree" instance=ExtResource("13_p67ya")]
+position = Vector2(-146, -144)
+
+[node name="Dark Trees224" parent="Grayish Grass/Tree" instance=ExtResource("13_p67ya")]
+position = Vector2(-136, -139)
+
+[node name="Dark Trees141" parent="Grayish Grass/Tree" instance=ExtResource("13_p67ya")]
+position = Vector2(-155, -148)
+
+[node name="Dark Trees138" parent="Grayish Grass/Tree" instance=ExtResource("13_p67ya")]
+position = Vector2(-156, -140)
+
+[node name="Dark Trees139" parent="Grayish Grass/Tree" instance=ExtResource("13_p67ya")]
+position = Vector2(-144, -132)
+
+[node name="Dark Trees225" parent="Grayish Grass/Tree" instance=ExtResource("13_p67ya")]
+position = Vector2(-134, -124)
+
+[node name="Dark Trees337" parent="Grayish Grass/Tree" instance=ExtResource("13_p67ya")]
+position = Vector2(-125, -115)
+
+[node name="Dark Trees345" parent="Grayish Grass/Tree" instance=ExtResource("13_p67ya")]
+position = Vector2(-118, -107)
+
+[node name="Dark Trees359" parent="Grayish Grass/Tree" instance=ExtResource("13_p67ya")]
+position = Vector2(-109, -98)
+
+[node name="Dark Trees346" parent="Grayish Grass/Tree" instance=ExtResource("13_p67ya")]
+position = Vector2(-135, -115)
+
+[node name="Dark Trees338" parent="Grayish Grass/Tree" instance=ExtResource("13_p67ya")]
+position = Vector2(-144, -123)
+
+[node name="Dark Trees347" parent="Grayish Grass/Tree" instance=ExtResource("13_p67ya")]
+position = Vector2(-134, -104)
+
+[node name="Dark Trees135" parent="Grayish Grass/Tree" instance=ExtResource("13_p67ya")]
+position = Vector2(-166, -134)
+
+[node name="Dark Trees136" parent="Grayish Grass/Tree" instance=ExtResource("13_p67ya")]
+position = Vector2(-153, -126)
+
+[node name="Dark Trees226" parent="Grayish Grass/Tree" instance=ExtResource("13_p67ya")]
+position = Vector2(-145, -113)
+
+[node name="Dark Trees339" parent="Grayish Grass/Tree" instance=ExtResource("13_p67ya")]
+position = Vector2(-126, -99)
+
+[node name="Dark Trees358" parent="Grayish Grass/Tree" instance=ExtResource("13_p67ya")]
+position = Vector2(-118, -88)
+
+[node name="Dark Trees340" parent="Grayish Grass/Tree" instance=ExtResource("13_p67ya")]
+position = Vector2(-159, -108)
+
+[node name="Dark Trees130" parent="Grayish Grass/Tree" instance=ExtResource("13_p67ya")]
+position = Vector2(-262, -132)
+
+[node name="Dark Trees129" parent="Grayish Grass/Tree" instance=ExtResource("13_p67ya")]
+position = Vector2(-285, -127)
+
+[node name="Dark Trees112" parent="Grayish Grass/Tree" instance=ExtResource("13_p67ya")]
+position = Vector2(-254, -126)
+
+[node name="Dark Trees127" parent="Grayish Grass/Tree" instance=ExtResource("13_p67ya")]
+position = Vector2(-273, -121)
+
+[node name="Dark Trees113" parent="Grayish Grass/Tree" instance=ExtResource("13_p67ya")]
+position = Vector2(-241, -129)
+
+[node name="Dark Trees126" parent="Grayish Grass/Tree" instance=ExtResource("13_p67ya")]
+position = Vector2(-260, -119)
+
+[node name="Dark Trees125" parent="Grayish Grass/Tree" instance=ExtResource("13_p67ya")]
+position = Vector2(-244, -119)
+
+[node name="Dark Trees114" parent="Grayish Grass/Tree" instance=ExtResource("13_p67ya")]
+position = Vector2(-227, -132)
+
+[node name="Dark Trees124" parent="Grayish Grass/Tree" instance=ExtResource("13_p67ya")]
+position = Vector2(-231, -117)
+
+[node name="Dark Trees115" parent="Grayish Grass/Tree" instance=ExtResource("13_p67ya")]
+position = Vector2(-210, -134)
+
+[node name="Dark Trees123" parent="Grayish Grass/Tree" instance=ExtResource("13_p67ya")]
+position = Vector2(-217, -122)
+
+[node name="Dark Trees116" parent="Grayish Grass/Tree" instance=ExtResource("13_p67ya")]
+position = Vector2(-198, -131)
+
+[node name="Dark Trees117" parent="Grayish Grass/Tree" instance=ExtResource("13_p67ya")]
+position = Vector2(-180, -137)
+
+[node name="Dark Trees122" parent="Grayish Grass/Tree" instance=ExtResource("13_p67ya")]
+position = Vector2(-203, -123)
+
+[node name="Dark Trees120" parent="Grayish Grass/Tree" instance=ExtResource("13_p67ya")]
+position = Vector2(-187, -125)
+
+[node name="Dark Trees121" parent="Grayish Grass/Tree" instance=ExtResource("13_p67ya")]
+position = Vector2(-174, -121)
+
+[node name="Dark Trees118" parent="Grayish Grass/Tree" instance=ExtResource("13_p67ya")]
+position = Vector2(-164, -120)
+
+[node name="Dark Trees119" parent="Grayish Grass/Tree" instance=ExtResource("13_p67ya")]
+position = Vector2(-158, -108)
+
+[node name="Dark Trees341" parent="Grayish Grass/Tree" instance=ExtResource("13_p67ya")]
+position = Vector2(-146, -103)
+
+[node name="Dark Trees348" parent="Grayish Grass/Tree" instance=ExtResource("13_p67ya")]
+position = Vector2(-140, -95)
+
+[node name="Dark Trees342" parent="Grayish Grass/Tree" instance=ExtResource("13_p67ya")]
+position = Vector2(-156, -100)
+
+[node name="Dark Trees349" parent="Grayish Grass/Tree" instance=ExtResource("13_p67ya")]
+position = Vector2(-147, -91)
+
+[node name="Dark Trees351" parent="Grayish Grass/Tree" instance=ExtResource("13_p67ya")]
+position = Vector2(-133, -88)
+
+[node name="Dark Trees357" parent="Grayish Grass/Tree" instance=ExtResource("13_p67ya")]
+position = Vector2(-129, -81)
+
+[node name="Dark Trees83" parent="Grayish Grass/Tree" instance=ExtResource("13_p67ya")]
+position = Vector2(-269, -108)
+
+[node name="Dark Trees105" parent="Grayish Grass/Tree" instance=ExtResource("13_p67ya")]
+position = Vector2(-253, -108)
+
+[node name="Dark Trees96" parent="Grayish Grass/Tree" instance=ExtResource("13_p67ya")]
+position = Vector2(-258, -100)
+
+[node name="Dark Trees97" parent="Grayish Grass/Tree" instance=ExtResource("13_p67ya")]
+position = Vector2(-239, -109)
+
+[node name="Dark Trees106" parent="Grayish Grass/Tree" instance=ExtResource("13_p67ya")]
+position = Vector2(-236, -103)
+
+[node name="Dark Trees98" parent="Grayish Grass/Tree" instance=ExtResource("13_p67ya")]
+position = Vector2(-222, -113)
+
+[node name="Dark Trees109" parent="Grayish Grass/Tree" instance=ExtResource("13_p67ya")]
+position = Vector2(-194, -115)
+
+[node name="Dark Trees111" parent="Grayish Grass/Tree" instance=ExtResource("13_p67ya")]
+position = Vector2(-283, -116)
+
+[node name="Dark Trees110" parent="Grayish Grass/Tree" instance=ExtResource("13_p67ya")]
+position = Vector2(-174, -111)
+
+[node name="Dark Trees108" parent="Grayish Grass/Tree" instance=ExtResource("13_p67ya")]
+position = Vector2(-211, -109)
+
+[node name="Dark Trees107" parent="Grayish Grass/Tree" instance=ExtResource("13_p67ya")]
+position = Vector2(-222, -102)
+
+[node name="Dark Trees99" parent="Grayish Grass/Tree" instance=ExtResource("13_p67ya")]
+position = Vector2(-202, -105)
+
+[node name="Dark Trees101" parent="Grayish Grass/Tree" instance=ExtResource("13_p67ya")]
+position = Vector2(-185, -105)
+
+[node name="Dark Trees102" parent="Grayish Grass/Tree" instance=ExtResource("13_p67ya")]
+position = Vector2(-169, -100)
+
+[node name="Dark Trees343" parent="Grayish Grass/Tree" instance=ExtResource("13_p67ya")]
+position = Vector2(-157, -87)
+
+[node name="Dark Trees352" parent="Grayish Grass/Tree" instance=ExtResource("13_p67ya")]
+position = Vector2(-150, -84)
+
+[node name="Dark Trees350" parent="Grayish Grass/Tree" instance=ExtResource("13_p67ya")]
+position = Vector2(-139, -71)
+
+[node name="Dark Trees100" parent="Grayish Grass/Tree" instance=ExtResource("13_p67ya")]
+position = Vector2(-194, -98)
+
+[node name="Dark Trees95" parent="Grayish Grass/Tree" instance=ExtResource("13_p67ya")]
+position = Vector2(-270, -97)
+
+[node name="Dark Trees81" parent="Grayish Grass/Tree" instance=ExtResource("13_p67ya")]
+position = Vector2(-251, -94)
+
+[node name="Dark Trees82" parent="Grayish Grass/Tree" instance=ExtResource("13_p67ya")]
+position = Vector2(-242, -94)
+
+[node name="Dark Trees88" parent="Grayish Grass/Tree" instance=ExtResource("13_p67ya")]
+position = Vector2(-231, -93)
+
+[node name="Dark Trees94" parent="Grayish Grass/Tree" instance=ExtResource("13_p67ya")]
+position = Vector2(-269, -86)
+
+[node name="Dark Trees104" parent="Grayish Grass/Tree" instance=ExtResource("13_p67ya")]
+position = Vector2(-283, -108)
+
+[node name="Dark Trees103" parent="Grayish Grass/Tree" instance=ExtResource("13_p67ya")]
+position = Vector2(-282, -98)
+
+[node name="Dark Trees89" parent="Grayish Grass/Tree" instance=ExtResource("13_p67ya")]
+position = Vector2(-202, -89)
+
+[node name="Dark Trees93" parent="Grayish Grass/Tree" instance=ExtResource("13_p67ya")]
+position = Vector2(-213, -92)
+
+[node name="Dark Trees90" parent="Grayish Grass/Tree" instance=ExtResource("13_p67ya")]
+position = Vector2(-188, -90)
+
+[node name="Dark Trees91" parent="Grayish Grass/Tree" instance=ExtResource("13_p67ya")]
+position = Vector2(-176, -90)
+
+[node name="Dark Trees87" parent="Grayish Grass/Tree" instance=ExtResource("13_p67ya")]
+position = Vector2(-224, -88)
+
+[node name="Dark Trees84" parent="Grayish Grass/Tree" instance=ExtResource("13_p67ya")]
+position = Vector2(-210, -83)
+
+[node name="Dark Trees85" parent="Grayish Grass/Tree" instance=ExtResource("13_p67ya")]
+position = Vector2(-197, -81)
+
+[node name="Dark Trees86" parent="Grayish Grass/Tree" instance=ExtResource("13_p67ya")]
+position = Vector2(-181, -82)
+
+[node name="Dark Trees92" parent="Grayish Grass/Tree" instance=ExtResource("13_p67ya")]
+position = Vector2(-166, -80)
+
+[node name="Dark Trees353" parent="Grayish Grass/Tree" instance=ExtResource("13_p67ya")]
+position = Vector2(-157, -72)
+
+[node name="Dark Trees354" parent="Grayish Grass/Tree" instance=ExtResource("13_p67ya")]
+position = Vector2(-145, -63)
+
+[node name="Dark Trees70" parent="Grayish Grass/Tree" instance=ExtResource("13_p67ya")]
+position = Vector2(-261, -86)
+
+[node name="Dark Trees80" parent="Grayish Grass/Tree" instance=ExtResource("13_p67ya")]
+position = Vector2(-283, -85)
+
+[node name="Dark Trees77" parent="Grayish Grass/Tree" instance=ExtResource("13_p67ya")]
+position = Vector2(-249, -84)
+
+[node name="Dark Trees78" parent="Grayish Grass/Tree" instance=ExtResource("13_p67ya")]
+position = Vector2(-261, -79)
+
+[node name="Dark Trees79" parent="Grayish Grass/Tree" instance=ExtResource("13_p67ya")]
+position = Vector2(-273, -78)
+
+[node name="Dark Trees44" parent="Grayish Grass/Tree" instance=ExtResource("13_p67ya")]
+position = Vector2(-236, -78)
+
+[node name="Dark Trees74" parent="Grayish Grass/Tree" instance=ExtResource("13_p67ya")]
+position = Vector2(-242, -68)
+
+[node name="Dark Trees68" parent="Grayish Grass/Tree" instance=ExtResource("13_p67ya")]
+position = Vector2(-253, -68)
+
+[node name="Dark Trees76" parent="Grayish Grass/Tree" instance=ExtResource("13_p67ya")]
+position = Vector2(-263, -67)
+
+[node name="Dark Trees69" parent="Grayish Grass/Tree" instance=ExtResource("13_p67ya")]
+position = Vector2(-284, -68)
+
+[node name="Dark Trees50" parent="Grayish Grass/Tree" instance=ExtResource("13_p67ya")]
+position = Vector2(-222, -77)
+
+[node name="Dark Trees73" parent="Grayish Grass/Tree" instance=ExtResource("13_p67ya")]
+position = Vector2(-229, -67)
+
+[node name="Dark Trees45" parent="Grayish Grass/Tree" instance=ExtResource("13_p67ya")]
+position = Vector2(-231, -41)
+
+[node name="Dark Trees46" parent="Grayish Grass/Tree" instance=ExtResource("13_p67ya")]
+position = Vector2(-204, -70)
+
+[node name="Dark Trees72" parent="Grayish Grass/Tree" instance=ExtResource("13_p67ya")]
+position = Vector2(-195, -69)
+
+[node name="Dark Trees47" parent="Grayish Grass/Tree" instance=ExtResource("13_p67ya")]
+position = Vector2(-176, -73)
+
+[node name="Dark Trees71" parent="Grayish Grass/Tree" instance=ExtResource("13_p67ya")]
+position = Vector2(-168, -60)
+
+[node name="Dark Trees355" parent="Grayish Grass/Tree" instance=ExtResource("13_p67ya")]
+position = Vector2(-155, -59)
+
+[node name="Dark Trees356" parent="Grayish Grass/Tree" instance=ExtResource("13_p67ya")]
+position = Vector2(-165, -49)
+
+[node name="Dark Trees61" parent="Grayish Grass/Tree" instance=ExtResource("13_p67ya")]
+position = Vector2(-185, -67)
+
+[node name="Dark Trees48" parent="Grayish Grass/Tree" instance=ExtResource("13_p67ya")]
+position = Vector2(-190, -56)
+
+[node name="Dark Trees56" parent="Grayish Grass/Tree" instance=ExtResource("13_p67ya")]
+position = Vector2(-203, -54)
+
+[node name="Dark Trees57" parent="Grayish Grass/Tree" instance=ExtResource("13_p67ya")]
+position = Vector2(-237, -54)
+
+[node name="Dark Trees58" parent="Grayish Grass/Tree" instance=ExtResource("13_p67ya")]
+position = Vector2(-216, -70)
+
+[node name="Dark Trees62" parent="Grayish Grass/Tree" instance=ExtResource("13_p67ya")]
+position = Vector2(-225, -55)
+
+[node name="Dark Trees59" parent="Grayish Grass/Tree" instance=ExtResource("13_p67ya")]
+position = Vector2(-273, -63)
+
+[node name="Dark Trees63" parent="Grayish Grass/Tree" instance=ExtResource("13_p67ya")]
+position = Vector2(-263, -59)
+
+[node name="Dark Trees75" parent="Grayish Grass/Tree" instance=ExtResource("13_p67ya")]
+position = Vector2(-263, -59)
+
+[node name="Dark Trees67" parent="Grayish Grass/Tree" instance=ExtResource("13_p67ya")]
+position = Vector2(-251, -54)
+
+[node name="Dark Trees66" parent="Grayish Grass/Tree" instance=ExtResource("13_p67ya")]
+position = Vector2(-270, -53)
+
+[node name="Dark Trees65" parent="Grayish Grass/Tree" instance=ExtResource("13_p67ya")]
+position = Vector2(-284, -51)
+
+[node name="Dark Trees64" parent="Grayish Grass/Tree" instance=ExtResource("13_p67ya")]
+position = Vector2(-284, -41)
+
+[node name="Dark Trees60" parent="Grayish Grass/Tree" instance=ExtResource("13_p67ya")]
+position = Vector2(-231, -41)
+
+[node name="Dark Trees54" parent="Grayish Grass/Tree" instance=ExtResource("13_p67ya")]
+position = Vector2(-213, -55)
+
+[node name="Dark Trees49" parent="Grayish Grass/Tree" instance=ExtResource("13_p67ya")]
+position = Vector2(-221, -41)
+
+[node name="Dark Trees55" parent="Grayish Grass/Tree" instance=ExtResource("13_p67ya")]
+position = Vector2(-151, -47)
+
+[node name="Dark Trees51" parent="Grayish Grass/Tree" instance=ExtResource("13_p67ya")]
+position = Vector2(-259, -43)
+
+[node name="Dark Trees52" parent="Grayish Grass/Tree" instance=ExtResource("13_p67ya")]
+position = Vector2(-206, -43)
+
+[node name="Dark Trees53" parent="Grayish Grass/Tree" instance=ExtResource("13_p67ya")]
+position = Vector2(-178, -53)
+
+[node name="Dark Trees43" parent="Grayish Grass/Tree" instance=ExtResource("13_p67ya")]
+position = Vector2(-244, -46)
+
+[node name="Dark Trees19" parent="Grayish Grass/Tree" instance=ExtResource("13_p67ya")]
+position = Vector2(-275, -38)
+
+[node name="Dark Trees20" parent="Grayish Grass/Tree" instance=ExtResource("13_p67ya")]
+position = Vector2(-258, -29)
+
+[node name="Dark Trees21" parent="Grayish Grass/Tree" instance=ExtResource("13_p67ya")]
+position = Vector2(-245, -36)
+
+[node name="Dark Trees23" parent="Grayish Grass/Tree" instance=ExtResource("13_p67ya")]
+position = Vector2(-206, -45)
+
+[node name="Dark Trees24" parent="Grayish Grass/Tree" instance=ExtResource("13_p67ya")]
+position = Vector2(-172, -40)
+
+[node name="Dark Trees25" parent="Grayish Grass/Tree" instance=ExtResource("13_p67ya")]
+position = Vector2(-185, -45)
+
+[node name="Dark Trees26" parent="Grayish Grass/Tree" instance=ExtResource("13_p67ya")]
+position = Vector2(-212, -39)
+
+[node name="Dark Trees27" parent="Grayish Grass/Tree" instance=ExtResource("13_p67ya")]
+position = Vector2(-195, -39)
+
+[node name="Dark Trees28" parent="Grayish Grass/Tree" instance=ExtResource("13_p67ya")]
+position = Vector2(-181, -32)
+
+[node name="Dark Trees2" parent="Grayish Grass/Tree" instance=ExtResource("13_p67ya")]
+position = Vector2(-266, -33)
+
+[node name="Dark Trees3" parent="Grayish Grass/Tree" instance=ExtResource("13_p67ya")]
+position = Vector2(-268, -26)
+
+[node name="Dark Trees18" parent="Grayish Grass/Tree" instance=ExtResource("13_p67ya")]
+position = Vector2(-287, -25)
+
+[node name="Dark Trees376" parent="Grayish Grass/Tree" instance=ExtResource("13_p67ya")]
+position = Vector2(-299, -20)
+
+[node name="Dark Trees4" parent="Grayish Grass/Tree" instance=ExtResource("13_p67ya")]
+position = Vector2(-234, -34)
+
+[node name="Dark Trees5" parent="Grayish Grass/Tree" instance=ExtResource("13_p67ya")]
+position = Vector2(-220, -31)
+
+[node name="Dark Trees6" parent="Grayish Grass/Tree" instance=ExtResource("13_p67ya")]
+position = Vector2(-160, -36)
+
+[node name="Dark Trees9" parent="Grayish Grass/Tree" instance=ExtResource("13_p67ya")]
+position = Vector2(-172, -27)
+
+[node name="Dark Trees29" parent="Grayish Grass/Tree" instance=ExtResource("13_p67ya")]
+position = Vector2(-205, -31)
+
+[node name="Dark Trees30" parent="Grayish Grass/Tree" instance=ExtResource("13_p67ya")]
+position = Vector2(-191, -25)
+
+[node name="Dark Trees31" parent="Grayish Grass/Tree" instance=ExtResource("13_p67ya")]
+position = Vector2(-211, -21)
+
+[node name="Dark Trees32" parent="Grayish Grass/Tree" instance=ExtResource("13_p67ya")]
+position = Vector2(-223, -22)
+
+[node name="Dark Trees33" parent="Grayish Grass/Tree" instance=ExtResource("13_p67ya")]
+position = Vector2(-237, -25)
+
+[node name="Dark Trees34" parent="Grayish Grass/Tree" instance=ExtResource("13_p67ya")]
+position = Vector2(-249, -21)
+
+[node name="Dark Trees35" parent="Grayish Grass/Tree" instance=ExtResource("13_p67ya")]
+position = Vector2(-277, -20)
+
+[node name="Dark Trees36" parent="Grayish Grass/Tree" instance=ExtResource("13_p67ya")]
+position = Vector2(-261, -12)
+
+[node name="Dark Trees37" parent="Grayish Grass/Tree" instance=ExtResource("13_p67ya")]
+position = Vector2(-240, -15)
+
+[node name="Dark Trees38" parent="Grayish Grass/Tree" instance=ExtResource("13_p67ya")]
+position = Vector2(-230, -9)
+
+[node name="Dark Trees39" parent="Grayish Grass/Tree" instance=ExtResource("13_p67ya")]
+position = Vector2(-248, -4)
+
+[node name="Dark Trees40" parent="Grayish Grass/Tree" instance=ExtResource("13_p67ya")]
+position = Vector2(-274, -8)
+
+[node name="Dark Trees41" parent="Grayish Grass/Tree" instance=ExtResource("13_p67ya")]
+position = Vector2(-286, -8)
+
+[node name="Dark Trees319" parent="Grayish Grass/Tree" instance=ExtResource("13_p67ya")]
+position = Vector2(-299, -8)
+
+[node name="Dark Trees42" parent="Grayish Grass/Tree" instance=ExtResource("13_p67ya")]
+position = Vector2(-263, 2)
+
+[node name="Dark Trees15" parent="Grayish Grass/Tree" instance=ExtResource("13_p67ya")]
+position = Vector2(-200, -17)
+
+[node name="Dark Trees16" parent="Grayish Grass/Tree" instance=ExtResource("13_p67ya")]
+position = Vector2(-209, -9)
+
+[node name="Dark Trees13" parent="Grayish Grass/Tree" instance=ExtResource("13_p67ya")]
+position = Vector2(-190, -13)
+
+[node name="Dark Trees14" parent="Grayish Grass/Tree" instance=ExtResource("13_p67ya")]
+position = Vector2(-164, -21)
+
+[node name="Dark Trees17" parent="Grayish Grass/Tree" instance=ExtResource("13_p67ya")]
+position = Vector2(-177, -16)
+
+[node name="Dark Trees10" parent="Grayish Grass/Tree" instance=ExtResource("13_p67ya")]
+position = Vector2(-238, -1)
+
+[node name="Dark Trees12" parent="Grayish Grass/Tree" instance=ExtResource("13_p67ya")]
+position = Vector2(-219, -7)
+
+[node name="Dark Trees8" parent="Grayish Grass/Tree" instance=ExtResource("13_p67ya")]
+position = Vector2(-200, -3)
+
+[node name="Dark Trees11" parent="Grayish Grass/Tree" instance=ExtResource("13_p67ya")]
+position = Vector2(-182, -6)
+
+[node name="Dark Trees7" parent="Grayish Grass/Tree" instance=ExtResource("13_p67ya")]
+position = Vector2(-254, 10)
+
+[node name="Lighter trees" parent="Grayish Grass/Tree" instance=ExtResource("14_mvd18")]
+position = Vector2(-283, 4)
+
+[node name="Lighter trees48" parent="Grayish Grass/Tree" instance=ExtResource("14_mvd18")]
+position = Vector2(-295, 5)
+
+[node name="Lighter trees50" parent="Grayish Grass/Tree" instance=ExtResource("14_mvd18")]
+position = Vector2(-307, 3)
+
+[node name="Lighter trees257" parent="Grayish Grass/Tree" instance=ExtResource("14_mvd18")]
+position = Vector2(-322, 0)
+
+[node name="Lighter trees256" parent="Grayish Grass/Tree" instance=ExtResource("14_mvd18")]
+position = Vector2(-322, 10)
+
+[node name="Lighter trees258" parent="Grayish Grass/Tree" instance=ExtResource("14_mvd18")]
+position = Vector2(-332, 11)
+
+[node name="Lighter trees309" parent="Grayish Grass/Tree" instance=ExtResource("14_mvd18")]
+position = Vector2(-347, 13)
+
+[node name="Lighter trees2" parent="Grayish Grass/Tree" instance=ExtResource("14_mvd18")]
+position = Vector2(-271, 2)
+
+[node name="Lighter trees30" parent="Grayish Grass/Tree" instance=ExtResource("14_mvd18")]
+position = Vector2(-286, 18)
+
+[node name="Lighter trees41" parent="Grayish Grass/Tree" instance=ExtResource("14_mvd18")]
+position = Vector2(-300, 15)
+
+[node name="Lighter trees49" parent="Grayish Grass/Tree" instance=ExtResource("14_mvd18")]
+position = Vector2(-312, 21)
+
+[node name="Lighter trees255" parent="Grayish Grass/Tree" instance=ExtResource("14_mvd18")]
+position = Vector2(-325, 18)
+
+[node name="Lighter trees259" parent="Grayish Grass/Tree" instance=ExtResource("14_mvd18")]
+position = Vector2(-339, 21)
+
+[node name="Lighter trees308" parent="Grayish Grass/Tree" instance=ExtResource("14_mvd18")]
+position = Vector2(-358, 17)
+
+[node name="Lighter trees298" parent="Grayish Grass/Tree" instance=ExtResource("14_mvd18")]
+position = Vector2(-350, 26)
+
+[node name="Lighter trees307" parent="Grayish Grass/Tree" instance=ExtResource("14_mvd18")]
+position = Vector2(-364, 32)
+
+[node name="Lighter trees299" parent="Grayish Grass/Tree" instance=ExtResource("14_mvd18")]
+position = Vector2(-354, 39)
+
+[node name="Lighter trees300" parent="Grayish Grass/Tree" instance=ExtResource("14_mvd18")]
+position = Vector2(-369, 44)
+
+[node name="Lighter trees301" parent="Grayish Grass/Tree" instance=ExtResource("14_mvd18")]
+position = Vector2(-357, 51)
+
+[node name="Lighter trees302" parent="Grayish Grass/Tree" instance=ExtResource("14_mvd18")]
+position = Vector2(-366, 56)
+
+[node name="Lighter trees310" parent="Grayish Grass/Tree" instance=ExtResource("14_mvd18")]
+position = Vector2(-377, 57)
+
+[node name="Lighter trees303" parent="Grayish Grass/Tree" instance=ExtResource("14_mvd18")]
+position = Vector2(-356, 61)
+
+[node name="Lighter trees304" parent="Grayish Grass/Tree" instance=ExtResource("14_mvd18")]
+position = Vector2(-370, 68)
+
+[node name="Lighter trees253" parent="Grayish Grass/Tree" instance=ExtResource("14_mvd18")]
+position = Vector2(-322, 25)
+
+[node name="Lighter trees254" parent="Grayish Grass/Tree" instance=ExtResource("14_mvd18")]
+position = Vector2(-328, 34)
+
+[node name="Lighter trees260" parent="Grayish Grass/Tree" instance=ExtResource("14_mvd18")]
+position = Vector2(-339, 34)
+
+[node name="Lighter trees47" parent="Grayish Grass/Tree" instance=ExtResource("14_mvd18")]
+position = Vector2(-299, 22)
+
+[node name="Lighter trees31" parent="Grayish Grass/Tree" instance=ExtResource("14_mvd18")]
+position = Vector2(-274, 13)
+
+[node name="Lighter trees21" parent="Grayish Grass/Tree" instance=ExtResource("14_mvd18")]
+position = Vector2(-263, 14)
+
+[node name="Lighter trees3" parent="Grayish Grass/Tree" instance=ExtResource("14_mvd18")]
+position = Vector2(-271, 22)
+
+[node name="Lighter trees5" parent="Grayish Grass/Tree" instance=ExtResource("14_mvd18")]
+position = Vector2(-266, 27)
+
+[node name="Lighter trees4" parent="Grayish Grass/Tree" instance=ExtResource("14_mvd18")]
+position = Vector2(-246, 15)
+
+[node name="Lighter trees22" parent="Grayish Grass/Tree" instance=ExtResource("14_mvd18")]
+position = Vector2(-257, 28)
+
+[node name="Lighter trees24" parent="Grayish Grass/Tree" instance=ExtResource("14_mvd18")]
+position = Vector2(-257, 25)
+
+[node name="Lighter trees23" parent="Grayish Grass/Tree" instance=ExtResource("14_mvd18")]
+position = Vector2(-284, 30)
+
+[node name="Lighter trees42" parent="Grayish Grass/Tree" instance=ExtResource("14_mvd18")]
+position = Vector2(-295, 30)
+
+[node name="Lighter trees52" parent="Grayish Grass/Tree" instance=ExtResource("14_mvd18")]
+position = Vector2(-305, 33)
+
+[node name="Lighter trees46" parent="Grayish Grass/Tree" instance=ExtResource("14_mvd18")]
+position = Vector2(-303, 40)
+
+[node name="Lighter trees51" parent="Grayish Grass/Tree" instance=ExtResource("14_mvd18")]
+position = Vector2(-315, 37)
+
+[node name="Lighter trees248" parent="Grayish Grass/Tree" instance=ExtResource("14_mvd18")]
+position = Vector2(-320, 45)
+
+[node name="Lighter trees249" parent="Grayish Grass/Tree" instance=ExtResource("14_mvd18")]
+position = Vector2(-320, 45)
+
+[node name="Lighter trees250" parent="Grayish Grass/Tree" instance=ExtResource("14_mvd18")]
+position = Vector2(-332, 47)
+
+[node name="Lighter trees261" parent="Grayish Grass/Tree" instance=ExtResource("14_mvd18")]
+position = Vector2(-344, 50)
+
+[node name="Lighter trees305" parent="Grayish Grass/Tree" instance=ExtResource("14_mvd18")]
+position = Vector2(-354, 72)
+
+[node name="Lighter trees306" parent="Grayish Grass/Tree" instance=ExtResource("14_mvd18")]
+position = Vector2(-365, 77)
+
+[node name="Lighter trees312" parent="Grayish Grass/Tree" instance=ExtResource("14_mvd18")]
+position = Vector2(-365, 91)
+
+[node name="Lighter trees311" parent="Grayish Grass/Tree" instance=ExtResource("14_mvd18")]
+position = Vector2(-377, 79)
+
+[node name="Lighter trees251" parent="Grayish Grass/Tree" instance=ExtResource("14_mvd18")]
+position = Vector2(-332, 57)
+
+[node name="Lighter trees262" parent="Grayish Grass/Tree" instance=ExtResource("14_mvd18")]
+position = Vector2(-342, 61)
+
+[node name="Lighter trees43" parent="Grayish Grass/Tree" instance=ExtResource("14_mvd18")]
+position = Vector2(-288, 44)
+
+[node name="Lighter trees320" parent="Grayish Grass/Tree" instance=ExtResource("14_mvd18")]
+position = Vector2(-275, 38)
+
+[node name="Lighter trees44" parent="Grayish Grass/Tree" instance=ExtResource("14_mvd18")]
+position = Vector2(-307, 52)
+
+[node name="Lighter trees53" parent="Grayish Grass/Tree" instance=ExtResource("14_mvd18")]
+position = Vector2(-322, 54)
+
+[node name="Lighter trees252" parent="Grayish Grass/Tree" instance=ExtResource("14_mvd18")]
+position = Vector2(-325, 67)
+
+[node name="Lighter trees263" parent="Grayish Grass/Tree" instance=ExtResource("14_mvd18")]
+position = Vector2(-337, 71)
+
+[node name="Lighter trees45" parent="Grayish Grass/Tree" instance=ExtResource("14_mvd18")]
+position = Vector2(-296, 50)
+
+[node name="Lighter trees39" parent="Grayish Grass/Tree" instance=ExtResource("14_mvd18")]
+position = Vector2(-302, 65)
+
+[node name="Lighter trees54" parent="Grayish Grass/Tree" instance=ExtResource("14_mvd18")]
+position = Vector2(-314, 67)
+
+[node name="Lighter trees264" parent="Grayish Grass/Tree" instance=ExtResource("14_mvd18")]
+position = Vector2(-320, 76)
+
+[node name="Lighter trees265" parent="Grayish Grass/Tree" instance=ExtResource("14_mvd18")]
+position = Vector2(-331, 82)
+
+[node name="Lighter trees269" parent="Grayish Grass/Tree" instance=ExtResource("14_mvd18")]
+position = Vector2(-343, 82)
+
+[node name="Lighter trees266" parent="Grayish Grass/Tree" instance=ExtResource("14_mvd18")]
+position = Vector2(-318, 83)
+
+[node name="Lighter trees55" parent="Grayish Grass/Tree" instance=ExtResource("14_mvd18")]
+position = Vector2(-290, 62)
+
+[node name="Lighter trees322" parent="Grayish Grass/Tree" instance=ExtResource("14_mvd18")]
+position = Vector2(-280, 56)
+
+[node name="Lighter trees324" parent="Grayish Grass/Tree" instance=ExtResource("14_mvd18")]
+position = Vector2(-260, 37)
+
+[node name="Lighter trees327" parent="Grayish Grass/Tree" instance=ExtResource("14_mvd18")]
+position = Vector2(-267, 51)
+
+[node name="Lighter trees326" parent="Grayish Grass/Tree" instance=ExtResource("14_mvd18")]
+position = Vector2(-246, 27)
+
+[node name="Lighter trees323" parent="Grayish Grass/Tree" instance=ExtResource("14_mvd18")]
+position = Vector2(-263, 62)
+
+[node name="Lighter trees325" parent="Grayish Grass/Tree" instance=ExtResource("14_mvd18")]
+position = Vector2(-261, 57)
+
+[node name="Lighter trees330" parent="Grayish Grass/Tree" instance=ExtResource("14_mvd18")]
+position = Vector2(-225, 2)
+
+[node name="Lighter trees331" parent="Grayish Grass/Tree" instance=ExtResource("14_mvd18")]
+position = Vector2(-189, 3)
+
+[node name="Lighter trees332" parent="Grayish Grass/Tree" instance=ExtResource("14_mvd18")]
+position = Vector2(-169, -8)
+
+[node name="Lighter trees333" parent="Grayish Grass/Tree" instance=ExtResource("14_mvd18")]
+position = Vector2(-174, 4)
+
+[node name="Lighter trees334" parent="Grayish Grass/Tree" instance=ExtResource("14_mvd18")]
+position = Vector2(-179, 12)
+
+[node name="Lighter trees335" parent="Grayish Grass/Tree" instance=ExtResource("14_mvd18")]
+position = Vector2(-207, 5)
+
+[node name="Lighter trees329" parent="Grayish Grass/Tree" instance=ExtResource("14_mvd18")]
+position = Vector2(-217, 9)
+
+[node name="Lighter trees336" parent="Grayish Grass/Tree" instance=ExtResource("14_mvd18")]
+position = Vector2(-234, 15)
+
+[node name="Lighter trees337" parent="Grayish Grass/Tree" instance=ExtResource("14_mvd18")]
+position = Vector2(-227, 23)
+
+[node name="Lighter trees338" parent="Grayish Grass/Tree" instance=ExtResource("14_mvd18")]
+position = Vector2(-196, 15)
+
+[node name="Lighter trees339" parent="Grayish Grass/Tree" instance=ExtResource("14_mvd18")]
+position = Vector2(-209, 19)
+
+[node name="Lighter trees340" parent="Grayish Grass/Tree" instance=ExtResource("14_mvd18")]
+position = Vector2(-216, 25)
+
+[node name="Lighter trees341" parent="Grayish Grass/Tree" instance=ExtResource("14_mvd18")]
+position = Vector2(-236, 24)
+
+[node name="Lighter trees342" parent="Grayish Grass/Tree" instance=ExtResource("14_mvd18")]
+position = Vector2(-186, 21)
+
+[node name="Lighter trees343" parent="Grayish Grass/Tree" instance=ExtResource("14_mvd18")]
+position = Vector2(-200, 23)
+
+[node name="Lighter trees345" parent="Grayish Grass/Tree" instance=ExtResource("14_mvd18")]
+position = Vector2(-233, 30)
+
+[node name="Lighter trees347" parent="Grayish Grass/Tree" instance=ExtResource("14_mvd18")]
+position = Vector2(-240, 36)
+
+[node name="Lighter trees349" parent="Grayish Grass/Tree" instance=ExtResource("14_mvd18")]
+position = Vector2(-249, 45)
+
+[node name="Lighter trees350" parent="Grayish Grass/Tree" instance=ExtResource("14_mvd18")]
+position = Vector2(-240, 47)
+
+[node name="Lighter trees348" parent="Grayish Grass/Tree" instance=ExtResource("14_mvd18")]
+position = Vector2(-248, 58)
+
+[node name="Lighter trees351" parent="Grayish Grass/Tree" instance=ExtResource("14_mvd18")]
+position = Vector2(-237, 64)
+
+[node name="Lighter trees58" parent="Grayish Grass/Tree" instance=ExtResource("14_mvd18")]
+position = Vector2(-270, 70)
+
+[node name="Lighter trees321" parent="Grayish Grass/Tree" instance=ExtResource("14_mvd18")]
+position = Vector2(-270, 70)
+
+[node name="Lighter trees59" parent="Grayish Grass/Tree" instance=ExtResource("14_mvd18")]
+position = Vector2(-254, 69)
+
+[node name="Lighter trees60" parent="Grayish Grass/Tree" instance=ExtResource("14_mvd18")]
+position = Vector2(-228, 69)
+
+[node name="Lighter trees67" parent="Grayish Grass/Tree" instance=ExtResource("14_mvd18")]
+position = Vector2(-195, 70)
+
+[node name="Lighter trees65" parent="Grayish Grass/Tree" instance=ExtResource("14_mvd18")]
+position = Vector2(-209, 70)
+
+[node name="Lighter trees66" parent="Grayish Grass/Tree" instance=ExtResource("14_mvd18")]
+position = Vector2(-187, 76)
+
+[node name="Lighter trees166" parent="Grayish Grass/Tree" instance=ExtResource("14_mvd18")]
+position = Vector2(-171, 70)
+
+[node name="Lighter trees68" parent="Grayish Grass/Tree" instance=ExtResource("14_mvd18")]
+position = Vector2(-174, 81)
+
+[node name="Lighter trees167" parent="Grayish Grass/Tree" instance=ExtResource("14_mvd18")]
+position = Vector2(-158, 70)
+
+[node name="Lighter trees149" parent="Grayish Grass/Tree" instance=ExtResource("14_mvd18")]
+position = Vector2(-166, 84)
+
+[node name="Lighter trees168" parent="Grayish Grass/Tree" instance=ExtResource("14_mvd18")]
+position = Vector2(-157, 85)
+
+[node name="Lighter trees169" parent="Grayish Grass/Tree" instance=ExtResource("14_mvd18")]
+position = Vector2(-164, 93)
+
+[node name="Lighter trees165" parent="Grayish Grass/Tree" instance=ExtResource("14_mvd18")]
+position = Vector2(-146, 93)
+
+[node name="Lighter trees195" parent="Grayish Grass/Tree" instance=ExtResource("14_mvd18")]
+position = Vector2(-155, 99)
+
+[node name="Lighter trees194" parent="Grayish Grass/Tree" instance=ExtResource("14_mvd18")]
+position = Vector2(-142, 108)
+
+[node name="Lighter trees63" parent="Grayish Grass/Tree" instance=ExtResource("14_mvd18")]
+position = Vector2(-217, 74)
+
+[node name="Lighter trees64" parent="Grayish Grass/Tree" instance=ExtResource("14_mvd18")]
+position = Vector2(-227, 77)
+
+[node name="Lighter trees62" parent="Grayish Grass/Tree" instance=ExtResource("14_mvd18")]
+position = Vector2(-241, 69)
+
+[node name="Lighter trees61" parent="Grayish Grass/Tree" instance=ExtResource("14_mvd18")]
+position = Vector2(-250, 79)
+
+[node name="Lighter trees74" parent="Grayish Grass/Tree" instance=ExtResource("14_mvd18")]
+position = Vector2(-235, 81)
+
+[node name="Lighter trees75" parent="Grayish Grass/Tree" instance=ExtResource("14_mvd18")]
+position = Vector2(-204, 81)
+
+[node name="Lighter trees76" parent="Grayish Grass/Tree" instance=ExtResource("14_mvd18")]
+position = Vector2(-218, 84)
+
+[node name="Lighter trees77" parent="Grayish Grass/Tree" instance=ExtResource("14_mvd18")]
+position = Vector2(-194, 86)
+
+[node name="Lighter trees78" parent="Grayish Grass/Tree" instance=ExtResource("14_mvd18")]
+position = Vector2(-181, 92)
+
+[node name="Lighter trees150" parent="Grayish Grass/Tree" instance=ExtResource("14_mvd18")]
+position = Vector2(-170, 101)
+
+[node name="Lighter trees151" parent="Grayish Grass/Tree" instance=ExtResource("14_mvd18")]
+position = Vector2(-183, 100)
+
+[node name="Lighter trees79" parent="Grayish Grass/Tree" instance=ExtResource("14_mvd18")]
+position = Vector2(-204, 93)
+
+[node name="Lighter trees80" parent="Grayish Grass/Tree" instance=ExtResource("14_mvd18")]
+position = Vector2(-193, 99)
+
+[node name="Lighter trees152" parent="Grayish Grass/Tree" instance=ExtResource("14_mvd18")]
+position = Vector2(-180, 108)
+
+[node name="Lighter trees153" parent="Grayish Grass/Tree" instance=ExtResource("14_mvd18")]
+position = Vector2(-164, 110)
+
+[node name="Lighter trees164" parent="Grayish Grass/Tree" instance=ExtResource("14_mvd18")]
+position = Vector2(-153, 115)
+
+[node name="Lighter trees193" parent="Grayish Grass/Tree" instance=ExtResource("14_mvd18")]
+position = Vector2(-139, 119)
+
+[node name="Lighter trees208" parent="Grayish Grass/Tree" instance=ExtResource("14_mvd18")]
+position = Vector2(-125, 124)
+
+[node name="Lighter trees209" parent="Grayish Grass/Tree" instance=ExtResource("14_mvd18")]
+position = Vector2(-111, 125)
+
+[node name="Lighter trees212" parent="Grayish Grass/Tree" instance=ExtResource("14_mvd18")]
+position = Vector2(-92, 118)
+
+[node name="Lighter trees210" parent="Grayish Grass/Tree" instance=ExtResource("14_mvd18")]
+position = Vector2(-98, 127)
+
+[node name="Lighter trees211" parent="Grayish Grass/Tree" instance=ExtResource("14_mvd18")]
+position = Vector2(-85, 129)
+
+[node name="Lighter trees81" parent="Grayish Grass/Tree" instance=ExtResource("14_mvd18")]
+position = Vector2(-229, 93)
+
+[node name="Lighter trees82" parent="Grayish Grass/Tree" instance=ExtResource("14_mvd18")]
+position = Vector2(-216, 98)
+
+[node name="Lighter trees83" parent="Grayish Grass/Tree" instance=ExtResource("14_mvd18")]
+position = Vector2(-200, 105)
+
+[node name="Lighter trees154" parent="Grayish Grass/Tree" instance=ExtResource("14_mvd18")]
+position = Vector2(-188, 111)
+
+[node name="Lighter trees56" parent="Grayish Grass/Tree" instance=ExtResource("14_mvd18")]
+position = Vector2(-280, 74)
+
+[node name="Lighter trees57" parent="Grayish Grass/Tree" instance=ExtResource("14_mvd18")]
+position = Vector2(-263, 75)
+
+[node name="Lighter trees69" parent="Grayish Grass/Tree" instance=ExtResource("14_mvd18")]
+position = Vector2(-275, 83)
+
+[node name="Lighter trees73" parent="Grayish Grass/Tree" instance=ExtResource("14_mvd18")]
+position = Vector2(-263, 87)
+
+[node name="Lighter trees86" parent="Grayish Grass/Tree" instance=ExtResource("14_mvd18")]
+position = Vector2(-303, 79)
+
+[node name="Lighter trees84" parent="Grayish Grass/Tree" instance=ExtResource("14_mvd18")]
+position = Vector2(-251, 94)
+
+[node name="Lighter trees85" parent="Grayish Grass/Tree" instance=ExtResource("14_mvd18")]
+position = Vector2(-241, 96)
+
+[node name="Lighter trees70" parent="Grayish Grass/Tree" instance=ExtResource("14_mvd18")]
+position = Vector2(-292, 76)
+
+[node name="Lighter trees71" parent="Grayish Grass/Tree" instance=ExtResource("14_mvd18")]
+position = Vector2(-307, 81)
+
+[node name="Lighter trees267" parent="Grayish Grass/Tree" instance=ExtResource("14_mvd18")]
+position = Vector2(-316, 93)
+
+[node name="Lighter trees268" parent="Grayish Grass/Tree" instance=ExtResource("14_mvd18")]
+position = Vector2(-327, 95)
+
+[node name="Lighter trees283" parent="Grayish Grass/Tree" instance=ExtResource("14_mvd18")]
+position = Vector2(-353, 93)
+
+[node name="Lighter trees282" parent="Grayish Grass/Tree" instance=ExtResource("14_mvd18")]
+position = Vector2(-340, 94)
+
+[node name="Lighter trees285" parent="Grayish Grass/Tree" instance=ExtResource("14_mvd18")]
+position = Vector2(-335, 105)
+
+[node name="Lighter trees284" parent="Grayish Grass/Tree" instance=ExtResource("14_mvd18")]
+position = Vector2(-345, 105)
+
+[node name="Lighter trees72" parent="Grayish Grass/Tree" instance=ExtResource("14_mvd18")]
+position = Vector2(-296, 87)
+
+[node name="Lighter trees40" parent="Grayish Grass/Tree" instance=ExtResource("14_mvd18")]
+position = Vector2(-284, 88)
+
+[node name="Lighter trees87" parent="Grayish Grass/Tree" instance=ExtResource("14_mvd18")]
+position = Vector2(-289, 93)
+
+[node name="Lighter trees99" parent="Grayish Grass/Tree" instance=ExtResource("14_mvd18")]
+position = Vector2(-302, 94)
+
+[node name="Lighter trees270" parent="Grayish Grass/Tree" instance=ExtResource("14_mvd18")]
+position = Vector2(-309, 102)
+
+[node name="Lighter trees271" parent="Grayish Grass/Tree" instance=ExtResource("14_mvd18")]
+position = Vector2(-321, 106)
+
+[node name="Lighter trees272" parent="Grayish Grass/Tree" instance=ExtResource("14_mvd18")]
+position = Vector2(-313, 115)
+
+[node name="Lighter trees274" parent="Grayish Grass/Tree" instance=ExtResource("14_mvd18")]
+position = Vector2(-313, 115)
+
+[node name="Lighter trees100" parent="Grayish Grass/Tree" instance=ExtResource("14_mvd18")]
+position = Vector2(-297, 105)
+
+[node name="Lighter trees88" parent="Grayish Grass/Tree" instance=ExtResource("14_mvd18")]
+position = Vector2(-275, 95)
+
+[node name="Lighter trees90" parent="Grayish Grass/Tree" instance=ExtResource("14_mvd18")]
+position = Vector2(-264, 99)
+
+[node name="Lighter trees91" parent="Grayish Grass/Tree" instance=ExtResource("14_mvd18")]
+position = Vector2(-253, 109)
+
+[node name="Lighter trees92" parent="Grayish Grass/Tree" instance=ExtResource("14_mvd18")]
+position = Vector2(-232, 106)
+
+[node name="Lighter trees95" parent="Grayish Grass/Tree" instance=ExtResource("14_mvd18")]
+position = Vector2(-242, 113)
+
+[node name="Lighter trees103" parent="Grayish Grass/Tree" instance=ExtResource("14_mvd18")]
+position = Vector2(-249, 120)
+
+[node name="Lighter trees96" parent="Grayish Grass/Tree" instance=ExtResource("14_mvd18")]
+position = Vector2(-265, 109)
+
+[node name="Lighter trees102" parent="Grayish Grass/Tree" instance=ExtResource("14_mvd18")]
+position = Vector2(-263, 119)
+
+[node name="Lighter trees111" parent="Grayish Grass/Tree" instance=ExtResource("14_mvd18")]
+position = Vector2(-253, 129)
+
+[node name="Lighter trees112" parent="Grayish Grass/Tree" instance=ExtResource("14_mvd18")]
+position = Vector2(-302, 116)
+
+[node name="Lighter trees275" parent="Grayish Grass/Tree" instance=ExtResource("14_mvd18")]
+position = Vector2(-311, 126)
+
+[node name="Lighter trees276" parent="Grayish Grass/Tree" instance=ExtResource("14_mvd18")]
+position = Vector2(-329, 113)
+
+[node name="Lighter trees286" parent="Grayish Grass/Tree" instance=ExtResource("14_mvd18")]
+position = Vector2(-342, 115)
+
+[node name="Lighter trees287" parent="Grayish Grass/Tree" instance=ExtResource("14_mvd18")]
+position = Vector2(-353, 109)
+
+[node name="Lighter trees273" parent="Grayish Grass/Tree" instance=ExtResource("14_mvd18")]
+position = Vector2(-324, 127)
+
+[node name="Lighter trees288" parent="Grayish Grass/Tree" instance=ExtResource("14_mvd18")]
+position = Vector2(-337, 126)
+
+[node name="Lighter trees291" parent="Grayish Grass/Tree" instance=ExtResource("14_mvd18")]
+position = Vector2(-334, 136)
+
+[node name="Lighter trees289" parent="Grayish Grass/Tree" instance=ExtResource("14_mvd18")]
+position = Vector2(-350, 122)
+
+[node name="Lighter trees290" parent="Grayish Grass/Tree" instance=ExtResource("14_mvd18")]
+position = Vector2(-345, 134)
+
+[node name="Lighter trees277" parent="Grayish Grass/Tree" instance=ExtResource("14_mvd18")]
+position = Vector2(-307, 133)
+
+[node name="Lighter trees98" parent="Grayish Grass/Tree" instance=ExtResource("14_mvd18")]
+position = Vector2(-285, 105)
+
+[node name="Lighter trees97" parent="Grayish Grass/Tree" instance=ExtResource("14_mvd18")]
+position = Vector2(-277, 111)
+
+[node name="Lighter trees101" parent="Grayish Grass/Tree" instance=ExtResource("14_mvd18")]
+position = Vector2(-277, 120)
+
+[node name="Lighter trees93" parent="Grayish Grass/Tree" instance=ExtResource("14_mvd18")]
+position = Vector2(-222, 110)
+
+[node name="Lighter trees104" parent="Grayish Grass/Tree" instance=ExtResource("14_mvd18")]
+position = Vector2(-230, 119)
+
+[node name="Lighter trees105" parent="Grayish Grass/Tree" instance=ExtResource("14_mvd18")]
+position = Vector2(-210, 112)
+
+[node name="Lighter trees94" parent="Grayish Grass/Tree" instance=ExtResource("14_mvd18")]
+position = Vector2(-201, 117)
+
+[node name="Lighter trees157" parent="Grayish Grass/Tree" instance=ExtResource("14_mvd18")]
+position = Vector2(-190, 123)
+
+[node name="Lighter trees155" parent="Grayish Grass/Tree" instance=ExtResource("14_mvd18")]
+position = Vector2(-177, 121)
+
+[node name="Lighter trees156" parent="Grayish Grass/Tree" instance=ExtResource("14_mvd18")]
+position = Vector2(-163, 122)
+
+[node name="Lighter trees163" parent="Grayish Grass/Tree" instance=ExtResource("14_mvd18")]
+position = Vector2(-151, 127)
+
+[node name="Lighter trees189" parent="Grayish Grass/Tree" instance=ExtResource("14_mvd18")]
+position = Vector2(-136, 128)
+
+[node name="Lighter trees192" parent="Grayish Grass/Tree" instance=ExtResource("14_mvd18")]
+position = Vector2(-117, 135)
+
+[node name="Lighter trees190" parent="Grayish Grass/Tree" instance=ExtResource("14_mvd18")]
+position = Vector2(-128, 136)
+
+[node name="Lighter trees191" parent="Grayish Grass/Tree" instance=ExtResource("14_mvd18")]
+position = Vector2(-127, 146)
+
+[node name="Lighter trees196" parent="Grayish Grass/Tree" instance=ExtResource("14_mvd18")]
+position = Vector2(-109, 138)
+
+[node name="Lighter trees214" parent="Grayish Grass/Tree" instance=ExtResource("14_mvd18")]
+position = Vector2(-78, 138)
+
+[node name="Lighter trees230" parent="Grayish Grass/Tree" instance=ExtResource("14_mvd18")]
+position = Vector2(-70, 153)
+
+[node name="Lighter trees313" parent="Grayish Grass/Tree" instance=ExtResource("14_mvd18")]
+position = Vector2(-70, 153)
+
+[node name="Lighter trees231" parent="Grayish Grass/Tree" instance=ExtResource("14_mvd18")]
+position = Vector2(-100, 140)
+
+[node name="Lighter trees213" parent="Grayish Grass/Tree" instance=ExtResource("14_mvd18")]
+position = Vector2(-92, 138)
+
+[node name="Lighter trees215" parent="Grayish Grass/Tree" instance=ExtResource("14_mvd18")]
+position = Vector2(-82, 145)
+
+[node name="Lighter trees229" parent="Grayish Grass/Tree" instance=ExtResource("14_mvd18")]
+position = Vector2(-63, 169)
+
+[node name="Lighter trees233" parent="Grayish Grass/Tree" instance=ExtResource("14_mvd18")]
+position = Vector2(-59, 183)
+
+[node name="Lighter trees234" parent="Grayish Grass/Tree" instance=ExtResource("14_mvd18")]
+position = Vector2(-77, 158)
+
+[node name="Lighter trees170" parent="Grayish Grass/Tree" instance=ExtResource("14_mvd18")]
+position = Vector2(-143, 137)
+
+[node name="Lighter trees106" parent="Grayish Grass/Tree" instance=ExtResource("14_mvd18")]
+position = Vector2(-217, 123)
+
+[node name="Lighter trees107" parent="Grayish Grass/Tree" instance=ExtResource("14_mvd18")]
+position = Vector2(-211, 128)
+
+[node name="Lighter trees120" parent="Grayish Grass/Tree" instance=ExtResource("14_mvd18")]
+position = Vector2(-199, 133)
+
+[node name="Lighter trees158" parent="Grayish Grass/Tree" instance=ExtResource("14_mvd18")]
+position = Vector2(-187, 132)
+
+[node name="Lighter trees159" parent="Grayish Grass/Tree" instance=ExtResource("14_mvd18")]
+position = Vector2(-173, 131)
+
+[node name="Lighter trees108" parent="Grayish Grass/Tree" instance=ExtResource("14_mvd18")]
+position = Vector2(-239, 131)
+
+[node name="Lighter trees109" parent="Grayish Grass/Tree" instance=ExtResource("14_mvd18")]
+position = Vector2(-229, 133)
+
+[node name="Lighter trees113" parent="Grayish Grass/Tree" instance=ExtResource("14_mvd18")]
+position = Vector2(-292, 118)
+
+[node name="Lighter trees110" parent="Grayish Grass/Tree" instance=ExtResource("14_mvd18")]
+position = Vector2(-216, 137)
+
+[node name="Lighter trees121" parent="Grayish Grass/Tree" instance=ExtResource("14_mvd18")]
+position = Vector2(-208, 143)
+
+[node name="Lighter trees122" parent="Grayish Grass/Tree" instance=ExtResource("14_mvd18")]
+position = Vector2(-195, 147)
+
+[node name="Lighter trees160" parent="Grayish Grass/Tree" instance=ExtResource("14_mvd18")]
+position = Vector2(-184, 147)
+
+[node name="Lighter trees172" parent="Grayish Grass/Tree" instance=ExtResource("14_mvd18")]
+position = Vector2(-173, 145)
+
+[node name="Lighter trees161" parent="Grayish Grass/Tree" instance=ExtResource("14_mvd18")]
+position = Vector2(-161, 141)
+
+[node name="Lighter trees162" parent="Grayish Grass/Tree" instance=ExtResource("14_mvd18")]
+position = Vector2(-150, 144)
+
+[node name="Lighter trees171" parent="Grayish Grass/Tree" instance=ExtResource("14_mvd18")]
+position = Vector2(-137, 151)
+
+[node name="Lighter trees89" parent="Grayish Grass/Tree" instance=ExtResource("14_mvd18")]
+position = Vector2(-296, 128)
+
+[node name="Lighter trees278" parent="Grayish Grass/Tree" instance=ExtResource("14_mvd18")]
+position = Vector2(-318, 139)
+
+[node name="Lighter trees292" parent="Grayish Grass/Tree" instance=ExtResource("14_mvd18")]
+position = Vector2(-327, 146)
+
+[node name="Lighter trees294" parent="Grayish Grass/Tree" instance=ExtResource("14_mvd18")]
+position = Vector2(-350, 143)
+
+[node name="Lighter trees293" parent="Grayish Grass/Tree" instance=ExtResource("14_mvd18")]
+position = Vector2(-339, 145)
+
+[node name="Lighter trees279" parent="Grayish Grass/Tree" instance=ExtResource("14_mvd18")]
+position = Vector2(-304, 147)
+
+[node name="Lighter trees114" parent="Grayish Grass/Tree" instance=ExtResource("14_mvd18")]
+position = Vector2(-285, 132)
+
+[node name="Lighter trees125" parent="Grayish Grass/Tree" instance=ExtResource("14_mvd18")]
+position = Vector2(-293, 140)
+
+[node name="Lighter trees280" parent="Grayish Grass/Tree" instance=ExtResource("14_mvd18")]
+position = Vector2(-315, 151)
+
+[node name="Lighter trees295" parent="Grayish Grass/Tree" instance=ExtResource("14_mvd18")]
+position = Vector2(-336, 153)
+
+[node name="Lighter trees296" parent="Grayish Grass/Tree" instance=ExtResource("14_mvd18")]
+position = Vector2(-325, 159)
+
+[node name="Lighter trees297" parent="Grayish Grass/Tree" instance=ExtResource("14_mvd18")]
+position = Vector2(-316, 168)
+
+[node name="Lighter trees281" parent="Grayish Grass/Tree" instance=ExtResource("14_mvd18")]
+position = Vector2(-305, 159)
+
+[node name="Lighter trees126" parent="Grayish Grass/Tree" instance=ExtResource("14_mvd18")]
+position = Vector2(-270, 131)
+
+[node name="Lighter trees115" parent="Grayish Grass/Tree" instance=ExtResource("14_mvd18")]
+position = Vector2(-280, 139)
+
+[node name="Lighter trees127" parent="Grayish Grass/Tree" instance=ExtResource("14_mvd18")]
+position = Vector2(-271, 143)
+
+[node name="Lighter trees116" parent="Grayish Grass/Tree" instance=ExtResource("14_mvd18")]
+position = Vector2(-260, 141)
+
+[node name="Lighter trees128" parent="Grayish Grass/Tree" instance=ExtResource("14_mvd18")]
+position = Vector2(-290, 149)
+
+[node name="Lighter trees135" parent="Grayish Grass/Tree" instance=ExtResource("14_mvd18")]
+position = Vector2(-272, 152)
+
+[node name="Lighter trees129" parent="Grayish Grass/Tree" instance=ExtResource("14_mvd18")]
+position = Vector2(-279, 152)
+
+[node name="Lighter trees136" parent="Grayish Grass/Tree" instance=ExtResource("14_mvd18")]
+position = Vector2(-286, 160)
+
+[node name="Lighter trees137" parent="Grayish Grass/Tree" instance=ExtResource("14_mvd18")]
+position = Vector2(-296, 163)
+
+[node name="Lighter trees130" parent="Grayish Grass/Tree" instance=ExtResource("14_mvd18")]
+position = Vector2(-264, 152)
+
+[node name="Lighter trees131" parent="Grayish Grass/Tree" instance=ExtResource("14_mvd18")]
+position = Vector2(-247, 138)
+
+[node name="Lighter trees117" parent="Grayish Grass/Tree" instance=ExtResource("14_mvd18")]
+position = Vector2(-253, 153)
+
+[node name="Lighter trees138" parent="Grayish Grass/Tree" instance=ExtResource("14_mvd18")]
+position = Vector2(-271, 163)
+
+[node name="Lighter trees139" parent="Grayish Grass/Tree" instance=ExtResource("14_mvd18")]
+position = Vector2(-192, 159)
+
+[node name="Lighter trees140" parent="Grayish Grass/Tree" instance=ExtResource("14_mvd18")]
+position = Vector2(-243, 152)
+
+[node name="Lighter trees118" parent="Grayish Grass/Tree" instance=ExtResource("14_mvd18")]
+position = Vector2(-234, 143)
+
+[node name="Lighter trees132" parent="Grayish Grass/Tree" instance=ExtResource("14_mvd18")]
+position = Vector2(-243, 152)
+
+[node name="Lighter trees133" parent="Grayish Grass/Tree" instance=ExtResource("14_mvd18")]
+position = Vector2(-225, 149)
+
+[node name="Lighter trees119" parent="Grayish Grass/Tree" instance=ExtResource("14_mvd18")]
+position = Vector2(-232, 158)
+
+[node name="Lighter trees141" parent="Grayish Grass/Tree" instance=ExtResource("14_mvd18")]
+position = Vector2(-249, 165)
+
+[node name="Lighter trees123" parent="Grayish Grass/Tree" instance=ExtResource("14_mvd18")]
+position = Vector2(-203, 156)
+
+[node name="Lighter trees124" parent="Grayish Grass/Tree" instance=ExtResource("14_mvd18")]
+position = Vector2(-213, 158)
+
+[node name="Lighter trees134" parent="Grayish Grass/Tree" instance=ExtResource("14_mvd18")]
+position = Vector2(-221, 163)
+
+[node name="Lighter trees142" parent="Grayish Grass/Tree" instance=ExtResource("14_mvd18")]
+position = Vector2(-238, 170)
+
+[node name="Lighter trees143" parent="Grayish Grass/Tree" instance=ExtResource("14_mvd18")]
+position = Vector2(-229, 175)
+
+[node name="Lighter trees144" parent="Grayish Grass/Tree" instance=ExtResource("14_mvd18")]
+position = Vector2(-202, 165)
+
+[node name="Lighter trees173" parent="Grayish Grass/Tree" instance=ExtResource("14_mvd18")]
+position = Vector2(-189, 160)
+
+[node name="Lighter trees174" parent="Grayish Grass/Tree" instance=ExtResource("14_mvd18")]
+position = Vector2(-177, 160)
+
+[node name="Lighter trees175" parent="Grayish Grass/Tree" instance=ExtResource("14_mvd18")]
+position = Vector2(-166, 153)
+
+[node name="Lighter trees176" parent="Grayish Grass/Tree" instance=ExtResource("14_mvd18")]
+position = Vector2(-155, 159)
+
+[node name="Lighter trees145" parent="Grayish Grass/Tree" instance=ExtResource("14_mvd18")]
+position = Vector2(-213, 173)
+
+[node name="Lighter trees177" parent="Grayish Grass/Tree" instance=ExtResource("14_mvd18")]
+position = Vector2(-194, 171)
+
+[node name="Lighter trees178" parent="Grayish Grass/Tree" instance=ExtResource("14_mvd18")]
+position = Vector2(-182, 173)
+
+[node name="Lighter trees179" parent="Grayish Grass/Tree" instance=ExtResource("14_mvd18")]
+position = Vector2(-164, 167)
+
+[node name="Lighter trees180" parent="Grayish Grass/Tree" instance=ExtResource("14_mvd18")]
+position = Vector2(-146, 161)
+
+[node name="Lighter trees181" parent="Grayish Grass/Tree" instance=ExtResource("14_mvd18")]
+position = Vector2(-129, 158)
+
+[node name="Lighter trees198" parent="Grayish Grass/Tree" instance=ExtResource("14_mvd18")]
+position = Vector2(-116, 151)
+
+[node name="Lighter trees197" parent="Grayish Grass/Tree" instance=ExtResource("14_mvd18")]
+position = Vector2(-102, 150)
+
+[node name="Lighter trees216" parent="Grayish Grass/Tree" instance=ExtResource("14_mvd18")]
+position = Vector2(-89, 151)
+
+[node name="Lighter trees228" parent="Grayish Grass/Tree" instance=ExtResource("14_mvd18")]
+position = Vector2(-80, 164)
+
+[node name="Lighter trees232" parent="Grayish Grass/Tree" instance=ExtResource("14_mvd18")]
+position = Vector2(-71, 175)
+
+[node name="Lighter trees217" parent="Grayish Grass/Tree" instance=ExtResource("14_mvd18")]
+position = Vector2(-107, 160)
+
+[node name="Lighter trees218" parent="Grayish Grass/Tree" instance=ExtResource("14_mvd18")]
+position = Vector2(-93, 157)
+
+[node name="Lighter trees219" parent="Grayish Grass/Tree" instance=ExtResource("14_mvd18")]
+position = Vector2(-67, 189)
+
+[node name="Lighter trees227" parent="Grayish Grass/Tree" instance=ExtResource("14_mvd18")]
+position = Vector2(-61, 201)
+
+[node name="Lighter trees235" parent="Grayish Grass/Tree" instance=ExtResource("14_mvd18")]
+position = Vector2(-140, 180)
+
+[node name="Lighter trees220" parent="Grayish Grass/Tree" instance=ExtResource("14_mvd18")]
+position = Vector2(-95, 167)
+
+[node name="Lighter trees221" parent="Grayish Grass/Tree" instance=ExtResource("14_mvd18")]
+position = Vector2(-85, 174)
+
+[node name="Lighter trees226" parent="Grayish Grass/Tree" instance=ExtResource("14_mvd18")]
+position = Vector2(-129, 167)
+
+[node name="Lighter trees222" parent="Grayish Grass/Tree" instance=ExtResource("14_mvd18")]
+position = Vector2(-94, 177)
+
+[node name="Lighter trees182" parent="Grayish Grass/Tree" instance=ExtResource("14_mvd18")]
+position = Vector2(-141, 168)
+
+[node name="Lighter trees199" parent="Grayish Grass/Tree" instance=ExtResource("14_mvd18")]
+position = Vector2(-117, 165)
+
+[node name="Lighter trees200" parent="Grayish Grass/Tree" instance=ExtResource("14_mvd18")]
+position = Vector2(-129, 174)
+
+[node name="Lighter trees202" parent="Grayish Grass/Tree" instance=ExtResource("14_mvd18")]
+position = Vector2(-152, 171)
+
+[node name="Lighter trees201" parent="Grayish Grass/Tree" instance=ExtResource("14_mvd18")]
+position = Vector2(-107, 172)
+
+[node name="Lighter trees225" parent="Grayish Grass/Tree" instance=ExtResource("14_mvd18")]
+position = Vector2(-79, 187)
+
+[node name="Lighter trees223" parent="Grayish Grass/Tree" instance=ExtResource("14_mvd18")]
+position = Vector2(-89, 189)
+
+[node name="Lighter trees224" parent="Grayish Grass/Tree" instance=ExtResource("14_mvd18")]
+position = Vector2(-102, 185)
+
+[node name="Lighter trees183" parent="Grayish Grass/Tree" instance=ExtResource("14_mvd18")]
+position = Vector2(-154, 180)
+
+[node name="Lighter trees203" parent="Grayish Grass/Tree" instance=ExtResource("14_mvd18")]
+position = Vector2(-142, 182)
+
+[node name="Lighter trees204" parent="Grayish Grass/Tree" instance=ExtResource("14_mvd18")]
+position = Vector2(-117, 177)
+
+[node name="Lighter trees205" parent="Grayish Grass/Tree" instance=ExtResource("14_mvd18")]
+position = Vector2(-127, 186)
+
+[node name="Lighter trees236" parent="Grayish Grass/Tree" instance=ExtResource("14_mvd18")]
+position = Vector2(-136, 191)
+
+[node name="Lighter trees237" parent="Grayish Grass/Tree" instance=ExtResource("14_mvd18")]
+position = Vector2(-119, 191)
+
+[node name="Lighter trees206" parent="Grayish Grass/Tree" instance=ExtResource("14_mvd18")]
+position = Vector2(-148, 190)
+
+[node name="Lighter trees207" parent="Grayish Grass/Tree" instance=ExtResource("14_mvd18")]
+position = Vector2(-111, 193)
+
+[node name="Lighter trees238" parent="Grayish Grass/Tree" instance=ExtResource("14_mvd18")]
+position = Vector2(-100, 198)
+
+[node name="Lighter trees239" parent="Grayish Grass/Tree" instance=ExtResource("14_mvd18")]
+position = Vector2(-81, 198)
+
+[node name="Lighter trees240" parent="Grayish Grass/Tree" instance=ExtResource("14_mvd18")]
+position = Vector2(-72, 204)
+
+[node name="Lighter trees241" parent="Grayish Grass/Tree" instance=ExtResource("14_mvd18")]
+position = Vector2(-91, 205)
+
+[node name="Lighter trees242" parent="Grayish Grass/Tree" instance=ExtResource("14_mvd18")]
+position = Vector2(-108, 204)
+
+[node name="Lighter trees243" parent="Grayish Grass/Tree" instance=ExtResource("14_mvd18")]
+position = Vector2(-129, 198)
+
+[node name="Lighter trees244" parent="Grayish Grass/Tree" instance=ExtResource("14_mvd18")]
+position = Vector2(-143, 199)
+
+[node name="Lighter trees245" parent="Grayish Grass/Tree" instance=ExtResource("14_mvd18")]
+position = Vector2(-161, 182)
+
+[node name="Lighter trees184" parent="Grayish Grass/Tree" instance=ExtResource("14_mvd18")]
+position = Vector2(-173, 175)
+
+[node name="Lighter trees185" parent="Grayish Grass/Tree" instance=ExtResource("14_mvd18")]
+position = Vector2(-172, 184)
+
+[node name="Lighter trees246" parent="Grayish Grass/Tree" instance=ExtResource("14_mvd18")]
+position = Vector2(-157, 196)
+
+[node name="Lighter trees247" parent="Grayish Grass/Tree" instance=ExtResource("14_mvd18")]
+position = Vector2(-167, 196)
+
+[node name="Lighter trees186" parent="Grayish Grass/Tree" instance=ExtResource("14_mvd18")]
+position = Vector2(-204, 178)
+
+[node name="Lighter trees187" parent="Grayish Grass/Tree" instance=ExtResource("14_mvd18")]
+position = Vector2(-191, 181)
+
+[node name="Lighter trees188" parent="Grayish Grass/Tree" instance=ExtResource("14_mvd18")]
+position = Vector2(-182, 192)
+
+[node name="Lighter trees146" parent="Grayish Grass/Tree" instance=ExtResource("14_mvd18")]
+position = Vector2(-254, 173)
+
+[node name="Lighter trees147" parent="Grayish Grass/Tree" instance=ExtResource("14_mvd18")]
+position = Vector2(-268, 173)
+
+[node name="Lighter trees148" parent="Grayish Grass/Tree" instance=ExtResource("14_mvd18")]
+position = Vector2(-284, 173)
+
+[node name="Lighter trees29" parent="Grayish Grass/Tree" instance=ExtResource("14_mvd18")]
+z_index = -1
+position = Vector2(-314, -5)
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Grayish Grass/Tree"]
+visible = false
+position = Vector2(1, -3)
+polygon = PackedVector2Array(-287, -175, -287, -176, -257, -182, -242, -171, -203, -176, -176, -169, -146, -178, -135, -171, -122, -176, -115, -189, -110, -184, -104, -188, -93, -181, -90, -191, 296, -186, 300, -77, 298, 79, 289, 182, 240, 172, 199, 185, 155, 180, 116, 186, 108, 198, 72, 201, 42, 206, -48, 235, -124, 213, -188, 210, -216, 191, -289, 182, -301, 188, -328, 187, -365, 155, -368, 84, -352, 41, -240, 50, -240, 52, -239, 53, -230, 54, -227, 53, -224, 57, -217, 57, -210, 54, -204, 54, -202, 54, -200, 54, -191, 54, -187, 53, -187, 53, -184, 54, -182, 53, -175, 53, -166, 53, -158, 53, -168, 54, -158, 53, -151, 59, -149, 69, -143, 79, -130, 116, -124, 108, -120, 117, -111, 109, -104, 115, -92, 100, -82, 115, -74, 105, -63, 129, -59, 125, -54, 125, -48, 131, -44, 122, -41, 108, 1, 118, 16, 115, 41, 123, 66, 124, 104, 118, 142, 102, 182, 90, 200, 40, 193, 7, 188, -14, 183, -27, 176, -42, 167, -54, 155, -65, 144, -70, 137, -78, 126, -84, 115, -89, 105, -94, 89, -97, 71, -97, 50, -97, 31, -98, 3, -98, -18, -98, -38, -98, -52, -97, -68, -96, -76, -94, -87, -92, -93, -88, -108, -79, -122, -67, -130, -60, -136, -50, -138, -40, -144, -33, -148, -28, -154, -21, -157, -9, -160, 1, -160, 9, -161, 19, -164, 25, -167, 33, -174, 37, -188, 41, -203, 43, -217, 46, -226, 49, -230, 51, -237, 49, -240, 48, -240, 50, -352, 41, -349, 5, -295, -40, -287, -120, -302, -144, -287, -176)
+
+[node name="Grayish Well_SCENE 2" parent="." instance=ExtResource("1_ogt5y")]
+position = Vector2(-8, -58)
+
+[node name="Lake" type="TileMapLayer" parent="."]
+tile_map_data = PackedByteArray("AAACAAQABwAAAAcAAAABAAQABwAAAAYAAAADAAQABwAAAAcAAAAEAAQABwAAAAcAAAAFAAQABwAAAAcAAAAGAAQABwABAAYAAAAFAAMABwAAAAUAAAAFAAIABwAAAAMAAAAGAAIAAAABAAUAAAAGAAMABwABAAAAAAAHAAIABwAAAAcAAAAIAAIABwABAAYAAAAEAAMABwABAAEAAAAEAAIABQABAAUAAAABAAIABwAAAAEAAAABAAMABwAAAAAAAAACAAIAAAAAAAIAAAACAAMAAAABAAQAAAADAAIAAAAAAAIAAAADAAMABwAAAAUAAAAFAAAABwAAAAIAAAAFAAEABwAAAAMAAAAGAAAAAAAAAAIAAAAGAAEABwAAAAQAAAAHAAAAAAAAAAIAAAAHAAEABwABAAMAAAAIAAAABwABAAcAAAAIAAEABwABAAAAAAAEAAEABQAAAAAAAAAEAAAABwAAAAEAAAA=")
+tile_set = SubResource("TileSet_4lec3")
+
+[node name="Mushroom" parent="." instance=ExtResource("5_ryt5m")]
+position = Vector2(-120, 72)
+
+[node name="mushroom 2" parent="." instance=ExtResource("6_mu6jc")]
+position = Vector2(-94, -26)
+
+[node name="Mushroom 3" parent="." instance=ExtResource("7_lpdaq")]
+position = Vector2(57, -27)
+
+[node name="ITEM" parent="." instance=ExtResource("14_krluk")]
+position = Vector2(15, -63)
+
+[node name="MC" parent="." instance=ExtResource("2_oq54p")]
+position = Vector2(-215, 53)

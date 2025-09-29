@@ -1,0 +1,29 @@
+[gd_scene load_steps=5 format=3 uid="uid://b7p6stpdyvv32"]
+
+[ext_resource type="Texture2D" uid="uid://b8d8e8ap3fyjx" path="res://scenes2d/scene2Art/UntitledArtwork5-Copy-Copy-Copy-Copy (2).png" id="1_7eqn0"]
+[ext_resource type="Texture2D" uid="uid://dkb533wdnahte" path="res://scenes2d/scene2Art/UntitledArtwork5-Copy-Copy-Copy-Copy (1).png" id="2_cpw17"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_cpw17"]
+size = Vector2(41, 5)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_7eqn0"]
+size = Vector2(45, 22)
+
+[node name="Grayish Well_SCENE 2" type="StaticBody2D"]
+
+[node name="UntitledArtwork5-copy-copy-copy-copy(2)" type="Sprite2D" parent="."]
+z_index = 1
+position = Vector2(-1, 0)
+texture = ExtResource("1_7eqn0")
+
+[node name="UntitledArtwork5-copy-copy-copy-copy(1)" type="Sprite2D" parent="."]
+position = Vector2(-1, 0)
+texture = ExtResource("2_cpw17")
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="."]
+position = Vector2(-1, -1)
+shape = SubResource("RectangleShape2D_cpw17")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(-1, 9)
+shape = SubResource("RectangleShape2D_7eqn0")

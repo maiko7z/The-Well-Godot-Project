@@ -1,0 +1,16 @@
+[gd_scene load_steps=3 format=3 uid="uid://3gkj51nfx4xr"]
+
+[ext_resource type="Texture2D" uid="uid://di7w6x6aw7r83" path="res://scenes2d/scene2Art/UntitledArtwork11 (5).png" id="1_5rswe"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_tje66"]
+size = Vector2(16, 15)
+
+[node name="Lighter trees" type="StaticBody2D"]
+
+[node name="UntitledArtwork11(5)" type="Sprite2D" parent="."]
+texture = ExtResource("1_5rswe")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+z_index = -1
+position = Vector2(0, 2.5)
+shape = SubResource("RectangleShape2D_tje66")

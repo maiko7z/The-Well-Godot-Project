@@ -3343,5 +3343,5 @@ position = Vector2(-40, 22)
 rotation = -1.5708
 shape = SubResource("CapsuleShape2D_vtmy7")
 
-[connection signal="body_entered" from="Collisions/Area2D" to="." method="_scene_swap"]
 [connection signal="body_entered" from="Collisions/Area2D" to="." method="_on_area_2d_body_entered"]
+[connection signal="body_entered" from="Collisions/Area2D" to="." method="_scene_swap"]
