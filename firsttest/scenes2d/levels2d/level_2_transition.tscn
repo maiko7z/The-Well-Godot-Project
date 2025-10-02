@@ -54,9 +54,9 @@ texture = ExtResource("5_ushwd")
 layout_mode = 0
 offset_left = 223.0
 offset_top = 59.0
-offset_right = 263.0
+offset_right = 327.0
 offset_bottom = 99.0
 theme = ExtResource("6_r76ga")
-text = "YOU"
+text = "REMEMBER"
 
 [connection signal="timeout" from="ScareTime" to="." method="_scene_swap"]

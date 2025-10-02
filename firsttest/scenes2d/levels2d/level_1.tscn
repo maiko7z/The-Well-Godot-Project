@@ -1,4 +1,4 @@
-[gd_scene load_steps=18 format=4 uid="uid://h6bjj036kv0y"]
+[gd_scene load_steps=19 format=4 uid="uid://h6bjj036kv0y"]
 
 [ext_resource type="PackedScene" uid="uid://dm3ht65ga0hry" path="res://scenes2d/Grass Tiles.tscn" id="1_lhxq5"]
 [ext_resource type="Script" uid="uid://chav6hmuyn3mj" path="res://scenes2d/levels2d/level_1.gd" id="1_vofyt"]
@@ -9,9 +9,10 @@
 [ext_resource type="PackedScene" uid="uid://r7i7tebg5u8w" path="res://scenes2d/mushroom_sprite.tscn" id="6_25vsf"]
 [ext_resource type="PackedScene" uid="uid://baif48leu18a8" path="res://images2d/bright_mushroom.tscn" id="7_01pdl"]
 [ext_resource type="PackedScene" uid="uid://bj1snsy3la2tg" path="res://scenes2d/purple_mushroom.tscn" id="8_cayrh"]
-[ext_resource type="PackedScene" uid="uid://dyvjstkxwfw0s" path="res://scenes2d/Well.tscn" id="9_81bac"]
-[ext_resource type="PackedScene" uid="uid://kjqhu6br55wu" path="res://player2d/player_2d2.tscn" id="10_ko25f"]
 [ext_resource type="AudioStream" uid="uid://bspjdac6hrjfd" path="res://audio/Main2DTheme.ogg" id="11_q146p"]
+[ext_resource type="AudioStream" uid="uid://c10dy3fq43gw4" path="res://audio/Forest.mp3" id="12_axgkn"]
+[ext_resource type="PackedScene" uid="uid://rot1fta3w6ut" path="res://player2d/player_2d.tscn" id="12_vofyt"]
+[ext_resource type="PackedScene" uid="uid://b7p6stpdyvv32" path="res://scenes2d/scene2Art/grayish_well_scene_2.tscn" id="13_axgkn"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_r38yu"]
 size = Vector2(90, 59)
@@ -3052,17 +3053,14 @@ position = Vector2(11, -21)
 [node name="Pruple mushroom" parent="Purple Mushroom" instance=ExtResource("8_cayrh")]
 position = Vector2(-131, 149)
 
-[node name="Well" parent="." instance=ExtResource("9_81bac")]
-position = Vector2(-40, 22)
-
-[node name="Player" parent="." instance=ExtResource("10_ko25f")]
-z_index = 3
-z_as_relative = false
-position = Vector2(-293, 82)
-
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("11_q146p")
 volume_db = -5.971
+autoplay = true
+
+[node name="AudioStreamPlayerNature" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("12_axgkn")
+volume_db = -23.387
 autoplay = true
 
 [node name="Collisions" type="Node" parent="."]
@@ -3108,6 +3106,12 @@ collision_mask = 3
 position = Vector2(-39, 29)
 shape = SubResource("RectangleShape2D_vofyt")
 
-[connection signal="body_entered" from="Collisions/Area2D" to="." method="_on_area_2d_body_entered"]
+[node name="Player" parent="." instance=ExtResource("12_vofyt")]
+position = Vector2(-289, 84)
+
+[node name="Grayish Well_SCENE 2" parent="." instance=ExtResource("13_axgkn")]
+position = Vector2(-39, 31)
+
 [connection signal="body_entered" from="Collisions/Area2D" to="." method="_scene_swap"]
+[connection signal="body_entered" from="Collisions/Area2D" to="." method="_on_area_2d_body_entered"]
 [connection signal="body_entered" from="DialogueTrigger1" to="." method="_on_dialogue_trigger_1_body_entered"]

@@ -1,7 +1,67 @@
-[gd_scene load_steps=13 format=3 uid="uid://kjqhu6br55wu"]
+[gd_scene load_steps=13 format=3 uid="uid://dgupcs8537sp2"]
 
 [ext_resource type="Texture2D" uid="uid://dihp0cmp8w3it" path="res://player2d/UntitledArtwork14 (3).png" id="1_btw67"]
-[ext_resource type="Script" uid="uid://cr7e8xgoi3wio" path="res://player2d/player_2d.gd" id="1_moghx"]
+
+[sub_resource type="GDScript" id="GDScript_jio18"]
+script/source = "extends CharacterBody2D
+
+
+const SPEED = 50.0
+
+#@onready var animated_sprite = $AnimatedSprite2D
+@onready var animated_sprite: AnimatedSprite2D = $AnimatedSprite2D
+
+
+func _physics_process(delta):
+	# Add the gravity.
+	if not is_on_floor():
+		velocity += get_gravity() * delta
+		
+	#get input direction
+	var direction_x := Input.get_axis(\"left\", \"right\")
+	#movemenet 
+	#if direction_x > 0:
+		#animated_sprite.flip_h = false
+	#elif direction_x < 0:
+		#animated_sprite.flip_h = true 
+
+	# play animation
+	if Dialogic.current_timeline != null:
+		animated_sprite.play(\"idle\")
+		return
+	else:
+		if direction_x == 0:
+			animated_sprite.play(\"idle\")
+		if direction_x == 1.0:
+			animated_sprite.play(\"run_right\")
+		elif direction_x == -1.0:
+			animated_sprite.play(\"run_left\")
+	
+	if direction_x:
+		velocity.x = direction_x * SPEED
+	else:
+		velocity.x = move_toward(velocity.x, 0, SPEED)
+		
+	# Y movement 	
+		
+	var direction_y := Input.get_axis(\"up\", \"down\")
+	# animation 
+	#if direction_y == 0:
+		#animated_sprite.play(\"idle\")
+	#elif direction_y > 0:
+		#animated_sprite.play(\"up\")
+	#else:
+		#animated_sprite.play(\"down\")		
+	
+	if direction_y:
+		velocity.y = direction_y * SPEED
+	else:
+		velocity.y = move_toward(velocity.y, 0, SPEED)
+	
+	#print(direction_y)
+
+	move_and_slide()
+"
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_moghx"]
 atlas = ExtResource("1_btw67")
@@ -85,7 +145,7 @@ height = 18.0
 z_index = 2
 collision_layer = 3
 collision_mask = 2
-script = ExtResource("1_moghx")
+script = SubResource("GDScript_jio18")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 sprite_frames = SubResource("SpriteFrames_5nwh8")

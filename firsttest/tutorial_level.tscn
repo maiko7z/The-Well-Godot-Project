@@ -1,4 +1,4 @@
-[gd_scene load_steps=18 format=3 uid="uid://bk7koapp7moh5"]
+[gd_scene load_steps=20 format=3 uid="uid://bk7koapp7moh5"]
 
 [ext_resource type="Script" uid="uid://c3cjac2php2l5" path="res://tutorial_level.gd" id="1_s56d1"]
 [ext_resource type="Script" uid="uid://bkoiyaadv0p85" path="res://world_environment.gd" id="2_i25kj"]
@@ -8,7 +8,9 @@
 [ext_resource type="Texture2D" uid="uid://b533o31yijebg" path="res://images/light.jpg" id="8_s56d1"]
 [ext_resource type="Script" uid="uid://d14x5qa1bsrdu" path="res://roomTypes/area_3d.gd" id="9_ccse8"]
 [ext_resource type="AudioStream" uid="uid://cef82326c1a55" path="res://audio/EnemyNearbyLoop.ogg" id="9_tgnax"]
+[ext_resource type="PackedScene" uid="uid://bv7csitlsty4m" path="res://dialogue/Timelines/3dTimelineScenes/3dDialogue1.tscn" id="12_tgnax"]
 [ext_resource type="AudioStream" uid="uid://cpdmshr5kyvqc" path="res://audio/AmbienceLooped.ogg" id="13_ct0jk"]
+[ext_resource type="PackedScene" uid="uid://6aafamm8gcmo" path="res://dialogue/Timelines/3dTimelineScenes/3dDialogue2.tscn" id="13_i4und"]
 [ext_resource type="MeshLibrary" uid="uid://cnx0qgayriil2" path="res://tiles/tileset.tres" id="14_h47qk"]
 [ext_resource type="PackedScene" uid="uid://chu4ft88k3ahk" path="res://playerFolder/player.tscn" id="15_8tbre"]
 
@@ -181,5 +183,11 @@ debug_fill = false
 
 [node name="Player" parent="." instance=ExtResource("15_8tbre")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.712204, 0.507724, -7.06369)
+
+[node name="DialogueTrigger" parent="." instance=ExtResource("12_tgnax")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 8.19791, 1.42409, -26.8783)
+
+[node name="DialogueTrigger2" parent="." instance=ExtResource("13_i4und")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 16.6439, 1.32509, -40.4871)
 
 [connection signal="body_entered" from="NavigationRegion3D/StarterZone/GridMap/ExitNode/Area3D" to="NavigationRegion3D/StarterZone/GridMap/ExitNode/Area3D" method="_on_area_3d_body_entered"]

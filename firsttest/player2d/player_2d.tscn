@@ -1,7 +1,11 @@
-[gd_scene load_steps=18 format=3 uid="uid://rot1fta3w6ut"]
+[gd_scene load_steps=23 format=3 uid="uid://rot1fta3w6ut"]
 
-[ext_resource type="Script" uid="uid://7gwdd7r8iqd0" path="res://scenes2d/scene2Art/player_2d.gd" id="1_lts6r"]
+[ext_resource type="Script" uid="uid://7gwdd7r8iqd0" path="res://player2d/player_2d.gd" id="1_lts6r"]
 [ext_resource type="Texture2D" uid="uid://dnhsn4t73twxv" path="res://scenes2d/scene2Art/UntitledArtwork14 (5).png" id="1_wbmuv"]
+[ext_resource type="AudioStream" uid="uid://bmispsvsl2vs7" path="res://audio/2dPlayerSounds/grass1.mp3" id="3_kucty"]
+[ext_resource type="AudioStream" uid="uid://ektyamt1wuy5" path="res://audio/2dPlayerSounds/grass2.mp3" id="4_2y10f"]
+[ext_resource type="AudioStream" uid="uid://bwkgy3p3los3l" path="res://audio/2dPlayerSounds/grass4.mp3" id="5_4ehql"]
+[ext_resource type="AudioStream" uid="uid://dlugq3ggi3jgt" path="res://audio/2dPlayerSounds/grass3.mp3" id="6_egd1u"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_lts6r"]
 atlas = ExtResource("1_wbmuv")
@@ -125,7 +129,16 @@ animations = [{
 [sub_resource type="CircleShape2D" id="CircleShape2D_qgsqu"]
 radius = 4.12311
 
+[sub_resource type="AudioStreamRandomizer" id="AudioStreamRandomizer_1kbxu"]
+streams_count = 4
+stream_0/stream = ExtResource("3_kucty")
+stream_1/stream = ExtResource("4_2y10f")
+stream_2/stream = ExtResource("5_4ehql")
+stream_3/stream = ExtResource("6_egd1u")
+
 [node name="Player" type="CharacterBody2D"]
+collision_layer = 3
+collision_mask = 3
 script = ExtResource("1_lts6r")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
@@ -135,9 +148,14 @@ animation = &"move_up"
 autoplay = "Idle"
 frame_progress = 0.411462
 
-[node name="Camera2D" type="Camera2D" parent="AnimatedSprite2D"]
-zoom = Vector2(9, 9)
-
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2(-1, -1)
 shape = SubResource("CircleShape2D_qgsqu")
+
+[node name="Camera2D" type="Camera2D" parent="."]
+zoom = Vector2(3, 3)
+
+[node name="StepSound" type="AudioStreamPlayer" parent="."]
+stream = SubResource("AudioStreamRandomizer_1kbxu")
+volume_db = -6.973
+pitch_scale = 2.0

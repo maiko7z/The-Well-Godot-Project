@@ -31,9 +31,14 @@ directories/dch_directory={
 "unit_test_character": "res://Tests/Resources/unit_test_character.dch"
 }
 directories/dtl_directory={
+"3dscene1_timeline": "res://dialogue/Timelines/3dTimelines/3dscene1_timeline.dtl",
+"3dscene2_timeline": "res://dialogue/Timelines/3dTimelines/3dscene2_timeline.dtl",
 "scene1_timeline": "res://dialogue/Timelines/scene1_timeline.dtl",
 "scene2_timeline": "res://dialogue/Timelines/scene2_timeline.dtl",
-"scene3_timeline": "res://dialogue/Timelines/scene3_timeline.dtl"
+"scene3_timeline": "res://dialogue/Timelines/scene3_timeline.dtl",
+"scene4_timeline": "res://dialogue/Timelines/scene4_timeline.dtl",
+"scene5_timeline": "res://dialogue/Timelines/scene5_timeline.dtl",
+"scene6_timeline": "res://dialogue/Timelines/scene6_timeline.dtl"
 }
 extensions_folder="res://addons/dialogic_additions"
 text/letter_speed=0.03
