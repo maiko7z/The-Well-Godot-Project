@@ -56,9 +56,29 @@
 "scene": "",
 "sound_mood": "Normal"
 },
+"Grimace": {
+"export_overrides": {
+"image": "\"res://images2d/playerIcons/mc_grimace.png\""
+},
+"mirror": false,
+"offset": Vector2(0, 0),
+"scale": 1,
+"scene": "",
+"sound_mood": "Normal"
+},
 "Handhead": {
 "export_overrides": {
 "image": "\"res://images2d/playerIcons/mc_handhead.png\""
+},
+"mirror": false,
+"offset": Vector2(0, 0),
+"scale": 1,
+"scene": "",
+"sound_mood": "Normal"
+},
+"NervousSmile": {
+"export_overrides": {
+"image": "\"res://images2d/playerIcons/mc_nervoussmile.png\""
 },
 "mirror": false,
 "offset": Vector2(0, 0),
@@ -76,6 +96,16 @@
 "scene": "",
 "sound_mood": "Normal"
 },
+"Screaming": {
+"export_overrides": {
+"image": "\"res://images2d/playerIcons/mc_screaming.png\""
+},
+"mirror": false,
+"offset": Vector2(0, 0),
+"scale": 1,
+"scene": "",
+"sound_mood": "Normal"
+},
 "Tired": {
 "export_overrides": {
 "image": "\"res://images2d/playerIcons/mc_tired.png\""
@@ -85,6 +115,16 @@
 "scale": 1,
 "scene": "",
 "sound_mood": "Normal"
+},
+"Whisper": {
+"export_overrides": {
+"image": "\"res://images2d/playerIcons/mc_whisper.png\""
+},
+"mirror": false,
+"offset": Vector2(0, 0),
+"scale": 1,
+"scene": "",
+"sound_mood": "Whisper"
 }
 },
 &"scale": 1.0
