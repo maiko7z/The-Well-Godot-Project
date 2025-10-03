@@ -3335,6 +3335,7 @@ position = Vector2(-40, 22)
 rotation = -1.5708
 shape = SubResource("CapsuleShape2D_vtmy7")
 
+<<<<<<< Updated upstream
 [node name="Player" parent="." instance=ExtResource("12_1ptrv")]
 position = Vector2(-292, 87)
 
@@ -3342,4 +3343,7 @@ position = Vector2(-292, 87)
 position = Vector2(89, 212)
 
 [connection signal="body_entered" from="Collisions/Area2D" to="." method="_scene_swap"]
+=======
+>>>>>>> Stashed changes
 [connection signal="body_entered" from="Collisions/Area2D" to="." method="_on_area_2d_body_entered"]
+[connection signal="body_entered" from="Collisions/Area2D" to="." method="_scene_swap"]
