@@ -26,8 +26,7 @@ tooltip_text = "Start a new story mode run.
 Difficulty naturally builds 
 as you play and learn your story."
 theme = ExtResource("2_nqe80")
-text = "Story Mode
-(NEW GAME)"
+text = "New Story"
 
 [node name="StoryContinue" type="Button" parent="VBoxContainer"]
 layout_mode = 2
@@ -52,8 +51,7 @@ slowly building up well size,
 well room types, trap spawn rate, 
 and the horrors you might find within..."
 theme = ExtResource("2_nqe80")
-text = "Endless Mode
-(NEW GAME)"
+text = "New Endless"
 
 [node name="EndlessContinue" type="Button" parent="VBoxContainer"]
 layout_mode = 2

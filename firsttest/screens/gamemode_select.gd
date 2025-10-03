@@ -2,14 +2,14 @@ extends Control
 
 func _ready() -> void:
 	if GlobalVariables.storyLevel > 0:
-		$VBoxContainer/StoryContinue.text = "Story Mode\n(CONTINUE - Lvl " + str(GlobalVariables.storyLevel) + ")"
+		$VBoxContainer/StoryContinue.text = "Continue Story\n(Lvl " + str(GlobalVariables.storyLevel) + ")"
 	else:
-		$VBoxContainer/StoryContinue.text = "Story Mode\n(CONTINUE)"
+		$VBoxContainer/StoryContinue.text = "Continue Story"
 		$VBoxContainer/StoryContinue.disabled = true
 	if GlobalVariables.endlessLevel > 0:
-		$VBoxContainer/EndlessContinue.text = "Endless Mode\n(CONTINUE - Lvl " + str(GlobalVariables.endlessLevel) + ")"
+		$VBoxContainer/EndlessContinue.text = "Continue Endless\n(Lvl " + str(GlobalVariables.endlessLevel) + ")"
 	else:
-		$VBoxContainer/EndlessContinue.text = "Endless Mode\n(CONTINUE)"
+		$VBoxContainer/EndlessContinue.text = "Continue Endless"
 		$VBoxContainer/EndlessContinue.disabled = true
 
 func _on_new_story_pressed() -> void:
