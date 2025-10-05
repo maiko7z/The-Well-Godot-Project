@@ -1,4 +1,4 @@
-[gd_scene load_steps=24 format=3 uid="uid://rot1fta3w6ut"]
+[gd_scene load_steps=25 format=3 uid="uid://rot1fta3w6ut"]
 
 [ext_resource type="Script" uid="uid://7gwdd7r8iqd0" path="res://player2d/player_2d.gd" id="1_lts6r"]
 [ext_resource type="Texture2D" uid="uid://dnhsn4t73twxv" path="res://scenes2d/scene2Art/UntitledArtwork14 (5).png" id="1_wbmuv"]
@@ -7,6 +7,7 @@
 [ext_resource type="AudioStream" uid="uid://bwkgy3p3los3l" path="res://audio/2dPlayerSounds/grass4.mp3" id="5_4ehql"]
 [ext_resource type="AudioStream" uid="uid://dlugq3ggi3jgt" path="res://audio/2dPlayerSounds/grass3.mp3" id="6_egd1u"]
 [ext_resource type="PackedScene" uid="uid://cga7e56vioft6" path="res://screens/pause_screen.tscn" id="7_2y10f"]
+[ext_resource type="PackedScene" uid="uid://c6whwdt06bja5" path="res://images2d/2d_blur_filter.tscn" id="8_4ehql"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_lts6r"]
 atlas = ExtResource("1_wbmuv")
@@ -166,3 +167,11 @@ layer = 10
 
 [node name="PauseScreen" parent="PauseCanvas" instance=ExtResource("7_2y10f")]
 metadata/_edit_use_anchors_ = true
+
+[node name="BlurCanvas" type="CanvasLayer" parent="."]
+
+[node name="2DBlurFilter" parent="BlurCanvas" instance=ExtResource("8_4ehql")]
+offset_left = -448.0
+offset_top = -287.0
+offset_right = -33.0
+offset_bottom = -30.0

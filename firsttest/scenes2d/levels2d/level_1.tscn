@@ -1,4 +1,4 @@
-[gd_scene load_steps=20 format=4 uid="uid://h6bjj036kv0y"]
+[gd_scene load_steps=19 format=4 uid="uid://h6bjj036kv0y"]
 
 [ext_resource type="PackedScene" uid="uid://dm3ht65ga0hry" path="res://scenes2d/Grass Tiles.tscn" id="1_lhxq5"]
 [ext_resource type="Script" uid="uid://chav6hmuyn3mj" path="res://scenes2d/levels2d/level_1.gd" id="1_vofyt"]
@@ -13,7 +13,6 @@
 [ext_resource type="AudioStream" uid="uid://c10dy3fq43gw4" path="res://audio/Forest.mp3" id="12_axgkn"]
 [ext_resource type="PackedScene" uid="uid://rot1fta3w6ut" path="res://player2d/player_2d.tscn" id="12_vofyt"]
 [ext_resource type="PackedScene" uid="uid://b7p6stpdyvv32" path="res://scenes2d/scene2Art/grayish_well_scene_2.tscn" id="13_axgkn"]
-[ext_resource type="PackedScene" uid="uid://c6whwdt06bja5" path="res://images2d/2d_blur_filter.tscn" id="15_bhtt4"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_r38yu"]
 size = Vector2(90, 59)
@@ -3112,14 +3111,6 @@ position = Vector2(-289, 84)
 
 [node name="Grayish Well_SCENE 2" parent="." instance=ExtResource("13_axgkn")]
 position = Vector2(-39, 31)
-
-[node name="BlurCanvas" type="CanvasLayer" parent="."]
-
-[node name="2DBlurFilter" parent="BlurCanvas" instance=ExtResource("15_bhtt4")]
-offset_left = -547.0
-offset_top = -95.0
-offset_right = -221.0
-offset_bottom = 31.0
 
 [connection signal="body_entered" from="Collisions/Area2D" to="." method="_on_area_2d_body_entered"]
 [connection signal="body_entered" from="Collisions/Area2D" to="." method="_scene_swap"]
