@@ -13,7 +13,7 @@
 [ext_resource type="PackedScene" uid="uid://dsbbg5eakjhx3" path="res://scenes2d/scene2Art/mushroom_3.tscn" id="7_lpdaq"]
 [ext_resource type="Texture2D" uid="uid://q6rnbursphhm" path="res://scenes2d/scene2Art/UntitledArtwork10-Copy-Copy (1).png" id="8_p67ya"]
 [ext_resource type="PackedScene" uid="uid://cvbh5sh4hhr2u" path="res://scenes2d/scene2Art/dark_trees.tscn" id="13_p67ya"]
-[ext_resource type="PackedScene" uid="uid://bcnwcc6tsx2cg" path="res://scenes2d/scene2Art/item.tscn" id="14_krluk"]
+[ext_resource type="PackedScene" path="res://scenes2d/scene2Art/item.tscn" id="14_krluk"]
 [ext_resource type="PackedScene" uid="uid://3gkj51nfx4xr" path="res://scenes2d/scene2Art/lighter_trees.tscn" id="14_mvd18"]
 [ext_resource type="AudioStream" uid="uid://bspjdac6hrjfd" path="res://audio/Main2DTheme.ogg" id="16_r4f7c"]
 

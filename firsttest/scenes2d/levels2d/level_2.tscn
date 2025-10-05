@@ -1,4 +1,4 @@
-[gd_scene load_steps=17 format=4 uid="uid://bocg73wd85xsk"]
+[gd_scene load_steps=18 format=4 uid="uid://bocg73wd85xsk"]
 
 [ext_resource type="Script" uid="uid://lqs3bhxo6oyk" path="res://scenes2d/levels2d/level_2.gd" id="1_1ptrv"]
 [ext_resource type="PackedScene" uid="uid://dm3ht65ga0hry" path="res://scenes2d/Grass Tiles.tscn" id="2_adlc2"]
@@ -12,6 +12,7 @@
 [ext_resource type="PackedScene" uid="uid://rot1fta3w6ut" path="res://player2d/player_2d.tscn" id="12_1ptrv"]
 [ext_resource type="PackedScene" uid="uid://b7p6stpdyvv32" path="res://scenes2d/scene2Art/grayish_well_scene_2.tscn" id="12_adlc2"]
 [ext_resource type="AudioStream" uid="uid://bspjdac6hrjfd" path="res://audio/Main2DTheme.ogg" id="12_gghf3"]
+[ext_resource type="PackedScene" uid="uid://cga7e56vioft6" path="res://screens/pause_screen.tscn" id="13_adlc2"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_r38yu"]
 size = Vector2(90, 59)
@@ -3341,5 +3342,11 @@ position = Vector2(-292, 87)
 [node name="Grayish Well_SCENE 2" parent="." instance=ExtResource("12_adlc2")]
 position = Vector2(89, 212)
 
-[connection signal="body_entered" from="Collisions/Area2D" to="." method="_scene_swap"]
+[node name="PauseCanvas" type="CanvasLayer" parent="."]
+layer = 10
+
+[node name="PauseScreen" parent="PauseCanvas" instance=ExtResource("13_adlc2")]
+metadata/_edit_use_anchors_ = true
+
 [connection signal="body_entered" from="Collisions/Area2D" to="." method="_on_area_2d_body_entered"]
+[connection signal="body_entered" from="Collisions/Area2D" to="." method="_scene_swap"]

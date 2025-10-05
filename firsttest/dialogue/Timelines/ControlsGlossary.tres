@@ -1,0 +1,44 @@
+[gd_resource type="Resource" script_class="DialogicGlossary" load_steps=2 format=3 uid="uid://cbpkiaw36g56s"]
+
+[ext_resource type="Script" uid="uid://bkb7pckccymih" path="res://addons/dialogic/Modules/Glossary/glossary_resource.gd" id="1_wvrwr"]
+
+[resource]
+script = ExtResource("1_wvrwr")
+entries = {
+"Crouch": {
+"case_sensitive": true,
+"color": Color(1, 0.835294, 0.27451, 1),
+"name": "Crouch",
+"text": "Press and hold \"C\" to crouch! Avoids triggering eye traps and lets you hide significantly easier from malicious things...",
+"title": "Crouch"
+},
+"Jump": {
+"case_sensitive": true,
+"color": Color(1, 0.835388, 0.273438, 1),
+"name": "Jump",
+"text": "Press \"SPACE\" to jump! Uses stamina, but lets you leap over pesky ground traps.",
+"title": "Jump"
+},
+"Light": {
+"case_sensitive": true,
+"color": Color(1, 0.835294, 0.27451, 1),
+"name": "Light",
+"text": "Press \"E\" to toggle your light on or off! You should turn this off if trying to hide, especially if something dangerous is looking your way!",
+"title": "Light"
+},
+"Sprint": {
+"color": Color(1, 0.835294, 0.27451, 1),
+"enabled": true,
+"name": "Sprint",
+"text": "Press \"SHIFT\" to sprint! Uses stamina. Don't run out of stamina or you will get tired and be unable to sprint or jump for 5 seconds!"
+},
+"hear": {
+"case_sensitive": false,
+"color": Color(0.492188, 0.797668, 1, 1),
+"name": "hear",
+"text": "Helpful sound cues can be heard!"
+}
+}
+enabled = true
+_translation_id = ""
+_translation_keys = {}

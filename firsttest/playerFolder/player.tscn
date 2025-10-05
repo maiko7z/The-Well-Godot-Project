@@ -1,4 +1,4 @@
-[gd_scene load_steps=40 format=3 uid="uid://chu4ft88k3ahk"]
+[gd_scene load_steps=41 format=3 uid="uid://chu4ft88k3ahk"]
 
 [ext_resource type="AudioStream" uid="uid://6r05nimratie" path="res://audio/Flashlight.mp3" id="1_4flbx"]
 [ext_resource type="AudioStream" uid="uid://bnnssgjv4sunn" path="res://audio/Footstep.ogg" id="2_onrkg"]
@@ -29,6 +29,7 @@
 [ext_resource type="AudioStream" uid="uid://dayu1wtoj1yqv" path="res://audio/ambientSounds/RockFall4.ogg" id="20_pugy6"]
 [ext_resource type="AudioStream" uid="uid://ddpyxkuahrx53" path="res://audio/ambientSounds/Howl1.ogg" id="21_r8y4i"]
 [ext_resource type="AudioStream" uid="uid://bwquj8j53uagk" path="res://audio/ambientSounds/Howl2.ogg" id="22_31wpx"]
+[ext_resource type="PackedScene" uid="uid://cga7e56vioft6" path="res://screens/pause_screen.tscn" id="30_nasy6"]
 
 [sub_resource type="GDScript" id="GDScript_sh265"]
 resource_name = "PlayerControl"
@@ -609,6 +610,12 @@ one_shot = true
 [node name="HurtFrame" type="Timer" parent="."]
 wait_time = 0.1
 one_shot = true
+
+[node name="PauseCanvas" type="CanvasLayer" parent="."]
+layer = 10
+
+[node name="PauseScreen" parent="PauseCanvas" instance=ExtResource("30_nasy6")]
+metadata/_edit_use_anchors_ = true
 
 [connection signal="timeout" from="ExhaustionTimer" to="." method="_exhaust_end"]
 [connection signal="timeout" from="CorpseScareFrame" to="." method="_corpse_frame_end"]

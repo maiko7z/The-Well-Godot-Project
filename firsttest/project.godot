@@ -37,6 +37,7 @@ directories/dtl_directory={
 "scene2_timeline": "res://dialogue/Timelines/scene2_timeline.dtl",
 "scene3_timeline": "res://dialogue/Timelines/scene3_timeline.dtl",
 "scene4_timeline": "res://dialogue/Timelines/scene4_timeline.dtl",
+"scene4extra_timeline": "res://dialogue/Timelines/scene4extra_timeline.dtl",
 "scene5_timeline": "res://dialogue/Timelines/scene5_timeline.dtl",
 "scene6_timeline": "res://dialogue/Timelines/scene6_timeline.dtl"
 }
@@ -64,6 +65,7 @@ layout/style_list=["res://dialogue/Styles/main_style.tres"]
 layout/default_style="res://dialogue/Styles/main_style.tres"
 glossary/default_case_sensitive=true
 variables={}
+glossary/glossary_files=["res://dialogue/Timelines/ControlsGlossary.tres"]
 
 [display]
 
