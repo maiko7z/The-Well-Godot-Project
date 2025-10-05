@@ -1,0 +1,15 @@
+[gd_scene load_steps=3 format=3 uid="uid://b8gdhmvmtpfss"]
+
+[ext_resource type="Texture2D" uid="uid://bu8lv2cvy0y2" path="res://scenes2d/Scene 4/Art/UntitledArtwork6 2-Copy-Copy-Copy-Copy.png" id="1_0ruhc"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_at5sb"]
+radius = 2.23607
+
+[node name="Mushroom 2_Scene 4" type="StaticBody2D"]
+
+[node name="UntitledArtwork62-copy-copy-copy-copy" type="Sprite2D" parent="."]
+texture = ExtResource("1_0ruhc")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(1, -1)
+shape = SubResource("CircleShape2D_at5sb")
