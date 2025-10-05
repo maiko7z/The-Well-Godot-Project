@@ -97,6 +97,7 @@ folder_colors={
 "res://playerFolder/": "teal",
 "res://roomTypes/": "teal",
 "res://scenes2d/": "purple",
+"res://scenes2d/Scene 3/Art/": "pink",
 "res://screens/": "green",
 "res://state_machine/": "gray",
 "res://tiles/": "teal",

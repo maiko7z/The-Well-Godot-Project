@@ -1,0 +1,14 @@
+[gd_scene load_steps=3 format=3 uid="uid://b3evcoxu72fib"]
+
+[ext_resource type="Texture2D" uid="uid://c7y0vj6k5mx4a" path="res://scenes2d/Scene 3/Art/UntitledArtwork11-Copy (2).png" id="1_0s2mh"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_rkk80"]
+size = Vector2(12, 11.5)
+
+[node name="Dark Trees" type="StaticBody2D"]
+
+[node name="UntitledArtwork11-copy(2)" type="Sprite2D" parent="."]
+texture = ExtResource("1_0s2mh")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("RectangleShape2D_rkk80")

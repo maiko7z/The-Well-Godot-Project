@@ -1,0 +1,4491 @@
+[gd_scene load_steps=19 format=4 uid="uid://c0i533bxfyi0j"]
+
+[ext_resource type="Texture2D" uid="uid://dv0jja4t4ql0f" path="res://scenes2d/Scene 4/Art/UntitledArtwork8-Copy.png" id="1_15muk"]
+[ext_resource type="Texture2D" uid="uid://im24tj0yciuh" path="res://scenes2d/Scene 4/Art/UntitledArtwork2-Copy-Copy.png" id="2_kqqis"]
+[ext_resource type="Texture2D" uid="uid://bfjpeuhnqmwqb" path="res://scenes2d/Scene 4/Art/UntitledArtwork2-Copy (2).png" id="3_xleig"]
+[ext_resource type="PackedScene" uid="uid://bdt27k7k0isgf" path="res://scenes2d/Scene 4/Art/scene_4_well.tscn" id="4_vk7sl"]
+[ext_resource type="Texture2D" uid="uid://ba1vf5cbm3685" path="res://scenes2d/Scene 4/Art/UntitledArtwork10-Copy-Copy (5).png" id="5_xleig"]
+[ext_resource type="Texture2D" uid="uid://dflnb3ax44jfy" path="res://scenes2d/Scene 4/Art/UntitledArtwork10-Copy-Copy (6).png" id="6_vk7sl"]
+[ext_resource type="PackedScene" uid="uid://c04rgfxtm52sc" path="res://scenes2d/Scene 4/Art/mushroom_1_scene_4.tscn" id="7_kfc4i"]
+[ext_resource type="PackedScene" uid="uid://bvku6e56huokl" path="res://scenes2d/Scene 4/Art/mushroom_3_scene_4.tscn" id="8_3trav"]
+[ext_resource type="PackedScene" uid="uid://b8gdhmvmtpfss" path="res://scenes2d/Scene 4/Art/mushroom_2_scene_4.tscn" id="9_c5mja"]
+[ext_resource type="PackedScene" uid="uid://duy0n1j751yle" path="res://scenes2d/Scene 4/Art/tree_scene_4.tscn" id="10_3trav"]
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_cymbl"]
+texture = ExtResource("1_15muk")
+0:0/0 = 0
+0:1/0 = 0
+0:2/0 = 0
+0:3/0 = 0
+0:4/0 = 0
+0:5/0 = 0
+0:6/0 = 0
+
+[sub_resource type="TileSet" id="TileSet_kfc4i"]
+sources/0 = SubResource("TileSetAtlasSource_cymbl")
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_3trav"]
+texture = ExtResource("2_kqqis")
+0:0/0 = 0
+0:1/0 = 0
+0:2/0 = 0
+0:3/0 = 0
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_c5mja"]
+texture = ExtResource("3_xleig")
+0:0/0 = 0
+0:1/0 = 0
+0:2/0 = 0
+0:3/0 = 0
+
+[sub_resource type="TileSet" id="TileSet_86ygl"]
+sources/0 = SubResource("TileSetAtlasSource_3trav")
+sources/1 = SubResource("TileSetAtlasSource_c5mja")
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_kfc4i"]
+texture = ExtResource("5_xleig")
+0:0/0 = 0
+1:0/0 = 0
+0:1/0 = 0
+1:1/0 = 0
+0:2/0 = 0
+1:2/0 = 0
+0:3/0 = 0
+1:3/0 = 0
+0:4/0 = 0
+1:4/0 = 0
+0:5/0 = 0
+1:5/0 = 0
+0:6/0 = 0
+1:6/0 = 0
+0:7/0 = 0
+1:7/0 = 0
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_86ygl"]
+texture = ExtResource("6_vk7sl")
+0:0/0 = 0
+1:0/0 = 0
+0:1/0 = 0
+1:1/0 = 0
+0:2/0 = 0
+1:2/0 = 0
+0:3/0 = 0
+1:3/0 = 0
+0:4/0 = 0
+1:4/0 = 0
+0:5/0 = 0
+1:5/0 = 0
+0:6/0 = 0
+1:6/0 = 0
+0:7/0 = 0
+1:7/0 = 0
+
+[sub_resource type="TileSet" id="TileSet_qnbxx"]
+sources/4 = SubResource("TileSetAtlasSource_kfc4i")
+sources/6 = SubResource("TileSetAtlasSource_86ygl")
+
+[node name="Scene 4" type="StaticBody2D"]
+metadata/_edit_vertical_guides_ = [-162.0]
+
+[node name="Grass" type="TileMapLayer" parent="."]
+tile_map_data = PackedByteArray("AAD4//z/AAAAAAMAAAD5//z/AAAAAAMAAAD5//3/AAAAAAEAAAD6//3/AAAAAAMAAAD7//3/AAAAAAMAAAD8//3/AAAAAAMAAAD9//3/AAAAAAMAAAD+//3/AAAAAAMAAAD///3/AAAAAAMAAAAAAP3/AAAAAAMAAAABAP3/AAAAAAMAAAACAP7/AAAAAAEAAAACAP//AAAAAAMAAAADAP//AAAAAAUAAAADAAAAAAAAAAMAAAACAAAAAAAAAAMAAAABAP7/AAAAAAMAAAABAPz/AAAAAAMAAAACAPz/AAAAAAMAAAACAP3/AAAAAAEAAAADAP3/AAAAAAUAAAADAPz/AAAAAAEAAAADAP7/AAAAAAUAAAABAP//AAAAAAMAAAABAAAAAAAAAAMAAAAAAAAAAAAAAAMAAAD//wAAAAAAAAMAAAD/////AAAAAAEAAAAAAP//AAAAAAEAAAD+////AAAAAAEAAAD9////AAAAAAMAAAD8////AAAAAAAAAAD9/wAAAAAAAAMAAAD9/wEAAAAAAAMAAAD+/wEAAAAAAAMAAAD//wEAAAAAAAMAAAD+/wAAAAAAAAMAAAAAAAEAAAAAAAEAAAABAAEAAAAAAAMAAAACAAEAAAAAAAMAAAADAAEAAAAAAAEAAAD8/wEAAAAAAAEAAAD7/wEAAAAAAAMAAAD7/wAAAAAAAAAAAAD7////AAAAAAMAAAD7//7/AAAAAAMAAAD8/wAAAAAAAAMAAAD8//7/AAAAAAMAAAD8//z/AAAAAAEAAAD///7/AAAAAAMAAAAAAP7/AAAAAAEAAAD9//7/AAAAAAMAAAD6////AAAAAAMAAAD5////AAAAAAMAAAD4////AAAAAAMAAAD5//7/AAAAAAMAAAD4//3/AAAAAAMAAAD3//z/AAAAAAIAAAD4//7/AAAAAAEAAAD4/wAAAAAAAAMAAAD4/wEAAAAAAAIAAAD5/wEAAAAAAAMAAAD6/wEAAAAAAAEAAAD6/wAAAAAAAAMAAAD6//7/AAAAAAMAAAD5/wAAAAAAAAMAAAD3//7/AAAAAAMAAAD3//3/AAAAAAUAAAD3////AAAAAAMAAAD3/wAAAAAAAAUAAAD3/wEAAAAAAAIAAAD3/wIAAAAAAAYAAAD4/wIAAAAAAAIAAAD5/wIAAAAAAAAAAAD6/wIAAAAAAAEAAAD7/wIAAAAAAAMAAAD8/wIAAAAAAAMAAAD9/wIAAAAAAAMAAAD9/wMAAAAAAAIAAAD+/wMAAAAAAAMAAAD//wMAAAAAAAMAAAAAAAMAAAAAAAYAAAABAAMAAAAAAAYAAAACAAMAAAAAAAYAAAACAAIAAAAAAAMAAAADAAIAAAAAAAMAAAADAAMAAAAAAAMAAAABAAIAAAAAAAMAAAAAAAIAAAAAAAYAAAD//wIAAAAAAAYAAAD+/wIAAAAAAAEAAAD5/wMAAAAAAAEAAAD4/wMAAAAAAAMAAAD3/wMAAAAAAAIAAAD6/wMAAAAAAAMAAAD7/wMAAAAAAAEAAAD8/wMAAAAAAAIAAAD6//z/AAAAAAMAAAD7//z/AAAAAAEAAAD9//z/AAAAAAMAAAD+//z/AAAAAAMAAAD///z/AAAAAAMAAAAAAPz/AAAAAAMAAAD3/wQAAAAAAAIAAAD4/wQAAAAAAAMAAAD5/wQAAAAAAAEAAAD6/wQAAAAAAAIAAAD7/wQAAAAAAAIAAAD8/wQAAAAAAAIAAAD9/wQAAAAAAAIAAAD+/wQAAAAAAAMAAAD//wQAAAAAAAMAAAAAAAQAAAAAAAMAAAABAAQAAAAAAAEAAAACAAQAAAAAAAAAAAADAAQAAAAAAAYAAAAEAAMAAAAAAAYAAAAEAAIAAAAAAAMAAAAEAAEAAAAAAAMAAAAEAAAAAAAAAAMAAAAEAP//AAAAAAUAAAAEAP7/AAAAAAUAAAAEAP3/AAAAAAAAAAAEAPz/AAAAAAEAAAACAPv/AAAAAAMAAAABAPv/AAAAAAMAAAAAAPv/AAAAAAEAAAD///v/AAAAAAMAAAD+//v/AAAAAAEAAAD9//v/AAAAAAEAAAD8//v/AAAAAAEAAAD7//v/AAAAAAMAAAD6//v/AAAAAAMAAAD5//v/AAAAAAMAAAD4//v/AAAAAAEAAAD3//v/AAAAAAEAAAD2//v/AAAAAAMAAAD2//z/AAAAAAIAAAD2//3/AAAAAAUAAAD2//7/AAAAAAMAAAD2/wAAAAAAAAMAAAD2/wEAAAAAAAUAAAD2/wIAAAAAAAIAAAD2/wMAAAAAAAMAAAD2/wQAAAAAAAMAAAD2/wUAAAAAAAUAAAD2////AAAAAAUAAAD1//7/AAAAAAMAAAD///r/AAAAAAAAAAAAAPr/AAAAAAUAAAABAPr/AAAAAAUAAAACAPr/AAAAAAUAAAADAPr/AAAAAAEAAAADAPv/AAAAAAMAAAAEAPv/AAAAAAEAAAAFAPv/AAAAAAMAAAAFAPz/AAAAAAUAAAAGAP3/AAAAAAMAAAAGAP7/AAAAAAMAAAAGAP//AAAAAAIAAAAGAAAAAAAAAAYAAAAGAAEAAAAAAAYAAAAGAAIAAAAAAAIAAAAGAAMAAAAAAAYAAAAGAAQAAAAAAAYAAAAGAAUAAAAAAAYAAAAFAAAAAAAAAAIAAAAFAP//AAAAAAMAAAAFAP7/AAAAAAMAAAAFAP3/AAAAAAMAAAAGAPv/AAAAAAMAAAAGAPz/AAAAAAMAAAAHAPv/AAAAAAMAAAAHAPz/AAAAAAMAAAAHAP3/AAAAAAIAAAAHAP7/AAAAAAIAAAAHAP//AAAAAAIAAAAHAAAAAAAAAAIAAAAHAAEAAAAAAAAAAAAHAAIAAAAAAAYAAAAHAAMAAAAAAAIAAAAHAAQAAAAAAAIAAAAFAAQAAAAAAAIAAAAFAAMAAAAAAAYAAAAFAAIAAAAAAAIAAAAFAAEAAAAAAAIAAAAEAAQAAAAAAAYAAAAHAAUAAAAAAAIAAAAFAAUAAAAAAAYAAAAEAAUAAAAAAAYAAAADAAUAAAAAAAIAAAACAAUAAAAAAAMAAAABAAUAAAAAAAAAAAAAAAUAAAAAAAEAAAD//wUAAAAAAAMAAAD6/wUAAAAAAAIAAAD5/wUAAAAAAAQAAAD4/wUAAAAAAAQAAAD3/wUAAAAAAAQAAAD7/wUAAAAAAAIAAAD8/wUAAAAAAAIAAAD9/wUAAAAAAAMAAAD+/wUAAAAAAAEAAAAAAAYAAAAAAAMAAAD//wYAAAAAAAMAAAD+/wYAAAAAAAMAAAD2/wYAAAAAAAIAAAD3/wYAAAAAAAEAAAD4/wYAAAAAAAUAAAD5/wYAAAAAAAUAAAD6/wYAAAAAAAEAAAD7/wYAAAAAAAIAAAD8/wYAAAAAAAMAAAD9/wYAAAAAAAMAAAABAAcAAAAAAAYAAAACAAcAAAAAAAYAAAADAAcAAAAAAAYAAAAEAAcAAAAAAAYAAAAFAAcAAAAAAAYAAAAGAAcAAAAAAAMAAAAHAAcAAAAAAAMAAAAHAAYAAAAAAAIAAAAIAAYAAAAAAAYAAAAGAAYAAAAAAAIAAAAFAAYAAAAAAAYAAAAEAAYAAAAAAAYAAAADAAYAAAAAAAYAAAACAAYAAAAAAAIAAAABAAYAAAAAAAMAAAAAAAcAAAAAAAIAAAD//wcAAAAAAAIAAAD+/wcAAAAAAAIAAAD9/wcAAAAAAAMAAAD4/wcAAAAAAAMAAAD3/wcAAAAAAAIAAAD2/wcAAAAAAAEAAAD5/wcAAAAAAAEAAAD6/wcAAAAAAAIAAAD7/wcAAAAAAAMAAAD8/wcAAAAAAAMAAAAGAAgAAAAAAAYAAAAHAAgAAAAAAAMAAAAGAAkAAAAAAAYAAAAFAAkAAAAAAAIAAAAFAAgAAAAAAAMAAAAEAAgAAAAAAAMAAAADAAgAAAAAAAYAAAACAAgAAAAAAAYAAAABAAgAAAAAAAYAAAAAAAgAAAAAAAIAAAD//wgAAAAAAAMAAAD+/wgAAAAAAAMAAAD9/wgAAAAAAAIAAAD8/wgAAAAAAAIAAAD7/wgAAAAAAAIAAAD6/wgAAAAAAAIAAAD5/wgAAAAAAAEAAAD4/wgAAAAAAAEAAAD3/wgAAAAAAAMAAAD2/wgAAAAAAAIAAAD2/wkAAAAAAAEAAAD3/wkAAAAAAAMAAAD4/wkAAAAAAAEAAAD5/wkAAAAAAAEAAAD6/wkAAAAAAAIAAAD7/wkAAAAAAAMAAAD8/wkAAAAAAAEAAAD9/wkAAAAAAAEAAAD+/wkAAAAAAAYAAAD//wkAAAAAAAEAAAAAAAkAAAAAAAUAAAABAAkAAAAAAAUAAAACAAkAAAAAAAUAAAADAAkAAAAAAAIAAAAEAAkAAAAAAAMAAAAHAAkAAAAAAAMAAAAHAAoAAAAAAAIAAAAGAAoAAAAAAAYAAAAFAAoAAAAAAAYAAAAEAAoAAAAAAAYAAAADAAoAAAAAAAIAAAACAAoAAAAAAAUAAAD4/woAAAAAAAEAAAD3/woAAAAAAAEAAAD2/woAAAAAAAEAAAD5/woAAAAAAAMAAAD6/woAAAAAAAMAAAD7/woAAAAAAAMAAAD8/woAAAAAAAMAAAD9/woAAAAAAAMAAAD+/woAAAAAAAMAAAD//woAAAAAAAMAAAAAAAoAAAAAAAIAAAABAAoAAAAAAAUAAAABAAsAAAAAAAEAAAACAAsAAAAAAAUAAAADAAsAAAAAAAMAAAAEAAsAAAAAAAMAAAAFAAsAAAAAAAYAAAAIAAoAAAAAAAYAAAAIAAkAAAAAAAIAAAAIAAgAAAAAAAMAAAAIAPv/AAAAAAMAAAAJAPv/AAAAAAUAAAAKAPv/AAAAAAIAAAALAPv/AAAAAAIAAAAMAPv/AAAAAAEAAAAMAPz/AAAAAAUAAAANAPz/AAAAAAIAAAANAP3/AAAAAAYAAAANAP7/AAAAAAYAAAANAP//AAAAAAYAAAANAAAAAAAAAAYAAAANAAEAAAAAAAYAAAANAAIAAAAAAAYAAAANAAMAAAAAAAIAAAANAAQAAAAAAAIAAAANAAUAAAAAAAMAAAANAAYAAAAAAAMAAAANAAcAAAAAAAMAAAANAAgAAAAAAAYAAAANAAkAAAAAAAYAAAAMAAkAAAAAAAYAAAALAAkAAAAAAAYAAAAKAAkAAAAAAAMAAAAKAAoAAAAAAAYAAAAJAAoAAAAAAAUAAAANAAoAAAAAAAIAAAAMAAoAAAAAAAYAAAALAAoAAAAAAAYAAAAJAAgAAAAAAAMAAAAJAAcAAAAAAAMAAAAJAAYAAAAAAAYAAAAJAAUAAAAAAAYAAAAJAAkAAAAAAAIAAAAIAAcAAAAAAAIAAAAIAAUAAAAAAAYAAAAIAAQAAAAAAAIAAAAIAAMAAAAAAAIAAAAIAAIAAAAAAAIAAAAIAAEAAAAAAAIAAAAIAAAAAAAAAAIAAAAIAP//AAAAAAYAAAAIAP7/AAAAAAYAAAAIAP3/AAAAAAIAAAAIAPz/AAAAAAIAAAAJAPz/AAAAAAIAAAAKAPz/AAAAAAMAAAALAPz/AAAAAAMAAAANAPv/AAAAAAIAAAAKAP3/AAAAAAMAAAAJAP3/AAAAAAAAAAALAP3/AAAAAAAAAAAMAP3/AAAAAAMAAAAMAP7/AAAAAAUAAAAMAP//AAAAAAMAAAAMAAAAAAAAAAIAAAAMAAEAAAAAAAIAAAAMAAIAAAAAAAIAAAAMAAMAAAAAAAIAAAAMAAQAAAAAAAMAAAAMAAUAAAAAAAMAAAAMAAYAAAAAAAMAAAAMAAcAAAAAAAMAAAAMAAgAAAAAAAMAAAAKAAgAAAAAAAMAAAAKAAcAAAAAAAMAAAALAAcAAAAAAAMAAAALAAYAAAAAAAMAAAALAAUAAAAAAAMAAAALAAQAAAAAAAIAAAALAAMAAAAAAAIAAAALAAIAAAAAAAYAAAALAAEAAAAAAAAAAAALAAAAAAAAAAYAAAALAP//AAAAAAYAAAALAP7/AAAAAAMAAAAKAP7/AAAAAAMAAAAJAP7/AAAAAAMAAAAJAP//AAAAAAMAAAAJAAAAAAAAAAMAAAAJAAEAAAAAAAYAAAAJAAIAAAAAAAIAAAAJAAMAAAAAAAIAAAAJAAQAAAAAAAIAAAAKAAMAAAAAAAYAAAAKAAIAAAAAAAYAAAAKAAEAAAAAAAYAAAAKAAAAAAAAAAYAAAAKAP//AAAAAAYAAAAKAAQAAAAAAAIAAAAKAAUAAAAAAAMAAAAKAAYAAAAAAAMAAAALAAgAAAAAAAMAAAD6/wsAAAAAAAIAAAD5/wsAAAAAAAIAAAD4/wsAAAAAAAIAAAD3/wsAAAAAAAIAAAD1/woAAAAAAAEAAAD1/wkAAAAAAAIAAAD1/wgAAAAAAAYAAAD1/wcAAAAAAAIAAAD1/wYAAAAAAAMAAAD1/wUAAAAAAAUAAAD1/wQAAAAAAAMAAAD1/wMAAAAAAAIAAAD1/wIAAAAAAAUAAAD1/wEAAAAAAAUAAAD1/wAAAAAAAAMAAAD1////AAAAAAUAAAD1//3/AAAAAAIAAAD1//z/AAAAAAMAAAD1//v/AAAAAAEAAAD0//v/AAAAAAIAAAD0//z/AAAAAAUAAAD0//3/AAAAAAMAAAD0//7/AAAAAAMAAAD0////AAAAAAMAAAD0/wAAAAAAAAMAAAD0/wEAAAAAAAMAAAD0/wIAAAAAAAUAAAD0/wMAAAAAAAUAAAD0/wQAAAAAAAMAAADz/wQAAAAAAAUAAADz/wUAAAAAAAEAAADz/wYAAAAAAAQAAADz/wcAAAAAAAQAAADz/wgAAAAAAAEAAADz/wkAAAAAAAEAAADz/woAAAAAAAEAAADz/wsAAAAAAAMAAADy/wUAAAAAAAUAAADy/wQAAAAAAAMAAADz/wMAAAAAAAMAAADz/wIAAAAAAAMAAADz/wEAAAAAAAMAAADz/wAAAAAAAAMAAADz////AAAAAAMAAADz//7/AAAAAAMAAADz//3/AAAAAAUAAADz//z/AAAAAAUAAADy//z/AAAAAAMAAADy//v/AAAAAAIAAADz//v/AAAAAAIAAADy//3/AAAAAAUAAADy//7/AAAAAAUAAADy////AAAAAAMAAADy/wAAAAAAAAIAAADy/wEAAAAAAAMAAADy/wIAAAAAAAMAAADy/wMAAAAAAAMAAADy/wYAAAAAAAUAAADy/wcAAAAAAAUAAADy/wgAAAAAAAAAAADy/wkAAAAAAAEAAADy/woAAAAAAAEAAADz/wwAAAAAAAIAAAD0/wsAAAAAAAIAAAD0/woAAAAAAAEAAAD0/wkAAAAAAAIAAAD0/wgAAAAAAAEAAAD0/wcAAAAAAAEAAAD0/wYAAAAAAAUAAAD0/wUAAAAAAAQAAADy/wsAAAAAAAMAAAD7/wsAAAAAAAIAAAD2/wsAAAAAAAMAAAD1/wsAAAAAAAIAAAD8/wsAAAAAAAEAAAD9/wsAAAAAAAMAAAD+/wsAAAAAAAIAAAD//wsAAAAAAAIAAAAAAAsAAAAAAAMAAAAGAAsAAAAAAAYAAAAHAAsAAAAAAAYAAAAIAAsAAAAAAAYAAAAJAAsAAAAAAAYAAAAKAAsAAAAAAAYAAAALAAsAAAAAAAMAAAAMAAsAAAAAAAYAAAANAAsAAAAAAAIAAAANAAwAAAAAAAYAAADy/wwAAAAAAAMAAAD0/wwAAAAAAAIAAAD1/wwAAAAAAAIAAAD2/wwAAAAAAAIAAAD3/wwAAAAAAAIAAAD4/wwAAAAAAAIAAAD5/wwAAAAAAAMAAAD6/wwAAAAAAAIAAAD7/wwAAAAAAAIAAAD8/wwAAAAAAAIAAAD9/wwAAAAAAAIAAAD+/wwAAAAAAAIAAAD//wwAAAAAAAMAAAAAAAwAAAAAAAMAAAABAAwAAAAAAAMAAAACAAwAAAAAAAMAAAADAAwAAAAAAAMAAAAEAAwAAAAAAAUAAAAFAAwAAAAAAAMAAAAGAAwAAAAAAAYAAAAHAAwAAAAAAAYAAAAIAAwAAAAAAAMAAAAJAAwAAAAAAAYAAAAKAAwAAAAAAAMAAAALAAwAAAAAAAMAAAAMAAwAAAAAAAYAAADy//r/AAAAAAEAAADz//r/AAAAAAIAAAD0//r/AAAAAAIAAAD1//r/AAAAAAAAAAD2//r/AAAAAAMAAAD3//r/AAAAAAMAAAD4//r/AAAAAAUAAAD5//r/AAAAAAUAAAD6//r/AAAAAAUAAAD7//r/AAAAAAUAAAAEAPr/AAAAAAMAAAAFAPr/AAAAAAMAAAAGAPr/AAAAAAMAAAAHAPr/AAAAAAMAAAAIAPr/AAAAAAMAAAAJAPr/AAAAAAMAAAAKAPr/AAAAAAIAAAALAPr/AAAAAAIAAAAMAPr/AAAAAAIAAAANAPr/AAAAAAIAAAD+//r/AAAAAAUAAAD9//r/AAAAAAEAAAD8//r/AAAAAAEAAADx//r/AAAAAAIAAADx//v/AAAAAAIAAADx//z/AAAAAAIAAADx//3/AAAAAAMAAADx//7/AAAAAAUAAADx////AAAAAAMAAADx/wAAAAAAAAMAAADx/wEAAAAAAAIAAADx/wIAAAAAAAUAAADx/wMAAAAAAAMAAADx/wQAAAAAAAEAAADx/wUAAAAAAAEAAADx/wYAAAAAAAQAAADx/wcAAAAAAAUAAADx/wgAAAAAAAEAAADx/wkAAAAAAAEAAADx/woAAAAAAAEAAADx/wsAAAAAAAIAAADx/wwAAAAAAAIAAAAOAPr/AAAAAAIAAAAPAPr/AAAAAAIAAAAPAPv/AAAAAAUAAAAPAPz/AAAAAAYAAAAPAP3/AAAAAAIAAAAPAP7/AAAAAAIAAAAPAP//AAAAAAMAAAAPAAAAAAAAAAIAAAAPAAEAAAAAAAMAAAAPAAIAAAAAAAEAAAAPAAMAAAAAAAMAAAAPAAQAAAAAAAMAAAAPAAUAAAAAAAIAAAAPAAYAAAAAAAEAAAAPAAcAAAAAAAMAAAAOAAYAAAAAAAIAAAAOAAUAAAAAAAMAAAAOAAQAAAAAAAMAAAAOAAMAAAAAAAUAAAAOAAIAAAAAAAMAAAAOAAEAAAAAAAUAAAAOAAAAAAAAAAMAAAAOAP//AAAAAAMAAAAOAP7/AAAAAAMAAAAOAP3/AAAAAAUAAAAOAPz/AAAAAAUAAAAOAPv/AAAAAAUAAAAOAAcAAAAAAAMAAAAOAAgAAAAAAAYAAAAOAAkAAAAAAAYAAAAOAAoAAAAAAAYAAAAOAAsAAAAAAAYAAAAOAAwAAAAAAAEAAAAPAAsAAAAAAAYAAAAPAAoAAAAAAAYAAAAPAAkAAAAAAAYAAAAPAAwAAAAAAAYAAAAPAAgAAAAAAAMAAADw//z/AAAAAAIAAADw//3/AAAAAAMAAADw//7/AAAAAAMAAADw////AAAAAAUAAADw/wAAAAAAAAMAAADw/wEAAAAAAAIAAADw/wIAAAAAAAUAAADw/wMAAAAAAAMAAADw/wQAAAAAAAMAAADw/wUAAAAAAAMAAADw/wYAAAAAAAAAAADw/wcAAAAAAAEAAADw/wgAAAAAAAEAAADw/wsAAAAAAAMAAADw/wwAAAAAAAIAAADw/woAAAAAAAMAAADw/wkAAAAAAAEAAAAQAPz/AAAAAAYAAAAQAP3/AAAAAAMAAAAQAP7/AAAAAAIAAAAQAP//AAAAAAAAAAAQAAAAAAAAAAEAAAAQAAEAAAAAAAMAAAAQAAIAAAAAAAIAAAAQAAMAAAAAAAIAAAAQAAQAAAAAAAMAAAAQAAUAAAAAAAEAAAAQAAYAAAAAAAMAAAAQAAcAAAAAAAMAAAAQAAgAAAAAAAEAAAAQAAkAAAAAAAYAAAAQAAoAAAAAAAYAAAAQAAsAAAAAAAYAAAAQAPv/AAAAAAUAAAAQAPr/AAAAAAAAAAAQAAwAAAAAAAYAAADw//r/AAAAAAIAAADw//v/AAAAAAIAAADv//r/AAAAAAEAAADv//v/AAAAAAMAAADv//z/AAAAAAMAAADv//3/AAAAAAMAAADv//7/AAAAAAMAAADv////AAAAAAMAAADv/wAAAAAAAAMAAADv/wEAAAAAAAMAAADv/wIAAAAAAAUAAADv/wMAAAAAAAUAAADv/wkAAAAAAAIAAADv/woAAAAAAAIAAADv/wsAAAAAAAIAAADv/wwAAAAAAAIAAADv/wgAAAAAAAIAAADv/wcAAAAAAAIAAADv/wYAAAAAAAIAAADv/wUAAAAAAAIAAADv/wQAAAAAAAIAAAARAPr/AAAAAAUAAAARAPv/AAAAAAAAAAARAPz/AAAAAAAAAAARAP3/AAAAAAIAAAARAP7/AAAAAAIAAAARAP//AAAAAAMAAAARAAAAAAAAAAIAAAARAAEAAAAAAAIAAAARAAIAAAAAAAIAAAARAAMAAAAAAAIAAAARAAQAAAAAAAMAAAARAAUAAAAAAAMAAAARAAYAAAAAAAMAAAARAAcAAAAAAAAAAAARAAgAAAAAAAIAAAARAAkAAAAAAAIAAAARAAoAAAAAAAAAAAARAAsAAAAAAAIAAAARAAwAAAAAAAAAAAARAA0AAAAAAAIAAAAQAA0AAAAAAAYAAAAPAA0AAAAAAAIAAAAOAA0AAAAAAAQAAAANAA0AAAAAAAYAAAAMAA0AAAAAAAYAAAALAA0AAAAAAAQAAAAKAA0AAAAAAAEAAAAJAA0AAAAAAAIAAAAIAA0AAAAAAAQAAAAHAA0AAAAAAAMAAAAGAA0AAAAAAAMAAAAFAA0AAAAAAAMAAAAEAA0AAAAAAAMAAAADAA0AAAAAAAMAAAACAA0AAAAAAAMAAAABAA0AAAAAAAQAAAAAAA0AAAAAAAIAAAD//w0AAAAAAAIAAAD+/w0AAAAAAAQAAAD9/w0AAAAAAAIAAAD8/w0AAAAAAAAAAAD7/w0AAAAAAAQAAAD6/w0AAAAAAAIAAAD5/w0AAAAAAAQAAAD4/w0AAAAAAAMAAAD3/w0AAAAAAAIAAAD2/w0AAAAAAAQAAAD1/w0AAAAAAAIAAAD0/w0AAAAAAAQAAADz/w0AAAAAAAEAAADy/w0AAAAAAAIAAADx/w0AAAAAAAIAAADw/w0AAAAAAAIAAADv/w0AAAAAAAIAAADu//r/AAAAAAAAAADu//v/AAAAAAEAAADu//z/AAAAAAMAAADu//3/AAAAAAIAAADu//7/AAAAAAQAAADu////AAAAAAIAAADu/wAAAAAAAAMAAADu/wEAAAAAAAMAAADu/wIAAAAAAAMAAADu/wMAAAAAAAUAAADu/wQAAAAAAAIAAADu/wUAAAAAAAIAAADu/wYAAAAAAAQAAADu/wcAAAAAAAIAAADu/wgAAAAAAAIAAADu/wkAAAAAAAIAAADu/woAAAAAAAQAAADu/wsAAAAAAAIAAADu/wwAAAAAAAQAAADu/w0AAAAAAAIAAAAGAA4AAAAAAAMAAAACAA4AAAAAAAIAAAAIAA4AAAAAAAIAAAANAA4AAAAAAAEAAADt/wkAAAAAAAIAAADt//7/AAAAAAIAAADt/wEAAAAAAAUAAADt/wMAAAAAAAMAAADt/wYAAAAAAAIAAAD6/w4AAAAAAAIAAADu/w4AAAAAAAQAAADu/w8AAAAAAAIAAADv/w4AAAAAAAIAAADv/w8AAAAAAAIAAADw/w4AAAAAAAIAAADw/w8AAAAAAAIAAADx/w4AAAAAAAIAAADx/w8AAAAAAAIAAADy/w4AAAAAAAMAAADy/w8AAAAAAAIAAADz/w4AAAAAAAIAAADz/w8AAAAAAAEAAAD0/w4AAAAAAAIAAAD0/w8AAAAAAAQAAAD1/w4AAAAAAAIAAAD1/w8AAAAAAAIAAAD2/w4AAAAAAAIAAAD2/w8AAAAAAAQAAAD3/w4AAAAAAAIAAAD3/w8AAAAAAAIAAAD4/w4AAAAAAAIAAAD4/w8AAAAAAAMAAAD5/w4AAAAAAAMAAAD5/w8AAAAAAAQAAAD6/w8AAAAAAAIAAAD7/w4AAAAAAAIAAAD7/w8AAAAAAAQAAAD8/w4AAAAAAAIAAAD8/w8AAAAAAAAAAAD9/w4AAAAAAAIAAAD9/w8AAAAAAAIAAAD+/w4AAAAAAAIAAAD+/w8AAAAAAAQAAAD//w4AAAAAAAMAAAD//w8AAAAAAAIAAAAAAA4AAAAAAAMAAAAAAA8AAAAAAAIAAAABAA4AAAAAAAEAAAABAA8AAAAAAAQAAAACAA8AAAAAAAIAAAADAA4AAAAAAAYAAAADAA8AAAAAAAQAAAAEAA4AAAAAAAMAAAAEAA8AAAAAAAIAAAAFAA4AAAAAAAMAAAAFAA8AAAAAAAQAAAAGAA8AAAAAAAIAAAAHAA4AAAAAAAIAAAAHAA8AAAAAAAIAAAAIAA8AAAAAAAQAAAAJAA4AAAAAAAEAAAAJAA8AAAAAAAIAAAAKAA4AAAAAAAEAAAAKAA8AAAAAAAEAAAALAA4AAAAAAAEAAAALAA8AAAAAAAQAAAAMAA4AAAAAAAIAAAAMAA8AAAAAAAEAAAANAA8AAAAAAAEAAAAOAA4AAAAAAAEAAAAOAA8AAAAAAAQAAAAPAA4AAAAAAAYAAAAPAA8AAAAAAAIAAAAQAA4AAAAAAAIAAAAQAA8AAAAAAAAAAAARAA4AAAAAAAAAAAARAA8AAAAAAAIAAADs//r/AAAAAAEAAADs//v/AAAAAAEAAADs//z/AAAAAAMAAADs//3/AAAAAAIAAADs//7/AAAAAAQAAADs////AAAAAAIAAADs/wAAAAAAAAIAAADs/wEAAAAAAAIAAADs/wIAAAAAAAIAAADs/wMAAAAAAAUAAADs/wQAAAAAAAIAAADs/wUAAAAAAAIAAADs/wYAAAAAAAQAAADs/wcAAAAAAAIAAADs/wgAAAAAAAIAAADs/wkAAAAAAAIAAADs/woAAAAAAAQAAADs/wsAAAAAAAIAAADs/wwAAAAAAAQAAADs/w0AAAAAAAIAAADs/w4AAAAAAAQAAADs/w8AAAAAAAIAAADt//r/AAAAAAEAAADt//v/AAAAAAMAAADt//z/AAAAAAMAAADt//3/AAAAAAMAAADt////AAAAAAIAAADt/wAAAAAAAAUAAADt/wIAAAAAAAUAAADt/wQAAAAAAAIAAADt/wUAAAAAAAIAAADt/wcAAAAAAAIAAADt/wgAAAAAAAIAAADt/woAAAAAAAIAAADt/wsAAAAAAAIAAADt/wwAAAAAAAIAAADt/w0AAAAAAAIAAADt/w4AAAAAAAIAAADt/w8AAAAAAAIAAAD+//7/AAAAAAEAAAA=")
+tile_set = SubResource("TileSet_kfc4i")
+
+[node name="Path" type="TileMapLayer" parent="Grass"]
+position = Vector2(0, -1)
+tile_map_data = PackedByteArray("AAAAAAMAAQAAAAEAAAAAAAQAAQAAAAEAAAAAAAIAAQAAAAMAAAD9/wYAAAAAAAAAAAD9/wcAAAAAAAEAAAD9/wgAAAAAAAEAAAD9/wkAAAAAAAEAAAD9/woAAAAAAAEAAAD9/wsAAAAAAAEAAAD9/wwAAAAAAAEAAAD9/w0AAAAAAAEAAAD9/w4AAAAAAAEAAAD9/w8AAAAAAAEAAADs/wYAAQAAAAAAAADt/wYAAQAAAAAAAADu/wYAAQAAAAAAAADv/wYAAQAAAAAAAAD5/wYAAQAAAAAAAAD6/wYAAQAAAAAAAAD7/wYAAQAAAAAAAAD8/wYAAQAAAAAAAAD3/wYAAQAAAAAAAAD2/wYAAQAAAAAAAAD1/wYAAQAAAAAAAAD0/wYAAQAAAAAAAADz/wYAAQAAAAAAAADy/wYAAQAAAAAAAADx/wYAAQAAAAAAAADw/wYAAQAAAAAAAAAAAAYAAQAAAAIAAAD4/wYAAQAAAAAAAAD+/wYAAQAAAAAAAAD//wYAAQAAAAAAAAAAAAUAAQAAAAEAAAAAAAAAAAAAAAAAAAD//wAAAAAAAAAAAAA=")
+tile_set = SubResource("TileSet_86ygl")
+
+[node name="Scene 4_well" parent="." instance=ExtResource("4_vk7sl")]
+position = Vector2(9, -5)
+
+[node name="Lake" type="TileMapLayer" parent="."]
+tile_map_data = PackedByteArray("AAAAAAgABAAAAAIAAAABAAgABAAAAAIAAAACAAgABgABAAUAAAABAAkABAABAAQAAAACAAkABAABAAEAAAADAAgABAABAAUAAAADAAcABAAAAAMAAAADAAYABAAAAAIAAAAEAAYABAAAAAIAAAAFAAYABAAAAAIAAAAGAAYABAABAAcAAAAGAAcABAABAAAAAAAGAAgABAABAAYAAAAAAAoABAAAAAcAAAABAAoABAAAAAcAAAACAAoABAAAAAcAAAAAAAkABAAAAAQAAAAFAAcABAABAAMAAAAEAAcABAAAAAQAAAAFAAgABAAAAAcAAAAEAAgABAAAAAcAAAADAAoABAABAAYAAAADAAkABAABAAAAAAD//wgABgAAAAEAAAD//wkABgAAAAAAAAD//woABgAAAAYAAAACAAYABAAAAAEAAAACAAcABAAAAAAAAAA=")
+tile_set = SubResource("TileSet_qnbxx")
+
+[node name="Mushroom1_scene 4" parent="." instance=ExtResource("7_kfc4i")]
+position = Vector2(-82, 132)
+
+[node name="Mushroom 3_Scene 4" parent="." instance=ExtResource("8_3trav")]
+position = Vector2(40, 69)
+
+[node name="Mushroom 2_Scene 4" parent="." instance=ExtResource("9_c5mja")]
+position = Vector2(-94, 61)
+
+[node name="Trees" type="StaticBody2D" parent="."]
+
+[node name="Tree_Scene 1159" parent="Trees" instance=ExtResource("10_3trav")]
+position = Vector2(-313, 105)
+
+[node name="Tree_Scene 4" parent="Trees" instance=ExtResource("10_3trav")]
+position = Vector2(-313, 105)
+
+[node name="Tree_Scene 1152" parent="Trees" instance=ExtResource("10_3trav")]
+position = Vector2(-314, -96)
+
+[node name="Tree_Scene 1232" parent="Trees" instance=ExtResource("10_3trav")]
+position = Vector2(-301, -104)
+
+[node name="Tree_Scene 1233" parent="Trees" instance=ExtResource("10_3trav")]
+position = Vector2(-287, -104)
+
+[node name="Tree_Scene 1216" parent="Trees" instance=ExtResource("10_3trav")]
+position = Vector2(-279, -100)
+
+[node name="Tree_Scene 1217" parent="Trees" instance=ExtResource("10_3trav")]
+position = Vector2(-254, -103)
+
+[node name="Tree_Scene 1218" parent="Trees" instance=ExtResource("10_3trav")]
+position = Vector2(-236, -102)
+
+[node name="Tree_Scene 1219" parent="Trees" instance=ExtResource("10_3trav")]
+position = Vector2(-212, -103)
+
+[node name="Tree_Scene 1220" parent="Trees" instance=ExtResource("10_3trav")]
+position = Vector2(-195, -107)
+
+[node name="Tree_Scene 1221" parent="Trees" instance=ExtResource("10_3trav")]
+position = Vector2(-171, -104)
+
+[node name="Tree_Scene 1222" parent="Trees" instance=ExtResource("10_3trav")]
+position = Vector2(-151, -107)
+
+[node name="Tree_Scene 1223" parent="Trees" instance=ExtResource("10_3trav")]
+position = Vector2(-133, -103)
+
+[node name="Tree_Scene 1224" parent="Trees" instance=ExtResource("10_3trav")]
+position = Vector2(-113, -107)
+
+[node name="Tree_Scene 1225" parent="Trees" instance=ExtResource("10_3trav")]
+position = Vector2(-93, -108)
+
+[node name="Tree_Scene 1226" parent="Trees" instance=ExtResource("10_3trav")]
+position = Vector2(-72, -107)
+
+[node name="Tree_Scene 1227" parent="Trees" instance=ExtResource("10_3trav")]
+position = Vector2(-51, -107)
+
+[node name="Tree_Scene 1228" parent="Trees" instance=ExtResource("10_3trav")]
+position = Vector2(-27, -107)
+
+[node name="Tree_Scene 1229" parent="Trees" instance=ExtResource("10_3trav")]
+position = Vector2(-185, -103)
+
+[node name="Tree_Scene 1203" parent="Trees" instance=ExtResource("10_3trav")]
+position = Vector2(-291, -96)
+
+[node name="Tree_Scene 1230" parent="Trees" instance=ExtResource("10_3trav")]
+position = Vector2(-304, -90)
+
+[node name="Tree_Scene 1231" parent="Trees" instance=ExtResource("10_3trav")]
+position = Vector2(-319, -84)
+
+[node name="Tree_Scene 1204" parent="Trees" instance=ExtResource("10_3trav")]
+position = Vector2(-268, -96)
+
+[node name="Tree_Scene 1205" parent="Trees" instance=ExtResource("10_3trav")]
+position = Vector2(-245, -98)
+
+[node name="Tree_Scene 1234" parent="Trees" instance=ExtResource("10_3trav")]
+position = Vector2(-259, -89)
+
+[node name="Tree_Scene 1235" parent="Trees" instance=ExtResource("10_3trav")]
+position = Vector2(-279, -88)
+
+[node name="Tree_Scene 1236" parent="Trees" instance=ExtResource("10_3trav")]
+position = Vector2(-291, -84)
+
+[node name="Tree_Scene 1237" parent="Trees" instance=ExtResource("10_3trav")]
+position = Vector2(-269, -83)
+
+[node name="Tree_Scene 1238" parent="Trees" instance=ExtResource("10_3trav")]
+position = Vector2(-304, -80)
+
+[node name="Tree_Scene 1206" parent="Trees" instance=ExtResource("10_3trav")]
+position = Vector2(-223, -97)
+
+[node name="Tree_Scene 1207" parent="Trees" instance=ExtResource("10_3trav")]
+position = Vector2(-202, -99)
+
+[node name="Tree_Scene 1208" parent="Trees" instance=ExtResource("10_3trav")]
+position = Vector2(-178, -99)
+
+[node name="Tree_Scene 1209" parent="Trees" instance=ExtResource("10_3trav")]
+position = Vector2(-161, -103)
+
+[node name="Tree_Scene 1210" parent="Trees" instance=ExtResource("10_3trav")]
+position = Vector2(-140, -104)
+
+[node name="Tree_Scene 1211" parent="Trees" instance=ExtResource("10_3trav")]
+position = Vector2(-120, -104)
+
+[node name="Tree_Scene 1212" parent="Trees" instance=ExtResource("10_3trav")]
+position = Vector2(-102, -106)
+
+[node name="Tree_Scene 1213" parent="Trees" instance=ExtResource("10_3trav")]
+position = Vector2(-83, -105)
+
+[node name="Tree_Scene 1214" parent="Trees" instance=ExtResource("10_3trav")]
+position = Vector2(-61, -105)
+
+[node name="Tree_Scene 1215" parent="Trees" instance=ExtResource("10_3trav")]
+position = Vector2(-38, -105)
+
+[node name="Tree_Scene 1239" parent="Trees" instance=ExtResource("10_3trav")]
+position = Vector2(-31, -98)
+
+[node name="Tree_Scene 1240" parent="Trees" instance=ExtResource("10_3trav")]
+position = Vector2(-49, -96)
+
+[node name="Tree_Scene 1241" parent="Trees" instance=ExtResource("10_3trav")]
+position = Vector2(-74, -97)
+
+[node name="Tree_Scene 1242" parent="Trees" instance=ExtResource("10_3trav")]
+position = Vector2(-93, -97)
+
+[node name="Tree_Scene 1243" parent="Trees" instance=ExtResource("10_3trav")]
+position = Vector2(-111, -98)
+
+[node name="Tree_Scene 1244" parent="Trees" instance=ExtResource("10_3trav")]
+position = Vector2(-130, -95)
+
+[node name="Tree_Scene 1245" parent="Trees" instance=ExtResource("10_3trav")]
+position = Vector2(-151, -95)
+
+[node name="Tree_Scene 1246" parent="Trees" instance=ExtResource("10_3trav")]
+position = Vector2(-167, -92)
+
+[node name="Tree_Scene 1247" parent="Trees" instance=ExtResource("10_3trav")]
+position = Vector2(-188, -94)
+
+[node name="Tree_Scene 1248" parent="Trees" instance=ExtResource("10_3trav")]
+position = Vector2(-211, -89)
+
+[node name="Tree_Scene 1249" parent="Trees" instance=ExtResource("10_3trav")]
+position = Vector2(-232, -91)
+
+[node name="Tree_Scene 1250" parent="Trees" instance=ExtResource("10_3trav")]
+position = Vector2(-245, -86)
+
+[node name="Tree_Scene 1251" parent="Trees" instance=ExtResource("10_3trav")]
+position = Vector2(-221, -82)
+
+[node name="Tree_Scene 1252" parent="Trees" instance=ExtResource("10_3trav")]
+position = Vector2(-200, -86)
+
+[node name="Tree_Scene 1253" parent="Trees" instance=ExtResource("10_3trav")]
+position = Vector2(-177, -87)
+
+[node name="Tree_Scene 1254" parent="Trees" instance=ExtResource("10_3trav")]
+position = Vector2(-159, -86)
+
+[node name="Tree_Scene 1255" parent="Trees" instance=ExtResource("10_3trav")]
+position = Vector2(-142, -88)
+
+[node name="Tree_Scene 1256" parent="Trees" instance=ExtResource("10_3trav")]
+position = Vector2(-123, -90)
+
+[node name="Tree_Scene 1257" parent="Trees" instance=ExtResource("10_3trav")]
+position = Vector2(-104, -89)
+
+[node name="Tree_Scene 1258" parent="Trees" instance=ExtResource("10_3trav")]
+position = Vector2(-85, -89)
+
+[node name="Tree_Scene 1259" parent="Trees" instance=ExtResource("10_3trav")]
+position = Vector2(-61, -91)
+
+[node name="Tree_Scene 1265" parent="Trees" instance=ExtResource("10_3trav")]
+position = Vector2(-74, -84)
+
+[node name="Tree_Scene 1266" parent="Trees" instance=ExtResource("10_3trav")]
+position = Vector2(-94, -79)
+
+[node name="Tree_Scene 1267" parent="Trees" instance=ExtResource("10_3trav")]
+position = Vector2(-114, -83)
+
+[node name="Tree_Scene 1268" parent="Trees" instance=ExtResource("10_3trav")]
+position = Vector2(-131, -79)
+
+[node name="Tree_Scene 1332" parent="Trees" instance=ExtResource("10_3trav")]
+position = Vector2(-126, -75)
+
+[node name="Tree_Scene 1333" parent="Trees" instance=ExtResource("10_3trav")]
+position = Vector2(-116, -69)
+
+[node name="Tree_Scene 1269" parent="Trees" instance=ExtResource("10_3trav")]
+position = Vector2(-150, -76)
+
+[node name="Tree_Scene 1270" parent="Trees" instance=ExtResource("10_3trav")]
+position = Vector2(-169, -78)
+
+[node name="Tree_Scene 1271" parent="Trees" instance=ExtResource("10_3trav")]
+position = Vector2(-188, -78)
+
+[node name="Tree_Scene 1272" parent="Trees" instance=ExtResource("10_3trav")]
+position = Vector2(-212, -76)
+
+[node name="Tree_Scene 1273" parent="Trees" instance=ExtResource("10_3trav")]
+position = Vector2(-232, -78)
+
+[node name="Tree_Scene 1274" parent="Trees" instance=ExtResource("10_3trav")]
+position = Vector2(-255, -76)
+
+[node name="Tree_Scene 1275" parent="Trees" instance=ExtResource("10_3trav")]
+position = Vector2(-280, -75)
+
+[node name="Tree_Scene 1283" parent="Trees" instance=ExtResource("10_3trav")]
+position = Vector2(-279, -66)
+
+[node name="Tree_Scene 1276" parent="Trees" instance=ExtResource("10_3trav")]
+position = Vector2(-290, -72)
+
+[node name="Tree_Scene 1277" parent="Trees" instance=ExtResource("10_3trav")]
+position = Vector2(-301, -68)
+
+[node name="Tree_Scene 1278" parent="Trees" instance=ExtResource("10_3trav")]
+position = Vector2(-316, -68)
+
+[node name="Tree_Scene 1449" parent="Trees" instance=ExtResource("10_3trav")]
+position = Vector2(-316, -68)
+
+[node name="Tree_Scene 1279" parent="Trees" instance=ExtResource("10_3trav")]
+position = Vector2(-314, -60)
+
+[node name="Tree_Scene 1280" parent="Trees" instance=ExtResource("10_3trav")]
+position = Vector2(-294, -60)
+
+[node name="Tree_Scene 1321" parent="Trees" instance=ExtResource("10_3trav")]
+position = Vector2(-306, -53)
+
+[node name="Tree_Scene 1450" parent="Trees" instance=ExtResource("10_3trav")]
+position = Vector2(-326, -53)
+
+[node name="Tree_Scene 1447" parent="Trees" instance=ExtResource("10_3trav")]
+position = Vector2(-306, -41)
+
+[node name="Tree_Scene 1281" parent="Trees" instance=ExtResource("10_3trav")]
+position = Vector2(-283, -58)
+
+[node name="Tree_Scene 1319" parent="Trees" instance=ExtResource("10_3trav")]
+position = Vector2(-288, -48)
+
+[node name="Tree_Scene 1320" parent="Trees" instance=ExtResource("10_3trav")]
+position = Vector2(-296, -39)
+
+[node name="Tree_Scene 1282" parent="Trees" instance=ExtResource("10_3trav")]
+position = Vector2(-267, -68)
+
+[node name="Tree_Scene 1284" parent="Trees" instance=ExtResource("10_3trav")]
+position = Vector2(-242, -72)
+
+[node name="Tree_Scene 1285" parent="Trees" instance=ExtResource("10_3trav")]
+position = Vector2(-225, -70)
+
+[node name="Tree_Scene 1286" parent="Trees" instance=ExtResource("10_3trav")]
+position = Vector2(-200, -69)
+
+[node name="Tree_Scene 1287" parent="Trees" instance=ExtResource("10_3trav")]
+position = Vector2(-181, -69)
+
+[node name="Tree_Scene 1288" parent="Trees" instance=ExtResource("10_3trav")]
+position = Vector2(-161, -68)
+
+[node name="Tree_Scene 1289" parent="Trees" instance=ExtResource("10_3trav")]
+position = Vector2(-141, -70)
+
+[node name="Tree_Scene 1290" parent="Trees" instance=ExtResource("10_3trav")]
+position = Vector2(-142, -60)
+
+[node name="Tree_Scene 1307" parent="Trees" instance=ExtResource("10_3trav")]
+position = Vector2(-130, -60)
+
+[node name="Tree_Scene 1326" parent="Trees" instance=ExtResource("10_3trav")]
+position = Vector2(-118, -58)
+
+[node name="Tree_Scene 1468" parent="Trees" instance=ExtResource("10_3trav")]
+position = Vector2(-102, -71)
+
+[node name="Tree_Scene 1470" parent="Trees" instance=ExtResource("10_3trav")]
+position = Vector2(-93, -69)
+
+[node name="Tree_Scene 1469" parent="Trees" instance=ExtResource("10_3trav")]
+position = Vector2(-106, -60)
+
+[node name="Tree_Scene 1291" parent="Trees" instance=ExtResource("10_3trav")]
+position = Vector2(-113, -52)
+
+[node name="Tree_Scene 1292" parent="Trees" instance=ExtResource("10_3trav")]
+position = Vector2(-83, -70)
+
+[node name="Tree_Scene 1293" parent="Trees" instance=ExtResource("10_3trav")]
+position = Vector2(-98, -58)
+
+[node name="Tree_Scene 1260" parent="Trees" instance=ExtResource("10_3trav")]
+position = Vector2(-41, -91)
+
+[node name="Tree_Scene 1261" parent="Trees" instance=ExtResource("10_3trav")]
+position = Vector2(-33, -87)
+
+[node name="Tree_Scene 1172" parent="Trees" instance=ExtResource("10_3trav")]
+position = Vector2(-319, -44)
+
+[node name="Tree_Scene 1183" parent="Trees" instance=ExtResource("10_3trav")]
+position = Vector2(-328, -35)
+
+[node name="Tree_Scene 1184" parent="Trees" instance=ExtResource("10_3trav")]
+position = Vector2(-265, -62)
+
+[node name="Tree_Scene 1185" parent="Trees" instance=ExtResource("10_3trav")]
+position = Vector2(-273, -52)
+
+[node name="Tree_Scene 1186" parent="Trees" instance=ExtResource("10_3trav")]
+position = Vector2(-278, -40)
+
+[node name="Tree_Scene 1187" parent="Trees" instance=ExtResource("10_3trav")]
+position = Vector2(-252, -59)
+
+[node name="Tree_Scene 1190" parent="Trees" instance=ExtResource("10_3trav")]
+position = Vector2(-260, -48)
+
+[node name="Tree_Scene 1191" parent="Trees" instance=ExtResource("10_3trav")]
+position = Vector2(-236, -61)
+
+[node name="Tree_Scene 1192" parent="Trees" instance=ExtResource("10_3trav")]
+position = Vector2(-217, -62)
+
+[node name="Tree_Scene 1201" parent="Trees" instance=ExtResource("10_3trav")]
+position = Vector2(-207, -60)
+
+[node name="Tree_Scene 1202" parent="Trees" instance=ExtResource("10_3trav")]
+position = Vector2(-226, -52)
+
+[node name="Tree_Scene 1322" parent="Trees" instance=ExtResource("10_3trav")]
+position = Vector2(-242, -48)
+
+[node name="Tree_Scene 1323" parent="Trees" instance=ExtResource("10_3trav")]
+position = Vector2(-249, -43)
+
+[node name="Tree_Scene 1324" parent="Trees" instance=ExtResource("10_3trav")]
+position = Vector2(-214, -47)
+
+[node name="Tree_Scene 1437" parent="Trees" instance=ExtResource("10_3trav")]
+position = Vector2(-216, -38)
+
+[node name="Tree_Scene 1438" parent="Trees" instance=ExtResource("10_3trav")]
+position = Vector2(-226, -39)
+
+[node name="Tree_Scene 1439" parent="Trees" instance=ExtResource("10_3trav")]
+position = Vector2(-234, -40)
+
+[node name="Tree_Scene 1440" parent="Trees" instance=ExtResource("10_3trav")]
+position = Vector2(-243, -32)
+
+[node name="Tree_Scene 1441" parent="Trees" instance=ExtResource("10_3trav")]
+position = Vector2(-259, -33)
+
+[node name="Tree_Scene 1443" parent="Trees" instance=ExtResource("10_3trav")]
+position = Vector2(-271, -31)
+
+[node name="Tree_Scene 1444" parent="Trees" instance=ExtResource("10_3trav")]
+position = Vector2(-287, -32)
+
+[node name="Tree_Scene 1445" parent="Trees" instance=ExtResource("10_3trav")]
+position = Vector2(-302, -31)
+
+[node name="Tree_Scene 1446" parent="Trees" instance=ExtResource("10_3trav")]
+position = Vector2(-314, -30)
+
+[node name="Tree_Scene 1442" parent="Trees" instance=ExtResource("10_3trav")]
+position = Vector2(-257, -25)
+
+[node name="Tree_Scene 1327" parent="Trees" instance=ExtResource("10_3trav")]
+position = Vector2(-191, -62)
+
+[node name="Tree_Scene 1328" parent="Trees" instance=ExtResource("10_3trav")]
+position = Vector2(-172, -64)
+
+[node name="Tree_Scene 1329" parent="Trees" instance=ExtResource("10_3trav")]
+position = Vector2(-155, -64)
+
+[node name="Tree_Scene 1331" parent="Trees" instance=ExtResource("10_3trav")]
+position = Vector2(-163, -54)
+
+[node name="Tree_Scene 1460" parent="Trees" instance=ExtResource("10_3trav")]
+position = Vector2(-163, -54)
+
+[node name="Tree_Scene 1464" parent="Trees" instance=ExtResource("10_3trav")]
+position = Vector2(-151, -52)
+
+[node name="Tree_Scene 1465" parent="Trees" instance=ExtResource("10_3trav")]
+position = Vector2(-140, -49)
+
+[node name="Tree_Scene 1466" parent="Trees" instance=ExtResource("10_3trav")]
+position = Vector2(-129, -48)
+
+[node name="Tree_Scene 1467" parent="Trees" instance=ExtResource("10_3trav")]
+position = Vector2(-117, -45)
+
+[node name="Tree_Scene 1334" parent="Trees" instance=ExtResource("10_3trav")]
+position = Vector2(-182, -55)
+
+[node name="Tree_Scene 1335" parent="Trees" instance=ExtResource("10_3trav")]
+position = Vector2(-199, -50)
+
+[node name="Tree_Scene 1336" parent="Trees" instance=ExtResource("10_3trav")]
+position = Vector2(-174, -49)
+
+[node name="Tree_Scene 1337" parent="Trees" instance=ExtResource("10_3trav")]
+position = Vector2(-189, -44)
+
+[node name="Tree_Scene 1338" parent="Trees" instance=ExtResource("10_3trav")]
+position = Vector2(-202, -40)
+
+[node name="Tree_Scene 1339" parent="Trees" instance=ExtResource("10_3trav")]
+position = Vector2(-179, -41)
+
+[node name="Tree_Scene 1340" parent="Trees" instance=ExtResource("10_3trav")]
+position = Vector2(-191, -31)
+
+[node name="Tree_Scene 1363" parent="Trees" instance=ExtResource("10_3trav")]
+position = Vector2(-196, -22)
+
+[node name="Tree_Scene 1427" parent="Trees" instance=ExtResource("10_3trav")]
+position = Vector2(-213, -26)
+
+[node name="Tree_Scene 1429" parent="Trees" instance=ExtResource("10_3trav")]
+position = Vector2(-204, -23)
+
+[node name="Tree_Scene 1428" parent="Trees" instance=ExtResource("10_3trav")]
+position = Vector2(-222, -27)
+
+[node name="Tree_Scene 1430" parent="Trees" instance=ExtResource("10_3trav")]
+position = Vector2(-233, -25)
+
+[node name="Tree_Scene 1431" parent="Trees" instance=ExtResource("10_3trav")]
+position = Vector2(-246, -24)
+
+[node name="Tree_Scene 1432" parent="Trees" instance=ExtResource("10_3trav")]
+position = Vector2(-265, -24)
+
+[node name="Tree_Scene 1433" parent="Trees" instance=ExtResource("10_3trav")]
+position = Vector2(-281, -23)
+
+[node name="Tree_Scene 1434" parent="Trees" instance=ExtResource("10_3trav")]
+position = Vector2(-293, -23)
+
+[node name="Tree_Scene 1435" parent="Trees" instance=ExtResource("10_3trav")]
+position = Vector2(-305, -23)
+
+[node name="Tree_Scene 1436" parent="Trees" instance=ExtResource("10_3trav")]
+position = Vector2(-320, -23)
+
+[node name="Tree_Scene 1417" parent="Trees" instance=ExtResource("10_3trav")]
+position = Vector2(-211, -19)
+
+[node name="Tree_Scene 1418" parent="Trees" instance=ExtResource("10_3trav")]
+position = Vector2(-224, -18)
+
+[node name="Tree_Scene 1419" parent="Trees" instance=ExtResource("10_3trav")]
+position = Vector2(-235, -18)
+
+[node name="Tree_Scene 1420" parent="Trees" instance=ExtResource("10_3trav")]
+position = Vector2(-246, -16)
+
+[node name="Tree_Scene 1421" parent="Trees" instance=ExtResource("10_3trav")]
+position = Vector2(-256, -11)
+
+[node name="Tree_Scene 1422" parent="Trees" instance=ExtResource("10_3trav")]
+position = Vector2(-269, -13)
+
+[node name="Tree_Scene 1423" parent="Trees" instance=ExtResource("10_3trav")]
+position = Vector2(-282, -12)
+
+[node name="Tree_Scene 1424" parent="Trees" instance=ExtResource("10_3trav")]
+position = Vector2(-297, -12)
+
+[node name="Tree_Scene 1425" parent="Trees" instance=ExtResource("10_3trav")]
+position = Vector2(-309, -12)
+
+[node name="Tree_Scene 1426" parent="Trees" instance=ExtResource("10_3trav")]
+position = Vector2(-322, -8)
+
+[node name="Tree_Scene 1364" parent="Trees" instance=ExtResource("10_3trav")]
+position = Vector2(-200, -14)
+
+[node name="Tree_Scene 1409" parent="Trees" instance=ExtResource("10_3trav")]
+position = Vector2(-215, -12)
+
+[node name="Tree_Scene 1410" parent="Trees" instance=ExtResource("10_3trav")]
+position = Vector2(-229, -7)
+
+[node name="Tree_Scene 1411" parent="Trees" instance=ExtResource("10_3trav")]
+position = Vector2(-238, -5)
+
+[node name="Tree_Scene 1412" parent="Trees" instance=ExtResource("10_3trav")]
+position = Vector2(-246, -4)
+
+[node name="Tree_Scene 1413" parent="Trees" instance=ExtResource("10_3trav")]
+position = Vector2(-270, -4)
+
+[node name="Tree_Scene 1414" parent="Trees" instance=ExtResource("10_3trav")]
+position = Vector2(-287, -5)
+
+[node name="Tree_Scene 1415" parent="Trees" instance=ExtResource("10_3trav")]
+position = Vector2(-301, -3)
+
+[node name="Tree_Scene 1416" parent="Trees" instance=ExtResource("10_3trav")]
+position = Vector2(-311, 0)
+
+[node name="Tree_Scene 1378" parent="Trees" instance=ExtResource("10_3trav")]
+position = Vector2(-211, -5)
+
+[node name="Tree_Scene 1400" parent="Trees" instance=ExtResource("10_3trav")]
+position = Vector2(-226, 1)
+
+[node name="Tree_Scene 1401" parent="Trees" instance=ExtResource("10_3trav")]
+position = Vector2(-243, 5)
+
+[node name="Tree_Scene 1402" parent="Trees" instance=ExtResource("10_3trav")]
+position = Vector2(-263, 2)
+
+[node name="Tree_Scene 1403" parent="Trees" instance=ExtResource("10_3trav")]
+position = Vector2(-279, 6)
+
+[node name="Tree_Scene 1406" parent="Trees" instance=ExtResource("10_3trav")]
+position = Vector2(-294, 8)
+
+[node name="Tree_Scene 1407" parent="Trees" instance=ExtResource("10_3trav")]
+position = Vector2(-306, 12)
+
+[node name="Tree_Scene 1408" parent="Trees" instance=ExtResource("10_3trav")]
+position = Vector2(-320, 6)
+
+[node name="Tree_Scene 1365" parent="Trees" instance=ExtResource("10_3trav")]
+position = Vector2(-197, -6)
+
+[node name="Tree_Scene 1341" parent="Trees" instance=ExtResource("10_3trav")]
+position = Vector2(-163, -43)
+
+[node name="Tree_Scene 1457" parent="Trees" instance=ExtResource("10_3trav")]
+position = Vector2(-152, -39)
+
+[node name="Tree_Scene 1458" parent="Trees" instance=ExtResource("10_3trav")]
+position = Vector2(-141, -37)
+
+[node name="Tree_Scene 1459" parent="Trees" instance=ExtResource("10_3trav")]
+position = Vector2(-131, -36)
+
+[node name="Tree_Scene 1462" parent="Trees" instance=ExtResource("10_3trav")]
+position = Vector2(-121, -34)
+
+[node name="Tree_Scene 1463" parent="Trees" instance=ExtResource("10_3trav")]
+position = Vector2(-121, -25)
+
+[node name="Tree_Scene 1342" parent="Trees" instance=ExtResource("10_3trav")]
+position = Vector2(-168, -33)
+
+[node name="Tree_Scene 1343" parent="Trees" instance=ExtResource("10_3trav")]
+position = Vector2(-158, -28)
+
+[node name="Tree_Scene 1452" parent="Trees" instance=ExtResource("10_3trav")]
+position = Vector2(-146, -28)
+
+[node name="Tree_Scene 1453" parent="Trees" instance=ExtResource("10_3trav")]
+position = Vector2(-131, -28)
+
+[node name="Tree_Scene 1344" parent="Trees" instance=ExtResource("10_3trav")]
+position = Vector2(-181, -24)
+
+[node name="Tree_Scene 1362" parent="Trees" instance=ExtResource("10_3trav")]
+position = Vector2(-186, -13)
+
+[node name="Tree_Scene 1366" parent="Trees" instance=ExtResource("10_3trav")]
+position = Vector2(-198, 0)
+
+[node name="Tree_Scene 1379" parent="Trees" instance=ExtResource("10_3trav")]
+position = Vector2(-215, 7)
+
+[node name="Tree_Scene 1394" parent="Trees" instance=ExtResource("10_3trav")]
+position = Vector2(-232, 9)
+
+[node name="Tree_Scene 1395" parent="Trees" instance=ExtResource("10_3trav")]
+position = Vector2(-254, 11)
+
+[node name="Tree_Scene 1396" parent="Trees" instance=ExtResource("10_3trav")]
+position = Vector2(-271, 13)
+
+[node name="Tree_Scene 1397" parent="Trees" instance=ExtResource("10_3trav")]
+position = Vector2(-286, 19)
+
+[node name="Tree_Scene 1398" parent="Trees" instance=ExtResource("10_3trav")]
+position = Vector2(-301, 20)
+
+[node name="Tree_Scene 1399" parent="Trees" instance=ExtResource("10_3trav")]
+position = Vector2(-317, 19)
+
+[node name="Tree_Scene 1380" parent="Trees" instance=ExtResource("10_3trav")]
+position = Vector2(-225, 15)
+
+[node name="Tree_Scene 1388" parent="Trees" instance=ExtResource("10_3trav")]
+position = Vector2(-242, 18)
+
+[node name="Tree_Scene 1389" parent="Trees" instance=ExtResource("10_3trav")]
+position = Vector2(-263, 20)
+
+[node name="Tree_Scene 1390" parent="Trees" instance=ExtResource("10_3trav")]
+position = Vector2(-276, 24)
+
+[node name="Tree_Scene 1391" parent="Trees" instance=ExtResource("10_3trav")]
+position = Vector2(-293, 30)
+
+[node name="Tree_Scene 1392" parent="Trees" instance=ExtResource("10_3trav")]
+position = Vector2(-309, 27)
+
+[node name="Tree_Scene 1393" parent="Trees" instance=ExtResource("10_3trav")]
+position = Vector2(-323, 26)
+
+[node name="Tree_Scene 1381" parent="Trees" instance=ExtResource("10_3trav")]
+position = Vector2(-234, 26)
+
+[node name="Tree_Scene 1382" parent="Trees" instance=ExtResource("10_3trav")]
+position = Vector2(-252, 28)
+
+[node name="Tree_Scene 1383" parent="Trees" instance=ExtResource("10_3trav")]
+position = Vector2(-269, 31)
+
+[node name="Tree_Scene 1384" parent="Trees" instance=ExtResource("10_3trav")]
+position = Vector2(-284, 35)
+
+[node name="Tree_Scene 1385" parent="Trees" instance=ExtResource("10_3trav")]
+position = Vector2(-304, 38)
+
+[node name="Tree_Scene 1386" parent="Trees" instance=ExtResource("10_3trav")]
+position = Vector2(-323, 37)
+
+[node name="Tree_Scene 1387" parent="Trees" instance=ExtResource("10_3trav")]
+position = Vector2(-314, 42)
+
+[node name="Tree_Scene 1367" parent="Trees" instance=ExtResource("10_3trav")]
+position = Vector2(-204, 15)
+
+[node name="Tree_Scene 1368" parent="Trees" instance=ExtResource("10_3trav")]
+position = Vector2(-213, 23)
+
+[node name="Tree_Scene 1369" parent="Trees" instance=ExtResource("10_3trav")]
+position = Vector2(-220, 30)
+
+[node name="Tree_Scene 1370" parent="Trees" instance=ExtResource("10_3trav")]
+position = Vector2(-242, 36)
+
+[node name="Tree_Scene 1371" parent="Trees" instance=ExtResource("10_3trav")]
+position = Vector2(-257, 40)
+
+[node name="Tree_Scene 1373" parent="Trees" instance=ExtResource("10_3trav")]
+position = Vector2(-267, 45)
+
+[node name="Tree_Scene 1374" parent="Trees" instance=ExtResource("10_3trav")]
+position = Vector2(-280, 45)
+
+[node name="Tree_Scene 1375" parent="Trees" instance=ExtResource("10_3trav")]
+position = Vector2(-292, 48)
+
+[node name="Tree_Scene 1376" parent="Trees" instance=ExtResource("10_3trav")]
+position = Vector2(-307, 49)
+
+[node name="Tree_Scene 1377" parent="Trees" instance=ExtResource("10_3trav")]
+position = Vector2(-319, 49)
+
+[node name="Tree_Scene 1345" parent="Trees" instance=ExtResource("10_3trav")]
+position = Vector2(-165, -21)
+
+[node name="Tree_Scene 1346" parent="Trees" instance=ExtResource("10_3trav")]
+position = Vector2(-175, -16)
+
+[node name="Tree_Scene 1360" parent="Trees" instance=ExtResource("10_3trav")]
+position = Vector2(-177, -4)
+
+[node name="Tree_Scene 1361" parent="Trees" instance=ExtResource("10_3trav")]
+position = Vector2(-186, 6)
+
+[node name="Tree_Scene 1347" parent="Trees" instance=ExtResource("10_3trav")]
+position = Vector2(-155, -13)
+
+[node name="Tree_Scene 1456" parent="Trees" instance=ExtResource("10_3trav")]
+position = Vector2(-139, -20)
+
+[node name="Tree_Scene 1454" parent="Trees" instance=ExtResource("10_3trav")]
+position = Vector2(-145, -10)
+
+[node name="Tree_Scene 1455" parent="Trees" instance=ExtResource("10_3trav")]
+position = Vector2(-130, -16)
+
+[node name="Tree_Scene 1348" parent="Trees" instance=ExtResource("10_3trav")]
+position = Vector2(-164, -8)
+
+[node name="Tree_Scene 1349" parent="Trees" instance=ExtResource("10_3trav")]
+position = Vector2(-155, 0)
+
+[node name="Tree_Scene 1350" parent="Trees" instance=ExtResource("10_3trav")]
+position = Vector2(-166, 6)
+
+[node name="Tree_Scene 1356" parent="Trees" instance=ExtResource("10_3trav")]
+position = Vector2(-175, 9)
+
+[node name="Tree_Scene 1357" parent="Trees" instance=ExtResource("10_3trav")]
+position = Vector2(-182, 19)
+
+[node name="Tree_Scene 1358" parent="Trees" instance=ExtResource("10_3trav")]
+position = Vector2(-195, 22)
+
+[node name="Tree_Scene 1359" parent="Trees" instance=ExtResource("10_3trav")]
+position = Vector2(-186, 25)
+
+[node name="Tree_Scene 1351" parent="Trees" instance=ExtResource("10_3trav")]
+position = Vector2(-140, -1)
+
+[node name="Tree_Scene 1451" parent="Trees" instance=ExtResource("10_3trav")]
+position = Vector2(-150, 9)
+
+[node name="Tree_Scene 1352" parent="Trees" instance=ExtResource("10_3trav")]
+position = Vector2(-158, 16)
+
+[node name="Tree_Scene 1354" parent="Trees" instance=ExtResource("10_3trav")]
+position = Vector2(-169, 22)
+
+[node name="Tree_Scene 1355" parent="Trees" instance=ExtResource("10_3trav")]
+position = Vector2(-163, 26)
+
+[node name="Tree_Scene 1353" parent="Trees" instance=ExtResource("10_3trav")]
+position = Vector2(-150, 24)
+
+[node name="Tree_Scene 1325" parent="Trees" instance=ExtResource("10_3trav")]
+position = Vector2(-324, 62)
+
+[node name="Tree_Scene 1173" parent="Trees" instance=ExtResource("10_3trav")]
+position = Vector2(-312, 64)
+
+[node name="Tree_Scene 1174" parent="Trees" instance=ExtResource("10_3trav")]
+position = Vector2(-301, 59)
+
+[node name="Tree_Scene 1175" parent="Trees" instance=ExtResource("10_3trav")]
+position = Vector2(-286, 57)
+
+[node name="Tree_Scene 1176" parent="Trees" instance=ExtResource("10_3trav")]
+position = Vector2(-273, 54)
+
+[node name="Tree_Scene 1177" parent="Trees" instance=ExtResource("10_3trav")]
+position = Vector2(-254, 47)
+
+[node name="Tree_Scene 1178" parent="Trees" instance=ExtResource("10_3trav")]
+position = Vector2(-231, 38)
+
+[node name="Tree_Scene 1179" parent="Trees" instance=ExtResource("10_3trav")]
+position = Vector2(-221, 37)
+
+[node name="Tree_Scene 1180" parent="Trees" instance=ExtResource("10_3trav")]
+position = Vector2(-203, 31)
+
+[node name="Tree_Scene 1181" parent="Trees" instance=ExtResource("10_3trav")]
+position = Vector2(-185, 36)
+
+[node name="Tree_Scene 1182" parent="Trees" instance=ExtResource("10_3trav")]
+position = Vector2(-174, 33)
+
+[node name="Tree_Scene 1161" parent="Trees" instance=ExtResource("10_3trav")]
+position = Vector2(-319, 71)
+
+[node name="Tree_Scene 1162" parent="Trees" instance=ExtResource("10_3trav")]
+position = Vector2(-275, 63)
+
+[node name="Tree_Scene 1163" parent="Trees" instance=ExtResource("10_3trav")]
+position = Vector2(-260, 54)
+
+[node name="Tree_Scene 1164" parent="Trees" instance=ExtResource("10_3trav")]
+position = Vector2(-243, 53)
+
+[node name="Tree_Scene 1165" parent="Trees" instance=ExtResource("10_3trav")]
+position = Vector2(-225, 47)
+
+[node name="Tree_Scene 1166" parent="Trees" instance=ExtResource("10_3trav")]
+position = Vector2(-208, 44)
+
+[node name="Tree_Scene 1167" parent="Trees" instance=ExtResource("10_3trav")]
+position = Vector2(-195, 42)
+
+[node name="Tree_Scene 1168" parent="Trees" instance=ExtResource("10_3trav")]
+position = Vector2(-178, 44)
+
+[node name="Tree_Scene 1169" parent="Trees" instance=ExtResource("10_3trav")]
+position = Vector2(-166, 38)
+
+[node name="Tree_Scene 1170" parent="Trees" instance=ExtResource("10_3trav")]
+position = Vector2(-291, 64)
+
+[node name="Tree_Scene 1160" parent="Trees" instance=ExtResource("10_3trav")]
+position = Vector2(-296, 70)
+
+[node name="Tree_Scene 5" parent="Trees" instance=ExtResource("10_3trav")]
+position = Vector2(-300, 107)
+
+[node name="Tree_Scene 1133" parent="Trees" instance=ExtResource("10_3trav")]
+position = Vector2(-277, 81)
+
+[node name="Tree_Scene 1134" parent="Trees" instance=ExtResource("10_3trav")]
+position = Vector2(-264, 70)
+
+[node name="Tree_Scene 1155" parent="Trees" instance=ExtResource("10_3trav")]
+position = Vector2(-287, 74)
+
+[node name="Tree_Scene 1153" parent="Trees" instance=ExtResource("10_3trav")]
+position = Vector2(-303, 74)
+
+[node name="Tree_Scene 1154" parent="Trees" instance=ExtResource("10_3trav")]
+position = Vector2(-277, 81)
+
+[node name="Tree_Scene 1135" parent="Trees" instance=ExtResource("10_3trav")]
+position = Vector2(-246, 64)
+
+[node name="Tree_Scene 1136" parent="Trees" instance=ExtResource("10_3trav")]
+position = Vector2(-234, 57)
+
+[node name="Tree_Scene 1156" parent="Trees" instance=ExtResource("10_3trav")]
+position = Vector2(-253, 67)
+
+[node name="Tree_Scene 1148" parent="Trees" instance=ExtResource("10_3trav")]
+position = Vector2(-322, 86)
+
+[node name="Tree_Scene 1149" parent="Trees" instance=ExtResource("10_3trav")]
+position = Vector2(-312, 88)
+
+[node name="Tree_Scene 1150" parent="Trees" instance=ExtResource("10_3trav")]
+position = Vector2(-300, 87)
+
+[node name="Tree_Scene 1151" parent="Trees" instance=ExtResource("10_3trav")]
+position = Vector2(-288, 87)
+
+[node name="Tree_Scene 1145" parent="Trees" instance=ExtResource("10_3trav")]
+position = Vector2(-304, 101)
+
+[node name="Tree_Scene 1137" parent="Trees" instance=ExtResource("10_3trav")]
+position = Vector2(-218, 54)
+
+[node name="Tree_Scene 1157" parent="Trees" instance=ExtResource("10_3trav")]
+position = Vector2(-323, 103)
+
+[node name="Tree_Scene 1146" parent="Trees" instance=ExtResource("10_3trav")]
+position = Vector2(-295, 96)
+
+[node name="Tree_Scene 1147" parent="Trees" instance=ExtResource("10_3trav")]
+position = Vector2(-315, 108)
+
+[node name="Tree_Scene 1144" parent="Trees" instance=ExtResource("10_3trav")]
+position = Vector2(-300, 107)
+
+[node name="Tree_Scene 1138" parent="Trees" instance=ExtResource("10_3trav")]
+position = Vector2(-205, 53)
+
+[node name="Tree_Scene 1139" parent="Trees" instance=ExtResource("10_3trav")]
+position = Vector2(-195, 53)
+
+[node name="Tree_Scene 1140" parent="Trees" instance=ExtResource("10_3trav")]
+position = Vector2(-182, 54)
+
+[node name="Tree_Scene 1141" parent="Trees" instance=ExtResource("10_3trav")]
+position = Vector2(-170, 48)
+
+[node name="Tree_Scene 1122" parent="Trees" instance=ExtResource("10_3trav")]
+position = Vector2(-282, 92)
+
+[node name="Tree_Scene 1123" parent="Trees" instance=ExtResource("10_3trav")]
+position = Vector2(-267, 84)
+
+[node name="Tree_Scene 1124" parent="Trees" instance=ExtResource("10_3trav")]
+position = Vector2(-254, 75)
+
+[node name="Tree_Scene 1125" parent="Trees" instance=ExtResource("10_3trav")]
+position = Vector2(-240, 67)
+
+[node name="Tree_Scene 1127" parent="Trees" instance=ExtResource("10_3trav")]
+position = Vector2(-227, 63)
+
+[node name="Tree_Scene 1128" parent="Trees" instance=ExtResource("10_3trav")]
+position = Vector2(-215, 63)
+
+[node name="Tree_Scene 1129" parent="Trees" instance=ExtResource("10_3trav")]
+position = Vector2(-203, 64)
+
+[node name="Tree_Scene 1130" parent="Trees" instance=ExtResource("10_3trav")]
+position = Vector2(-193, 64)
+
+[node name="Tree_Scene 1131" parent="Trees" instance=ExtResource("10_3trav")]
+position = Vector2(-180, 61)
+
+[node name="Tree_Scene 1132" parent="Trees" instance=ExtResource("10_3trav")]
+position = Vector2(-169, 59)
+
+[node name="Tree_Scene 1126" parent="Trees" instance=ExtResource("10_3trav")]
+position = Vector2(-246, 78)
+
+[node name="Tree_Scene 9" parent="Trees" instance=ExtResource("10_3trav")]
+position = Vector2(-251, 89)
+
+[node name="Tree_Scene 11" parent="Trees" instance=ExtResource("10_3trav")]
+position = Vector2(-238, 82)
+
+[node name="Tree_Scene 13" parent="Trees" instance=ExtResource("10_3trav")]
+position = Vector2(-227, 75)
+
+[node name="Tree_Scene 27" parent="Trees" instance=ExtResource("10_3trav")]
+position = Vector2(-214, 74)
+
+[node name="Tree_Scene 212" parent="Trees" instance=ExtResource("10_3trav")]
+position = Vector2(-202, 74)
+
+[node name="Tree_Scene 218" parent="Trees" instance=ExtResource("10_3trav")]
+position = Vector2(-185, 72)
+
+[node name="Tree_Scene 1118" parent="Trees" instance=ExtResource("10_3trav")]
+position = Vector2(-175, 68)
+
+[node name="Tree_Scene 14" parent="Trees" instance=ExtResource("10_3trav")]
+position = Vector2(-217, 83)
+
+[node name="Tree_Scene 15" parent="Trees" instance=ExtResource("10_3trav")]
+position = Vector2(-206, 82)
+
+[node name="Tree_Scene 213" parent="Trees" instance=ExtResource("10_3trav")]
+position = Vector2(-191, 80)
+
+[node name="Tree_Scene 214" parent="Trees" instance=ExtResource("10_3trav")]
+position = Vector2(-180, 82)
+
+[node name="Tree_Scene 216" parent="Trees" instance=ExtResource("10_3trav")]
+position = Vector2(-156, 37)
+
+[node name="Tree_Scene 1193" parent="Trees" instance=ExtResource("10_3trav")]
+position = Vector2(-75, -37)
+
+[node name="Tree_Scene 1194" parent="Trees" instance=ExtResource("10_3trav")]
+position = Vector2(-63, -41)
+
+[node name="Tree_Scene 1195" parent="Trees" instance=ExtResource("10_3trav")]
+position = Vector2(-52, -44)
+
+[node name="Tree_Scene 1196" parent="Trees" instance=ExtResource("10_3trav")]
+position = Vector2(-38, -44)
+
+[node name="Tree_Scene 1158" parent="Trees" instance=ExtResource("10_3trav")]
+position = Vector2(-327, 110)
+
+[node name="Tree_Scene 12" parent="Trees" instance=ExtResource("10_3trav")]
+position = Vector2(-227, 86)
+
+[node name="Tree_Scene 10" parent="Trees" instance=ExtResource("10_3trav")]
+position = Vector2(-239, 90)
+
+[node name="Tree_Scene 6" parent="Trees" instance=ExtResource("10_3trav")]
+position = Vector2(-282, 106)
+
+[node name="Tree_Scene 1120" parent="Trees" instance=ExtResource("10_3trav")]
+position = Vector2(-269, 97)
+
+[node name="Tree_Scene 1121" parent="Trees" instance=ExtResource("10_3trav")]
+position = Vector2(-259, 99)
+
+[node name="Tree_Scene 7" parent="Trees" instance=ExtResource("10_3trav")]
+position = Vector2(-264, 106)
+
+[node name="Tree_Scene 8" parent="Trees" instance=ExtResource("10_3trav")]
+position = Vector2(-251, 102)
+
+[node name="Tree_Scene 16" parent="Trees" instance=ExtResource("10_3trav")]
+position = Vector2(-253, 110)
+
+[node name="Tree_Scene 17" parent="Trees" instance=ExtResource("10_3trav")]
+position = Vector2(-271, 110)
+
+[node name="Tree_Scene 18" parent="Trees" instance=ExtResource("10_3trav")]
+position = Vector2(-290, 110)
+
+[node name="Tree_Scene 19" parent="Trees" instance=ExtResource("10_3trav")]
+position = Vector2(-306, 114)
+
+[node name="Tree_Scene 20" parent="Trees" instance=ExtResource("10_3trav")]
+position = Vector2(-320, 118)
+
+[node name="Tree_Scene 21" parent="Trees" instance=ExtResource("10_3trav")]
+position = Vector2(-297, 117)
+
+[node name="Tree_Scene 22" parent="Trees" instance=ExtResource("10_3trav")]
+position = Vector2(-280, 117)
+
+[node name="Tree_Scene 23" parent="Trees" instance=ExtResource("10_3trav")]
+position = Vector2(-260, 115)
+
+[node name="Tree_Scene 24" parent="Trees" instance=ExtResource("10_3trav")]
+position = Vector2(-241, 115)
+
+[node name="Tree_Scene 25" parent="Trees" instance=ExtResource("10_3trav")]
+position = Vector2(-220, 113)
+
+[node name="Tree_Scene 26" parent="Trees" instance=ExtResource("10_3trav")]
+position = Vector2(-196, 114)
+
+[node name="Tree_Scene 164" parent="Trees" instance=ExtResource("10_3trav")]
+position = Vector2(-166, 117)
+
+[node name="Tree_Scene 28" parent="Trees" instance=ExtResource("10_3trav")]
+position = Vector2(-307, 123)
+
+[node name="Tree_Scene 29" parent="Trees" instance=ExtResource("10_3trav")]
+position = Vector2(-288, 121)
+
+[node name="Tree_Scene 30" parent="Trees" instance=ExtResource("10_3trav")]
+position = Vector2(-271, 124)
+
+[node name="Tree_Scene 31" parent="Trees" instance=ExtResource("10_3trav")]
+position = Vector2(-252, 123)
+
+[node name="Tree_Scene 32" parent="Trees" instance=ExtResource("10_3trav")]
+position = Vector2(-228, 122)
+
+[node name="Tree_Scene 33" parent="Trees" instance=ExtResource("10_3trav")]
+position = Vector2(-209, 120)
+
+[node name="Tree_Scene 34" parent="Trees" instance=ExtResource("10_3trav")]
+position = Vector2(-183, 120)
+
+[node name="Tree_Scene 35" parent="Trees" instance=ExtResource("10_3trav")]
+position = Vector2(-175, 123)
+
+[node name="Tree_Scene 163" parent="Trees" instance=ExtResource("10_3trav")]
+position = Vector2(-165, 128)
+
+[node name="Tree_Scene 36" parent="Trees" instance=ExtResource("10_3trav")]
+position = Vector2(-164, 137)
+
+[node name="Tree_Scene 37" parent="Trees" instance=ExtResource("10_3trav")]
+position = Vector2(-194, 124)
+
+[node name="Tree_Scene 38" parent="Trees" instance=ExtResource("10_3trav")]
+position = Vector2(-182, 128)
+
+[node name="Tree_Scene 39" parent="Trees" instance=ExtResource("10_3trav")]
+position = Vector2(-202, 130)
+
+[node name="Tree_Scene 40" parent="Trees" instance=ExtResource("10_3trav")]
+position = Vector2(-240, 128)
+
+[node name="Tree_Scene 42" parent="Trees" instance=ExtResource("10_3trav")]
+position = Vector2(-262, 129)
+
+[node name="Tree_Scene 43" parent="Trees" instance=ExtResource("10_3trav")]
+position = Vector2(-280, 129)
+
+[node name="Tree_Scene 44" parent="Trees" instance=ExtResource("10_3trav")]
+position = Vector2(-297, 132)
+
+[node name="Tree_Scene 1143" parent="Trees" instance=ExtResource("10_3trav")]
+position = Vector2(-129, -3)
+
+[node name="Tree_Scene 1448" parent="Trees" instance=ExtResource("10_3trav")]
+position = Vector2(-132, 6)
+
+[node name="Tree_Scene 1171" parent="Trees" instance=ExtResource("10_3trav")]
+position = Vector2(-143, 19)
+
+[node name="Tree_Scene 45" parent="Trees" instance=ExtResource("10_3trav")]
+position = Vector2(-316, 130)
+
+[node name="Tree_Scene 46" parent="Trees" instance=ExtResource("10_3trav")]
+position = Vector2(-324, 131)
+
+[node name="Tree_Scene 47" parent="Trees" instance=ExtResource("10_3trav")]
+position = Vector2(-307, 137)
+
+[node name="Tree_Scene 48" parent="Trees" instance=ExtResource("10_3trav")]
+position = Vector2(-290, 141)
+
+[node name="Tree_Scene 49" parent="Trees" instance=ExtResource("10_3trav")]
+position = Vector2(-270, 138)
+
+[node name="Tree_Scene 50" parent="Trees" instance=ExtResource("10_3trav")]
+position = Vector2(-252, 136)
+
+[node name="Tree_Scene 51" parent="Trees" instance=ExtResource("10_3trav")]
+position = Vector2(-218, 126)
+
+[node name="Tree_Scene 41" parent="Trees" instance=ExtResource("10_3trav")]
+position = Vector2(-229, 136)
+
+[node name="Tree_Scene 52" parent="Trees" instance=ExtResource("10_3trav")]
+position = Vector2(-211, 135)
+
+[node name="Tree_Scene 53" parent="Trees" instance=ExtResource("10_3trav")]
+position = Vector2(-191, 133)
+
+[node name="Tree_Scene 54" parent="Trees" instance=ExtResource("10_3trav")]
+position = Vector2(-173, 136)
+
+[node name="Tree_Scene 346" parent="Trees" instance=ExtResource("10_3trav")]
+position = Vector2(-164, 137)
+
+[node name="Tree_Scene 55" parent="Trees" instance=ExtResource("10_3trav")]
+position = Vector2(-166, 144)
+
+[node name="Tree_Scene 56" parent="Trees" instance=ExtResource("10_3trav")]
+position = Vector2(-182, 141)
+
+[node name="Tree_Scene 57" parent="Trees" instance=ExtResource("10_3trav")]
+position = Vector2(-201, 142)
+
+[node name="Tree_Scene 58" parent="Trees" instance=ExtResource("10_3trav")]
+position = Vector2(-219, 141)
+
+[node name="Tree_Scene 59" parent="Trees" instance=ExtResource("10_3trav")]
+position = Vector2(-239, 140)
+
+[node name="Tree_Scene 60" parent="Trees" instance=ExtResource("10_3trav")]
+position = Vector2(-259, 141)
+
+[node name="Tree_Scene 61" parent="Trees" instance=ExtResource("10_3trav")]
+position = Vector2(-279, 145)
+
+[node name="Tree_Scene 62" parent="Trees" instance=ExtResource("10_3trav")]
+position = Vector2(-299, 146)
+
+[node name="Tree_Scene 63" parent="Trees" instance=ExtResource("10_3trav")]
+position = Vector2(-317, 143)
+
+[node name="Tree_Scene 64" parent="Trees" instance=ExtResource("10_3trav")]
+position = Vector2(-328, 149)
+
+[node name="Tree_Scene 65" parent="Trees" instance=ExtResource("10_3trav")]
+position = Vector2(-308, 152)
+
+[node name="Tree_Scene 66" parent="Trees" instance=ExtResource("10_3trav")]
+position = Vector2(-290, 150)
+
+[node name="Tree_Scene 67" parent="Trees" instance=ExtResource("10_3trav")]
+position = Vector2(-269, 150)
+
+[node name="Tree_Scene 68" parent="Trees" instance=ExtResource("10_3trav")]
+position = Vector2(-250, 149)
+
+[node name="Tree_Scene 69" parent="Trees" instance=ExtResource("10_3trav")]
+position = Vector2(-229, 150)
+
+[node name="Tree_Scene 70" parent="Trees" instance=ExtResource("10_3trav")]
+position = Vector2(-212, 150)
+
+[node name="Tree_Scene 71" parent="Trees" instance=ExtResource("10_3trav")]
+position = Vector2(-192, 148)
+
+[node name="Tree_Scene 72" parent="Trees" instance=ExtResource("10_3trav")]
+position = Vector2(-174, 150)
+
+[node name="Tree_Scene 73" parent="Trees" instance=ExtResource("10_3trav")]
+position = Vector2(-160, 152)
+
+[node name="Tree_Scene 74" parent="Trees" instance=ExtResource("10_3trav")]
+position = Vector2(-157, 162)
+
+[node name="Tree_Scene 75" parent="Trees" instance=ExtResource("10_3trav")]
+position = Vector2(-170, 159)
+
+[node name="Tree_Scene 76" parent="Trees" instance=ExtResource("10_3trav")]
+position = Vector2(-184, 158)
+
+[node name="Tree_Scene 77" parent="Trees" instance=ExtResource("10_3trav")]
+position = Vector2(-203, 156)
+
+[node name="Tree_Scene 78" parent="Trees" instance=ExtResource("10_3trav")]
+position = Vector2(-220, 157)
+
+[node name="Tree_Scene 79" parent="Trees" instance=ExtResource("10_3trav")]
+position = Vector2(-239, 155)
+
+[node name="Tree_Scene 80" parent="Trees" instance=ExtResource("10_3trav")]
+position = Vector2(-260, 155)
+
+[node name="Tree_Scene 81" parent="Trees" instance=ExtResource("10_3trav")]
+position = Vector2(-278, 155)
+
+[node name="Tree_Scene 82" parent="Trees" instance=ExtResource("10_3trav")]
+position = Vector2(-299, 158)
+
+[node name="Tree_Scene 83" parent="Trees" instance=ExtResource("10_3trav")]
+position = Vector2(-318, 158)
+
+[node name="Tree_Scene 84" parent="Trees" instance=ExtResource("10_3trav")]
+position = Vector2(-327, 162)
+
+[node name="Tree_Scene 85" parent="Trees" instance=ExtResource("10_3trav")]
+position = Vector2(-308, 167)
+
+[node name="Tree_Scene 86" parent="Trees" instance=ExtResource("10_3trav")]
+position = Vector2(-289, 160)
+
+[node name="Tree_Scene 87" parent="Trees" instance=ExtResource("10_3trav")]
+position = Vector2(-268, 162)
+
+[node name="Tree_Scene 88" parent="Trees" instance=ExtResource("10_3trav")]
+position = Vector2(-248, 162)
+
+[node name="Tree_Scene 89" parent="Trees" instance=ExtResource("10_3trav")]
+position = Vector2(-231, 163)
+
+[node name="Tree_Scene 90" parent="Trees" instance=ExtResource("10_3trav")]
+position = Vector2(-209, 161)
+
+[node name="Tree_Scene 91" parent="Trees" instance=ExtResource("10_3trav")]
+position = Vector2(-193, 162)
+
+[node name="Tree_Scene 92" parent="Trees" instance=ExtResource("10_3trav")]
+position = Vector2(-177, 164)
+
+[node name="Tree_Scene 93" parent="Trees" instance=ExtResource("10_3trav")]
+position = Vector2(-163, 167)
+
+[node name="Tree_Scene 94" parent="Trees" instance=ExtResource("10_3trav")]
+position = Vector2(-153, 172)
+
+[node name="Tree_Scene 95" parent="Trees" instance=ExtResource("10_3trav")]
+position = Vector2(-168, 173)
+
+[node name="Tree_Scene 110" parent="Trees" instance=ExtResource("10_3trav")]
+position = Vector2(-268, 171)
+
+[node name="Tree_Scene 105" parent="Trees" instance=ExtResource("10_3trav")]
+position = Vector2(-143, 188)
+
+[node name="Tree_Scene 106" parent="Trees" instance=ExtResource("10_3trav")]
+position = Vector2(-230, 168)
+
+[node name="Tree_Scene 107" parent="Trees" instance=ExtResource("10_3trav")]
+position = Vector2(-212, 168)
+
+[node name="Tree_Scene 96" parent="Trees" instance=ExtResource("10_3trav")]
+position = Vector2(-188, 168)
+
+[node name="Tree_Scene 97" parent="Trees" instance=ExtResource("10_3trav")]
+position = Vector2(-201, 170)
+
+[node name="Tree_Scene 98" parent="Trees" instance=ExtResource("10_3trav")]
+position = Vector2(-220, 170)
+
+[node name="Tree_Scene 108" parent="Trees" instance=ExtResource("10_3trav")]
+position = Vector2(-253, 167)
+
+[node name="Tree_Scene 99" parent="Trees" instance=ExtResource("10_3trav")]
+position = Vector2(-241, 169)
+
+[node name="Tree_Scene 100" parent="Trees" instance=ExtResource("10_3trav")]
+position = Vector2(-258, 171)
+
+[node name="Tree_Scene 101" parent="Trees" instance=ExtResource("10_3trav")]
+position = Vector2(-279, 168)
+
+[node name="Tree_Scene 102" parent="Trees" instance=ExtResource("10_3trav")]
+position = Vector2(-294, 171)
+
+[node name="Tree_Scene 103" parent="Trees" instance=ExtResource("10_3trav")]
+position = Vector2(-317, 170)
+
+[node name="Tree_Scene 104" parent="Trees" instance=ExtResource("10_3trav")]
+position = Vector2(-326, 173)
+
+[node name="Tree_Scene 111" parent="Trees" instance=ExtResource("10_3trav")]
+position = Vector2(-304, 175)
+
+[node name="Tree_Scene 112" parent="Trees" instance=ExtResource("10_3trav")]
+position = Vector2(-281, 177)
+
+[node name="Tree_Scene 113" parent="Trees" instance=ExtResource("10_3trav")]
+position = Vector2(-268, 180)
+
+[node name="Tree_Scene 114" parent="Trees" instance=ExtResource("10_3trav")]
+position = Vector2(-247, 177)
+
+[node name="Tree_Scene 115" parent="Trees" instance=ExtResource("10_3trav")]
+position = Vector2(-231, 179)
+
+[node name="Tree_Scene 116" parent="Trees" instance=ExtResource("10_3trav")]
+position = Vector2(-211, 176)
+
+[node name="Tree_Scene 117" parent="Trees" instance=ExtResource("10_3trav")]
+position = Vector2(-192, 176)
+
+[node name="Tree_Scene 118" parent="Trees" instance=ExtResource("10_3trav")]
+position = Vector2(-179, 176)
+
+[node name="Tree_Scene 120" parent="Trees" instance=ExtResource("10_3trav")]
+position = Vector2(-163, 178)
+
+[node name="Tree_Scene 119" parent="Trees" instance=ExtResource("10_3trav")]
+position = Vector2(-172, 184)
+
+[node name="Tree_Scene 121" parent="Trees" instance=ExtResource("10_3trav")]
+position = Vector2(-201, 180)
+
+[node name="Tree_Scene 122" parent="Trees" instance=ExtResource("10_3trav")]
+position = Vector2(-219, 183)
+
+[node name="Tree_Scene 123" parent="Trees" instance=ExtResource("10_3trav")]
+position = Vector2(-238, 186)
+
+[node name="Tree_Scene 124" parent="Trees" instance=ExtResource("10_3trav")]
+position = Vector2(-256, 187)
+
+[node name="Tree_Scene 125" parent="Trees" instance=ExtResource("10_3trav")]
+position = Vector2(-274, 186)
+
+[node name="Tree_Scene 126" parent="Trees" instance=ExtResource("10_3trav")]
+position = Vector2(-294, 183)
+
+[node name="Tree_Scene 127" parent="Trees" instance=ExtResource("10_3trav")]
+position = Vector2(-313, 178)
+
+[node name="Tree_Scene 128" parent="Trees" instance=ExtResource("10_3trav")]
+position = Vector2(-325, 187)
+
+[node name="Tree_Scene 129" parent="Trees" instance=ExtResource("10_3trav")]
+position = Vector2(-308, 186)
+
+[node name="Tree_Scene 130" parent="Trees" instance=ExtResource("10_3trav")]
+position = Vector2(-314, 194)
+
+[node name="Tree_Scene 131" parent="Trees" instance=ExtResource("10_3trav")]
+position = Vector2(-284, 190)
+
+[node name="Tree_Scene 132" parent="Trees" instance=ExtResource("10_3trav")]
+position = Vector2(-265, 193)
+
+[node name="Tree_Scene 133" parent="Trees" instance=ExtResource("10_3trav")]
+position = Vector2(-244, 191)
+
+[node name="Tree_Scene 134" parent="Trees" instance=ExtResource("10_3trav")]
+position = Vector2(-229, 192)
+
+[node name="Tree_Scene 135" parent="Trees" instance=ExtResource("10_3trav")]
+position = Vector2(-208, 189)
+
+[node name="Tree_Scene 1057" parent="Trees" instance=ExtResource("10_3trav")]
+position = Vector2(82, -96)
+
+[node name="Tree_Scene 1097" parent="Trees" instance=ExtResource("10_3trav")]
+position = Vector2(99, -98)
+
+[node name="Tree_Scene 1098" parent="Trees" instance=ExtResource("10_3trav")]
+position = Vector2(112, -95)
+
+[node name="Tree_Scene 1099" parent="Trees" instance=ExtResource("10_3trav")]
+position = Vector2(124, -96)
+
+[node name="Tree_Scene 1100" parent="Trees" instance=ExtResource("10_3trav")]
+position = Vector2(138, -100)
+
+[node name="Tree_Scene 1101" parent="Trees" instance=ExtResource("10_3trav")]
+position = Vector2(150, -99)
+
+[node name="Tree_Scene 1102" parent="Trees" instance=ExtResource("10_3trav")]
+position = Vector2(164, -102)
+
+[node name="Tree_Scene 1103" parent="Trees" instance=ExtResource("10_3trav")]
+position = Vector2(178, -101)
+
+[node name="Tree_Scene 1064" parent="Trees" instance=ExtResource("10_3trav")]
+position = Vector2(69, -94)
+
+[node name="Tree_Scene 1065" parent="Trees" instance=ExtResource("10_3trav")]
+position = Vector2(93, -90)
+
+[node name="Tree_Scene 1066" parent="Trees" instance=ExtResource("10_3trav")]
+position = Vector2(78, -86)
+
+[node name="Tree_Scene 1067" parent="Trees" instance=ExtResource("10_3trav")]
+position = Vector2(53, -98)
+
+[node name="Tree_Scene 1068" parent="Trees" instance=ExtResource("10_3trav")]
+position = Vector2(57, -89)
+
+[node name="Tree_Scene 1069" parent="Trees" instance=ExtResource("10_3trav")]
+position = Vector2(66, -79)
+
+[node name="Tree_Scene 1070" parent="Trees" instance=ExtResource("10_3trav")]
+position = Vector2(39, -100)
+
+[node name="Tree_Scene 1071" parent="Trees" instance=ExtResource("10_3trav")]
+position = Vector2(44, -88)
+
+[node name="Tree_Scene 1072" parent="Trees" instance=ExtResource("10_3trav")]
+position = Vector2(52, -78)
+
+[node name="Tree_Scene 1073" parent="Trees" instance=ExtResource("10_3trav")]
+position = Vector2(28, -101)
+
+[node name="Tree_Scene 1074" parent="Trees" instance=ExtResource("10_3trav")]
+position = Vector2(31, -86)
+
+[node name="Tree_Scene 1075" parent="Trees" instance=ExtResource("10_3trav")]
+position = Vector2(38, -74)
+
+[node name="Tree_Scene 1076" parent="Trees" instance=ExtResource("10_3trav")]
+position = Vector2(12, -99)
+
+[node name="Tree_Scene 1077" parent="Trees" instance=ExtResource("10_3trav")]
+position = Vector2(18, -87)
+
+[node name="Tree_Scene 1078" parent="Trees" instance=ExtResource("10_3trav")]
+position = Vector2(-2, -97)
+
+[node name="Tree_Scene 1079" parent="Trees" instance=ExtResource("10_3trav")]
+position = Vector2(6, -88)
+
+[node name="Tree_Scene 1080" parent="Trees" instance=ExtResource("10_3trav")]
+position = Vector2(-18, -97)
+
+[node name="Tree_Scene 1081" parent="Trees" instance=ExtResource("10_3trav")]
+position = Vector2(-9, -86)
+
+[node name="Tree_Scene 1082" parent="Trees" instance=ExtResource("10_3trav")]
+position = Vector2(-2, -78)
+
+[node name="Tree_Scene 1083" parent="Trees" instance=ExtResource("10_3trav")]
+position = Vector2(12, -77)
+
+[node name="Tree_Scene 1084" parent="Trees" instance=ExtResource("10_3trav")]
+position = Vector2(25, -74)
+
+[node name="Tree_Scene 1085" parent="Trees" instance=ExtResource("10_3trav")]
+position = Vector2(-21, -84)
+
+[node name="Tree_Scene 1262" parent="Trees" instance=ExtResource("10_3trav")]
+position = Vector2(-51, -84)
+
+[node name="Tree_Scene 1263" parent="Trees" instance=ExtResource("10_3trav")]
+position = Vector2(-42, -79)
+
+[node name="Tree_Scene 1294" parent="Trees" instance=ExtResource("10_3trav")]
+position = Vector2(-61, -79)
+
+[node name="Tree_Scene 1295" parent="Trees" instance=ExtResource("10_3trav")]
+position = Vector2(-49, -74)
+
+[node name="Tree_Scene 1296" parent="Trees" instance=ExtResource("10_3trav")]
+position = Vector2(-70, -72)
+
+[node name="Tree_Scene 1297" parent="Trees" instance=ExtResource("10_3trav")]
+position = Vector2(-46, -68)
+
+[node name="Tree_Scene 1298" parent="Trees" instance=ExtResource("10_3trav")]
+position = Vector2(-60, -67)
+
+[node name="Tree_Scene 1299" parent="Trees" instance=ExtResource("10_3trav")]
+position = Vector2(-81, -63)
+
+[node name="Tree_Scene 1264" parent="Trees" instance=ExtResource("10_3trav")]
+position = Vector2(-32, -74)
+
+[node name="Tree_Scene 1086" parent="Trees" instance=ExtResource("10_3trav")]
+position = Vector2(-13, -73)
+
+[node name="Tree_Scene 1087" parent="Trees" instance=ExtResource("10_3trav")]
+position = Vector2(-27, -68)
+
+[node name="Tree_Scene 1200" parent="Trees" instance=ExtResource("10_3trav")]
+position = Vector2(-39, -56)
+
+[node name="Tree_Scene 1301" parent="Trees" instance=ExtResource("10_3trav")]
+position = Vector2(-52, -57)
+
+[node name="Tree_Scene 1305" parent="Trees" instance=ExtResource("10_3trav")]
+position = Vector2(-69, -58)
+
+[node name="Tree_Scene 1314" parent="Trees" instance=ExtResource("10_3trav")]
+position = Vector2(-62, -51)
+
+[node name="Tree_Scene 1306" parent="Trees" instance=ExtResource("10_3trav")]
+position = Vector2(-78, -53)
+
+[node name="Tree_Scene 1309" parent="Trees" instance=ExtResource("10_3trav")]
+position = Vector2(-91, -57)
+
+[node name="Tree_Scene 1310" parent="Trees" instance=ExtResource("10_3trav")]
+position = Vector2(-103, -50)
+
+[node name="Tree_Scene 1311" parent="Trees" instance=ExtResource("10_3trav")]
+position = Vector2(-90, -46)
+
+[node name="Tree_Scene 1312" parent="Trees" instance=ExtResource("10_3trav")]
+position = Vector2(-87, -39)
+
+[node name="Tree_Scene 1313" parent="Trees" instance=ExtResource("10_3trav")]
+position = Vector2(-104, -39)
+
+[node name="Tree_Scene 1318" parent="Trees" instance=ExtResource("10_3trav")]
+position = Vector2(-110, -29)
+
+[node name="Tree_Scene 1372" parent="Trees" instance=ExtResource("10_3trav")]
+position = Vector2(-117, -19)
+
+[node name="Tree_Scene 1461" parent="Trees" instance=ExtResource("10_3trav")]
+position = Vector2(-115, -13)
+
+[node name="Tree_Scene 1404" parent="Trees" instance=ExtResource("10_3trav")]
+position = Vector2(-119, -7)
+
+[node name="Tree_Scene 1315" parent="Trees" instance=ExtResource("10_3trav")]
+position = Vector2(-99, -30)
+
+[node name="Tree_Scene 1316" parent="Trees" instance=ExtResource("10_3trav")]
+position = Vector2(-98, -22)
+
+[node name="Tree_Scene 1330" parent="Trees" instance=ExtResource("10_3trav")]
+position = Vector2(-105, -18)
+
+[node name="Tree_Scene 1317" parent="Trees" instance=ExtResource("10_3trav")]
+position = Vector2(-107, -14)
+
+[node name="Tree_Scene 1405" parent="Trees" instance=ExtResource("10_3trav")]
+position = Vector2(-121, 2)
+
+[node name="Tree_Scene 1303" parent="Trees" instance=ExtResource("10_3trav")]
+position = Vector2(-75, -37)
+
+[node name="Tree_Scene 1304" parent="Trees" instance=ExtResource("10_3trav")]
+position = Vector2(-88, -25)
+
+[node name="Tree_Scene 1302" parent="Trees" instance=ExtResource("10_3trav")]
+position = Vector2(-63, -40)
+
+[node name="Tree_Scene 1300" parent="Trees" instance=ExtResource("10_3trav")]
+position = Vector2(-52, -45)
+
+[node name="Tree_Scene 1199" parent="Trees" instance=ExtResource("10_3trav")]
+position = Vector2(-36, -46)
+
+[node name="Tree_Scene 1088" parent="Trees" instance=ExtResource("10_3trav")]
+position = Vector2(-13, -62)
+
+[node name="Tree_Scene 1198" parent="Trees" instance=ExtResource("10_3trav")]
+position = Vector2(-24, -54)
+
+[node name="Tree_Scene 1197" parent="Trees" instance=ExtResource("10_3trav")]
+position = Vector2(-25, -47)
+
+[node name="Tree_Scene 1089" parent="Trees" instance=ExtResource("10_3trav")]
+position = Vector2(-3, -68)
+
+[node name="Tree_Scene 1090" parent="Trees" instance=ExtResource("10_3trav")]
+position = Vector2(10, -64)
+
+[node name="Tree_Scene 1094" parent="Trees" instance=ExtResource("10_3trav")]
+position = Vector2(-3, -59)
+
+[node name="Tree_Scene 1095" parent="Trees" instance=ExtResource("10_3trav")]
+position = Vector2(6, -55)
+
+[node name="Tree_Scene 1096" parent="Trees" instance=ExtResource("10_3trav")]
+position = Vector2(-6, -51)
+
+[node name="Tree_Scene 1091" parent="Trees" instance=ExtResource("10_3trav")]
+position = Vector2(20, -61)
+
+[node name="Tree_Scene 1092" parent="Trees" instance=ExtResource("10_3trav")]
+position = Vector2(20, -61)
+
+[node name="Tree_Scene 1093" parent="Trees" instance=ExtResource("10_3trav")]
+position = Vector2(37, -60)
+
+[node name="Tree_Scene 136" parent="Trees" instance=ExtResource("10_3trav")]
+position = Vector2(-190, 188)
+
+[node name="Tree_Scene 137" parent="Trees" instance=ExtResource("10_3trav")]
+position = Vector2(-180, 192)
+
+[node name="Tree_Scene 138" parent="Trees" instance=ExtResource("10_3trav")]
+position = Vector2(-158, 186)
+
+[node name="Tree_Scene 109" parent="Trees" instance=ExtResource("10_3trav")]
+position = Vector2(-150, 191)
+
+[node name="Tree_Scene 140" parent="Trees" instance=ExtResource("10_3trav")]
+position = Vector2(-168, 196)
+
+[node name="Tree_Scene 141" parent="Trees" instance=ExtResource("10_3trav")]
+position = Vector2(-196, 194)
+
+[node name="Tree_Scene 142" parent="Trees" instance=ExtResource("10_3trav")]
+position = Vector2(-219, 196)
+
+[node name="Tree_Scene 143" parent="Trees" instance=ExtResource("10_3trav")]
+position = Vector2(-238, 197)
+
+[node name="Tree_Scene 144" parent="Trees" instance=ExtResource("10_3trav")]
+position = Vector2(-255, 200)
+
+[node name="Tree_Scene 145" parent="Trees" instance=ExtResource("10_3trav")]
+position = Vector2(-276, 199)
+
+[node name="Tree_Scene 146" parent="Trees" instance=ExtResource("10_3trav")]
+position = Vector2(-298, 194)
+
+[node name="Tree_Scene 147" parent="Trees" instance=ExtResource("10_3trav")]
+position = Vector2(-289, 203)
+
+[node name="Tree_Scene 148" parent="Trees" instance=ExtResource("10_3trav")]
+position = Vector2(-326, 198)
+
+[node name="Tree_Scene 149" parent="Trees" instance=ExtResource("10_3trav")]
+position = Vector2(-306, 200)
+
+[node name="Tree_Scene 150" parent="Trees" instance=ExtResource("10_3trav")]
+position = Vector2(-316, 206)
+
+[node name="Tree_Scene 151" parent="Trees" instance=ExtResource("10_3trav")]
+position = Vector2(-297, 208)
+
+[node name="Tree_Scene 152" parent="Trees" instance=ExtResource("10_3trav")]
+position = Vector2(-282, 207)
+
+[node name="Tree_Scene 153" parent="Trees" instance=ExtResource("10_3trav")]
+position = Vector2(-264, 203)
+
+[node name="Tree_Scene 154" parent="Trees" instance=ExtResource("10_3trav")]
+position = Vector2(-245, 204)
+
+[node name="Tree_Scene 155" parent="Trees" instance=ExtResource("10_3trav")]
+position = Vector2(-226, 202)
+
+[node name="Tree_Scene 156" parent="Trees" instance=ExtResource("10_3trav")]
+position = Vector2(-208, 202)
+
+[node name="Tree_Scene 157" parent="Trees" instance=ExtResource("10_3trav")]
+position = Vector2(-189, 199)
+
+[node name="Tree_Scene 158" parent="Trees" instance=ExtResource("10_3trav")]
+position = Vector2(-155, 199)
+
+[node name="Tree_Scene 159" parent="Trees" instance=ExtResource("10_3trav")]
+position = Vector2(-137, 195)
+
+[node name="Tree_Scene 160" parent="Trees" instance=ExtResource("10_3trav")]
+position = Vector2(-142, 201)
+
+[node name="Tree_Scene 139" parent="Trees" instance=ExtResource("10_3trav")]
+position = Vector2(-130, 203)
+
+[node name="Tree_Scene 219" parent="Trees" instance=ExtResource("10_3trav")]
+position = Vector2(-124, 210)
+
+[node name="Tree_Scene 161" parent="Trees" instance=ExtResource("10_3trav")]
+position = Vector2(-151, 209)
+
+[node name="Tree_Scene 165" parent="Trees" instance=ExtResource("10_3trav")]
+position = Vector2(-178, 203)
+
+[node name="Tree_Scene 166" parent="Trees" instance=ExtResource("10_3trav")]
+position = Vector2(-199, 205)
+
+[node name="Tree_Scene 1063" parent="Trees" instance=ExtResource("10_3trav")]
+position = Vector2(102, -86)
+
+[node name="Tree_Scene 167" parent="Trees" instance=ExtResource("10_3trav")]
+position = Vector2(-221, 209)
+
+[node name="Tree_Scene 168" parent="Trees" instance=ExtResource("10_3trav")]
+position = Vector2(-236, 210)
+
+[node name="Tree_Scene 169" parent="Trees" instance=ExtResource("10_3trav")]
+position = Vector2(-254, 209)
+
+[node name="Tree_Scene 170" parent="Trees" instance=ExtResource("10_3trav")]
+position = Vector2(-276, 212)
+
+[node name="Tree_Scene 171" parent="Trees" instance=ExtResource("10_3trav")]
+position = Vector2(-290, 214)
+
+[node name="Tree_Scene 172" parent="Trees" instance=ExtResource("10_3trav")]
+position = Vector2(-306, 215)
+
+[node name="Tree_Scene 173" parent="Trees" instance=ExtResource("10_3trav")]
+position = Vector2(-326, 213)
+
+[node name="Tree_Scene 174" parent="Trees" instance=ExtResource("10_3trav")]
+position = Vector2(-315, 219)
+
+[node name="Tree_Scene 175" parent="Trees" instance=ExtResource("10_3trav")]
+position = Vector2(-298, 221)
+
+[node name="Tree_Scene 176" parent="Trees" instance=ExtResource("10_3trav")]
+position = Vector2(-281, 219)
+
+[node name="Tree_Scene 177" parent="Trees" instance=ExtResource("10_3trav")]
+position = Vector2(-264, 216)
+
+[node name="Tree_Scene 178" parent="Trees" instance=ExtResource("10_3trav")]
+position = Vector2(-246, 216)
+
+[node name="Tree_Scene 179" parent="Trees" instance=ExtResource("10_3trav")]
+position = Vector2(-228, 214)
+
+[node name="Tree_Scene 180" parent="Trees" instance=ExtResource("10_3trav")]
+position = Vector2(-209, 214)
+
+[node name="Tree_Scene 181" parent="Trees" instance=ExtResource("10_3trav")]
+position = Vector2(-188, 208)
+
+[node name="Tree_Scene 182" parent="Trees" instance=ExtResource("10_3trav")]
+position = Vector2(-166, 203)
+
+[node name="Tree_Scene 183" parent="Trees" instance=ExtResource("10_3trav")]
+position = Vector2(-136, 212)
+
+[node name="Tree_Scene 184" parent="Trees" instance=ExtResource("10_3trav")]
+position = Vector2(-116, 218)
+
+[node name="Tree_Scene 162" parent="Trees" instance=ExtResource("10_3trav")]
+position = Vector2(-116, 221)
+
+[node name="Tree_Scene 185" parent="Trees" instance=ExtResource("10_3trav")]
+position = Vector2(-131, 218)
+
+[node name="Tree_Scene 186" parent="Trees" instance=ExtResource("10_3trav")]
+position = Vector2(-147, 215)
+
+[node name="Tree_Scene 574" parent="Trees" instance=ExtResource("10_3trav")]
+position = Vector2(185, 82)
+
+[node name="Tree_Scene 790" parent="Trees" instance=ExtResource("10_3trav")]
+position = Vector2(198, 77)
+
+[node name="Tree_Scene 791" parent="Trees" instance=ExtResource("10_3trav")]
+position = Vector2(212, 78)
+
+[node name="Tree_Scene 792" parent="Trees" instance=ExtResource("10_3trav")]
+position = Vector2(224, 77)
+
+[node name="Tree_Scene 793" parent="Trees" instance=ExtResource("10_3trav")]
+position = Vector2(233, 83)
+
+[node name="Tree_Scene 794" parent="Trees" instance=ExtResource("10_3trav")]
+position = Vector2(247, 85)
+
+[node name="Tree_Scene 795" parent="Trees" instance=ExtResource("10_3trav")]
+position = Vector2(265, 79)
+
+[node name="Tree_Scene 796" parent="Trees" instance=ExtResource("10_3trav")]
+position = Vector2(280, 79)
+
+[node name="Tree_Scene 797" parent="Trees" instance=ExtResource("10_3trav")]
+position = Vector2(293, 79)
+
+[node name="Tree_Scene 576" parent="Trees" instance=ExtResource("10_3trav")]
+position = Vector2(187, 110)
+
+[node name="Tree_Scene 715" parent="Trees" instance=ExtResource("10_3trav")]
+position = Vector2(-1, -45)
+
+[node name="Tree_Scene 1062" parent="Trees" instance=ExtResource("10_3trav")]
+position = Vector2(-14, -47)
+
+[node name="Tree_Scene 1051" parent="Trees" instance=ExtResource("10_3trav")]
+position = Vector2(19, -53)
+
+[node name="Tree_Scene 1052" parent="Trees" instance=ExtResource("10_3trav")]
+position = Vector2(30, -56)
+
+[node name="Tree_Scene 1053" parent="Trees" instance=ExtResource("10_3trav")]
+position = Vector2(48, -61)
+
+[node name="Tree_Scene 1054" parent="Trees" instance=ExtResource("10_3trav")]
+position = Vector2(60, -61)
+
+[node name="Tree_Scene 1055" parent="Trees" instance=ExtResource("10_3trav")]
+position = Vector2(74, -68)
+
+[node name="Tree_Scene 1056" parent="Trees" instance=ExtResource("10_3trav")]
+position = Vector2(86, -78)
+
+[node name="Tree_Scene 1058" parent="Trees" instance=ExtResource("10_3trav")]
+position = Vector2(113, -87)
+
+[node name="Tree_Scene 1059" parent="Trees" instance=ExtResource("10_3trav")]
+position = Vector2(128, -90)
+
+[node name="Tree_Scene 1060" parent="Trees" instance=ExtResource("10_3trav")]
+position = Vector2(91, -73)
+
+[node name="Tree_Scene 999" parent="Trees" instance=ExtResource("10_3trav")]
+position = Vector2(10, -44)
+
+[node name="Tree_Scene 1000" parent="Trees" instance=ExtResource("10_3trav")]
+position = Vector2(37, -49)
+
+[node name="Tree_Scene 1005" parent="Trees" instance=ExtResource("10_3trav")]
+position = Vector2(50, -50)
+
+[node name="Tree_Scene 1006" parent="Trees" instance=ExtResource("10_3trav")]
+position = Vector2(62, -51)
+
+[node name="Tree_Scene 1007" parent="Trees" instance=ExtResource("10_3trav")]
+position = Vector2(73, -57)
+
+[node name="Tree_Scene 1008" parent="Trees" instance=ExtResource("10_3trav")]
+position = Vector2(86, -67)
+
+[node name="Tree_Scene 1009" parent="Trees" instance=ExtResource("10_3trav")]
+position = Vector2(101, -77)
+
+[node name="Tree_Scene 1026" parent="Trees" instance=ExtResource("10_3trav")]
+position = Vector2(112, -77)
+
+[node name="Tree_Scene 1027" parent="Trees" instance=ExtResource("10_3trav")]
+position = Vector2(125, -83)
+
+[node name="Tree_Scene 1028" parent="Trees" instance=ExtResource("10_3trav")]
+position = Vector2(140, -90)
+
+[node name="Tree_Scene 1050" parent="Trees" instance=ExtResource("10_3trav")]
+position = Vector2(26, -46)
+
+[node name="Tree_Scene 1029" parent="Trees" instance=ExtResource("10_3trav")]
+position = Vector2(153, -90)
+
+[node name="Tree_Scene 1030" parent="Trees" instance=ExtResource("10_3trav")]
+position = Vector2(163, -91)
+
+[node name="Tree_Scene 1032" parent="Trees" instance=ExtResource("10_3trav")]
+position = Vector2(174, -92)
+
+[node name="Tree_Scene 1034" parent="Trees" instance=ExtResource("10_3trav")]
+position = Vector2(188, -96)
+
+[node name="Tree_Scene 1036" parent="Trees" instance=ExtResource("10_3trav")]
+position = Vector2(202, -96)
+
+[node name="Tree_Scene 1061" parent="Trees" instance=ExtResource("10_3trav")]
+position = Vector2(-13, -41)
+
+[node name="Tree_Scene 1104" parent="Trees" instance=ExtResource("10_3trav")]
+position = Vector2(-29, -39)
+
+[node name="Tree_Scene 1105" parent="Trees" instance=ExtResource("10_3trav")]
+position = Vector2(-43, -35)
+
+[node name="Tree_Scene 1106" parent="Trees" instance=ExtResource("10_3trav")]
+position = Vector2(-55, -31)
+
+[node name="Tree_Scene 1107" parent="Trees" instance=ExtResource("10_3trav")]
+position = Vector2(-68, -28)
+
+[node name="Tree_Scene 1188" parent="Trees" instance=ExtResource("10_3trav")]
+position = Vector2(-76, -23)
+
+[node name="Tree_Scene 1108" parent="Trees" instance=ExtResource("10_3trav")]
+position = Vector2(-85, -17)
+
+[node name="Tree_Scene 1109" parent="Trees" instance=ExtResource("10_3trav")]
+position = Vector2(-93, -10)
+
+[node name="Tree_Scene 1110" parent="Trees" instance=ExtResource("10_3trav")]
+position = Vector2(-106, -2)
+
+[node name="Tree_Scene 1111" parent="Trees" instance=ExtResource("10_3trav")]
+position = Vector2(-113, 3)
+
+[node name="Tree_Scene 1189" parent="Trees" instance=ExtResource("10_3trav")]
+position = Vector2(-118, 10)
+
+[node name="Tree_Scene 1112" parent="Trees" instance=ExtResource("10_3trav")]
+position = Vector2(-128, 16)
+
+[node name="Tree_Scene 1113" parent="Trees" instance=ExtResource("10_3trav")]
+position = Vector2(-136, 26)
+
+[node name="Tree_Scene 1114" parent="Trees" instance=ExtResource("10_3trav")]
+position = Vector2(-145, 33)
+
+[node name="Tree_Scene 1142" parent="Trees" instance=ExtResource("10_3trav")]
+position = Vector2(-153, 43)
+
+[node name="Tree_Scene 1115" parent="Trees" instance=ExtResource("10_3trav")]
+position = Vector2(-157, 54)
+
+[node name="Tree_Scene 1116" parent="Trees" instance=ExtResource("10_3trav")]
+position = Vector2(-161, 67)
+
+[node name="Tree_Scene 1119" parent="Trees" instance=ExtResource("10_3trav")]
+position = Vector2(-167, 77)
+
+[node name="Tree_Scene 1117" parent="Trees" instance=ExtResource("10_3trav")]
+position = Vector2(-173, 84)
+
+[node name="Tree_Scene 1038" parent="Trees" instance=ExtResource("10_3trav")]
+position = Vector2(218, -96)
+
+[node name="Tree_Scene 1040" parent="Trees" instance=ExtResource("10_3trav")]
+position = Vector2(232, -100)
+
+[node name="Tree_Scene 1042" parent="Trees" instance=ExtResource("10_3trav")]
+position = Vector2(247, -97)
+
+[node name="Tree_Scene 1044" parent="Trees" instance=ExtResource("10_3trav")]
+position = Vector2(264, -101)
+
+[node name="Tree_Scene 1048" parent="Trees" instance=ExtResource("10_3trav")]
+position = Vector2(255, -95)
+
+[node name="Tree_Scene 1049" parent="Trees" instance=ExtResource("10_3trav")]
+position = Vector2(273, -96)
+
+[node name="Tree_Scene 1046" parent="Trees" instance=ExtResource("10_3trav")]
+position = Vector2(279, -103)
+
+[node name="Tree_Scene 1047" parent="Trees" instance=ExtResource("10_3trav")]
+position = Vector2(289, -93)
+
+[node name="Tree_Scene 1045" parent="Trees" instance=ExtResource("10_3trav")]
+position = Vector2(276, -94)
+
+[node name="Tree_Scene 1043" parent="Trees" instance=ExtResource("10_3trav")]
+position = Vector2(260, -90)
+
+[node name="Tree_Scene 1041" parent="Trees" instance=ExtResource("10_3trav")]
+position = Vector2(237, -94)
+
+[node name="Tree_Scene 1039" parent="Trees" instance=ExtResource("10_3trav")]
+position = Vector2(227, -90)
+
+[node name="Tree_Scene 1037" parent="Trees" instance=ExtResource("10_3trav")]
+position = Vector2(208, -93)
+
+[node name="Tree_Scene 1035" parent="Trees" instance=ExtResource("10_3trav")]
+position = Vector2(196, -89)
+
+[node name="Tree_Scene 1033" parent="Trees" instance=ExtResource("10_3trav")]
+position = Vector2(180, -85)
+
+[node name="Tree_Scene 1031" parent="Trees" instance=ExtResource("10_3trav")]
+position = Vector2(166, -83)
+
+[node name="Tree_Scene 1024" parent="Trees" instance=ExtResource("10_3trav")]
+position = Vector2(97, -70)
+
+[node name="Tree_Scene 1025" parent="Trees" instance=ExtResource("10_3trav")]
+position = Vector2(106, -68)
+
+[node name="Tree_Scene 1010" parent="Trees" instance=ExtResource("10_3trav")]
+position = Vector2(124, -76)
+
+[node name="Tree_Scene 1011" parent="Trees" instance=ExtResource("10_3trav")]
+position = Vector2(139, -80)
+
+[node name="Tree_Scene 1012" parent="Trees" instance=ExtResource("10_3trav")]
+position = Vector2(157, -82)
+
+[node name="Tree_Scene 1022" parent="Trees" instance=ExtResource("10_3trav")]
+position = Vector2(148, -79)
+
+[node name="Tree_Scene 1013" parent="Trees" instance=ExtResource("10_3trav")]
+position = Vector2(174, -82)
+
+[node name="Tree_Scene 1014" parent="Trees" instance=ExtResource("10_3trav")]
+position = Vector2(189, -84)
+
+[node name="Tree_Scene 1015" parent="Trees" instance=ExtResource("10_3trav")]
+position = Vector2(205, -83)
+
+[node name="Tree_Scene 1016" parent="Trees" instance=ExtResource("10_3trav")]
+position = Vector2(219, -84)
+
+[node name="Tree_Scene 1017" parent="Trees" instance=ExtResource("10_3trav")]
+position = Vector2(232, -84)
+
+[node name="Tree_Scene 1018" parent="Trees" instance=ExtResource("10_3trav")]
+position = Vector2(253, -85)
+
+[node name="Tree_Scene 1019" parent="Trees" instance=ExtResource("10_3trav")]
+position = Vector2(272, -85)
+
+[node name="Tree_Scene 1020" parent="Trees" instance=ExtResource("10_3trav")]
+position = Vector2(287, -86)
+
+[node name="Tree_Scene 1021" parent="Trees" instance=ExtResource("10_3trav")]
+position = Vector2(243, -83)
+
+[node name="Tree_Scene 1001" parent="Trees" instance=ExtResource("10_3trav")]
+position = Vector2(31, -42)
+
+[node name="Tree_Scene 1002" parent="Trees" instance=ExtResource("10_3trav")]
+position = Vector2(42, -40)
+
+[node name="Tree_Scene 719" parent="Trees" instance=ExtResource("10_3trav")]
+position = Vector2(53, -38)
+
+[node name="Tree_Scene 967" parent="Trees" instance=ExtResource("10_3trav")]
+position = Vector2(68, -45)
+
+[node name="Tree_Scene 984" parent="Trees" instance=ExtResource("10_3trav")]
+position = Vector2(87, -56)
+
+[node name="Tree_Scene 985" parent="Trees" instance=ExtResource("10_3trav")]
+position = Vector2(99, -62)
+
+[node name="Tree_Scene 1023" parent="Trees" instance=ExtResource("10_3trav")]
+position = Vector2(97, -52)
+
+[node name="Tree_Scene 986" parent="Trees" instance=ExtResource("10_3trav")]
+position = Vector2(115, -66)
+
+[node name="Tree_Scene 987" parent="Trees" instance=ExtResource("10_3trav")]
+position = Vector2(131, -69)
+
+[node name="Tree_Scene 988" parent="Trees" instance=ExtResource("10_3trav")]
+position = Vector2(148, -72)
+
+[node name="Tree_Scene 989" parent="Trees" instance=ExtResource("10_3trav")]
+position = Vector2(162, -72)
+
+[node name="Tree_Scene 990" parent="Trees" instance=ExtResource("10_3trav")]
+position = Vector2(179, -72)
+
+[node name="Tree_Scene 991" parent="Trees" instance=ExtResource("10_3trav")]
+position = Vector2(203, -73)
+
+[node name="Tree_Scene 993" parent="Trees" instance=ExtResource("10_3trav")]
+position = Vector2(219, -73)
+
+[node name="Tree_Scene 994" parent="Trees" instance=ExtResource("10_3trav")]
+position = Vector2(233, -76)
+
+[node name="Tree_Scene 995" parent="Trees" instance=ExtResource("10_3trav")]
+position = Vector2(245, -75)
+
+[node name="Tree_Scene 996" parent="Trees" instance=ExtResource("10_3trav")]
+position = Vector2(262, -77)
+
+[node name="Tree_Scene 997" parent="Trees" instance=ExtResource("10_3trav")]
+position = Vector2(278, -77)
+
+[node name="Tree_Scene 998" parent="Trees" instance=ExtResource("10_3trav")]
+position = Vector2(294, -79)
+
+[node name="Tree_Scene 992" parent="Trees" instance=ExtResource("10_3trav")]
+position = Vector2(190, -70)
+
+[node name="Tree_Scene 969" parent="Trees" instance=ExtResource("10_3trav")]
+position = Vector2(79, -43)
+
+[node name="Tree_Scene 983" parent="Trees" instance=ExtResource("10_3trav")]
+position = Vector2(62, -35)
+
+[node name="Tree_Scene 970" parent="Trees" instance=ExtResource("10_3trav")]
+position = Vector2(92, -45)
+
+[node name="Tree_Scene 971" parent="Trees" instance=ExtResource("10_3trav")]
+position = Vector2(107, -56)
+
+[node name="Tree_Scene 972" parent="Trees" instance=ExtResource("10_3trav")]
+position = Vector2(122, -58)
+
+[node name="Tree_Scene 973" parent="Trees" instance=ExtResource("10_3trav")]
+position = Vector2(140, -60)
+
+[node name="Tree_Scene 974" parent="Trees" instance=ExtResource("10_3trav")]
+position = Vector2(151, -62)
+
+[node name="Tree_Scene 975" parent="Trees" instance=ExtResource("10_3trav")]
+position = Vector2(172, -62)
+
+[node name="Tree_Scene 976" parent="Trees" instance=ExtResource("10_3trav")]
+position = Vector2(187, -62)
+
+[node name="Tree_Scene 977" parent="Trees" instance=ExtResource("10_3trav")]
+position = Vector2(204, -64)
+
+[node name="Tree_Scene 978" parent="Trees" instance=ExtResource("10_3trav")]
+position = Vector2(215, -65)
+
+[node name="Tree_Scene 979" parent="Trees" instance=ExtResource("10_3trav")]
+position = Vector2(235, -66)
+
+[node name="Tree_Scene 980" parent="Trees" instance=ExtResource("10_3trav")]
+position = Vector2(254, -69)
+
+[node name="Tree_Scene 981" parent="Trees" instance=ExtResource("10_3trav")]
+position = Vector2(270, -66)
+
+[node name="Tree_Scene 982" parent="Trees" instance=ExtResource("10_3trav")]
+position = Vector2(288, -69)
+
+[node name="Tree_Scene 720" parent="Trees" instance=ExtResource("10_3trav")]
+position = Vector2(72, -32)
+
+[node name="Tree_Scene 1003" parent="Trees" instance=ExtResource("10_3trav")]
+position = Vector2(21, -41)
+
+[node name="Tree_Scene 1004" parent="Trees" instance=ExtResource("10_3trav")]
+position = Vector2(3, -41)
+
+[node name="Tree_Scene 721" parent="Trees" instance=ExtResource("10_3trav")]
+position = Vector2(91, -34)
+
+[node name="Tree_Scene 968" parent="Trees" instance=ExtResource("10_3trav")]
+position = Vector2(91, -34)
+
+[node name="Tree_Scene 953" parent="Trees" instance=ExtResource("10_3trav")]
+position = Vector2(103, -44)
+
+[node name="Tree_Scene 954" parent="Trees" instance=ExtResource("10_3trav")]
+position = Vector2(118, -46)
+
+[node name="Tree_Scene 955" parent="Trees" instance=ExtResource("10_3trav")]
+position = Vector2(133, -49)
+
+[node name="Tree_Scene 956" parent="Trees" instance=ExtResource("10_3trav")]
+position = Vector2(147, -53)
+
+[node name="Tree_Scene 957" parent="Trees" instance=ExtResource("10_3trav")]
+position = Vector2(163, -54)
+
+[node name="Tree_Scene 958" parent="Trees" instance=ExtResource("10_3trav")]
+position = Vector2(178, -54)
+
+[node name="Tree_Scene 959" parent="Trees" instance=ExtResource("10_3trav")]
+position = Vector2(194, -54)
+
+[node name="Tree_Scene 960" parent="Trees" instance=ExtResource("10_3trav")]
+position = Vector2(209, -51)
+
+[node name="Tree_Scene 961" parent="Trees" instance=ExtResource("10_3trav")]
+position = Vector2(224, -59)
+
+[node name="Tree_Scene 962" parent="Trees" instance=ExtResource("10_3trav")]
+position = Vector2(232, -53)
+
+[node name="Tree_Scene 963" parent="Trees" instance=ExtResource("10_3trav")]
+position = Vector2(247, -59)
+
+[node name="Tree_Scene 964" parent="Trees" instance=ExtResource("10_3trav")]
+position = Vector2(260, -59)
+
+[node name="Tree_Scene 965" parent="Trees" instance=ExtResource("10_3trav")]
+position = Vector2(280, -61)
+
+[node name="Tree_Scene 966" parent="Trees" instance=ExtResource("10_3trav")]
+position = Vector2(290, -56)
+
+[node name="Tree_Scene 938" parent="Trees" instance=ExtResource("10_3trav")]
+position = Vector2(102, -32)
+
+[node name="Tree_Scene 939" parent="Trees" instance=ExtResource("10_3trav")]
+position = Vector2(118, -39)
+
+[node name="Tree_Scene 952" parent="Trees" instance=ExtResource("10_3trav")]
+position = Vector2(82, -26)
+
+[node name="Tree_Scene 940" parent="Trees" instance=ExtResource("10_3trav")]
+position = Vector2(132, -41)
+
+[node name="Tree_Scene 941" parent="Trees" instance=ExtResource("10_3trav")]
+position = Vector2(144, -38)
+
+[node name="Tree_Scene 942" parent="Trees" instance=ExtResource("10_3trav")]
+position = Vector2(163, -45)
+
+[node name="Tree_Scene 943" parent="Trees" instance=ExtResource("10_3trav")]
+position = Vector2(178, -44)
+
+[node name="Tree_Scene 944" parent="Trees" instance=ExtResource("10_3trav")]
+position = Vector2(192, -41)
+
+[node name="Tree_Scene 945" parent="Trees" instance=ExtResource("10_3trav")]
+position = Vector2(207, -41)
+
+[node name="Tree_Scene 946" parent="Trees" instance=ExtResource("10_3trav")]
+position = Vector2(220, -43)
+
+[node name="Tree_Scene 947" parent="Trees" instance=ExtResource("10_3trav")]
+position = Vector2(238, -45)
+
+[node name="Tree_Scene 948" parent="Trees" instance=ExtResource("10_3trav")]
+position = Vector2(255, -48)
+
+[node name="Tree_Scene 949" parent="Trees" instance=ExtResource("10_3trav")]
+position = Vector2(270, -50)
+
+[node name="Tree_Scene 950" parent="Trees" instance=ExtResource("10_3trav")]
+position = Vector2(284, -49)
+
+[node name="Tree_Scene 951" parent="Trees" instance=ExtResource("10_3trav")]
+position = Vector2(294, -48)
+
+[node name="Tree_Scene 924" parent="Trees" instance=ExtResource("10_3trav")]
+position = Vector2(94, -21)
+
+[node name="Tree_Scene 925" parent="Trees" instance=ExtResource("10_3trav")]
+position = Vector2(110, -31)
+
+[node name="Tree_Scene 926" parent="Trees" instance=ExtResource("10_3trav")]
+position = Vector2(122, -30)
+
+[node name="Tree_Scene 927" parent="Trees" instance=ExtResource("10_3trav")]
+position = Vector2(137, -29)
+
+[node name="Tree_Scene 928" parent="Trees" instance=ExtResource("10_3trav")]
+position = Vector2(153, -36)
+
+[node name="Tree_Scene 929" parent="Trees" instance=ExtResource("10_3trav")]
+position = Vector2(170, -37)
+
+[node name="Tree_Scene 930" parent="Trees" instance=ExtResource("10_3trav")]
+position = Vector2(187, -36)
+
+[node name="Tree_Scene 931" parent="Trees" instance=ExtResource("10_3trav")]
+position = Vector2(202, -34)
+
+[node name="Tree_Scene 932" parent="Trees" instance=ExtResource("10_3trav")]
+position = Vector2(216, -36)
+
+[node name="Tree_Scene 933" parent="Trees" instance=ExtResource("10_3trav")]
+position = Vector2(231, -37)
+
+[node name="Tree_Scene 934" parent="Trees" instance=ExtResource("10_3trav")]
+position = Vector2(249, -40)
+
+[node name="Tree_Scene 935" parent="Trees" instance=ExtResource("10_3trav")]
+position = Vector2(264, -40)
+
+[node name="Tree_Scene 936" parent="Trees" instance=ExtResource("10_3trav")]
+position = Vector2(277, -39)
+
+[node name="Tree_Scene 937" parent="Trees" instance=ExtResource("10_3trav")]
+position = Vector2(291, -38)
+
+[node name="Tree_Scene 722" parent="Trees" instance=ExtResource("10_3trav")]
+position = Vector2(114, -21)
+
+[node name="Tree_Scene 910" parent="Trees" instance=ExtResource("10_3trav")]
+position = Vector2(130, -22)
+
+[node name="Tree_Scene 911" parent="Trees" instance=ExtResource("10_3trav")]
+position = Vector2(150, -23)
+
+[node name="Tree_Scene 912" parent="Trees" instance=ExtResource("10_3trav")]
+position = Vector2(165, -26)
+
+[node name="Tree_Scene 914" parent="Trees" instance=ExtResource("10_3trav")]
+position = Vector2(178, -24)
+
+[node name="Tree_Scene 915" parent="Trees" instance=ExtResource("10_3trav")]
+position = Vector2(190, -22)
+
+[node name="Tree_Scene 916" parent="Trees" instance=ExtResource("10_3trav")]
+position = Vector2(202, -26)
+
+[node name="Tree_Scene 917" parent="Trees" instance=ExtResource("10_3trav")]
+position = Vector2(218, -27)
+
+[node name="Tree_Scene 918" parent="Trees" instance=ExtResource("10_3trav")]
+position = Vector2(232, -29)
+
+[node name="Tree_Scene 919" parent="Trees" instance=ExtResource("10_3trav")]
+position = Vector2(242, -27)
+
+[node name="Tree_Scene 920" parent="Trees" instance=ExtResource("10_3trav")]
+position = Vector2(254, -28)
+
+[node name="Tree_Scene 921" parent="Trees" instance=ExtResource("10_3trav")]
+position = Vector2(269, -29)
+
+[node name="Tree_Scene 922" parent="Trees" instance=ExtResource("10_3trav")]
+position = Vector2(283, -29)
+
+[node name="Tree_Scene 923" parent="Trees" instance=ExtResource("10_3trav")]
+position = Vector2(294, -26)
+
+[node name="Tree_Scene 913" parent="Trees" instance=ExtResource("10_3trav")]
+position = Vector2(159, -21)
+
+[node name="Tree_Scene 741" parent="Trees" instance=ExtResource("10_3trav")]
+position = Vector2(105, -16)
+
+[node name="Tree_Scene 723" parent="Trees" instance=ExtResource("10_3trav")]
+position = Vector2(122, -15)
+
+[node name="Tree_Scene 742" parent="Trees" instance=ExtResource("10_3trav")]
+position = Vector2(115, -6)
+
+[node name="Tree_Scene 724" parent="Trees" instance=ExtResource("10_3trav")]
+position = Vector2(129, -7)
+
+[node name="Tree_Scene 898" parent="Trees" instance=ExtResource("10_3trav")]
+position = Vector2(141, -12)
+
+[node name="Tree_Scene 899" parent="Trees" instance=ExtResource("10_3trav")]
+position = Vector2(152, -9)
+
+[node name="Tree_Scene 900" parent="Trees" instance=ExtResource("10_3trav")]
+position = Vector2(166, -14)
+
+[node name="Tree_Scene 901" parent="Trees" instance=ExtResource("10_3trav")]
+position = Vector2(180, -13)
+
+[node name="Tree_Scene 902" parent="Trees" instance=ExtResource("10_3trav")]
+position = Vector2(180, -13)
+
+[node name="Tree_Scene 903" parent="Trees" instance=ExtResource("10_3trav")]
+position = Vector2(194, -14)
+
+[node name="Tree_Scene 904" parent="Trees" instance=ExtResource("10_3trav")]
+position = Vector2(209, -15)
+
+[node name="Tree_Scene 905" parent="Trees" instance=ExtResource("10_3trav")]
+position = Vector2(226, -18)
+
+[node name="Tree_Scene 906" parent="Trees" instance=ExtResource("10_3trav")]
+position = Vector2(246, -19)
+
+[node name="Tree_Scene 907" parent="Trees" instance=ExtResource("10_3trav")]
+position = Vector2(261, -20)
+
+[node name="Tree_Scene 908" parent="Trees" instance=ExtResource("10_3trav")]
+position = Vector2(276, -19)
+
+[node name="Tree_Scene 909" parent="Trees" instance=ExtResource("10_3trav")]
+position = Vector2(289, -21)
+
+[node name="Tree_Scene 740" parent="Trees" instance=ExtResource("10_3trav")]
+position = Vector2(125, 2)
+
+[node name="Tree_Scene 738" parent="Trees" instance=ExtResource("10_3trav")]
+position = Vector2(134, 1)
+
+[node name="Tree_Scene 888" parent="Trees" instance=ExtResource("10_3trav")]
+position = Vector2(144, -3)
+
+[node name="Tree_Scene 889" parent="Trees" instance=ExtResource("10_3trav")]
+position = Vector2(160, -4)
+
+[node name="Tree_Scene 890" parent="Trees" instance=ExtResource("10_3trav")]
+position = Vector2(175, -5)
+
+[node name="Tree_Scene 891" parent="Trees" instance=ExtResource("10_3trav")]
+position = Vector2(198, -7)
+
+[node name="Tree_Scene 892" parent="Trees" instance=ExtResource("10_3trav")]
+position = Vector2(220, -7)
+
+[node name="Tree_Scene 893" parent="Trees" instance=ExtResource("10_3trav")]
+position = Vector2(238, -10)
+
+[node name="Tree_Scene 894" parent="Trees" instance=ExtResource("10_3trav")]
+position = Vector2(253, -10)
+
+[node name="Tree_Scene 895" parent="Trees" instance=ExtResource("10_3trav")]
+position = Vector2(269, -10)
+
+[node name="Tree_Scene 896" parent="Trees" instance=ExtResource("10_3trav")]
+position = Vector2(283, -10)
+
+[node name="Tree_Scene 897" parent="Trees" instance=ExtResource("10_3trav")]
+position = Vector2(293, -10)
+
+[node name="Tree_Scene 739" parent="Trees" instance=ExtResource("10_3trav")]
+position = Vector2(141, 6)
+
+[node name="Tree_Scene 878" parent="Trees" instance=ExtResource("10_3trav")]
+position = Vector2(154, 3)
+
+[node name="Tree_Scene 879" parent="Trees" instance=ExtResource("10_3trav")]
+position = Vector2(172, 3)
+
+[node name="Tree_Scene 880" parent="Trees" instance=ExtResource("10_3trav")]
+position = Vector2(187, 0)
+
+[node name="Tree_Scene 881" parent="Trees" instance=ExtResource("10_3trav")]
+position = Vector2(211, -1)
+
+[node name="Tree_Scene 882" parent="Trees" instance=ExtResource("10_3trav")]
+position = Vector2(233, -1)
+
+[node name="Tree_Scene 883" parent="Trees" instance=ExtResource("10_3trav")]
+position = Vector2(244, -1)
+
+[node name="Tree_Scene 884" parent="Trees" instance=ExtResource("10_3trav")]
+position = Vector2(258, -2)
+
+[node name="Tree_Scene 885" parent="Trees" instance=ExtResource("10_3trav")]
+position = Vector2(271, -1)
+
+[node name="Tree_Scene 886" parent="Trees" instance=ExtResource("10_3trav")]
+position = Vector2(285, -2)
+
+[node name="Tree_Scene 887" parent="Trees" instance=ExtResource("10_3trav")]
+position = Vector2(294, -2)
+
+[node name="Tree_Scene 736" parent="Trees" instance=ExtResource("10_3trav")]
+position = Vector2(130, 12)
+
+[node name="Tree_Scene 737" parent="Trees" instance=ExtResource("10_3trav")]
+position = Vector2(149, 10)
+
+[node name="Tree_Scene 869" parent="Trees" instance=ExtResource("10_3trav")]
+position = Vector2(163, 9)
+
+[node name="Tree_Scene 870" parent="Trees" instance=ExtResource("10_3trav")]
+position = Vector2(179, 8)
+
+[node name="Tree_Scene 871" parent="Trees" instance=ExtResource("10_3trav")]
+position = Vector2(200, 7)
+
+[node name="Tree_Scene 872" parent="Trees" instance=ExtResource("10_3trav")]
+position = Vector2(222, 5)
+
+[node name="Tree_Scene 873" parent="Trees" instance=ExtResource("10_3trav")]
+position = Vector2(235, 11)
+
+[node name="Tree_Scene 874" parent="Trees" instance=ExtResource("10_3trav")]
+position = Vector2(249, 9)
+
+[node name="Tree_Scene 875" parent="Trees" instance=ExtResource("10_3trav")]
+position = Vector2(264, 10)
+
+[node name="Tree_Scene 876" parent="Trees" instance=ExtResource("10_3trav")]
+position = Vector2(276, 9)
+
+[node name="Tree_Scene 877" parent="Trees" instance=ExtResource("10_3trav")]
+position = Vector2(293, 6)
+
+[node name="Tree_Scene 860" parent="Trees" instance=ExtResource("10_3trav")]
+position = Vector2(155, 20)
+
+[node name="Tree_Scene 861" parent="Trees" instance=ExtResource("10_3trav")]
+position = Vector2(173, 16)
+
+[node name="Tree_Scene 862" parent="Trees" instance=ExtResource("10_3trav")]
+position = Vector2(192, 16)
+
+[node name="Tree_Scene 863" parent="Trees" instance=ExtResource("10_3trav")]
+position = Vector2(213, 13)
+
+[node name="Tree_Scene 864" parent="Trees" instance=ExtResource("10_3trav")]
+position = Vector2(226, 18)
+
+[node name="Tree_Scene 865" parent="Trees" instance=ExtResource("10_3trav")]
+position = Vector2(242, 19)
+
+[node name="Tree_Scene 866" parent="Trees" instance=ExtResource("10_3trav")]
+position = Vector2(256, 20)
+
+[node name="Tree_Scene 867" parent="Trees" instance=ExtResource("10_3trav")]
+position = Vector2(269, 18)
+
+[node name="Tree_Scene 868" parent="Trees" instance=ExtResource("10_3trav")]
+position = Vector2(286, 15)
+
+[node name="Tree_Scene 725" parent="Trees" instance=ExtResource("10_3trav")]
+position = Vector2(141, 21)
+
+[node name="Tree_Scene 726" parent="Trees" instance=ExtResource("10_3trav")]
+position = Vector2(150, 28)
+
+[node name="Tree_Scene 727" parent="Trees" instance=ExtResource("10_3trav")]
+position = Vector2(153, 37)
+
+[node name="Tree_Scene 829" parent="Trees" instance=ExtResource("10_3trav")]
+position = Vector2(153, 37)
+
+[node name="Tree_Scene 850" parent="Trees" instance=ExtResource("10_3trav")]
+position = Vector2(166, 25)
+
+[node name="Tree_Scene 851" parent="Trees" instance=ExtResource("10_3trav")]
+position = Vector2(186, 23)
+
+[node name="Tree_Scene 852" parent="Trees" instance=ExtResource("10_3trav")]
+position = Vector2(201, 20)
+
+[node name="Tree_Scene 853" parent="Trees" instance=ExtResource("10_3trav")]
+position = Vector2(214, 26)
+
+[node name="Tree_Scene 854" parent="Trees" instance=ExtResource("10_3trav")]
+position = Vector2(227, 30)
+
+[node name="Tree_Scene 855" parent="Trees" instance=ExtResource("10_3trav")]
+position = Vector2(238, 31)
+
+[node name="Tree_Scene 856" parent="Trees" instance=ExtResource("10_3trav")]
+position = Vector2(250, 30)
+
+[node name="Tree_Scene 857" parent="Trees" instance=ExtResource("10_3trav")]
+position = Vector2(264, 27)
+
+[node name="Tree_Scene 858" parent="Trees" instance=ExtResource("10_3trav")]
+position = Vector2(279, 25)
+
+[node name="Tree_Scene 859" parent="Trees" instance=ExtResource("10_3trav")]
+position = Vector2(294, 23)
+
+[node name="Tree_Scene 841" parent="Trees" instance=ExtResource("10_3trav")]
+position = Vector2(178, 30)
+
+[node name="Tree_Scene 842" parent="Trees" instance=ExtResource("10_3trav")]
+position = Vector2(189, 34)
+
+[node name="Tree_Scene 843" parent="Trees" instance=ExtResource("10_3trav")]
+position = Vector2(203, 30)
+
+[node name="Tree_Scene 844" parent="Trees" instance=ExtResource("10_3trav")]
+position = Vector2(218, 38)
+
+[node name="Tree_Scene 845" parent="Trees" instance=ExtResource("10_3trav")]
+position = Vector2(234, 40)
+
+[node name="Tree_Scene 846" parent="Trees" instance=ExtResource("10_3trav")]
+position = Vector2(246, 40)
+
+[node name="Tree_Scene 847" parent="Trees" instance=ExtResource("10_3trav")]
+position = Vector2(261, 40)
+
+[node name="Tree_Scene 848" parent="Trees" instance=ExtResource("10_3trav")]
+position = Vector2(273, 37)
+
+[node name="Tree_Scene 849" parent="Trees" instance=ExtResource("10_3trav")]
+position = Vector2(286, 33)
+
+[node name="Tree_Scene 830" parent="Trees" instance=ExtResource("10_3trav")]
+position = Vector2(165, 36)
+
+[node name="Tree_Scene 831" parent="Trees" instance=ExtResource("10_3trav")]
+position = Vector2(180, 40)
+
+[node name="Tree_Scene 832" parent="Trees" instance=ExtResource("10_3trav")]
+position = Vector2(196, 40)
+
+[node name="Tree_Scene 833" parent="Trees" instance=ExtResource("10_3trav")]
+position = Vector2(208, 40)
+
+[node name="Tree_Scene 834" parent="Trees" instance=ExtResource("10_3trav")]
+position = Vector2(225, 45)
+
+[node name="Tree_Scene 835" parent="Trees" instance=ExtResource("10_3trav")]
+position = Vector2(229, 53)
+
+[node name="Tree_Scene 836" parent="Trees" instance=ExtResource("10_3trav")]
+position = Vector2(241, 51)
+
+[node name="Tree_Scene 837" parent="Trees" instance=ExtResource("10_3trav")]
+position = Vector2(253, 51)
+
+[node name="Tree_Scene 838" parent="Trees" instance=ExtResource("10_3trav")]
+position = Vector2(267, 52)
+
+[node name="Tree_Scene 839" parent="Trees" instance=ExtResource("10_3trav")]
+position = Vector2(281, 45)
+
+[node name="Tree_Scene 840" parent="Trees" instance=ExtResource("10_3trav")]
+position = Vector2(293, 42)
+
+[node name="Tree_Scene 819" parent="Trees" instance=ExtResource("10_3trav")]
+position = Vector2(182, 51)
+
+[node name="Tree_Scene 820" parent="Trees" instance=ExtResource("10_3trav")]
+position = Vector2(200, 53)
+
+[node name="Tree_Scene 821" parent="Trees" instance=ExtResource("10_3trav")]
+position = Vector2(217, 54)
+
+[node name="Tree_Scene 822" parent="Trees" instance=ExtResource("10_3trav")]
+position = Vector2(234, 62)
+
+[node name="Tree_Scene 823" parent="Trees" instance=ExtResource("10_3trav")]
+position = Vector2(246, 64)
+
+[node name="Tree_Scene 824" parent="Trees" instance=ExtResource("10_3trav")]
+position = Vector2(260, 61)
+
+[node name="Tree_Scene 825" parent="Trees" instance=ExtResource("10_3trav")]
+position = Vector2(275, 58)
+
+[node name="Tree_Scene 826" parent="Trees" instance=ExtResource("10_3trav")]
+position = Vector2(288, 55)
+
+[node name="Tree_Scene 728" parent="Trees" instance=ExtResource("10_3trav")]
+position = Vector2(157, 47)
+
+[node name="Tree_Scene 818" parent="Trees" instance=ExtResource("10_3trav")]
+position = Vector2(168, 49)
+
+[node name="Tree_Scene 827" parent="Trees" instance=ExtResource("10_3trav")]
+position = Vector2(192, 54)
+
+[node name="Tree_Scene 828" parent="Trees" instance=ExtResource("10_3trav")]
+position = Vector2(209, 56)
+
+[node name="Tree_Scene 809" parent="Trees" instance=ExtResource("10_3trav")]
+position = Vector2(191, 63)
+
+[node name="Tree_Scene 810" parent="Trees" instance=ExtResource("10_3trav")]
+position = Vector2(208, 64)
+
+[node name="Tree_Scene 811" parent="Trees" instance=ExtResource("10_3trav")]
+position = Vector2(223, 65)
+
+[node name="Tree_Scene 812" parent="Trees" instance=ExtResource("10_3trav")]
+position = Vector2(239, 74)
+
+[node name="Tree_Scene 813" parent="Trees" instance=ExtResource("10_3trav")]
+position = Vector2(253, 74)
+
+[node name="Tree_Scene 814" parent="Trees" instance=ExtResource("10_3trav")]
+position = Vector2(272, 68)
+
+[node name="Tree_Scene 815" parent="Trees" instance=ExtResource("10_3trav")]
+position = Vector2(285, 67)
+
+[node name="Tree_Scene 816" parent="Trees" instance=ExtResource("10_3trav")]
+position = Vector2(297, 67)
+
+[node name="Tree_Scene 801" parent="Trees" instance=ExtResource("10_3trav")]
+position = Vector2(198, 76)
+
+[node name="Tree_Scene 802" parent="Trees" instance=ExtResource("10_3trav")]
+position = Vector2(213, 77)
+
+[node name="Tree_Scene 803" parent="Trees" instance=ExtResource("10_3trav")]
+position = Vector2(224, 76)
+
+[node name="Tree_Scene 804" parent="Trees" instance=ExtResource("10_3trav")]
+position = Vector2(233, 83)
+
+[node name="Tree_Scene 805" parent="Trees" instance=ExtResource("10_3trav")]
+position = Vector2(247, 85)
+
+[node name="Tree_Scene 806" parent="Trees" instance=ExtResource("10_3trav")]
+position = Vector2(265, 79)
+
+[node name="Tree_Scene 807" parent="Trees" instance=ExtResource("10_3trav")]
+position = Vector2(280, 79)
+
+[node name="Tree_Scene 808" parent="Trees" instance=ExtResource("10_3trav")]
+position = Vector2(293, 78)
+
+[node name="Tree_Scene 729" parent="Trees" instance=ExtResource("10_3trav")]
+position = Vector2(161, 56)
+
+[node name="Tree_Scene 817" parent="Trees" instance=ExtResource("10_3trav")]
+position = Vector2(173, 53)
+
+[node name="Tree_Scene 800" parent="Trees" instance=ExtResource("10_3trav")]
+position = Vector2(178, 59)
+
+[node name="Tree_Scene 730" parent="Trees" instance=ExtResource("10_3trav")]
+position = Vector2(203, 88)
+
+[node name="Tree_Scene 784" parent="Trees" instance=ExtResource("10_3trav")]
+position = Vector2(216, 90)
+
+[node name="Tree_Scene 785" parent="Trees" instance=ExtResource("10_3trav")]
+position = Vector2(226, 90)
+
+[node name="Tree_Scene 786" parent="Trees" instance=ExtResource("10_3trav")]
+position = Vector2(241, 95)
+
+[node name="Tree_Scene 787" parent="Trees" instance=ExtResource("10_3trav")]
+position = Vector2(257, 91)
+
+[node name="Tree_Scene 788" parent="Trees" instance=ExtResource("10_3trav")]
+position = Vector2(273, 89)
+
+[node name="Tree_Scene 789" parent="Trees" instance=ExtResource("10_3trav")]
+position = Vector2(289, 89)
+
+[node name="Tree_Scene 731" parent="Trees" instance=ExtResource("10_3trav")]
+position = Vector2(165, 63)
+
+[node name="Tree_Scene 799" parent="Trees" instance=ExtResource("10_3trav")]
+position = Vector2(177, 70)
+
+[node name="Tree_Scene 798" parent="Trees" instance=ExtResource("10_3trav")]
+position = Vector2(185, 80)
+
+[node name="Tree_Scene 732" parent="Trees" instance=ExtResource("10_3trav")]
+position = Vector2(190, 91)
+
+[node name="Tree_Scene 774" parent="Trees" instance=ExtResource("10_3trav")]
+position = Vector2(175, 84)
+
+[node name="Tree_Scene 783" parent="Trees" instance=ExtResource("10_3trav")]
+position = Vector2(183, 105)
+
+[node name="Tree_Scene 775" parent="Trees" instance=ExtResource("10_3trav")]
+position = Vector2(206, 98)
+
+[node name="Tree_Scene 776" parent="Trees" instance=ExtResource("10_3trav")]
+position = Vector2(219, 100)
+
+[node name="Tree_Scene 777" parent="Trees" instance=ExtResource("10_3trav")]
+position = Vector2(233, 101)
+
+[node name="Tree_Scene 778" parent="Trees" instance=ExtResource("10_3trav")]
+position = Vector2(252, 100)
+
+[node name="Tree_Scene 779" parent="Trees" instance=ExtResource("10_3trav")]
+position = Vector2(264, 99)
+
+[node name="Tree_Scene 780" parent="Trees" instance=ExtResource("10_3trav")]
+position = Vector2(280, 99)
+
+[node name="Tree_Scene 781" parent="Trees" instance=ExtResource("10_3trav")]
+position = Vector2(295, 100)
+
+[node name="Tree_Scene 733" parent="Trees" instance=ExtResource("10_3trav")]
+position = Vector2(166, 78)
+
+[node name="Tree_Scene 734" parent="Trees" instance=ExtResource("10_3trav")]
+position = Vector2(174, 94)
+
+[node name="Tree_Scene 782" parent="Trees" instance=ExtResource("10_3trav")]
+position = Vector2(194, 103)
+
+[node name="Tree_Scene 735" parent="Trees" instance=ExtResource("10_3trav")]
+position = Vector2(166, 95)
+
+[node name="Tree_Scene 717" parent="Trees" instance=ExtResource("10_3trav")]
+position = Vector2(174, 103)
+
+[node name="Tree_Scene 716" parent="Trees" instance=ExtResource("10_3trav")]
+position = Vector2(166, 109)
+
+[node name="Tree_Scene 704" parent="Trees" instance=ExtResource("10_3trav")]
+position = Vector2(200, 112)
+
+[node name="Tree_Scene 705" parent="Trees" instance=ExtResource("10_3trav")]
+position = Vector2(212, 112)
+
+[node name="Tree_Scene 706" parent="Trees" instance=ExtResource("10_3trav")]
+position = Vector2(227, 112)
+
+[node name="Tree_Scene 707" parent="Trees" instance=ExtResource("10_3trav")]
+position = Vector2(240, 110)
+
+[node name="Tree_Scene 708" parent="Trees" instance=ExtResource("10_3trav")]
+position = Vector2(259, 106)
+
+[node name="Tree_Scene 709" parent="Trees" instance=ExtResource("10_3trav")]
+position = Vector2(274, 107)
+
+[node name="Tree_Scene 710" parent="Trees" instance=ExtResource("10_3trav")]
+position = Vector2(288, 107)
+
+[node name="Tree_Scene 588" parent="Trees" instance=ExtResource("10_3trav")]
+position = Vector2(177, 115)
+
+[node name="Tree_Scene 713" parent="Trees" instance=ExtResource("10_3trav")]
+position = Vector2(166, 116)
+
+[node name="Tree_Scene 714" parent="Trees" instance=ExtResource("10_3trav")]
+position = Vector2(169, 123)
+
+[node name="Tree_Scene 589" parent="Trees" instance=ExtResource("10_3trav")]
+position = Vector2(188, 122)
+
+[node name="Tree_Scene 681" parent="Trees" instance=ExtResource("10_3trav")]
+position = Vector2(222, 119)
+
+[node name="Tree_Scene 699" parent="Trees" instance=ExtResource("10_3trav")]
+position = Vector2(239, 119)
+
+[node name="Tree_Scene 700" parent="Trees" instance=ExtResource("10_3trav")]
+position = Vector2(251, 117)
+
+[node name="Tree_Scene 701" parent="Trees" instance=ExtResource("10_3trav")]
+position = Vector2(265, 117)
+
+[node name="Tree_Scene 702" parent="Trees" instance=ExtResource("10_3trav")]
+position = Vector2(281, 117)
+
+[node name="Tree_Scene 703" parent="Trees" instance=ExtResource("10_3trav")]
+position = Vector2(294, 116)
+
+[node name="Tree_Scene 698" parent="Trees" instance=ExtResource("10_3trav")]
+position = Vector2(207, 121)
+
+[node name="Tree_Scene 690" parent="Trees" instance=ExtResource("10_3trav")]
+position = Vector2(198, 129)
+
+[node name="Tree_Scene 691" parent="Trees" instance=ExtResource("10_3trav")]
+position = Vector2(215, 129)
+
+[node name="Tree_Scene 692" parent="Trees" instance=ExtResource("10_3trav")]
+position = Vector2(231, 128)
+
+[node name="Tree_Scene 693" parent="Trees" instance=ExtResource("10_3trav")]
+position = Vector2(246, 128)
+
+[node name="Tree_Scene 694" parent="Trees" instance=ExtResource("10_3trav")]
+position = Vector2(258, 129)
+
+[node name="Tree_Scene 695" parent="Trees" instance=ExtResource("10_3trav")]
+position = Vector2(275, 128)
+
+[node name="Tree_Scene 696" parent="Trees" instance=ExtResource("10_3trav")]
+position = Vector2(285, 126)
+
+[node name="Tree_Scene 697" parent="Trees" instance=ExtResource("10_3trav")]
+position = Vector2(297, 125)
+
+[node name="Tree_Scene 587" parent="Trees" instance=ExtResource("10_3trav")]
+position = Vector2(175, 128)
+
+[node name="Tree_Scene 712" parent="Trees" instance=ExtResource("10_3trav")]
+position = Vector2(167, 130)
+
+[node name="Tree_Scene 671" parent="Trees" instance=ExtResource("10_3trav")]
+position = Vector2(189, 136)
+
+[node name="Tree_Scene 682" parent="Trees" instance=ExtResource("10_3trav")]
+position = Vector2(204, 139)
+
+[node name="Tree_Scene 683" parent="Trees" instance=ExtResource("10_3trav")]
+position = Vector2(224, 141)
+
+[node name="Tree_Scene 684" parent="Trees" instance=ExtResource("10_3trav")]
+position = Vector2(238, 139)
+
+[node name="Tree_Scene 685" parent="Trees" instance=ExtResource("10_3trav")]
+position = Vector2(250, 138)
+
+[node name="Tree_Scene 686" parent="Trees" instance=ExtResource("10_3trav")]
+position = Vector2(268, 137)
+
+[node name="Tree_Scene 687" parent="Trees" instance=ExtResource("10_3trav")]
+position = Vector2(280, 137)
+
+[node name="Tree_Scene 688" parent="Trees" instance=ExtResource("10_3trav")]
+position = Vector2(293, 133)
+
+[node name="Tree_Scene 689" parent="Trees" instance=ExtResource("10_3trav")]
+position = Vector2(304, 134)
+
+[node name="Tree_Scene 672" parent="Trees" instance=ExtResource("10_3trav")]
+position = Vector2(186, 141)
+
+[node name="Tree_Scene 673" parent="Trees" instance=ExtResource("10_3trav")]
+position = Vector2(200, 147)
+
+[node name="Tree_Scene 674" parent="Trees" instance=ExtResource("10_3trav")]
+position = Vector2(214, 148)
+
+[node name="Tree_Scene 675" parent="Trees" instance=ExtResource("10_3trav")]
+position = Vector2(231, 149)
+
+[node name="Tree_Scene 676" parent="Trees" instance=ExtResource("10_3trav")]
+position = Vector2(244, 148)
+
+[node name="Tree_Scene 677" parent="Trees" instance=ExtResource("10_3trav")]
+position = Vector2(257, 147)
+
+[node name="Tree_Scene 678" parent="Trees" instance=ExtResource("10_3trav")]
+position = Vector2(267, 147)
+
+[node name="Tree_Scene 679" parent="Trees" instance=ExtResource("10_3trav")]
+position = Vector2(287, 145)
+
+[node name="Tree_Scene 680" parent="Trees" instance=ExtResource("10_3trav")]
+position = Vector2(297, 145)
+
+[node name="Tree_Scene 577" parent="Trees" instance=ExtResource("10_3trav")]
+position = Vector2(172, 138)
+
+[node name="Tree_Scene 711" parent="Trees" instance=ExtResource("10_3trav")]
+position = Vector2(167, 142)
+
+[node name="Tree_Scene 586" parent="Trees" instance=ExtResource("10_3trav")]
+position = Vector2(165, 153)
+
+[node name="Tree_Scene 578" parent="Trees" instance=ExtResource("10_3trav")]
+position = Vector2(177, 148)
+
+[node name="Tree_Scene 662" parent="Trees" instance=ExtResource("10_3trav")]
+position = Vector2(191, 156)
+
+[node name="Tree_Scene 663" parent="Trees" instance=ExtResource("10_3trav")]
+position = Vector2(206, 159)
+
+[node name="Tree_Scene 664" parent="Trees" instance=ExtResource("10_3trav")]
+position = Vector2(225, 160)
+
+[node name="Tree_Scene 665" parent="Trees" instance=ExtResource("10_3trav")]
+position = Vector2(236, 161)
+
+[node name="Tree_Scene 666" parent="Trees" instance=ExtResource("10_3trav")]
+position = Vector2(250, 160)
+
+[node name="Tree_Scene 667" parent="Trees" instance=ExtResource("10_3trav")]
+position = Vector2(263, 157)
+
+[node name="Tree_Scene 668" parent="Trees" instance=ExtResource("10_3trav")]
+position = Vector2(277, 155)
+
+[node name="Tree_Scene 669" parent="Trees" instance=ExtResource("10_3trav")]
+position = Vector2(291, 155)
+
+[node name="Tree_Scene 670" parent="Trees" instance=ExtResource("10_3trav")]
+position = Vector2(304, 151)
+
+[node name="Tree_Scene 579" parent="Trees" instance=ExtResource("10_3trav")]
+position = Vector2(167, 156)
+
+[node name="Tree_Scene 651" parent="Trees" instance=ExtResource("10_3trav")]
+position = Vector2(177, 162)
+
+[node name="Tree_Scene 652" parent="Trees" instance=ExtResource("10_3trav")]
+position = Vector2(186, 168)
+
+[node name="Tree_Scene 653" parent="Trees" instance=ExtResource("10_3trav")]
+position = Vector2(199, 169)
+
+[node name="Tree_Scene 654" parent="Trees" instance=ExtResource("10_3trav")]
+position = Vector2(215, 168)
+
+[node name="Tree_Scene 655" parent="Trees" instance=ExtResource("10_3trav")]
+position = Vector2(230, 168)
+
+[node name="Tree_Scene 656" parent="Trees" instance=ExtResource("10_3trav")]
+position = Vector2(242, 167)
+
+[node name="Tree_Scene 657" parent="Trees" instance=ExtResource("10_3trav")]
+position = Vector2(258, 168)
+
+[node name="Tree_Scene 658" parent="Trees" instance=ExtResource("10_3trav")]
+position = Vector2(273, 165)
+
+[node name="Tree_Scene 659" parent="Trees" instance=ExtResource("10_3trav")]
+position = Vector2(286, 163)
+
+[node name="Tree_Scene 660" parent="Trees" instance=ExtResource("10_3trav")]
+position = Vector2(298, 161)
+
+[node name="Tree_Scene 661" parent="Trees" instance=ExtResource("10_3trav")]
+position = Vector2(307, 162)
+
+[node name="Tree_Scene 580" parent="Trees" instance=ExtResource("10_3trav")]
+position = Vector2(159, 172)
+
+[node name="Tree_Scene 585" parent="Trees" instance=ExtResource("10_3trav")]
+position = Vector2(168, 168)
+
+[node name="Tree_Scene 640" parent="Trees" instance=ExtResource("10_3trav")]
+position = Vector2(175, 173)
+
+[node name="Tree_Scene 626" parent="Trees" instance=ExtResource("10_3trav")]
+position = Vector2(169, 179)
+
+[node name="Tree_Scene 641" parent="Trees" instance=ExtResource("10_3trav")]
+position = Vector2(182, 179)
+
+[node name="Tree_Scene 642" parent="Trees" instance=ExtResource("10_3trav")]
+position = Vector2(197, 179)
+
+[node name="Tree_Scene 643" parent="Trees" instance=ExtResource("10_3trav")]
+position = Vector2(212, 178)
+
+[node name="Tree_Scene 644" parent="Trees" instance=ExtResource("10_3trav")]
+position = Vector2(225, 176)
+
+[node name="Tree_Scene 645" parent="Trees" instance=ExtResource("10_3trav")]
+position = Vector2(237, 178)
+
+[node name="Tree_Scene 646" parent="Trees" instance=ExtResource("10_3trav")]
+position = Vector2(249, 180)
+
+[node name="Tree_Scene 647" parent="Trees" instance=ExtResource("10_3trav")]
+position = Vector2(266, 175)
+
+[node name="Tree_Scene 648" parent="Trees" instance=ExtResource("10_3trav")]
+position = Vector2(278, 172)
+
+[node name="Tree_Scene 649" parent="Trees" instance=ExtResource("10_3trav")]
+position = Vector2(289, 170)
+
+[node name="Tree_Scene 650" parent="Trees" instance=ExtResource("10_3trav")]
+position = Vector2(302, 169)
+
+[node name="Tree_Scene 581" parent="Trees" instance=ExtResource("10_3trav")]
+position = Vector2(157, 181)
+
+[node name="Tree_Scene 627" parent="Trees" instance=ExtResource("10_3trav")]
+position = Vector2(173, 185)
+
+[node name="Tree_Scene 628" parent="Trees" instance=ExtResource("10_3trav")]
+position = Vector2(189, 187)
+
+[node name="Tree_Scene 629" parent="Trees" instance=ExtResource("10_3trav")]
+position = Vector2(204, 187)
+
+[node name="Tree_Scene 630" parent="Trees" instance=ExtResource("10_3trav")]
+position = Vector2(218, 188)
+
+[node name="Tree_Scene 631" parent="Trees" instance=ExtResource("10_3trav")]
+position = Vector2(230, 186)
+
+[node name="Tree_Scene 632" parent="Trees" instance=ExtResource("10_3trav")]
+position = Vector2(230, 186)
+
+[node name="Tree_Scene 633" parent="Trees" instance=ExtResource("10_3trav")]
+position = Vector2(242, 188)
+
+[node name="Tree_Scene 634" parent="Trees" instance=ExtResource("10_3trav")]
+position = Vector2(242, 188)
+
+[node name="Tree_Scene 635" parent="Trees" instance=ExtResource("10_3trav")]
+position = Vector2(258, 187)
+
+[node name="Tree_Scene 636" parent="Trees" instance=ExtResource("10_3trav")]
+position = Vector2(272, 183)
+
+[node name="Tree_Scene 637" parent="Trees" instance=ExtResource("10_3trav")]
+position = Vector2(284, 180)
+
+[node name="Tree_Scene 638" parent="Trees" instance=ExtResource("10_3trav")]
+position = Vector2(297, 179)
+
+[node name="Tree_Scene 639" parent="Trees" instance=ExtResource("10_3trav")]
+position = Vector2(308, 176)
+
+[node name="Tree_Scene 582" parent="Trees" instance=ExtResource("10_3trav")]
+position = Vector2(151, 188)
+
+[node name="Tree_Scene 612" parent="Trees" instance=ExtResource("10_3trav")]
+position = Vector2(166, 195)
+
+[node name="Tree_Scene 613" parent="Trees" instance=ExtResource("10_3trav")]
+position = Vector2(181, 195)
+
+[node name="Tree_Scene 614" parent="Trees" instance=ExtResource("10_3trav")]
+position = Vector2(198, 196)
+
+[node name="Tree_Scene 615" parent="Trees" instance=ExtResource("10_3trav")]
+position = Vector2(212, 196)
+
+[node name="Tree_Scene 616" parent="Trees" instance=ExtResource("10_3trav")]
+position = Vector2(226, 195)
+
+[node name="Tree_Scene 617" parent="Trees" instance=ExtResource("10_3trav")]
+position = Vector2(236, 195)
+
+[node name="Tree_Scene 618" parent="Trees" instance=ExtResource("10_3trav")]
+position = Vector2(236, 195)
+
+[node name="Tree_Scene 619" parent="Trees" instance=ExtResource("10_3trav")]
+position = Vector2(254, 195)
+
+[node name="Tree_Scene 620" parent="Trees" instance=ExtResource("10_3trav")]
+position = Vector2(267, 193)
+
+[node name="Tree_Scene 621" parent="Trees" instance=ExtResource("10_3trav")]
+position = Vector2(278, 191)
+
+[node name="Tree_Scene 622" parent="Trees" instance=ExtResource("10_3trav")]
+position = Vector2(291, 189)
+
+[node name="Tree_Scene 623" parent="Trees" instance=ExtResource("10_3trav")]
+position = Vector2(303, 187)
+
+[node name="Tree_Scene 624" parent="Trees" instance=ExtResource("10_3trav")]
+position = Vector2(311, 191)
+
+[node name="Tree_Scene 625" parent="Trees" instance=ExtResource("10_3trav")]
+position = Vector2(318, 198)
+
+[node name="Tree_Scene 611" parent="Trees" instance=ExtResource("10_3trav")]
+position = Vector2(157, 198)
+
+[node name="Tree_Scene 583" parent="Trees" instance=ExtResource("10_3trav")]
+position = Vector2(145, 197)
+
+[node name="Tree_Scene 601" parent="Trees" instance=ExtResource("10_3trav")]
+position = Vector2(160, 204)
+
+[node name="Tree_Scene 602" parent="Trees" instance=ExtResource("10_3trav")]
+position = Vector2(175, 204)
+
+[node name="Tree_Scene 603" parent="Trees" instance=ExtResource("10_3trav")]
+position = Vector2(188, 204)
+
+[node name="Tree_Scene 604" parent="Trees" instance=ExtResource("10_3trav")]
+position = Vector2(208, 206)
+
+[node name="Tree_Scene 605" parent="Trees" instance=ExtResource("10_3trav")]
+position = Vector2(218, 205)
+
+[node name="Tree_Scene 606" parent="Trees" instance=ExtResource("10_3trav")]
+position = Vector2(232, 202)
+
+[node name="Tree_Scene 607" parent="Trees" instance=ExtResource("10_3trav")]
+position = Vector2(245, 200)
+
+[node name="Tree_Scene 608" parent="Trees" instance=ExtResource("10_3trav")]
+position = Vector2(266, 200)
+
+[node name="Tree_Scene 609" parent="Trees" instance=ExtResource("10_3trav")]
+position = Vector2(283, 197)
+
+[node name="Tree_Scene 610" parent="Trees" instance=ExtResource("10_3trav")]
+position = Vector2(299, 192)
+
+[node name="Tree_Scene 575" parent="Trees" instance=ExtResource("10_3trav")]
+position = Vector2(133, 204)
+
+[node name="Tree_Scene 590" parent="Trees" instance=ExtResource("10_3trav")]
+position = Vector2(136, 212)
+
+[node name="Tree_Scene 591" parent="Trees" instance=ExtResource("10_3trav")]
+position = Vector2(150, 213)
+
+[node name="Tree_Scene 592" parent="Trees" instance=ExtResource("10_3trav")]
+position = Vector2(166, 214)
+
+[node name="Tree_Scene 593" parent="Trees" instance=ExtResource("10_3trav")]
+position = Vector2(184, 215)
+
+[node name="Tree_Scene 594" parent="Trees" instance=ExtResource("10_3trav")]
+position = Vector2(199, 214)
+
+[node name="Tree_Scene 595" parent="Trees" instance=ExtResource("10_3trav")]
+position = Vector2(227, 211)
+
+[node name="Tree_Scene 596" parent="Trees" instance=ExtResource("10_3trav")]
+position = Vector2(241, 209)
+
+[node name="Tree_Scene 597" parent="Trees" instance=ExtResource("10_3trav")]
+position = Vector2(255, 205)
+
+[node name="Tree_Scene 598" parent="Trees" instance=ExtResource("10_3trav")]
+position = Vector2(276, 202)
+
+[node name="Tree_Scene 599" parent="Trees" instance=ExtResource("10_3trav")]
+position = Vector2(291, 199)
+
+[node name="Tree_Scene 600" parent="Trees" instance=ExtResource("10_3trav")]
+position = Vector2(306, 200)
+
+[node name="Tree_Scene 584" parent="Trees" instance=ExtResource("10_3trav")]
+position = Vector2(125, 212)
+
+[node name="Tree_Scene 187" parent="Trees" instance=ExtResource("10_3trav")]
+position = Vector2(-161, 213)
+
+[node name="Tree_Scene 188" parent="Trees" instance=ExtResource("10_3trav")]
+position = Vector2(-173, 215)
+
+[node name="Tree_Scene 189" parent="Trees" instance=ExtResource("10_3trav")]
+position = Vector2(-182, 216)
+
+[node name="Tree_Scene 190" parent="Trees" instance=ExtResource("10_3trav")]
+position = Vector2(-196, 218)
+
+[node name="Tree_Scene 191" parent="Trees" instance=ExtResource("10_3trav")]
+position = Vector2(-215, 220)
+
+[node name="Tree_Scene 192" parent="Trees" instance=ExtResource("10_3trav")]
+position = Vector2(-236, 221)
+
+[node name="Tree_Scene 193" parent="Trees" instance=ExtResource("10_3trav")]
+position = Vector2(-252, 222)
+
+[node name="Tree_Scene 194" parent="Trees" instance=ExtResource("10_3trav")]
+position = Vector2(-271, 223)
+
+[node name="Tree_Scene 195" parent="Trees" instance=ExtResource("10_3trav")]
+position = Vector2(-292, 227)
+
+[node name="Tree_Scene 196" parent="Trees" instance=ExtResource("10_3trav")]
+position = Vector2(-307, 227)
+
+[node name="Tree_Scene 197" parent="Trees" instance=ExtResource("10_3trav")]
+position = Vector2(-328, 227)
+
+[node name="Tree_Scene 198" parent="Trees" instance=ExtResource("10_3trav")]
+position = Vector2(-317, 232)
+
+[node name="Tree_Scene 221" parent="Trees" instance=ExtResource("10_3trav")]
+position = Vector2(-328, 239)
+
+[node name="Tree_Scene 222" parent="Trees" instance=ExtResource("10_3trav")]
+position = Vector2(-300, 234)
+
+[node name="Tree_Scene 199" parent="Trees" instance=ExtResource("10_3trav")]
+position = Vector2(-309, 237)
+
+[node name="Tree_Scene 201" parent="Trees" instance=ExtResource("10_3trav")]
+position = Vector2(-260, 230)
+
+[node name="Tree_Scene 202" parent="Trees" instance=ExtResource("10_3trav")]
+position = Vector2(-244, 230)
+
+[node name="Tree_Scene 203" parent="Trees" instance=ExtResource("10_3trav")]
+position = Vector2(-225, 226)
+
+[node name="Tree_Scene 204" parent="Trees" instance=ExtResource("10_3trav")]
+position = Vector2(-206, 225)
+
+[node name="Tree_Scene 205" parent="Trees" instance=ExtResource("10_3trav")]
+position = Vector2(-189, 225)
+
+[node name="Tree_Scene 206" parent="Trees" instance=ExtResource("10_3trav")]
+position = Vector2(-171, 223)
+
+[node name="Tree_Scene 207" parent="Trees" instance=ExtResource("10_3trav")]
+position = Vector2(-158, 223)
+
+[node name="Tree_Scene 208" parent="Trees" instance=ExtResource("10_3trav")]
+position = Vector2(-143, 227)
+
+[node name="Tree_Scene 209" parent="Trees" instance=ExtResource("10_3trav")]
+position = Vector2(-123, 224)
+
+[node name="Tree_Scene 210" parent="Trees" instance=ExtResource("10_3trav")]
+position = Vector2(-109, 226)
+
+[node name="Tree_Scene 211" parent="Trees" instance=ExtResource("10_3trav")]
+position = Vector2(-97, 230)
+
+[node name="Tree_Scene 215" parent="Trees" instance=ExtResource("10_3trav")]
+position = Vector2(-58, 240)
+
+[node name="Tree_Scene 573" parent="Trees" instance=ExtResource("10_3trav")]
+position = Vector2(117, 214)
+
+[node name="Tree_Scene 559" parent="Trees" instance=ExtResource("10_3trav")]
+position = Vector2(106, 224)
+
+[node name="Tree_Scene 572" parent="Trees" instance=ExtResource("10_3trav")]
+position = Vector2(111, 227)
+
+[node name="Tree_Scene 560" parent="Trees" instance=ExtResource("10_3trav")]
+position = Vector2(127, 222)
+
+[node name="Tree_Scene 561" parent="Trees" instance=ExtResource("10_3trav")]
+position = Vector2(145, 221)
+
+[node name="Tree_Scene 562" parent="Trees" instance=ExtResource("10_3trav")]
+position = Vector2(159, 224)
+
+[node name="Tree_Scene 563" parent="Trees" instance=ExtResource("10_3trav")]
+position = Vector2(176, 223)
+
+[node name="Tree_Scene 564" parent="Trees" instance=ExtResource("10_3trav")]
+position = Vector2(193, 224)
+
+[node name="Tree_Scene 565" parent="Trees" instance=ExtResource("10_3trav")]
+position = Vector2(212, 219)
+
+[node name="Tree_Scene 566" parent="Trees" instance=ExtResource("10_3trav")]
+position = Vector2(231, 217)
+
+[node name="Tree_Scene 567" parent="Trees" instance=ExtResource("10_3trav")]
+position = Vector2(249, 215)
+
+[node name="Tree_Scene 568" parent="Trees" instance=ExtResource("10_3trav")]
+position = Vector2(267, 214)
+
+[node name="Tree_Scene 569" parent="Trees" instance=ExtResource("10_3trav")]
+position = Vector2(288, 211)
+
+[node name="Tree_Scene 570" parent="Trees" instance=ExtResource("10_3trav")]
+position = Vector2(299, 209)
+
+[node name="Tree_Scene 571" parent="Trees" instance=ExtResource("10_3trav")]
+position = Vector2(312, 211)
+
+[node name="Tree_Scene 534" parent="Trees" instance=ExtResource("10_3trav")]
+position = Vector2(55, 239)
+
+[node name="Tree_Scene 536" parent="Trees" instance=ExtResource("10_3trav")]
+position = Vector2(89, 231)
+
+[node name="Tree_Scene 555" parent="Trees" instance=ExtResource("10_3trav")]
+position = Vector2(89, 231)
+
+[node name="Tree_Scene 537" parent="Trees" instance=ExtResource("10_3trav")]
+position = Vector2(102, 230)
+
+[node name="Tree_Scene 538" parent="Trees" instance=ExtResource("10_3trav")]
+position = Vector2(120, 228)
+
+[node name="Tree_Scene 539" parent="Trees" instance=ExtResource("10_3trav")]
+position = Vector2(134, 228)
+
+[node name="Tree_Scene 540" parent="Trees" instance=ExtResource("10_3trav")]
+position = Vector2(149, 231)
+
+[node name="Tree_Scene 541" parent="Trees" instance=ExtResource("10_3trav")]
+position = Vector2(167, 231)
+
+[node name="Tree_Scene 542" parent="Trees" instance=ExtResource("10_3trav")]
+position = Vector2(189, 231)
+
+[node name="Tree_Scene 543" parent="Trees" instance=ExtResource("10_3trav")]
+position = Vector2(209, 228)
+
+[node name="Tree_Scene 544" parent="Trees" instance=ExtResource("10_3trav")]
+position = Vector2(226, 226)
+
+[node name="Tree_Scene 545" parent="Trees" instance=ExtResource("10_3trav")]
+position = Vector2(242, 224)
+
+[node name="Tree_Scene 546" parent="Trees" instance=ExtResource("10_3trav")]
+position = Vector2(259, 221)
+
+[node name="Tree_Scene 547" parent="Trees" instance=ExtResource("10_3trav")]
+position = Vector2(272, 220)
+
+[node name="Tree_Scene 548" parent="Trees" instance=ExtResource("10_3trav")]
+position = Vector2(282, 218)
+
+[node name="Tree_Scene 549" parent="Trees" instance=ExtResource("10_3trav")]
+position = Vector2(295, 217)
+
+[node name="Tree_Scene 550" parent="Trees" instance=ExtResource("10_3trav")]
+position = Vector2(307, 215)
+
+[node name="Tree_Scene 507" parent="Trees" instance=ExtResource("10_3trav")]
+position = Vector2(-8, 241)
+
+[node name="Tree_Scene 511" parent="Trees" instance=ExtResource("10_3trav")]
+position = Vector2(35, 240)
+
+[node name="Tree_Scene 512" parent="Trees" instance=ExtResource("10_3trav")]
+position = Vector2(48, 240)
+
+[node name="Tree_Scene 513" parent="Trees" instance=ExtResource("10_3trav")]
+position = Vector2(64, 240)
+
+[node name="Tree_Scene 514" parent="Trees" instance=ExtResource("10_3trav")]
+position = Vector2(92, 239)
+
+[node name="Tree_Scene 515" parent="Trees" instance=ExtResource("10_3trav")]
+position = Vector2(77, 238)
+
+[node name="Tree_Scene 516" parent="Trees" instance=ExtResource("10_3trav")]
+position = Vector2(112, 235)
+
+[node name="Tree_Scene 517" parent="Trees" instance=ExtResource("10_3trav")]
+position = Vector2(126, 240)
+
+[node name="Tree_Scene 518" parent="Trees" instance=ExtResource("10_3trav")]
+position = Vector2(143, 235)
+
+[node name="Tree_Scene 519" parent="Trees" instance=ExtResource("10_3trav")]
+position = Vector2(158, 237)
+
+[node name="Tree_Scene 520" parent="Trees" instance=ExtResource("10_3trav")]
+position = Vector2(179, 235)
+
+[node name="Tree_Scene 521" parent="Trees" instance=ExtResource("10_3trav")]
+position = Vector2(200, 233)
+
+[node name="Tree_Scene 522" parent="Trees" instance=ExtResource("10_3trav")]
+position = Vector2(218, 233)
+
+[node name="Tree_Scene 523" parent="Trees" instance=ExtResource("10_3trav")]
+position = Vector2(234, 229)
+
+[node name="Tree_Scene 524" parent="Trees" instance=ExtResource("10_3trav")]
+position = Vector2(253, 229)
+
+[node name="Tree_Scene 525" parent="Trees" instance=ExtResource("10_3trav")]
+position = Vector2(272, 227)
+
+[node name="Tree_Scene 526" parent="Trees" instance=ExtResource("10_3trav")]
+position = Vector2(286, 226)
+
+[node name="Tree_Scene 527" parent="Trees" instance=ExtResource("10_3trav")]
+position = Vector2(299, 225)
+
+[node name="Tree_Scene 528" parent="Trees" instance=ExtResource("10_3trav")]
+position = Vector2(310, 229)
+
+[node name="Tree_Scene 529" parent="Trees" instance=ExtResource("10_3trav")]
+position = Vector2(263, 229)
+
+[node name="Tree_Scene 508" parent="Trees" instance=ExtResource("10_3trav")]
+position = Vector2(-18, 242)
+
+[node name="Tree_Scene 530" parent="Trees" instance=ExtResource("10_3trav")]
+position = Vector2(-26, 245)
+
+[node name="Tree_Scene 324" parent="Trees" instance=ExtResource("10_3trav")]
+position = Vector2(-37, 239)
+
+[node name="Tree_Scene 325" parent="Trees" instance=ExtResource("10_3trav")]
+position = Vector2(-49, 242)
+
+[node name="Tree_Scene 220" parent="Trees" instance=ExtResource("10_3trav")]
+position = Vector2(-81, 235)
+
+[node name="Tree_Scene 217" parent="Trees" instance=ExtResource("10_3trav")]
+position = Vector2(-70, 237)
+
+[node name="Tree_Scene 200" parent="Trees" instance=ExtResource("10_3trav")]
+position = Vector2(-281, 233)
+
+[node name="Tree_Scene 223" parent="Trees" instance=ExtResource("10_3trav")]
+position = Vector2(-287, 238)
+
+[node name="Tree_Scene 224" parent="Trees" instance=ExtResource("10_3trav")]
+position = Vector2(-269, 235)
+
+[node name="Tree_Scene 225" parent="Trees" instance=ExtResource("10_3trav")]
+position = Vector2(-249, 233)
+
+[node name="Tree_Scene 226" parent="Trees" instance=ExtResource("10_3trav")]
+position = Vector2(-233, 232)
+
+[node name="Tree_Scene 227" parent="Trees" instance=ExtResource("10_3trav")]
+position = Vector2(-216, 232)
+
+[node name="Tree_Scene 228" parent="Trees" instance=ExtResource("10_3trav")]
+position = Vector2(-198, 233)
+
+[node name="Tree_Scene 229" parent="Trees" instance=ExtResource("10_3trav")]
+position = Vector2(-178, 230)
+
+[node name="Tree_Scene 230" parent="Trees" instance=ExtResource("10_3trav")]
+position = Vector2(-166, 232)
+
+[node name="Tree_Scene 231" parent="Trees" instance=ExtResource("10_3trav")]
+position = Vector2(-151, 233)
+
+[node name="Tree_Scene 232" parent="Trees" instance=ExtResource("10_3trav")]
+position = Vector2(-133, 231)
+
+[node name="Tree_Scene 233" parent="Trees" instance=ExtResource("10_3trav")]
+position = Vector2(-116, 233)
+
+[node name="Tree_Scene 234" parent="Trees" instance=ExtResource("10_3trav")]
+position = Vector2(-106, 237)
+
+[node name="Tree_Scene 235" parent="Trees" instance=ExtResource("10_3trav")]
+position = Vector2(-89, 233)
+
+[node name="Tree_Scene 236" parent="Trees" instance=ExtResource("10_3trav")]
+position = Vector2(-66, 247)
+
+[node name="Tree_Scene 237" parent="Trees" instance=ExtResource("10_3trav")]
+position = Vector2(-51, 248)
+
+[node name="Tree_Scene 331" parent="Trees" instance=ExtResource("10_3trav")]
+position = Vector2(-44, 245)
+
+[node name="Tree_Scene 328" parent="Trees" instance=ExtResource("10_3trav")]
+position = Vector2(-23, 249)
+
+[node name="Tree_Scene 477" parent="Trees" instance=ExtResource("10_3trav")]
+position = Vector2(-10, 249)
+
+[node name="Tree_Scene 478" parent="Trees" instance=ExtResource("10_3trav")]
+position = Vector2(2, 247)
+
+[node name="Tree_Scene 479" parent="Trees" instance=ExtResource("10_3trav")]
+position = Vector2(12, 248)
+
+[node name="Tree_Scene 480" parent="Trees" instance=ExtResource("10_3trav")]
+position = Vector2(24, 247)
+
+[node name="Tree_Scene 481" parent="Trees" instance=ExtResource("10_3trav")]
+position = Vector2(37, 252)
+
+[node name="Tree_Scene 482" parent="Trees" instance=ExtResource("10_3trav")]
+position = Vector2(49, 248)
+
+[node name="Tree_Scene 483" parent="Trees" instance=ExtResource("10_3trav")]
+position = Vector2(64, 248)
+
+[node name="Tree_Scene 484" parent="Trees" instance=ExtResource("10_3trav")]
+position = Vector2(78, 245)
+
+[node name="Tree_Scene 485" parent="Trees" instance=ExtResource("10_3trav")]
+position = Vector2(91, 248)
+
+[node name="Tree_Scene 486" parent="Trees" instance=ExtResource("10_3trav")]
+position = Vector2(105, 244)
+
+[node name="Tree_Scene 487" parent="Trees" instance=ExtResource("10_3trav")]
+position = Vector2(118, 246)
+
+[node name="Tree_Scene 488" parent="Trees" instance=ExtResource("10_3trav")]
+position = Vector2(136, 245)
+
+[node name="Tree_Scene 489" parent="Trees" instance=ExtResource("10_3trav")]
+position = Vector2(148, 246)
+
+[node name="Tree_Scene 490" parent="Trees" instance=ExtResource("10_3trav")]
+position = Vector2(161, 248)
+
+[node name="Tree_Scene 491" parent="Trees" instance=ExtResource("10_3trav")]
+position = Vector2(172, 245)
+
+[node name="Tree_Scene 492" parent="Trees" instance=ExtResource("10_3trav")]
+position = Vector2(187, 243)
+
+[node name="Tree_Scene 493" parent="Trees" instance=ExtResource("10_3trav")]
+position = Vector2(199, 242)
+
+[node name="Tree_Scene 494" parent="Trees" instance=ExtResource("10_3trav")]
+position = Vector2(215, 242)
+
+[node name="Tree_Scene 495" parent="Trees" instance=ExtResource("10_3trav")]
+position = Vector2(229, 242)
+
+[node name="Tree_Scene 496" parent="Trees" instance=ExtResource("10_3trav")]
+position = Vector2(244, 239)
+
+[node name="Tree_Scene 497" parent="Trees" instance=ExtResource("10_3trav")]
+position = Vector2(257, 239)
+
+[node name="Tree_Scene 498" parent="Trees" instance=ExtResource("10_3trav")]
+position = Vector2(269, 239)
+
+[node name="Tree_Scene 499" parent="Trees" instance=ExtResource("10_3trav")]
+position = Vector2(280, 239)
+
+[node name="Tree_Scene 500" parent="Trees" instance=ExtResource("10_3trav")]
+position = Vector2(292, 237)
+
+[node name="Tree_Scene 503" parent="Trees" instance=ExtResource("10_3trav")]
+position = Vector2(304, 237)
+
+[node name="Tree_Scene 504" parent="Trees" instance=ExtResource("10_3trav")]
+position = Vector2(308, 242)
+
+[node name="Tree_Scene 501" parent="Trees" instance=ExtResource("10_3trav")]
+position = Vector2(296, 242)
+
+[node name="Tree_Scene 502" parent="Trees" instance=ExtResource("10_3trav")]
+position = Vector2(303, 249)
+
+[node name="Tree_Scene 505" parent="Trees" instance=ExtResource("10_3trav")]
+position = Vector2(310, 258)
+
+[node name="Tree_Scene 506" parent="Trees" instance=ExtResource("10_3trav")]
+position = Vector2(313, 267)
+
+[node name="Tree_Scene 238" parent="Trees" instance=ExtResource("10_3trav")]
+position = Vector2(-59, 248)
+
+[node name="Tree_Scene 239" parent="Trees" instance=ExtResource("10_3trav")]
+position = Vector2(-78, 240)
+
+[node name="Tree_Scene 240" parent="Trees" instance=ExtResource("10_3trav")]
+position = Vector2(-74, 250)
+
+[node name="Tree_Scene 241" parent="Trees" instance=ExtResource("10_3trav")]
+position = Vector2(-96, 240)
+
+[node name="Tree_Scene 242" parent="Trees" instance=ExtResource("10_3trav")]
+position = Vector2(-88, 244)
+
+[node name="Tree_Scene 243" parent="Trees" instance=ExtResource("10_3trav")]
+position = Vector2(-127, 238)
+
+[node name="Tree_Scene 244" parent="Trees" instance=ExtResource("10_3trav")]
+position = Vector2(-141, 239)
+
+[node name="Tree_Scene 245" parent="Trees" instance=ExtResource("10_3trav")]
+position = Vector2(-160, 240)
+
+[node name="Tree_Scene 246" parent="Trees" instance=ExtResource("10_3trav")]
+position = Vector2(-176, 240)
+
+[node name="Tree_Scene 247" parent="Trees" instance=ExtResource("10_3trav")]
+position = Vector2(-189, 239)
+
+[node name="Tree_Scene 248" parent="Trees" instance=ExtResource("10_3trav")]
+position = Vector2(-206, 238)
+
+[node name="Tree_Scene 249" parent="Trees" instance=ExtResource("10_3trav")]
+position = Vector2(-226, 238)
+
+[node name="Tree_Scene 250" parent="Trees" instance=ExtResource("10_3trav")]
+position = Vector2(-241, 241)
+
+[node name="Tree_Scene 251" parent="Trees" instance=ExtResource("10_3trav")]
+position = Vector2(-259, 239)
+
+[node name="Tree_Scene 252" parent="Trees" instance=ExtResource("10_3trav")]
+position = Vector2(-278, 239)
+
+[node name="Tree_Scene 253" parent="Trees" instance=ExtResource("10_3trav")]
+position = Vector2(-297, 241)
+
+[node name="Tree_Scene 254" parent="Trees" instance=ExtResource("10_3trav")]
+position = Vector2(-320, 243)
+
+[node name="Tree_Scene 255" parent="Trees" instance=ExtResource("10_3trav")]
+position = Vector2(-327, 252)
+
+[node name="Tree_Scene 256" parent="Trees" instance=ExtResource("10_3trav")]
+position = Vector2(-309, 249)
+
+[node name="Tree_Scene 257" parent="Trees" instance=ExtResource("10_3trav")]
+position = Vector2(-316, 256)
+
+[node name="Tree_Scene 258" parent="Trees" instance=ExtResource("10_3trav")]
+position = Vector2(-289, 247)
+
+[node name="Tree_Scene 259" parent="Trees" instance=ExtResource("10_3trav")]
+position = Vector2(-297, 254)
+
+[node name="Tree_Scene 260" parent="Trees" instance=ExtResource("10_3trav")]
+position = Vector2(-269, 244)
+
+[node name="Tree_Scene 261" parent="Trees" instance=ExtResource("10_3trav")]
+position = Vector2(-278, 250)
+
+[node name="Tree_Scene 262" parent="Trees" instance=ExtResource("10_3trav")]
+position = Vector2(-250, 246)
+
+[node name="Tree_Scene 263" parent="Trees" instance=ExtResource("10_3trav")]
+position = Vector2(-258, 251)
+
+[node name="Tree_Scene 264" parent="Trees" instance=ExtResource("10_3trav")]
+position = Vector2(-267, 257)
+
+[node name="Tree_Scene 265" parent="Trees" instance=ExtResource("10_3trav")]
+position = Vector2(-287, 259)
+
+[node name="Tree_Scene 266" parent="Trees" instance=ExtResource("10_3trav")]
+position = Vector2(-233, 244)
+
+[node name="Tree_Scene 267" parent="Trees" instance=ExtResource("10_3trav")]
+position = Vector2(-241, 249)
+
+[node name="Tree_Scene 268" parent="Trees" instance=ExtResource("10_3trav")]
+position = Vector2(-248, 256)
+
+[node name="Tree_Scene 269" parent="Trees" instance=ExtResource("10_3trav")]
+position = Vector2(-217, 243)
+
+[node name="Tree_Scene 270" parent="Trees" instance=ExtResource("10_3trav")]
+position = Vector2(-223, 248)
+
+[node name="Tree_Scene 271" parent="Trees" instance=ExtResource("10_3trav")]
+position = Vector2(-232, 254)
+
+[node name="Tree_Scene 272" parent="Trees" instance=ExtResource("10_3trav")]
+position = Vector2(-194, 244)
+
+[node name="Tree_Scene 273" parent="Trees" instance=ExtResource("10_3trav")]
+position = Vector2(-203, 248)
+
+[node name="Tree_Scene 274" parent="Trees" instance=ExtResource("10_3trav")]
+position = Vector2(-212, 252)
+
+[node name="Tree_Scene 275" parent="Trees" instance=ExtResource("10_3trav")]
+position = Vector2(-218, 259)
+
+[node name="Tree_Scene 276" parent="Trees" instance=ExtResource("10_3trav")]
+position = Vector2(-183, 247)
+
+[node name="Tree_Scene 277" parent="Trees" instance=ExtResource("10_3trav")]
+position = Vector2(-191, 250)
+
+[node name="Tree_Scene 278" parent="Trees" instance=ExtResource("10_3trav")]
+position = Vector2(-201, 256)
+
+[node name="Tree_Scene 279" parent="Trees" instance=ExtResource("10_3trav")]
+position = Vector2(-167, 245)
+
+[node name="Tree_Scene 280" parent="Trees" instance=ExtResource("10_3trav")]
+position = Vector2(-179, 251)
+
+[node name="Tree_Scene 281" parent="Trees" instance=ExtResource("10_3trav")]
+position = Vector2(-187, 258)
+
+[node name="Tree_Scene 285" parent="Trees" instance=ExtResource("10_3trav")]
+position = Vector2(-149, 243)
+
+[node name="Tree_Scene 286" parent="Trees" instance=ExtResource("10_3trav")]
+position = Vector2(-159, 250)
+
+[node name="Tree_Scene 287" parent="Trees" instance=ExtResource("10_3trav")]
+position = Vector2(-169, 254)
+
+[node name="Tree_Scene 288" parent="Trees" instance=ExtResource("10_3trav")]
+position = Vector2(-177, 262)
+
+[node name="Tree_Scene 289" parent="Trees" instance=ExtResource("10_3trav")]
+position = Vector2(-195, 266)
+
+[node name="Tree_Scene 290" parent="Trees" instance=ExtResource("10_3trav")]
+position = Vector2(-131, 244)
+
+[node name="Tree_Scene 291" parent="Trees" instance=ExtResource("10_3trav")]
+position = Vector2(-138, 247)
+
+[node name="Tree_Scene 292" parent="Trees" instance=ExtResource("10_3trav")]
+position = Vector2(-146, 254)
+
+[node name="Tree_Scene 293" parent="Trees" instance=ExtResource("10_3trav")]
+position = Vector2(-158, 260)
+
+[node name="Tree_Scene 294" parent="Trees" instance=ExtResource("10_3trav")]
+position = Vector2(-168, 266)
+
+[node name="Tree_Scene 295" parent="Trees" instance=ExtResource("10_3trav")]
+position = Vector2(-116, 243)
+
+[node name="Tree_Scene 296" parent="Trees" instance=ExtResource("10_3trav")]
+position = Vector2(-125, 250)
+
+[node name="Tree_Scene 297" parent="Trees" instance=ExtResource("10_3trav")]
+position = Vector2(-136, 257)
+
+[node name="Tree_Scene 298" parent="Trees" instance=ExtResource("10_3trav")]
+position = Vector2(-149, 265)
+
+[node name="Tree_Scene 299" parent="Trees" instance=ExtResource("10_3trav")]
+position = Vector2(-107, 246)
+
+[node name="Tree_Scene 300" parent="Trees" instance=ExtResource("10_3trav")]
+position = Vector2(-116, 256)
+
+[node name="Tree_Scene 301" parent="Trees" instance=ExtResource("10_3trav")]
+position = Vector2(-125, 260)
+
+[node name="Tree_Scene 302" parent="Trees" instance=ExtResource("10_3trav")]
+position = Vector2(-134, 266)
+
+[node name="Tree_Scene 303" parent="Trees" instance=ExtResource("10_3trav")]
+position = Vector2(-96, 251)
+
+[node name="Tree_Scene 304" parent="Trees" instance=ExtResource("10_3trav")]
+position = Vector2(-108, 258)
+
+[node name="Tree_Scene 305" parent="Trees" instance=ExtResource("10_3trav")]
+position = Vector2(-117, 265)
+
+[node name="Tree_Scene 306" parent="Trees" instance=ExtResource("10_3trav")]
+position = Vector2(-125, 274)
+
+[node name="Tree_Scene 759" parent="Trees" instance=ExtResource("10_3trav")]
+position = Vector2(-139, 276)
+
+[node name="Tree_Scene 760" parent="Trees" instance=ExtResource("10_3trav")]
+position = Vector2(-157, 273)
+
+[node name="Tree_Scene 761" parent="Trees" instance=ExtResource("10_3trav")]
+position = Vector2(-150, 281)
+
+[node name="Tree_Scene 762" parent="Trees" instance=ExtResource("10_3trav")]
+position = Vector2(-134, 285)
+
+[node name="Tree_Scene 763" parent="Trees" instance=ExtResource("10_3trav")]
+position = Vector2(-178, 275)
+
+[node name="Tree_Scene 764" parent="Trees" instance=ExtResource("10_3trav")]
+position = Vector2(-167, 280)
+
+[node name="Tree_Scene 765" parent="Trees" instance=ExtResource("10_3trav")]
+position = Vector2(-158, 288)
+
+[node name="Tree_Scene 766" parent="Trees" instance=ExtResource("10_3trav")]
+position = Vector2(-146, 291)
+
+[node name="Tree_Scene 767" parent="Trees" instance=ExtResource("10_3trav")]
+position = Vector2(-137, 295)
+
+[node name="Tree_Scene 307" parent="Trees" instance=ExtResource("10_3trav")]
+position = Vector2(-84, 256)
+
+[node name="Tree_Scene 308" parent="Trees" instance=ExtResource("10_3trav")]
+position = Vector2(-98, 261)
+
+[node name="Tree_Scene 309" parent="Trees" instance=ExtResource("10_3trav")]
+position = Vector2(-106, 267)
+
+[node name="Tree_Scene 310" parent="Trees" instance=ExtResource("10_3trav")]
+position = Vector2(-87, 265)
+
+[node name="Tree_Scene 311" parent="Trees" instance=ExtResource("10_3trav")]
+position = Vector2(-97, 272)
+
+[node name="Tree_Scene 312" parent="Trees" instance=ExtResource("10_3trav")]
+position = Vector2(-110, 276)
+
+[node name="Tree_Scene 751" parent="Trees" instance=ExtResource("10_3trav")]
+position = Vector2(-94, 277)
+
+[node name="Tree_Scene 313" parent="Trees" instance=ExtResource("10_3trav")]
+position = Vector2(-62, 255)
+
+[node name="Tree_Scene 314" parent="Trees" instance=ExtResource("10_3trav")]
+position = Vector2(-71, 259)
+
+[node name="Tree_Scene 315" parent="Trees" instance=ExtResource("10_3trav")]
+position = Vector2(-81, 273)
+
+[node name="Tree_Scene 316" parent="Trees" instance=ExtResource("10_3trav")]
+position = Vector2(-47, 255)
+
+[node name="Tree_Scene 333" parent="Trees" instance=ExtResource("10_3trav")]
+position = Vector2(-33, 247)
+
+[node name="Tree_Scene 329" parent="Trees" instance=ExtResource("10_3trav")]
+position = Vector2(-30, 255)
+
+[node name="Tree_Scene 455" parent="Trees" instance=ExtResource("10_3trav")]
+position = Vector2(-11, 255)
+
+[node name="Tree_Scene 456" parent="Trees" instance=ExtResource("10_3trav")]
+position = Vector2(0, 256)
+
+[node name="Tree_Scene 457" parent="Trees" instance=ExtResource("10_3trav")]
+position = Vector2(14, 257)
+
+[node name="Tree_Scene 458" parent="Trees" instance=ExtResource("10_3trav")]
+position = Vector2(29, 257)
+
+[node name="Tree_Scene 462" parent="Trees" instance=ExtResource("10_3trav")]
+position = Vector2(72, 257)
+
+[node name="Tree_Scene 463" parent="Trees" instance=ExtResource("10_3trav")]
+position = Vector2(87, 257)
+
+[node name="Tree_Scene 464" parent="Trees" instance=ExtResource("10_3trav")]
+position = Vector2(97, 257)
+
+[node name="Tree_Scene 465" parent="Trees" instance=ExtResource("10_3trav")]
+position = Vector2(116, 255)
+
+[node name="Tree_Scene 466" parent="Trees" instance=ExtResource("10_3trav")]
+position = Vector2(130, 255)
+
+[node name="Tree_Scene 467" parent="Trees" instance=ExtResource("10_3trav")]
+position = Vector2(151, 256)
+
+[node name="Tree_Scene 468" parent="Trees" instance=ExtResource("10_3trav")]
+position = Vector2(163, 252)
+
+[node name="Tree_Scene 469" parent="Trees" instance=ExtResource("10_3trav")]
+position = Vector2(180, 250)
+
+[node name="Tree_Scene 470" parent="Trees" instance=ExtResource("10_3trav")]
+position = Vector2(192, 250)
+
+[node name="Tree_Scene 471" parent="Trees" instance=ExtResource("10_3trav")]
+position = Vector2(210, 247)
+
+[node name="Tree_Scene 472" parent="Trees" instance=ExtResource("10_3trav")]
+position = Vector2(220, 247)
+
+[node name="Tree_Scene 473" parent="Trees" instance=ExtResource("10_3trav")]
+position = Vector2(241, 247)
+
+[node name="Tree_Scene 474" parent="Trees" instance=ExtResource("10_3trav")]
+position = Vector2(251, 248)
+
+[node name="Tree_Scene 475" parent="Trees" instance=ExtResource("10_3trav")]
+position = Vector2(272, 248)
+
+[node name="Tree_Scene 476" parent="Trees" instance=ExtResource("10_3trav")]
+position = Vector2(285, 245)
+
+[node name="Tree_Scene 459" parent="Trees" instance=ExtResource("10_3trav")]
+position = Vector2(48, 260)
+
+[node name="Tree_Scene 460" parent="Trees" instance=ExtResource("10_3trav")]
+position = Vector2(59, 260)
+
+[node name="Tree_Scene 461" parent="Trees" instance=ExtResource("10_3trav")]
+position = Vector2(59, 260)
+
+[node name="Tree_Scene 332" parent="Trees" instance=ExtResource("10_3trav")]
+position = Vector2(-41, 262)
+
+[node name="Tree_Scene 337" parent="Trees" instance=ExtResource("10_3trav")]
+position = Vector2(-52, 261)
+
+[node name="Tree_Scene 330" parent="Trees" instance=ExtResource("10_3trav")]
+position = Vector2(-19, 261)
+
+[node name="Tree_Scene 348" parent="Trees" instance=ExtResource("10_3trav")]
+position = Vector2(-7, 264)
+
+[node name="Tree_Scene 349" parent="Trees" instance=ExtResource("10_3trav")]
+position = Vector2(5, 265)
+
+[node name="Tree_Scene 350" parent="Trees" instance=ExtResource("10_3trav")]
+position = Vector2(21, 264)
+
+[node name="Tree_Scene 351" parent="Trees" instance=ExtResource("10_3trav")]
+position = Vector2(40, 265)
+
+[node name="Tree_Scene 352" parent="Trees" instance=ExtResource("10_3trav")]
+position = Vector2(65, 265)
+
+[node name="Tree_Scene 353" parent="Trees" instance=ExtResource("10_3trav")]
+position = Vector2(79, 259)
+
+[node name="Tree_Scene 354" parent="Trees" instance=ExtResource("10_3trav")]
+position = Vector2(90, 265)
+
+[node name="Tree_Scene 355" parent="Trees" instance=ExtResource("10_3trav")]
+position = Vector2(108, 257)
+
+[node name="Tree_Scene 356" parent="Trees" instance=ExtResource("10_3trav")]
+position = Vector2(124, 264)
+
+[node name="Tree_Scene 357" parent="Trees" instance=ExtResource("10_3trav")]
+position = Vector2(142, 256)
+
+[node name="Tree_Scene 358" parent="Trees" instance=ExtResource("10_3trav")]
+position = Vector2(157, 263)
+
+[node name="Tree_Scene 359" parent="Trees" instance=ExtResource("10_3trav")]
+position = Vector2(172, 257)
+
+[node name="Tree_Scene 360" parent="Trees" instance=ExtResource("10_3trav")]
+position = Vector2(184, 262)
+
+[node name="Tree_Scene 361" parent="Trees" instance=ExtResource("10_3trav")]
+position = Vector2(201, 255)
+
+[node name="Tree_Scene 362" parent="Trees" instance=ExtResource("10_3trav")]
+position = Vector2(214, 258)
+
+[node name="Tree_Scene 363" parent="Trees" instance=ExtResource("10_3trav")]
+position = Vector2(233, 248)
+
+[node name="Tree_Scene 364" parent="Trees" instance=ExtResource("10_3trav")]
+position = Vector2(245, 258)
+
+[node name="Tree_Scene 365" parent="Trees" instance=ExtResource("10_3trav")]
+position = Vector2(263, 251)
+
+[node name="Tree_Scene 366" parent="Trees" instance=ExtResource("10_3trav")]
+position = Vector2(277, 259)
+
+[node name="Tree_Scene 367" parent="Trees" instance=ExtResource("10_3trav")]
+position = Vector2(292, 248)
+
+[node name="Tree_Scene 334" parent="Trees" instance=ExtResource("10_3trav")]
+position = Vector2(-28, 269)
+
+[node name="Tree_Scene 344" parent="Trees" instance=ExtResource("10_3trav")]
+position = Vector2(-15, 271)
+
+[node name="Tree_Scene 347" parent="Trees" instance=ExtResource("10_3trav")]
+position = Vector2(-2, 273)
+
+[node name="Tree_Scene 368" parent="Trees" instance=ExtResource("10_3trav")]
+position = Vector2(11, 270)
+
+[node name="Tree_Scene 369" parent="Trees" instance=ExtResource("10_3trav")]
+position = Vector2(30, 270)
+
+[node name="Tree_Scene 370" parent="Trees" instance=ExtResource("10_3trav")]
+position = Vector2(52, 271)
+
+[node name="Tree_Scene 371" parent="Trees" instance=ExtResource("10_3trav")]
+position = Vector2(70, 271)
+
+[node name="Tree_Scene 372" parent="Trees" instance=ExtResource("10_3trav")]
+position = Vector2(80, 275)
+
+[node name="Tree_Scene 373" parent="Trees" instance=ExtResource("10_3trav")]
+position = Vector2(100, 269)
+
+[node name="Tree_Scene 374" parent="Trees" instance=ExtResource("10_3trav")]
+position = Vector2(113, 272)
+
+[node name="Tree_Scene 375" parent="Trees" instance=ExtResource("10_3trav")]
+position = Vector2(93, 278)
+
+[node name="Tree_Scene 376" parent="Trees" instance=ExtResource("10_3trav")]
+position = Vector2(104, 280)
+
+[node name="Tree_Scene 377" parent="Trees" instance=ExtResource("10_3trav")]
+position = Vector2(134, 265)
+
+[node name="Tree_Scene 378" parent="Trees" instance=ExtResource("10_3trav")]
+position = Vector2(125, 275)
+
+[node name="Tree_Scene 379" parent="Trees" instance=ExtResource("10_3trav")]
+position = Vector2(116, 285)
+
+[node name="Tree_Scene 380" parent="Trees" instance=ExtResource("10_3trav")]
+position = Vector2(146, 269)
+
+[node name="Tree_Scene 381" parent="Trees" instance=ExtResource("10_3trav")]
+position = Vector2(135, 278)
+
+[node name="Tree_Scene 382" parent="Trees" instance=ExtResource("10_3trav")]
+position = Vector2(172, 266)
+
+[node name="Tree_Scene 383" parent="Trees" instance=ExtResource("10_3trav")]
+position = Vector2(163, 271)
+
+[node name="Tree_Scene 384" parent="Trees" instance=ExtResource("10_3trav")]
+position = Vector2(154, 276)
+
+[node name="Tree_Scene 385" parent="Trees" instance=ExtResource("10_3trav")]
+position = Vector2(193, 264)
+
+[node name="Tree_Scene 386" parent="Trees" instance=ExtResource("10_3trav")]
+position = Vector2(203, 264)
+
+[node name="Tree_Scene 387" parent="Trees" instance=ExtResource("10_3trav")]
+position = Vector2(185, 271)
+
+[node name="Tree_Scene 388" parent="Trees" instance=ExtResource("10_3trav")]
+position = Vector2(195, 272)
+
+[node name="Tree_Scene 389" parent="Trees" instance=ExtResource("10_3trav")]
+position = Vector2(172, 275)
+
+[node name="Tree_Scene 390" parent="Trees" instance=ExtResource("10_3trav")]
+position = Vector2(226, 259)
+
+[node name="Tree_Scene 391" parent="Trees" instance=ExtResource("10_3trav")]
+position = Vector2(236, 264)
+
+[node name="Tree_Scene 392" parent="Trees" instance=ExtResource("10_3trav")]
+position = Vector2(215, 267)
+
+[node name="Tree_Scene 393" parent="Trees" instance=ExtResource("10_3trav")]
+position = Vector2(226, 270)
+
+[node name="Tree_Scene 394" parent="Trees" instance=ExtResource("10_3trav")]
+position = Vector2(204, 274)
+
+[node name="Tree_Scene 395" parent="Trees" instance=ExtResource("10_3trav")]
+position = Vector2(256, 262)
+
+[node name="Tree_Scene 396" parent="Trees" instance=ExtResource("10_3trav")]
+position = Vector2(265, 266)
+
+[node name="Tree_Scene 397" parent="Trees" instance=ExtResource("10_3trav")]
+position = Vector2(247, 272)
+
+[node name="Tree_Scene 398" parent="Trees" instance=ExtResource("10_3trav")]
+position = Vector2(256, 275)
+
+[node name="Tree_Scene 401" parent="Trees" instance=ExtResource("10_3trav")]
+position = Vector2(286, 258)
+
+[node name="Tree_Scene 402" parent="Trees" instance=ExtResource("10_3trav")]
+position = Vector2(299, 261)
+
+[node name="Tree_Scene 403" parent="Trees" instance=ExtResource("10_3trav")]
+position = Vector2(278, 267)
+
+[node name="Tree_Scene 404" parent="Trees" instance=ExtResource("10_3trav")]
+position = Vector2(289, 271)
+
+[node name="Tree_Scene 405" parent="Trees" instance=ExtResource("10_3trav")]
+position = Vector2(269, 276)
+
+[node name="Tree_Scene 406" parent="Trees" instance=ExtResource("10_3trav")]
+position = Vector2(281, 282)
+
+[node name="Tree_Scene 407" parent="Trees" instance=ExtResource("10_3trav")]
+position = Vector2(302, 274)
+
+[node name="Tree_Scene 408" parent="Trees" instance=ExtResource("10_3trav")]
+position = Vector2(293, 284)
+
+[node name="Tree_Scene 399" parent="Trees" instance=ExtResource("10_3trav")]
+position = Vector2(237, 278)
+
+[node name="Tree_Scene 400" parent="Trees" instance=ExtResource("10_3trav")]
+position = Vector2(216, 280)
+
+[node name="Tree_Scene 345" parent="Trees" instance=ExtResource("10_3trav")]
+position = Vector2(-9, 278)
+
+[node name="Tree_Scene 409" parent="Trees" instance=ExtResource("10_3trav")]
+position = Vector2(4, 281)
+
+[node name="Tree_Scene 410" parent="Trees" instance=ExtResource("10_3trav")]
+position = Vector2(22, 278)
+
+[node name="Tree_Scene 411" parent="Trees" instance=ExtResource("10_3trav")]
+position = Vector2(41, 276)
+
+[node name="Tree_Scene 412" parent="Trees" instance=ExtResource("10_3trav")]
+position = Vector2(59, 278)
+
+[node name="Tree_Scene 413" parent="Trees" instance=ExtResource("10_3trav")]
+position = Vector2(52, 285)
+
+[node name="Tree_Scene 414" parent="Trees" instance=ExtResource("10_3trav")]
+position = Vector2(31, 283)
+
+[node name="Tree_Scene 415" parent="Trees" instance=ExtResource("10_3trav")]
+position = Vector2(14, 287)
+
+[node name="Tree_Scene 416" parent="Trees" instance=ExtResource("10_3trav")]
+position = Vector2(69, 283)
+
+[node name="Tree_Scene 417" parent="Trees" instance=ExtResource("10_3trav")]
+position = Vector2(83, 285)
+
+[node name="Tree_Scene 418" parent="Trees" instance=ExtResource("10_3trav")]
+position = Vector2(96, 290)
+
+[node name="Tree_Scene 419" parent="Trees" instance=ExtResource("10_3trav")]
+position = Vector2(108, 291)
+
+[node name="Tree_Scene 420" parent="Trees" instance=ExtResource("10_3trav")]
+position = Vector2(125, 289)
+
+[node name="Tree_Scene 421" parent="Trees" instance=ExtResource("10_3trav")]
+position = Vector2(142, 285)
+
+[node name="Tree_Scene 422" parent="Trees" instance=ExtResource("10_3trav")]
+position = Vector2(161, 287)
+
+[node name="Tree_Scene 423" parent="Trees" instance=ExtResource("10_3trav")]
+position = Vector2(178, 284)
+
+[node name="Tree_Scene 424" parent="Trees" instance=ExtResource("10_3trav")]
+position = Vector2(190, 284)
+
+[node name="Tree_Scene 425" parent="Trees" instance=ExtResource("10_3trav")]
+position = Vector2(202, 287)
+
+[node name="Tree_Scene 426" parent="Trees" instance=ExtResource("10_3trav")]
+position = Vector2(193, 294)
+
+[node name="Tree_Scene 427" parent="Trees" instance=ExtResource("10_3trav")]
+position = Vector2(183, 293)
+
+[node name="Tree_Scene 428" parent="Trees" instance=ExtResource("10_3trav")]
+position = Vector2(170, 295)
+
+[node name="Tree_Scene 429" parent="Trees" instance=ExtResource("10_3trav")]
+position = Vector2(152, 294)
+
+[node name="Tree_Scene 430" parent="Trees" instance=ExtResource("10_3trav")]
+position = Vector2(134, 295)
+
+[node name="Tree_Scene 431" parent="Trees" instance=ExtResource("10_3trav")]
+position = Vector2(113, 297)
+
+[node name="Tree_Scene 432" parent="Trees" instance=ExtResource("10_3trav")]
+position = Vector2(85, 295)
+
+[node name="Tree_Scene 433" parent="Trees" instance=ExtResource("10_3trav")]
+position = Vector2(59, 291)
+
+[node name="Tree_Scene 434" parent="Trees" instance=ExtResource("10_3trav")]
+position = Vector2(42, 291)
+
+[node name="Tree_Scene 435" parent="Trees" instance=ExtResource("10_3trav")]
+position = Vector2(26, 292)
+
+[node name="Tree_Scene 436" parent="Trees" instance=ExtResource("10_3trav")]
+position = Vector2(-2, 289)
+
+[node name="Tree_Scene 437" parent="Trees" instance=ExtResource("10_3trav")]
+position = Vector2(17, 297)
+
+[node name="Tree_Scene 531" parent="Trees" instance=ExtResource("10_3trav")]
+position = Vector2(1, 300)
+
+[node name="Tree_Scene 532" parent="Trees" instance=ExtResource("10_3trav")]
+position = Vector2(-19, 289)
+
+[node name="Tree_Scene 438" parent="Trees" instance=ExtResource("10_3trav")]
+position = Vector2(71, 298)
+
+[node name="Tree_Scene 439" parent="Trees" instance=ExtResource("10_3trav")]
+position = Vector2(52, 298)
+
+[node name="Tree_Scene 440" parent="Trees" instance=ExtResource("10_3trav")]
+position = Vector2(34, 299)
+
+[node name="Tree_Scene 441" parent="Trees" instance=ExtResource("10_3trav")]
+position = Vector2(214, 291)
+
+[node name="Tree_Scene 442" parent="Trees" instance=ExtResource("10_3trav")]
+position = Vector2(228, 286)
+
+[node name="Tree_Scene 443" parent="Trees" instance=ExtResource("10_3trav")]
+position = Vector2(248, 286)
+
+[node name="Tree_Scene 444" parent="Trees" instance=ExtResource("10_3trav")]
+position = Vector2(262, 288)
+
+[node name="Tree_Scene 445" parent="Trees" instance=ExtResource("10_3trav")]
+position = Vector2(270, 291)
+
+[node name="Tree_Scene 446" parent="Trees" instance=ExtResource("10_3trav")]
+position = Vector2(286, 294)
+
+[node name="Tree_Scene 447" parent="Trees" instance=ExtResource("10_3trav")]
+position = Vector2(255, 293)
+
+[node name="Tree_Scene 448" parent="Trees" instance=ExtResource("10_3trav")]
+position = Vector2(237, 293)
+
+[node name="Tree_Scene 449" parent="Trees" instance=ExtResource("10_3trav")]
+position = Vector2(227, 297)
+
+[node name="Tree_Scene 450" parent="Trees" instance=ExtResource("10_3trav")]
+position = Vector2(248, 299)
+
+[node name="Tree_Scene 451" parent="Trees" instance=ExtResource("10_3trav")]
+position = Vector2(264, 302)
+
+[node name="Tree_Scene 452" parent="Trees" instance=ExtResource("10_3trav")]
+position = Vector2(277, 300)
+
+[node name="Tree_Scene 453" parent="Trees" instance=ExtResource("10_3trav")]
+position = Vector2(203, 299)
+
+[node name="Tree_Scene 454" parent="Trees" instance=ExtResource("10_3trav")]
+position = Vector2(215, 304)
+
+[node name="Tree_Scene 335" parent="Trees" instance=ExtResource("10_3trav")]
+position = Vector2(-40, 271)
+
+[node name="Tree_Scene 317" parent="Trees" instance=ExtResource("10_3trav")]
+position = Vector2(-62, 263)
+
+[node name="Tree_Scene 336" parent="Trees" instance=ExtResource("10_3trav")]
+position = Vector2(-31, 276)
+
+[node name="Tree_Scene 318" parent="Trees" instance=ExtResource("10_3trav")]
+position = Vector2(-61, 263)
+
+[node name="Tree_Scene 338" parent="Trees" instance=ExtResource("10_3trav")]
+position = Vector2(-53, 272)
+
+[node name="Tree_Scene 339" parent="Trees" instance=ExtResource("10_3trav")]
+position = Vector2(-46, 276)
+
+[node name="Tree_Scene 319" parent="Trees" instance=ExtResource("10_3trav")]
+position = Vector2(-67, 270)
+
+[node name="Tree_Scene 340" parent="Trees" instance=ExtResource("10_3trav")]
+position = Vector2(-61, 279)
+
+[node name="Tree_Scene 341" parent="Trees" instance=ExtResource("10_3trav")]
+position = Vector2(-41, 284)
+
+[node name="Tree_Scene 342" parent="Trees" instance=ExtResource("10_3trav")]
+position = Vector2(-24, 282)
+
+[node name="Tree_Scene 343" parent="Trees" instance=ExtResource("10_3trav")]
+position = Vector2(-13, 285)
+
+[node name="Tree_Scene 551" parent="Trees" instance=ExtResource("10_3trav")]
+position = Vector2(-35, 291)
+
+[node name="Tree_Scene 552" parent="Trees" instance=ExtResource("10_3trav")]
+position = Vector2(-23, 297)
+
+[node name="Tree_Scene 553" parent="Trees" instance=ExtResource("10_3trav")]
+position = Vector2(-8, 304)
+
+[node name="Tree_Scene 554" parent="Trees" instance=ExtResource("10_3trav")]
+position = Vector2(-53, 289)
+
+[node name="Tree_Scene 743" parent="Trees" instance=ExtResource("10_3trav")]
+position = Vector2(-44, 299)
+
+[node name="Tree_Scene 744" parent="Trees" instance=ExtResource("10_3trav")]
+position = Vector2(-35, 305)
+
+[node name="Tree_Scene 745" parent="Trees" instance=ExtResource("10_3trav")]
+position = Vector2(-20, 312)
+
+[node name="Tree_Scene 746" parent="Trees" instance=ExtResource("10_3trav")]
+position = Vector2(-73, 280)
+
+[node name="Tree_Scene 320" parent="Trees" instance=ExtResource("10_3trav")]
+position = Vector2(-76, 277)
+
+[node name="Tree_Scene 323" parent="Trees" instance=ExtResource("10_3trav")]
+position = Vector2(-66, 288)
+
+[node name="Tree_Scene 327" parent="Trees" instance=ExtResource("10_3trav")]
+position = Vector2(-61, 299)
+
+[node name="Tree_Scene 747" parent="Trees" instance=ExtResource("10_3trav")]
+position = Vector2(-52, 309)
+
+[node name="Tree_Scene 321" parent="Trees" instance=ExtResource("10_3trav")]
+position = Vector2(-88, 282)
+
+[node name="Tree_Scene 752" parent="Trees" instance=ExtResource("10_3trav")]
+position = Vector2(-106, 285)
+
+[node name="Tree_Scene 753" parent="Trees" instance=ExtResource("10_3trav")]
+position = Vector2(-98, 289)
+
+[node name="Tree_Scene 754" parent="Trees" instance=ExtResource("10_3trav")]
+position = Vector2(-117, 286)
+
+[node name="Tree_Scene 768" parent="Trees" instance=ExtResource("10_3trav")]
+position = Vector2(-126, 297)
+
+[node name="Tree_Scene 769" parent="Trees" instance=ExtResource("10_3trav")]
+position = Vector2(-132, 305)
+
+[node name="Tree_Scene 770" parent="Trees" instance=ExtResource("10_3trav")]
+position = Vector2(-156, 298)
+
+[node name="Tree_Scene 748" parent="Trees" instance=ExtResource("10_3trav")]
+position = Vector2(-83, 286)
+
+[node name="Tree_Scene 755" parent="Trees" instance=ExtResource("10_3trav")]
+position = Vector2(-91, 296)
+
+[node name="Tree_Scene 756" parent="Trees" instance=ExtResource("10_3trav")]
+position = Vector2(-108, 296)
+
+[node name="Tree_Scene 771" parent="Trees" instance=ExtResource("10_3trav")]
+position = Vector2(-116, 303)
+
+[node name="Tree_Scene 772" parent="Trees" instance=ExtResource("10_3trav")]
+position = Vector2(-123, 313)
+
+[node name="Tree_Scene 773" parent="Trees" instance=ExtResource("10_3trav")]
+position = Vector2(-147, 304)
+
+[node name="Tree_Scene 757" parent="Trees" instance=ExtResource("10_3trav")]
+position = Vector2(-101, 305)
+
+[node name="Tree_Scene 758" parent="Trees" instance=ExtResource("10_3trav")]
+position = Vector2(-79, 298)
+
+[node name="Tree_Scene 749" parent="Trees" instance=ExtResource("10_3trav")]
+position = Vector2(-89, 308)
+
+[node name="Tree_Scene 750" parent="Trees" instance=ExtResource("10_3trav")]
+position = Vector2(-72, 309)
+
+[node name="Tree_Scene 282" parent="Trees" instance=ExtResource("10_3trav")]
+position = Vector2(-211, 262)
+
+[node name="Tree_Scene 283" parent="Trees" instance=ExtResource("10_3trav")]
+position = Vector2(-276, 262)
+
+[node name="Tree_Scene 284" parent="Trees" instance=ExtResource("10_3trav")]
+position = Vector2(-238, 261)
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Trees"]
+visible = false
+polygon = PackedVector2Array(-233, 99, -208, 93, -162, 95, -161, 90, -113, 22, -62, -18, -15, -30, 46, -28, 91, -9, 124, 16, 147, 48, 156, 123, 150, 167, 113, 199, 102, 207, 65, 223, 35, 221, 6, 231, -3, 225, -41, 221, -82, 217, -108, 206, -125, 189, -151, 153, -159, 111, -169, 98, -179, 104, -200, 99, -211, 102, -226, 102, -237, 99, -327, 71, -339, 201, -329, 272, -242, 258, -125, 307, 24, 307, 319, 283, 300, -107, -240, -104, -334, -85, -327, 71, -251, 97)
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="."]
+visible = false
+polygon = PackedVector2Array(-12, 130, -14, 132, -14, 173, -12, 174, 58, 174, 62, 171, 62, 141, 108, 142, 110, 139, 110, 98, 105, 97, 36, 97, 34, 102, 35, 129)
