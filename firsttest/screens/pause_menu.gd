@@ -7,11 +7,13 @@ func _ready():
 func resume():
 	get_tree().paused = false
 	$AnimationPlayer.play_backwards("blur")
+	Input.mouse_mode = Input.MOUSE_MODE_CAPTURED
 	hide()
 
 func pause():
 	get_tree().paused = true
 	$AnimationPlayer.play("blur")
+	Input.mouse_mode = Input.MOUSE_MODE_VISIBLE
 	show()
 
 func testEsc():
@@ -29,6 +31,7 @@ func _on_resume_pressed() -> void:
 
 func _on_main_menu_pressed() -> void:
 	resume()
+	Input.mouse_mode = Input.MOUSE_MODE_VISIBLE
 	get_tree().change_scene_to_file("res://screens/main_menu.tscn")
 
 
