@@ -28,6 +28,9 @@ var playerModHealthDegen = 0.0
 var playerModStamConsumption = 2.0
 var playerModMaxStam = 100.0
 
+#2D Player modifier that tinkers with their movement speed, especially important for later
+var storyPlayerMovementSpeed = 50.0
+
 #Enemy modifiers that make the wraith more dangerous. The below values are the baseline
 var wraithModChaseSpeed = 5.0
 var wraithModRoamSpeed = 2.0

@@ -12,6 +12,7 @@ func resume():
 
 func pause():
 	get_tree().paused = true
+	$Pause.play()
 	$AnimationPlayer.play("blur")
 	Input.mouse_mode = Input.MOUSE_MODE_VISIBLE
 	show()

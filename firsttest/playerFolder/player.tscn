@@ -1,15 +1,19 @@
-[gd_scene load_steps=41 format=3 uid="uid://chu4ft88k3ahk"]
+[gd_scene load_steps=46 format=3 uid="uid://chu4ft88k3ahk"]
 
 [ext_resource type="AudioStream" uid="uid://6r05nimratie" path="res://audio/Flashlight.mp3" id="1_4flbx"]
 [ext_resource type="AudioStream" uid="uid://bnnssgjv4sunn" path="res://audio/Footstep.ogg" id="2_onrkg"]
 [ext_resource type="AudioStream" uid="uid://b1kmeklk07f1i" path="res://audio/ExhaustionBreathing.mp3" id="3_6v6k0"]
 [ext_resource type="Texture2D" uid="uid://di0arg7lxvb7e" path="res://images/staminabar under.jpg" id="3_erkmy"]
+[ext_resource type="AudioStream" uid="uid://gdboyhg27gd8" path="res://audio/mcVoiceNormal/MCSpeakNormal_A.ogg" id="3_otjdj"]
 [ext_resource type="AudioStream" uid="uid://b170mpfa6nmhg" path="res://audio/corpseSounds/CorpseScare.ogg" id="4_3mvkr"]
 [ext_resource type="Texture2D" uid="uid://yx5ataeprkb1" path="res://images/Bar exterior.png" id="4_6v6k0"]
+[ext_resource type="AudioStream" uid="uid://bvya4k3kkn0w7" path="res://audio/mcVoiceNormal/MCSpeakNormal_E.ogg" id="4_b11d2"]
 [ext_resource type="AudioStream" uid="uid://bstck34ke1g5d" path="res://audio/Hurt.mp3" id="4_vpon2"]
+[ext_resource type="AudioStream" uid="uid://cdbiit8y6urtu" path="res://audio/mcVoiceNormal/MCSpeakNormal_O.ogg" id="5_fc323"]
 [ext_resource type="AudioStream" uid="uid://ru0kuavutlcp" path="res://audio/Death.ogg" id="5_kaacd"]
 [ext_resource type="Texture2D" uid="uid://cmra3ak7qgoog" path="res://images/staminabar.jpg" id="5_uwpkh"]
 [ext_resource type="AudioStream" uid="uid://b4420vgevagy0" path="res://audio/corpseSounds/CorpseAttack.ogg" id="6_0p6du"]
+[ext_resource type="AudioStream" uid="uid://cama51qdd6lo2" path="res://audio/mcVoiceNormal/MCSpeakNormal_UN.ogg" id="6_cd4id"]
 [ext_resource type="Texture2D" uid="uid://cnj25goxf4wpd" path="res://images/healthbar under.jpg" id="6_vpon2"]
 [ext_resource type="Texture2D" uid="uid://mpu84f06fnyn" path="res://images/healthbar.jpg" id="7_kaacd"]
 [ext_resource type="AudioStream" uid="uid://cwsjos0eacow2" path="res://audio/ambientSounds/WaterDrop1.ogg" id="8_wwcwf"]
@@ -254,6 +258,7 @@ func _physics_process(delta):
 	#Jump input
 	if Input.is_action_just_pressed(\"jump\") and is_on_floor() and not isExhausted:
 		velocity.y = JUMP_VELOCITY
+		$Head/JumpSound.play()
 		if CURRENT_STAMINA - 20.0 < 0:
 			CURRENT_STAMINA = 0.0
 			staminaBar.value = CURRENT_STAMINA
@@ -358,6 +363,13 @@ random_volume_offset_db = 4.0
 streams_count = 1
 stream_0/stream = ExtResource("2_onrkg")
 
+[sub_resource type="AudioStreamRandomizer" id="AudioStreamRandomizer_na4ql"]
+streams_count = 4
+stream_0/stream = ExtResource("3_otjdj")
+stream_1/stream = ExtResource("4_b11d2")
+stream_2/stream = ExtResource("5_fc323")
+stream_3/stream = ExtResource("6_cd4id")
+
 [sub_resource type="AudioStreamRandomizer" id="AudioStreamRandomizer_vpon2"]
 random_pitch = 1.07
 random_volume_offset_db = 1.5
@@ -449,6 +461,11 @@ bus = &"ReverbAmbience"
 stream = SubResource("AudioStreamRandomizer_i3pqv")
 volume_db = -15.433
 pitch_scale = 0.28
+bus = &"ReverbAmbience"
+
+[node name="JumpSound" type="AudioStreamPlayer" parent="Head"]
+stream = SubResource("AudioStreamRandomizer_na4ql")
+volume_db = -12.393
 bus = &"ReverbAmbience"
 
 [node name="ExhaustionSound" type="AudioStreamPlayer" parent="Head"]

@@ -27,18 +27,23 @@ Dialogic="*res://addons/dialogic/Core/DialogicGameHandler.gd"
 [dialogic]
 
 directories/dch_directory={
+"ghost_sister": "res://dialogue/Timelines/ghost_sister.dch",
 "main_character": "res://dialogue/main_character.dch"
 }
 directories/dtl_directory={
 "3dscene1_timeline": "res://dialogue/Timelines/3dTimelines/3dscene1_timeline.dtl",
 "3dscene2_timeline": "res://dialogue/Timelines/3dTimelines/3dscene2_timeline.dtl",
+"item1_bow": "res://dialogue/Timelines/item1_bow.dtl",
+"item2_teddybear": "res://dialogue/Timelines/item2_teddybear.dtl",
 "scene1_timeline": "res://dialogue/Timelines/scene1_timeline.dtl",
 "scene2_timeline": "res://dialogue/Timelines/scene2_timeline.dtl",
 "scene3_timeline": "res://dialogue/Timelines/scene3_timeline.dtl",
 "scene4_timeline": "res://dialogue/Timelines/scene4_timeline.dtl",
 "scene4extra_timeline": "res://dialogue/Timelines/scene4extra_timeline.dtl",
 "scene5_timeline": "res://dialogue/Timelines/scene5_timeline.dtl",
-"scene6_timeline": "res://dialogue/Timelines/scene6_timeline.dtl"
+"scene6_timeline": "res://dialogue/Timelines/scene6_timeline.dtl",
+"scene7_timeline": "res://dialogue/Timelines/scene7_timeline.dtl",
+"scene8_timeline": "res://dialogue/Timelines/scene8_timeline.dtl"
 }
 extensions_folder="res://addons/dialogic_additions"
 text/letter_speed=0.03

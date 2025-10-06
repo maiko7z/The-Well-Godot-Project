@@ -1,7 +1,7 @@
 extends CharacterBody2D
 
 
-const SPEED = 50.0
+
 
 #@onready var animated_sprite = $AnimatedSprite2D
 @onready var animated_sprite: AnimatedSprite2D = $AnimatedSprite2D
@@ -13,6 +13,8 @@ func _ready():
 
 func _physics_process(delta):
 	# Add the gravity.
+	var SPEED = GlobalVariables.storyPlayerMovementSpeed
+	
 	if not is_on_floor():
 		velocity += get_gravity() * delta
 		
