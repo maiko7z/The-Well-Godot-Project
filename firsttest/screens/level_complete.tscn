@@ -1,9 +1,10 @@
-[gd_scene load_steps=7 format=3 uid="uid://dsip577k0qqj7"]
+[gd_scene load_steps=8 format=3 uid="uid://dsip577k0qqj7"]
 
 [ext_resource type="Script" uid="uid://dkqclwacxg25c" path="res://screens/level_complete.gd" id="1_4sait"]
 [ext_resource type="AudioStream" uid="uid://cpdmshr5kyvqc" path="res://audio/AmbienceLooped.ogg" id="2_4sait"]
 [ext_resource type="Theme" uid="uid://cxjwnkpltc1jx" path="res://textTheme.tres" id="2_hy6y3"]
 [ext_resource type="AudioStream" uid="uid://42lyxx8krnrs" path="res://audio/pianoHits/LifeGained.ogg" id="4_e4kpk"]
+[ext_resource type="Texture2D" uid="uid://dun4rlnfpynq0" path="res://images/IMG_9323.png" id="5_6k0j0"]
 
 [sub_resource type="LabelSettings" id="LabelSettings_4sait"]
 font_size = 32
@@ -29,7 +30,7 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-color = Color(0, 0, 0, 1)
+color = Color(1, 1, 0, 1)
 
 [node name="CenterContainer" type="CenterContainer" parent="."]
 layout_mode = 1
@@ -47,7 +48,6 @@ layout_mode = 2
 layout_mode = 2
 theme_override_colors/font_color = Color(1, 0, 0, 1)
 theme_override_font_sizes/font_size = 31
-text = "ESCAPED!"
 label_settings = SubResource("LabelSettings_4sait")
 horizontal_alignment = 1
 
@@ -96,3 +96,8 @@ autoplay = true
 stream = ExtResource("4_e4kpk")
 volume_db = 3.609
 autoplay = true
+
+[node name="Img9323" type="Sprite2D" parent="."]
+position = Vector2(243.875, 59)
+scale = Vector2(0.139112, 0.133866)
+texture = ExtResource("5_6k0j0")

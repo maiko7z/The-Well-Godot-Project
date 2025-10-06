@@ -45,11 +45,13 @@ Modeling: Nate
 
 - Asset Attribution -
 SFX: pixabay.com
+2D Wave Shader: marsonfire
 
 - Code Attribution -
 bypell (AI base)
 LegionGames (Cam Bobbing)
 majikayogames (Simple Dungeons)
+Emilio Coppola (Dialogic)
 
 - Thank You! -
 Special thanks to Rodney DuPlessis (Professor) 
@@ -94,5 +96,5 @@ mouse_filter = 2
 texture = ExtResource("3_h3olt")
 stretch_mode = 1
 
-[connection signal="pressed" from="Back Button" to="." method="_on_back_button_pressed"]
 [connection signal="pressed" from="Back Button" to="." method="_on_button_pressed"]
+[connection signal="pressed" from="Back Button" to="." method="_on_back_button_pressed"]

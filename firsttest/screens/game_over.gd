@@ -1,5 +1,6 @@
 extends Control
 @onready var message = $CenterContainer/VBoxContainer/LoreLabel
+var tween = create_tween()
 
 func _ready() -> void:
 	randomize()
@@ -16,6 +17,8 @@ func _ready() -> void:
 		message.text = "The answer, again, just out of reach."
 	elif textChoice >= 7.5:
 		message.text = "Why do you hide the truth from yourself?"
+	
+	tween.tween_property($Background, "color", Color(0,0,0,1), 1.0)
 	
 	if GlobalVariables.currentGameMode == "Story":
 		%RetryButton.text = "Retry? ( Level " + str(GlobalVariables.storyLevel) + " )"

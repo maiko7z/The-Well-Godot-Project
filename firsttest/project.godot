@@ -27,8 +27,7 @@ Dialogic="*res://addons/dialogic/Core/DialogicGameHandler.gd"
 [dialogic]
 
 directories/dch_directory={
-"main_character": "res://dialogue/main_character.dch",
-"unit_test_character": "res://Tests/Resources/unit_test_character.dch"
+"main_character": "res://dialogue/main_character.dch"
 }
 directories/dtl_directory={
 "3dscene1_timeline": "res://dialogue/Timelines/3dTimelines/3dscene1_timeline.dtl",
@@ -82,7 +81,6 @@ enabled=PackedStringArray("res://addons/dialogic/plugin.cfg")
 [file_customization]
 
 folder_colors={
-"res://Tests/": "blue",
 "res://addons/": "blue",
 "res://addons/SimpleDungeons/": "teal",
 "res://audio/": "yellow",

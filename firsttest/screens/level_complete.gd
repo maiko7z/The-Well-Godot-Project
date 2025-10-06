@@ -1,5 +1,6 @@
 extends Control
 @onready var message = $CenterContainer/VBoxContainer/LoreLabel
+var tween = create_tween()
 
 func _ready() -> void:
 	randomize()
@@ -16,6 +17,8 @@ func _ready() -> void:
 		message.text = "You feel closer to the truth."
 	elif textChoice >= 7.5:
 		message.text = "Revelation at last? No... but nearly!"
+		
+	tween.tween_property($Background, "color", Color(0,0,0,1), 1.0)
 	
 	if GlobalVariables.currentGameMode == "Story":
 		GlobalVariables.storyLevel += 1
