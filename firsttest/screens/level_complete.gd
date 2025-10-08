@@ -43,6 +43,8 @@ func _on_restart_pressed() -> void:
 			get_tree().change_scene_to_file("res://scenes2d/levels2d/scene_2.tscn")
 		elif GlobalVariables.storyLevel == 3:
 			get_tree().change_scene_to_file("res://scenes2d/Scene 3/Scene 3.tscn")
+		elif GlobalVariables.storyLevel == 4:
+			get_tree().change_scene_to_file("res://scenes2d/Scene 3/Scene 4.tscn")
 		else:
 			get_tree().change_scene_to_file("res://world.tscn")
 	else:

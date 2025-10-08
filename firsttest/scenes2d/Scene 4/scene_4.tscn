@@ -1,6 +1,7 @@
-[gd_scene load_steps=19 format=4 uid="uid://c0i533bxfyi0j"]
+[gd_scene load_steps=27 format=4 uid="uid://c0i533bxfyi0j"]
 
 [ext_resource type="Texture2D" uid="uid://dv0jja4t4ql0f" path="res://scenes2d/Scene 4/Art/UntitledArtwork8-Copy.png" id="1_15muk"]
+[ext_resource type="Script" uid="uid://b4va2cuptoch0" path="res://scenes2d/Scene 4/scene_4.gd" id="1_qdjgn"]
 [ext_resource type="Texture2D" uid="uid://im24tj0yciuh" path="res://scenes2d/Scene 4/Art/UntitledArtwork2-Copy-Copy.png" id="2_kqqis"]
 [ext_resource type="Texture2D" uid="uid://bfjpeuhnqmwqb" path="res://scenes2d/Scene 4/Art/UntitledArtwork2-Copy (2).png" id="3_xleig"]
 [ext_resource type="PackedScene" uid="uid://bdt27k7k0isgf" path="res://scenes2d/Scene 4/Art/scene_4_well.tscn" id="4_vk7sl"]
@@ -10,6 +11,12 @@
 [ext_resource type="PackedScene" uid="uid://bvku6e56huokl" path="res://scenes2d/Scene 4/Art/mushroom_3_scene_4.tscn" id="8_3trav"]
 [ext_resource type="PackedScene" uid="uid://b8gdhmvmtpfss" path="res://scenes2d/Scene 4/Art/mushroom_2_scene_4.tscn" id="9_c5mja"]
 [ext_resource type="PackedScene" uid="uid://duy0n1j751yle" path="res://scenes2d/Scene 4/Art/tree_scene_4.tscn" id="10_3trav"]
+[ext_resource type="PackedScene" uid="uid://rot1fta3w6ut" path="res://player2d/player_2d.tscn" id="11_c5mja"]
+[ext_resource type="AudioStream" uid="uid://b1kmeklk07f1i" path="res://audio/ExhaustionBreathing.mp3" id="12_4s8na"]
+[ext_resource type="AudioStream" uid="uid://beb28qguiik2w" path="res://audio/wraithSounds/WraithAmbience.mp3" id="14_4s8na"]
+[ext_resource type="AudioStream" uid="uid://cpdmshr5kyvqc" path="res://audio/AmbienceLooped.ogg" id="14_50egi"]
+[ext_resource type="AudioStream" uid="uid://bg2aiph4ogyb3" path="res://audio/pianoHits/Frantic5.ogg" id="15_eqdon"]
+[ext_resource type="Texture2D" uid="uid://ctbhgcgmkgfwl" path="res://images2d/sisterIcons/sis_madidle.png" id="16_50egi"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_cymbl"]
 texture = ExtResource("1_15muk")
@@ -84,7 +91,11 @@ texture = ExtResource("6_vk7sl")
 sources/4 = SubResource("TileSetAtlasSource_kfc4i")
 sources/6 = SubResource("TileSetAtlasSource_86ygl")
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_tfm2d"]
+size = Vector2(94, 130)
+
 [node name="Scene 4" type="StaticBody2D"]
+script = ExtResource("1_qdjgn")
 metadata/_edit_vertical_guides_ = [-162.0]
 
 [node name="Grass" type="TileMapLayer" parent="."]
@@ -4489,3 +4500,50 @@ polygon = PackedVector2Array(-233, 99, -208, 93, -162, 95, -161, 90, -113, 22, -
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="."]
 visible = false
 polygon = PackedVector2Array(-12, 130, -14, 132, -14, 173, -12, 174, 58, 174, 62, 171, 62, 141, 108, 142, 110, 139, 110, 98, 105, 97, 36, 97, 34, 102, 35, 129)
+
+[node name="Player" parent="." instance=ExtResource("11_c5mja")]
+position = Vector2(-39, 214)
+
+[node name="Breathing" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("12_4s8na")
+volume_db = -4.22
+pitch_scale = 0.66
+autoplay = true
+bus = &"WarpedSFX"
+parameters/looping = true
+
+[node name="Fear2" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("14_50egi")
+volume_db = -3.98
+pitch_scale = 0.85
+autoplay = true
+bus = &"ReverbAmbience"
+parameters/looping = true
+
+[node name="Fear3" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("14_4s8na")
+volume_db = -15.923
+pitch_scale = 0.74
+autoplay = true
+bus = &"ReverbAmbience"
+parameters/looping = true
+
+[node name="Frantic5" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("15_eqdon")
+autoplay = true
+
+[node name="SisMadidle" type="Sprite2D" parent="."]
+position = Vector2(7, 16)
+scale = Vector2(0.353448, 0.376437)
+texture = ExtResource("16_50egi")
+
+[node name="DialogueTrigger1" type="Area2D" parent="."]
+position = Vector2(60, 25)
+collision_layer = 3
+collision_mask = 3
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="DialogueTrigger1"]
+position = Vector2(-52, -50)
+shape = SubResource("RectangleShape2D_tfm2d")
+
+[connection signal="body_entered" from="DialogueTrigger1" to="." method="_on_dialogue_trigger_1_body_entered"]

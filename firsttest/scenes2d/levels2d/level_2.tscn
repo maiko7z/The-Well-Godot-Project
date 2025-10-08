@@ -3348,5 +3348,5 @@ layer = 10
 [node name="PauseScreen" parent="PauseCanvas" instance=ExtResource("13_adlc2")]
 metadata/_edit_use_anchors_ = true
 
-[connection signal="body_entered" from="Collisions/Area2D" to="." method="_scene_swap"]
 [connection signal="body_entered" from="Collisions/Area2D" to="." method="_on_area_2d_body_entered"]
+[connection signal="body_entered" from="Collisions/Area2D" to="." method="_scene_swap"]

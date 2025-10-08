@@ -1,0 +1,50 @@
+{
+"@path": "res://addons/dialogic/Resources/character.gd",
+"@subpath": NodePath(""),
+&"_translation_id": "",
+&"color": Color(1, 0, 0, 1),
+&"custom_info": {
+"sound_mood_default": "",
+"sound_moods": {
+"Rotting": {
+"mode": 1,
+"name": "Rotting",
+"pitch_base": 1.0,
+"pitch_variance": 0.1,
+"skip_characters": 0.0,
+"sound_path": "res://audio/corpseSounds/CorpseScare2D.ogg",
+"volume_base": -0.2,
+"volume_variance": 0.0
+}
+},
+"style": ""
+},
+&"default_portrait": "Dead",
+&"description": "",
+&"display_name": "Lillith",
+&"mirror": false,
+&"nicknames": [""],
+&"offset": Vector2(0, 0),
+&"portraits": {
+"Dead": {
+"export_overrides": {
+"image": "\"res://images/Corpse Full2.png\""
+},
+"mirror": false,
+"offset": Vector2(0, 0),
+"scale": 1,
+"scene": "",
+"sound_mood": "Rotting"
+},
+"ded": {
+"export_overrides": {
+"image": ""
+},
+"mirror": false,
+"offset": Vector2(0, 0),
+"scale": 1,
+"scene": ""
+}
+},
+&"scale": 1.0
+}
