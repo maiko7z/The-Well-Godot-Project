@@ -11,6 +11,10 @@ func _ready() -> void:
 	else:
 		$VBoxContainer/EndlessContinue.text = "Continue Endless"
 		$VBoxContainer/EndlessContinue.disabled = true
+	if GlobalVariables.storyCompleted == true:
+		$StoryModeComplete.visible = true
+	if GlobalVariables.endlessBestLevel > 0:
+		$EndlessBest.text = "Endless High Score: "+ str(GlobalVariables.endlessBestLevel)
 
 func _on_new_story_pressed() -> void:
 	GlobalSounds.click_sound_play()

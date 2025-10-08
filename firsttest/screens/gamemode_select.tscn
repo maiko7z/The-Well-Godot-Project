@@ -117,6 +117,25 @@ theme_override_font_sizes/font_size = 12
 text = "(hover for info)"
 horizontal_alignment = 1
 
+[node name="EndlessBest" type="Label" parent="."]
+offset_left = 152.0
+offset_top = 291.0
+offset_right = 336.0
+offset_bottom = 314.0
+theme = ExtResource("2_nqe80")
+text = "Endless High Score: None"
+horizontal_alignment = 1
+
+[node name="StoryModeComplete" type="Label" parent="."]
+visible = false
+offset_left = 154.0
+offset_top = 268.0
+offset_right = 338.0
+offset_bottom = 291.0
+theme = ExtResource("2_nqe80")
+text = "Story Mode Complete!"
+horizontal_alignment = 1
+
 [connection signal="pressed" from="VBoxContainer/StoryNew" to="." method="_on_new_story_pressed"]
 [connection signal="pressed" from="VBoxContainer/StoryContinue" to="." method="_on_continue_story_pressed"]
 [connection signal="pressed" from="VBoxContainer/EndlessNew" to="." method="_on_new_endless_pressed"]

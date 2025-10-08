@@ -8,6 +8,9 @@ var storyLevel = 0
 var endlessLevel = 0
 var storyCurrentLives = 3
 var endlessCurrentLives = 3
+var storyCompleted = false
+var endlessBestLevel = 0
+
 #var resetLevelOnWorld = true #switches to false if you have enough lives to not refresh the structure and keep same seed
 
 #Trap modifiers that influence their spawn chance or damage. LOWER SPAWN RATE NUMBER MEANS HIGHER CHANCE TO SPAWN.

@@ -1,0 +1,93 @@
+[gd_scene load_steps=7 format=3 uid="uid://6asx33yay4m2"]
+
+[ext_resource type="Script" uid="uid://df1obr8hput" path="res://screens/story_mode_ending.gd" id="1_lm7fr"]
+[ext_resource type="Theme" uid="uid://cxjwnkpltc1jx" path="res://textTheme.tres" id="2_b1h5o"]
+[ext_resource type="AudioStream" uid="uid://cpdmshr5kyvqc" path="res://audio/AmbienceLooped.ogg" id="3_7chdp"]
+[ext_resource type="AudioStream" uid="uid://42lyxx8krnrs" path="res://audio/pianoHits/LifeGained.ogg" id="4_7xr8x"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_4sait"]
+font_size = 32
+font_color = Color(1, 1, 0, 1)
+
+[sub_resource type="LabelSettings" id="LabelSettings_hy6y3"]
+line_spacing = 0.0
+font_size = 10
+
+[node name="LevelComplete" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_lm7fr")
+
+[node name="Background" type="ColorRect" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(1, 1, 0, 1)
+
+[node name="CenterContainer" type="CenterContainer" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme = ExtResource("2_b1h5o")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="CenterContainer"]
+layout_mode = 2
+
+[node name="VictoryLabel" type="Label" parent="CenterContainer/VBoxContainer"]
+layout_mode = 2
+theme_override_colors/font_color = Color(1, 0, 0, 1)
+theme_override_font_sizes/font_size = 31
+text = "Story Complete!"
+label_settings = SubResource("LabelSettings_4sait")
+horizontal_alignment = 1
+
+[node name="Spacer" type="Control" parent="CenterContainer/VBoxContainer"]
+custom_minimum_size = Vector2(0, 10)
+layout_mode = 2
+
+[node name="LoreLabel" type="Label" parent="CenterContainer/VBoxContainer"]
+layout_mode = 2
+theme_override_colors/font_color = Color(1, 0, 0, 1)
+theme_override_font_sizes/font_size = 31
+text = "But what lies further down the well?
+Your curiosity gnaws at you...
+You must find the truth."
+label_settings = SubResource("LabelSettings_hy6y3")
+horizontal_alignment = 1
+
+[node name="Spacer2" type="Control" parent="CenterContainer/VBoxContainer"]
+custom_minimum_size = Vector2(0, 15)
+layout_mode = 2
+
+[node name="MainMenuButton" type="Button" parent="CenterContainer/VBoxContainer"]
+unique_name_in_owner = true
+layout_mode = 2
+text = "Main Menu
+"
+
+[node name="QuitButton" type="Button" parent="CenterContainer/VBoxContainer"]
+unique_name_in_owner = true
+layout_mode = 2
+text = "Quit
+"
+
+[node name="SuccessMusic" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("3_7chdp")
+volume_db = 0.623
+pitch_scale = 0.37
+autoplay = true
+
+[node name="SuccessStinger" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("4_7xr8x")
+volume_db = 3.609
+autoplay = true

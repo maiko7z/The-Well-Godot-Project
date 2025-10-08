@@ -59,7 +59,16 @@ The Corpse
 every 5 levels beat in Endless
 0.1.8 Added dynamic soundscape system
 that plays random sounds around the
-player"
+player
+0.1.9 Improved menus
+0.2.0 Added a pause menu
+0.2.1 New dialogue and dialogue sprites
+0.2.2 New shaders for 2d segments
+0.2.3 New story scenes added
+0.2.4 Story dialogue added upon and improved
+0.2.5 Pause menu fixes
+0.2.6 Final story scene added, final story dialogue
+0.2.7 Endless High Score/Story Mode tracking"
 horizontal_alignment = 1
 vertical_alignment = 1
 

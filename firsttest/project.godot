@@ -38,6 +38,8 @@ directories/dtl_directory={
 "item2_teddybear": "res://dialogue/Timelines/item2_teddybear.dtl",
 "scene10_timeline": "res://dialogue/Timelines/scene10_timeline.dtl",
 "scene11_timeline": "res://dialogue/Timelines/scene11_timeline.dtl",
+"scene12_timeline": "res://dialogue/Timelines/scene12_timeline.dtl",
+"scene13_timeline": "res://dialogue/Timelines/scene13_timeline.dtl",
 "scene1_timeline": "res://dialogue/Timelines/scene1_timeline.dtl",
 "scene2_timeline": "res://dialogue/Timelines/scene2_timeline.dtl",
 "scene3_timeline": "res://dialogue/Timelines/scene3_timeline.dtl",

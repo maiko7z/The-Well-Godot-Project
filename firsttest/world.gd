@@ -150,35 +150,15 @@ func _ready() -> void:
 			GlobalVariables.wraithModSearchSpeed = 4.5
 			GlobalVariables.wraithModSearchDuration = 7.0
 		elif GlobalVariables.storyLevel == 4:
-			GlobalVariables.trapWallSpawnRate = 8.0
-			GlobalVariables.trapEyeSpawnRate = 15.0
-			GlobalVariables.trapSusSpawnRate = 8.0
-			GlobalVariables.dungeonXTotalSize = 8
-			GlobalVariables.dungeonPossibleRoomSpawns = ["res://roomTypes/SmallRoom_U.tscn","res://roomTypes/MonsterRoom.tscn","res://roomTypes/LargeRoom_Cramped.tscn","res://roomTypes/SmallDeadEnd.tscn","res://roomTypes/ExitRoom.tscn"]
-			GlobalVariables.wraithModChaseDuration = 3.5
-			GlobalVariables.wraithModChaseSpeed = 5.0
-			GlobalVariables.wraithModSearchSpeed = 5.0
-			GlobalVariables.wraithModSearchDuration = 9.0
-		elif GlobalVariables.storyLevel == 5:
-			GlobalVariables.trapWallSpawnRate = 8.0
-			GlobalVariables.trapEyeSpawnRate = 7.0
-			GlobalVariables.trapSusSpawnRate = 25.0
-			GlobalVariables.dungeonXTotalSize = 8
-			GlobalVariables.dungeonPossibleRoomSpawns = ["res://roomTypes/SmallRoom_U.tscn","res://roomTypes/MonsterRoom.tscn","res://roomTypes/SmallerRoom_Pillar.tscn","res://roomTypes/SmallDeadEnd.tscn","res://roomTypes/StraightHall.tscn","res://roomTypes/ExitRoom.tscn"]
-			GlobalVariables.wraithModChaseDuration = 3.5
-			GlobalVariables.wraithModChaseSpeed = 5.0
-			GlobalVariables.wraithModSearchSpeed = 5.5
-			GlobalVariables.wraithModSearchDuration = 10.0
-		elif GlobalVariables.storyLevel == 6:
 			GlobalVariables.trapWallSpawnRate = 6.0
 			GlobalVariables.trapEyeSpawnRate = 10.0
 			GlobalVariables.trapSusSpawnRate = 8.0
 			GlobalVariables.dungeonXTotalSize = 10
 			GlobalVariables.wraithModChaseDuration = 4.0
 			GlobalVariables.wraithModChaseSpeed = 5.0
-			GlobalVariables.wraithModSearchSpeed = 6.0
-			GlobalVariables.wraithModSearchDuration = 12.0
-			GlobalVariables.dungeonPossibleRoomSpawns = ["res://roomTypes/LargeRoom.tscn","res://roomTypes/SmallerRoom_Pillar.tscn","res://roomTypes/SmallRoom_U.tscn","res://roomTypes/MonsterRoom.tscn","res://roomTypes/LargeRoom_Cramped.tscn","res://roomTypes/SmallDeadEnd.tscn","res://roomTypes/ExitRoom.tscn","res://roomTypes/StraightHall.tscn"]
+			GlobalVariables.wraithModSearchSpeed = 5.0
+			GlobalVariables.wraithModSearchDuration = 9.0
+			GlobalVariables.dungeonPossibleRoomSpawns = ["res://roomTypes/LargeRoom.tscn","res://roomTypes/SmallerRoom_Pillar.tscn","res://roomTypes/SmallRoom_U.tscn","res://roomTypes/MonsterRoom.tscn","res://roomTypes/LargeRoom_Cramped.tscn","res://roomTypes/SmallDeadEnd.tscn","res://roomTypes/ExitRoom.tscn","res://roomTypes/StraightHall.tscn","res://roomTypes/CorpseRoom.tscn"]
 	else:
 		if GlobalVariables.endlessLevel <= 1: #Base for endless levels
 			GlobalVariables.trapWallSpawnRate = 15.0
