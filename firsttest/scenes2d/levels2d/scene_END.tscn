@@ -3120,6 +3120,6 @@ position = Vector2(-41, 40)
 scale = Vector2(0.353448, 0.376437)
 texture = ExtResource("14_teorg")
 
-[connection signal="body_entered" from="Collisions/Area2D" to="." method="_on_area_2d_body_entered"]
 [connection signal="body_entered" from="Collisions/Area2D" to="." method="_scene_swap"]
+[connection signal="body_entered" from="Collisions/Area2D" to="." method="_on_area_2d_body_entered"]
 [connection signal="body_entered" from="DialogueTrigger1" to="." method="_on_dialogue_trigger_1_body_entered"]

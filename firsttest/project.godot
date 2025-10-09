@@ -34,6 +34,8 @@ directories/dch_directory={
 directories/dtl_directory={
 "3dscene1_timeline": "res://dialogue/Timelines/3dTimelines/3dscene1_timeline.dtl",
 "3dscene2_timeline": "res://dialogue/Timelines/3dTimelines/3dscene2_timeline.dtl",
+"MID 1": "res://dialogue/Timelines/MID 1.dtl",
+"MID 2": "res://dialogue/Timelines/MID 2.dtl",
 "item1_bow": "res://dialogue/Timelines/item1_bow.dtl",
 "item2_teddybear": "res://dialogue/Timelines/item2_teddybear.dtl",
 "scene10_timeline": "res://dialogue/Timelines/scene10_timeline.dtl",

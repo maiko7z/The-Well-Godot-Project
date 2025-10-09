@@ -152,6 +152,16 @@ func _ready() -> void:
 		elif GlobalVariables.storyLevel == 4:
 			GlobalVariables.trapWallSpawnRate = 6.0
 			GlobalVariables.trapEyeSpawnRate = 10.0
+			GlobalVariables.trapSusSpawnRate = 6.0
+			GlobalVariables.dungeonXTotalSize = 8.0
+			GlobalVariables.dungeonPossibleRoomSpawns = ["res://roomTypes/MonsterRoom.tscn","res://roomTypes/LargeRoom_Cramped.tscn","res://roomTypes/SmallRoom_U.tscn","res://roomTypes/LargeRoom.tscn","res://roomTypes/StraightHall.tscn","res://roomTypes/ExitRoom.tscn"]
+			GlobalVariables.wraithModChaseDuration = 4.0
+			GlobalVariables.wraithModChaseSpeed = 5.0
+			GlobalVariables.wraithModSearchSpeed = 4.5
+			GlobalVariables.wraithModSearchDuration = 9.0
+		elif GlobalVariables.storyLevel == 5:
+			GlobalVariables.trapWallSpawnRate = 6.0
+			GlobalVariables.trapEyeSpawnRate = 10.0
 			GlobalVariables.trapSusSpawnRate = 8.0
 			GlobalVariables.dungeonXTotalSize = 10
 			GlobalVariables.wraithModChaseDuration = 4.0

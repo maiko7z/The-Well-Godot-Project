@@ -1,0 +1,15 @@
+[gd_scene load_steps=3 format=3 uid="uid://dsrtbowctp5n2"]
+
+[ext_resource type="Texture2D" uid="uid://ck8xp7pb2s7jn" path="res://scenes2d/Scene 5/Art/UntitledArtwork5-Copy-Copy-Copy-Copy (2).png" id="1_xc1o4"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_xc1o4"]
+size = Vector2(43, 22)
+
+[node name="Well_Scene 5" type="StaticBody2D"]
+
+[node name="UntitledArtwork5-copy-copy-copy-copy(2)" type="Sprite2D" parent="."]
+texture = ExtResource("1_xc1o4")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(-0.5, 11)
+shape = SubResource("RectangleShape2D_xc1o4")

@@ -34,18 +34,18 @@ Michael Reyes, Nathaniel \"Nate\" Wood
 
 - Roles -
 Artists: Jay, Tatiana
-UI Design: Michael, Nate
-Textures: Jay, Tatiana, Nate
-Writing: Jay, Tatiana, Nate
-2D Programming: Michael, Nate
+UI Design: Nate, Michael
+Textures: Nate, Jay, Tatiana
+Writing: Nate, Jay, Tatiana
+2D Programming: Nate, Michael
 3D Programming: Nate
 Audio Design and Composer: Nate
-Level Design: Jay, Michael, Tatiana, Nate
+Level Design: Nate, Jay
 Modeling: Nate
 
 - Asset Attribution -
 SFX: pixabay.com
-2D Wave Shader: marsonfire
+2D Wave Shader: marsonfire (GodotShaders)
 
 - Code Attribution -
 bypell (AI base)
@@ -96,5 +96,5 @@ mouse_filter = 2
 texture = ExtResource("3_h3olt")
 stretch_mode = 1
 
-[connection signal="pressed" from="Back Button" to="." method="_on_button_pressed"]
 [connection signal="pressed" from="Back Button" to="." method="_on_back_button_pressed"]
+[connection signal="pressed" from="Back Button" to="." method="_on_button_pressed"]

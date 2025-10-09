@@ -21,7 +21,7 @@ func _ready() -> void:
 	tween.tween_property($Background, "color", Color(0,0,0,1), 1.0)
 	
 	if GlobalVariables.currentGameMode == "Story":
-		if GlobalVariables.storyLevel == 4:
+		if GlobalVariables.storyLevel == 5:
 			message.text = "Don't you remember?\nYou let her fall in. It's all your fault."
 		%RetryButton.text = "Retry? ( Level " + str(GlobalVariables.storyLevel) + " )"
 		$NoLivesLeft.play()

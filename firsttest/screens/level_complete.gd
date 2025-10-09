@@ -23,9 +23,9 @@ func _ready() -> void:
 	if GlobalVariables.currentGameMode == "Story":
 		GlobalVariables.storyLevel += 1
 		%ContinueButton.text = "Continue ( Level " + str(GlobalVariables.storyLevel) + " )"
-		if GlobalVariables.storyLevel == 4:
+		if GlobalVariables.storyLevel == 5:
 			message.text = "And at last, you make a horrifying realization...\nFACE THE TRUTH."
-		elif GlobalVariables.storyLevel == 5:
+		elif GlobalVariables.storyLevel == 6:
 			GlobalVariables.storyCompleted = true
 			message.text = "Freed from your mental prison.\nShe would've forgiven you. Forgive yourself."
 			%ContinueButton.text = "Continue (END)"
@@ -54,6 +54,8 @@ func _on_restart_pressed() -> void:
 		elif GlobalVariables.storyLevel == 4:
 			get_tree().change_scene_to_file("res://scenes2d/Scene 4/scene_4.tscn")
 		elif GlobalVariables.storyLevel == 5:
+			get_tree().change_scene_to_file("res://scenes2d/Scene 5/scene_5.tscn")
+		elif GlobalVariables.storyLevel == 6:
 			get_tree().change_scene_to_file("res://scenes2d/levels2d/scene_END.tscn")
 		else:
 			get_tree().change_scene_to_file("res://world.tscn")

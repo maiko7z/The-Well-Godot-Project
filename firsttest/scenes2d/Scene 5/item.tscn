@@ -1,0 +1,40 @@
+[gd_scene load_steps=6 format=3 uid="uid://dekjm2vo1pxdo"]
+
+[ext_resource type="Texture2D" uid="uid://bt226i57v74pa" path="res://scenes2d/Scene 5/Art/UntitledArtwork17 (4).png" id="1_85oeb"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_dk7f1"]
+atlas = ExtResource("1_85oeb")
+region = Rect2(0, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_g1cp4"]
+atlas = ExtResource("1_85oeb")
+region = Rect2(16, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_n4w7n"]
+atlas = ExtResource("1_85oeb")
+region = Rect2(32, 0, 16, 16)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_n42pu"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_dk7f1")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_g1cp4")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_n4w7n")
+}],
+"loop": true,
+"name": &"new_animation",
+"speed": 2.5
+}]
+
+[node name="item" type="Node2D"]
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+sprite_frames = SubResource("SpriteFrames_n42pu")
+animation = &"new_animation"
+autoplay = "new_animation"
+frame_progress = 0.631949
